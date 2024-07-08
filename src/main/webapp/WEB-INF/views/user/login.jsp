@@ -483,7 +483,7 @@ body {
       <div class="oqeTs u JpEOb">
         <a class="pBcSw F0 wSSLS" href="main.do"> 
           <picture>
-            <img class="XpHHt" src="logo.png" alt="Tripadvisor" />
+            <img class="XpHHt" src="/travel/resources/images/logo.png" alt="Áü¸¸½Î" />
           </picture>
         </a>
       </div>
