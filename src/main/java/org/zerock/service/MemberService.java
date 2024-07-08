@@ -11,7 +11,7 @@ public interface MemberService {
 
 	void deleteMember(String id);
 
-	MemberVO getMember(String id);
+	 MemberVO getMember(String id);
 
 	List<MemberVO> getMemberList();
 
