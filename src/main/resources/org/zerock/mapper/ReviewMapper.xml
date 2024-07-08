@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="org.zerock.mapper.ReviewMapper">
+  	<resultMap id="reviewResultMap" type="org.zerock.domain.ReviewVO">
+  		<result property="reviewNo" column="review_no"/>
+  		<result property="boardNo" column="board_no"/>
+  		<result property="memberId" column="member_id"/>
+  		<result property="content" column="content"/>
+  		<result property="like" column="score"/>
+  	</resultMap>
+  	
+  	<select id="selectReview"  resultMap="reviewResultMap">
+  		select * from review where board_no = #{boardNo}
+  	</select>
+  	
+  	<select id="selectCountOfReview" resultType="Integer">
+  		select count(*) from review where board_no = #{boardNo}
+  	</select>
+  	
+  	<select id="selectCountOfLikes" resultType="Integer">
+  		select count(*) from review where score = #{score} and board_no = #{board.boardNo}
+  	</select>
+  	
+  	<select id="selectReviewImage" resultType="String">
+  		select image_name from reviewImage where review_no = #{reviewNo}
+  	</select>
+  	
+  	<insert id="insertImage">
+  		insert into reviewImage values (#{name}, (select max(review_no) from review))
+  	</insert>
+  	
+  	<insert id="insertReview" >
+  		insert into review values(#{reviewNo}, #{boardNo}, #{memberId}, #{content}, #{like})
+  	</insert>
+  </mapper>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.zerock.mapper.SurveyMapper">
+    <!-- 새로운 Survey 삽입 -->
+    <insert id="insertSurvey" parameterType="org.zerock.domain.SurveyVO" useGeneratedKeys="true" keyProperty="survey_no">
+        INSERT INTO survey (
+            member_id, country, area, 
+            start_date, end_date, stay_type, 
+            peoplecount, climate
+        ) VALUES (
+            #{member_id}, #{country}, #{area}, 
+            #{start_date}, #{end_date}, #{stay_type}, 
+            #{peoplecount}, #{climate}
+        );
+    </insert>
+
+    <!-- 새로운 Activity 삽입 -->
+    <insert id="insertActivityType" parameterType="org.zerock.domain.ActivityTypeVO">
+        INSERT INTO activity_type (
+            survey_no, activity_type
+        ) VALUES (
+            #{survey_no}, #{activity_type}
+        );
+    </insert>
+
+     <!-- Survey 삭제 -->
+    <delete id="deleteActivityTypesBySurveyNo" parameterType="Long">
+        DELETE FROM activity_type WHERE survey_no = #{survey_no}
+    </delete>
+    
+    <delete id="deleteSurvey" parameterType="Long">
+        DELETE FROM survey WHERE survey_no = #{survey_no}
+    </delete>
+
+<!-- 특정 설문의 survey 조회 -->
+<select id="getSurveyById" parameterType="Long" resultType="org.zerock.domain.SurveyVO">
+    SELECT 
+        survey_no, member_id, country, area, 
+        DATE_FORMAT(start_date, '%Y-%m-%d') as start_date, 
+        <!-- DATE_FORMAT 은 날짜 형식을 문자 형식으로 전환해주는
+        역할을 함 %Y는 2024와 같은 4자리 년도를 가져오고 %m은 01~12, %d는 0~31까지 표현-->
+        DATE_FORMAT(end_date, '%Y-%m-%d') as end_date, 
+        stay_type, peoplecount, climate
+    FROM 
+        survey
+    WHERE 
+        survey_no = #{survey_no}
+</select>
+
+<!-- 특정 설문의 Activity 조회 -->
+<select id="getActivityTypesBySurveyNo" parameterType="Long" resultType="org.zerock.domain.ActivityTypeVO">
+    SELECT 
+        activity_no, survey_no, activity_type
+    FROM 
+        activity_type
+    WHERE 
+        survey_no = #{survey_no}
+</select>
+
+
+    <!-- 특정 유저의 Survey 리스트 조회 -->
+    <select id="getSurveyListByUserId" parameterType="String" resultType="org.zerock.domain.SurveyVO">
+        SELECT 
+            survey_no, member_id, country, area, 
+             DATE_FORMAT(start_date, '%Y-%m-%d') as start_date, 
+             DATE_FORMAT(end_date, '%Y-%m-%d') as end_date
+             , stay_type, 
+            peoplecount, climate
+        FROM 
+            survey
+        WHERE 
+            member_id = #{userId}
+    </select>
+
+    <!-- 특정 유저의 모든 Activity 타입 조회 -->
+    <select id="getAllActivityTypesByUserId" parameterType="String" resultType="org.zerock.domain.ActivityTypeVO">
+        SELECT 
+            activity_no, survey_no, activity_type
+        FROM 
+            activity_type
+        WHERE 
+            survey_no IN (SELECT survey_no FROM survey WHERE member_id = #{userId})
+    </select>
+</mapper>
+

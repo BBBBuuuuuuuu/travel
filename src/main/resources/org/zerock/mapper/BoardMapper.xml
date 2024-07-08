@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zerock.mapper.BoardMapper">
+
+	<resultMap id="boardResultMap" type="org.zerock.domain.BoardVO">
+		<result property="boardNo" column="board_no"/>
+		<result property="monthNo" column="month_no"/>
+		<result property="name" column="name"/>
+		<result property="country" column="country"/>
+		<result property="area" column="area"/>
+		<result property="address" column="address"/>
+		<result property="category" column="category"/>
+	</resultMap>
+	<select id="selectBoardList" resultMap="boardResultMap">
+		select * from board where category = #{category} order by board_no desc
+	</select>	
+	
+	<select id="selectImageList" resultType="String">
+		select image_name from boardImage where board_no = #{no}
+	</select>
+	
+	<select id="selectBoard" resultMap="boardResultMap">
+		select * from board where board_no = #{no}
+	</select>
+
+	<select id="selectContent" resultType="String">
+		select content from content where board_no = #{no}
+	</select>
+	
+	<resultMap id="activityResultMap" type="org.zerock.domain.ActivityVO" extends="boardResultMap">
+		<result property="activityType" column="activity_type"/>
+	</resultMap>	
+	
+	<select id="selectActivityBoard" resultMap="activityResultMap">
+		select * from board b JOIN activity a ON b.board_no = a.board_no where a.board_no = #{no}
+	</select>
+	
+	<select id="selectWord" resultMap = "boardResultMap">
+		SELECT * FROM board WHERE category = #{category} AND (country LIKE #{word} OR area LIKE #{word});
+	</select>
+	<resultMap id="stayResultMap" type="org.zerock.domain.StayVO" extends="boardResultMap">
+		<result property="owner" column= "owner"/>
+		<result property="phone" column= "phone"/>
+		<result property="max" column="max"/>
+		<result property="stayType" column="stay_type"/>
+	</resultMap>
+	
+	<select id="selectStayBoard" resultMap="stayResultMap">
+		select * from board b JOIN stay s ON b.board_no = s.board_no where b.board_no = #{no}
+	</select>
+	
+</mapper>
