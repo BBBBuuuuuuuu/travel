@@ -95,13 +95,12 @@ public class MemberController {
 	            id = (String) session.getAttribute("userId");
 	            if (id == null || id.isEmpty()) {
 	                model.addAttribute("message", "회원 ID가 필요합니다.");
-	                return "redirect:/login.do"; // 로그인 페이지로 리디렉션
+	                return "redirect:/login.do"; 
 	            }
 	        }
-
 	        MemberVO member = memberService.getMember(id);
 	        model.addAttribute("member", member);
-	        return "user/updateMember";
+	        return "user/update";
 	    }
 
 	    @RequestMapping(value = "updateMember.do", method = RequestMethod.POST)
@@ -110,13 +109,12 @@ public class MemberController {
 	            vo.setId((String) session.getAttribute("userId"));
 	            if (vo.getId() == null || vo.getId().isEmpty()) {
 	                model.addAttribute("message", "회원 ID가 필요합니다.");
-	                return "redirect:/login.do"; // 로그인 페이지로 리디렉션
+	                return "redirect:/login.do"; 
 	            }
 	        }
-
 	        memberService.updateMember(vo);
 	        model.addAttribute("message", "회원정보가 성공적으로 수정되었습니다.");
-	        return "redirect:/travel/getMember.do?id=" + vo.getId();
+	        return "redirect:/main.do";
 	    }
 	
 	 
@@ -124,7 +122,7 @@ public class MemberController {
 	public String deleteMember(@RequestParam("id") String id, HttpSession session) {
 		memberService.deleteMember(id);
 		session.invalidate();
-		return "redirect:login.do";
+		return "redirect:/main.do";
 	}
 
 	@RequestMapping(value = "/deleteMember.do", method = RequestMethod.GET)
