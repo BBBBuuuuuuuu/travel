@@ -16,6 +16,7 @@ public class MainController {
 	        if (userId != null) {
 	            model.addAttribute("userId", userId);
 	        }
+	       
 	        return "board/main";
 	    }
 }
