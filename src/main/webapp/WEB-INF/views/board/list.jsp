@@ -254,7 +254,7 @@
 									class="BMuGb"
 									src="https://static.tacdn.com/img2/brand_refresh/special/pride_month_Tripadvisor_lockup_horizontal_secondary_small.svg"
 									alt="Tripadvisor" /></picture> <picture> <img class="XpHHt"
-									src="https://static.tacdn.com/img2/brand_refresh/special/pride_month_Tripadvisor_lockup_horizontal_secondary.svg"
+									src="/travel/resources/images/logo.png"
 									alt="Tripadvisor" /></picture>
 							</a>
 						</div>
@@ -312,13 +312,13 @@
 											role="tab" type="button" aria-selected="true"
 											data-automation="navHeader_Hotels">
 											<span class="biGQs _P fOtGX"><a class="JBbKZ Q1"
-												href="/Hotels">Hotels</a></span>
+												href="/getBoardList.do?category=stay">Hotels</a></span>
 										</button>
 										<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS BmgDU"
 											role="tab" type="button" aria-selected="true"
 											data-automation="navHeader_Things to Do">
 											<span class="biGQs _P fOtGX"><a class="JBbKZ Q1"
-												href="/Hotels">Things to Do</a></span>
+												href="/getBoardList.do?category=activity">Things to Do</a></span>
 										</button>
 										<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS" role="tab"
 											type="button" aria-selected="false" tabindex="-1"

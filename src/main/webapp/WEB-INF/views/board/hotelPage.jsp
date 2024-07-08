@@ -235,7 +235,7 @@
 					<nav class="MGToN u">
 						<div class="oqeTs u JpEOb">
 							<a class="pBcSw F0 wSSLS" href="/"> <picture> <img
-									class="XpHHt" src="logo.png" alt="Tripadvisor" /></picture>
+									class="XpHHt" src="/travel/resources/images/logo.png" alt="Tripadvisor" /></picture>
 							</a>
 						</div>
 						<div class="OzBsv">
@@ -424,7 +424,7 @@
 								<div class="TCaFW f"></div>
 								<div class="ZlaHM f k">
 									<div class="WMndO f">
-										<h1 id="HEADING" class="biGQs _P rRtyp">이름</h1>
+										<h1 id="HEADING" class="biGQs _P rRtyp">${board.name}</h1>
 									</div>
 									<div class="WgQFn f">
 										<div class="IRzhD d _T Vt Cl">

@@ -20,14 +20,14 @@
 	
 	<update id="updateMember"
 		parameterType="org.zerock.domain.MemberVO">
-		UPDATE member
-		SET password = #{password},
-		name = #{name},
-		email = #{email},
-		phone = #{phone}
-		WHERE id = #{id}
+		 UPDATE member
+        SET password = #{password}, phone = #{phone}, name = #{name}, email = #{email}
+        WHERE id = #{id}
 	</update>
 
+<select id="getMember" parameterType="String" resultType="org.zerock.domain.MemberVO">
+        SELECT * FROM member WHERE id = #{id}
+    </select>
 	
 	<delete id="deleteMember" parameterType="String">
 		DELETE FROM member WHERE id = #{id}

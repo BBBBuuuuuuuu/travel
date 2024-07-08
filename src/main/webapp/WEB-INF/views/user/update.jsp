@@ -8,11 +8,8 @@
 </head>
 <body>
     <h2>회원정보 수정</h2>
-    <form action="updateUser.do" method="post">
-        <div>
-            <label for="id">ID:</label>
-            <input type="text" id="id" name="id" readonly>
-        </div>
+    <form action="updateMember.do" method="post">
+        
         <div>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
@@ -36,5 +33,9 @@
     <c:if test="${not empty message}">
         <span>${message}</span>
     </c:if>
+   <form action="deleteMember.do" method="post">
+        <input type="hidden" name="id" value="${sessionScope.userId}">
+        <button type="submit">Delete</button>
+    </form>
 </body>
 </html>

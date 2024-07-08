@@ -262,7 +262,7 @@
 										</span>
 										<div id="userMenu" style="display: none;">
 											<a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj"
-												href="/travel/update.do"> <span class="biGQs _P ttuOS">
+												href="/travel/updateMember.do"> <span class="biGQs _P ttuOS">
 													<div class="eoYut">정보수정</div>
 											</span>
 											</a> <a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj"
