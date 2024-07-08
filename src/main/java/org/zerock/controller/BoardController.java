@@ -59,6 +59,7 @@ public class BoardController {
 			return "board/placePage";
 		} else {
 			StayVO stayBoard = boardService.getStayBoard(no); // 숙소 게시판에 대한 정보 불러오기
+			log.info("=====================Controller,getBoard" + stayBoard);
 			model.addAttribute("board", stayBoard);
 			return "board/hotelPage";
 		}

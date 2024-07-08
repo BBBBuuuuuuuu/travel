@@ -10,7 +10,9 @@ import org.zerock.domain.StayVO;
 import org.zerock.mapper.BoardMapper;
 
 import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 
+@Log4j
 @Service
 public class BoardServiceImpl implements BoardService {
 
@@ -47,6 +49,7 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public StayVO getStayBoard(int no) {
 		StayVO stayBoard = boardMapper.selectStayBoard(no);
+		log.info("boardImpl===================" + stayBoard);
 		if (stayBoard != null) {
 			stayBoard.setImageName(boardMapper.selectImageList(no));
 			return stayBoard;
