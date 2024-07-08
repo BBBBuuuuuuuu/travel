@@ -6,8 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Survey List</title>
+
      <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
     <style>
         .modal {
             display: none;
