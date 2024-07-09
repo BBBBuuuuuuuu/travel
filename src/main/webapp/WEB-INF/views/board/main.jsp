@@ -235,7 +235,7 @@
 									<div class="f u" data-automation="topNav_trips">
 										<div class="JLKop w">
 											<button class="rmyCe _G B- z _S c Wc wSSLS jWkoZ InwKl"
-												type="button">
+												type="button" value="bookinglist.do">
 												<span class="biGQs _P ttuOS">MyTrips</span>
 											</button>
 										</div>
@@ -1389,18 +1389,25 @@
         };
     </script>
 <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var mySurveyButton = document.querySelector('.rmyCe._G.B-.z._S.c.Wc.wSSLS.jWkoZ.InwKl');
-            if (mySurveyButton) {
-                mySurveyButton.addEventListener('click', function() {
-                    console.log('Button clicked'); 
+    document.addEventListener('DOMContentLoaded', function() {
+        var buttons = document.querySelectorAll('.rmyCe._G.B-.z._S.c.Wc.wSSLS.jWkoZ.InwKl');
+        buttons.forEach(function(button) {
+            var buttonText = button.querySelector('span').innerText.trim();
+            if (buttonText === 'MyTrips') {
+                button.addEventListener('click', function() {
+                    console.log('MyTrips Button clicked'); 
+                    window.location.href = 'bookinglist.do';
+                });
+            } else if (buttonText === 'MySurvey') {
+                button.addEventListener('click', function() {
+                    console.log('Survey Button clicked'); 
                     window.location.href = 'surveylist.do';
                 });
-            } else {
-                console.error('Button not found');
             }
         });
-    </script>
+    });
+</script>
+
 
 
 
