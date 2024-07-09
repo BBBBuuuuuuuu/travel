@@ -3,57 +3,65 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.zerock.mapper.BookingMapper">
-	<resultMap id="bookingResultMap" type="org.zerock.domain.BookingVO">
-		<result column="board_no" property="boardNo"/>
-		<result column="start_date" property="startDate"/>
-		<result column="end_date" property="endDate"/>
-		<result column="people_count" property="peopleCount"/>
-		<result column="price" property="price"/>
-		<result column="total_price" property="totalPrice"/>
-	</resultMap>
 
-	<insert id="insertBooking" >
-		insert into booking values (null, #{boardNo}, #{startDate}, #{endDate}, #{peopleCount}, #{price}, #{totalPrice}, #{memberId})
-	</insert>
+    <!-- Insert Booking with member_id fetched from the card table -->
+    <insert id="insertBooking">
+        insert into booking (booking_no, board_no, start_date, end_date, people_count, price, total_price, member_id)
+        values (null, #{boardNo}, #{startDate}, #{endDate}, #{peopleCount}, #{price}, #{totalPrice}, 
+                (select member_id from card where card_num = #{cardNum} limit 1))
+    </insert>
 
-	<select id="selectBookingNo" resultType="Integer">
-		select max(booking_no) from booking where member_id = #{memberId};
-	</select>
-	
-	<resultMap id="cardResultMap" type="org.zerock.domain.CardVO">
-		<result column="card_num" property="cardNum"/>
-		<result column="member_id" property="memberId"/>
-		<result column="bank" property="bank"/>
-		<result column="card_pass" property="cardPass"/>
-		<result column="balance" property="balance"/>
-	</resultMap>
-	
-	<select id="selectCard" resultMap="cardResultMap">
-		select * from card where member_id=#{memberId}
-	</select>
-	
-	<update id="updateBalance">
-		update card set balance=#{balance} where card_num = #{cardNum}
-	</update>
-	
-	<insert id="insertPayment">
-		insert into payment values (null, #{card.memberId}, #{card.cardNum}, #{card.bank}, #{bookingNo})
-	</insert>
-	
-	    <select id="getListByUser" parameterType="String" resultType="org.zerock.domain.BookingVO">
-        SELECT b.* 
-        FROM booking b
-        JOIN board bo ON b.board_no = bo.board_no
-        JOIN member m ON bo.member_id = m.id
-        WHERE m.id = #{memberId}
+    <!-- Select max booking number by member_id -->
+    <select id="selectBookingNo" resultType="Integer">
+        select max(booking_no) from booking where member_id = #{memberId}
     </select>
 
+    <!-- Result map for CardVO -->
+    <resultMap id="cardResultMap" type="org.zerock.domain.CardVO">
+        <result column="card_num" property="cardNum"/>
+        <result column="member_id" property="memberId"/>
+        <result column="bank" property="bank"/>
+        <result column="card_pass" property="cardPass"/>
+        <result column="balance" property="balance"/>
+    </resultMap>
+
+    <!-- Select card details by member_id -->
+    <select id="selectCard" resultMap="cardResultMap">
+        select card_num as cardNum, member_id as memberId, bank, card_pass as cardPass, balance
+        from card 
+        where member_id = #{memberId}
+    </select>
+
+    <!-- Update card balance by card_num -->
+    <update id="updateBalance">
+        update card set balance = #{balance} where card_num = #{cardNum}
+    </update>
+
+    <!-- Insert payment record -->
+    <insert id="insertPayment">
+        insert into payment (payment_no, member_id, card_num, bank, booking_no)
+        values (null, #{card.memberId}, #{card.cardNum}, #{card.bank}, #{bookingNo})
+    </insert>
+
+    <!-- Get list of bookings by user (member_id) -->
+    <select id="getListByUser" parameterType="String" resultType="org.zerock.domain.BookingVO">
+        SELECT booking_no as bookingNo, board_no as boardNo, start_date as startDate, 
+               end_date as endDate, people_count as peopleCount, price, total_price as totalPrice, member_id as memberId
+        FROM booking
+        WHERE member_id = #{memberId}
+    </select>
+
+    <!-- Read booking details by booking_no -->
     <select id="read" parameterType="Long" resultType="org.zerock.domain.BookingVO">
-        SELECT * FROM booking WHERE booking_no = #{booking_no}
+        SELECT booking_no as bookingNo, board_no as boardNo, start_date as startDate, 
+               end_date as endDate, people_count as peopleCount, price, total_price as totalPrice, member_id as memberId
+        FROM booking 
+        WHERE booking_no = #{bookingNo}
     </select>
 
+    <!-- Delete booking by booking_no -->
     <delete id="delete" parameterType="Long">
-        DELETE FROM booking WHERE booking_no = #{booking_no}
+        DELETE FROM booking WHERE booking_no = #{bookingNo}
     </delete>
-    
+
 </mapper>
