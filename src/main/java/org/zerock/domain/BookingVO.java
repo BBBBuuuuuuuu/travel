@@ -4,11 +4,11 @@ import lombok.Data;
 
 @Data
 public class BookingVO {
-	private int boardNo;
-	private String checkinDate;
-	private String checkoutDate;
-	private int peopleCount;
-	private int price;
-	private int totalPrice;
-	private String memberId;
+	private Long booking_no;
+	private Long board_no;
+	private String start_date;
+	private String end_date;
+	private Long price;
+	private Long total_price;
+
 }

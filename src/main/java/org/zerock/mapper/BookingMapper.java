@@ -1,5 +1,7 @@
 package org.zerock.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.zerock.domain.BookingVO;
 import org.zerock.domain.CardVO;
@@ -16,4 +18,9 @@ public interface BookingMapper {
 
 	void insertPayment(@Param("card") CardVO card, @Param("bookingNo") int bookingNo);
 
+	List<BookingVO> getListByUser(String userId);
+
+	BookingVO read(Long booking_no);
+
+	int delete(Long booking_no);
 }

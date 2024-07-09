@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 @Service
 public class SurveyServiceImpl implements SurveyService {
 
-    private static final Logger logger = LoggerFactory.getLogger(SurveyServiceImpl.class);
+     private static final Logger logger = LoggerFactory.getLogger(SurveyServiceImpl.class);
 
     @Autowired
     private SurveyMapper surveyMapper;

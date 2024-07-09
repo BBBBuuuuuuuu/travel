@@ -1,5 +1,7 @@
 package org.zerock.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zerock.domain.BookingVO;
@@ -22,7 +24,7 @@ public class BookingServiceImpl implements BookingService{
 
 
 	@Override
-	public void payTotalPrice(CardVO card, int totalPrice) {
+	public void payTotalPrice(CardVO card, Long totalPrice) {
 		mapper.updateBalance(card.getCardNum(), card.getBalance() - totalPrice);
 		
 	}
@@ -40,4 +42,20 @@ public class BookingServiceImpl implements BookingService{
 		mapper.insertPayment(card, bookingNo);
 	}
 	
+    @Override
+    public List<BookingVO> getListByUser(String memberId) {
+        return mapper.getListByUser(memberId);
+    }
+    @Override
+    public BookingVO get(Long booking_no) {
+        return mapper.read(booking_no);
+    }
+    @Override
+    public boolean cancel(Long booking_no) {
+        return mapper.delete(booking_no) == 1;
+    }
+
+
+
+
 }

@@ -39,4 +39,21 @@
 	<insert id="insertPayment">
 		insert into payment values (null, #{card.memberId}, #{card.cardNum}, #{card.bank}, #{bookingNo})
 	</insert>
+	
+	    <select id="getListByUser" parameterType="String" resultType="org.zerock.domain.BookingVO">
+        SELECT b.* 
+        FROM booking b
+        JOIN board bo ON b.board_no = bo.board_no
+        JOIN member m ON bo.member_id = m.id
+        WHERE m.id = #{memberId}
+    </select>
+
+    <select id="read" parameterType="Long" resultType="org.zerock.domain.BookingVO">
+        SELECT * FROM booking WHERE booking_no = #{booking_no}
+    </select>
+
+    <delete id="delete" parameterType="Long">
+        DELETE FROM booking WHERE booking_no = #{booking_no}
+    </delete>
+    
 </mapper>
