@@ -44,8 +44,8 @@
 
     <!-- Get list of bookings by user (member_id) -->
     <select id="getListByUser" parameterType="String" resultType="org.zerock.domain.BookingVO">
-        SELECT booking_no as bookingNo, board_no as boardNo, start_date as startDate, 
-               end_date as endDate, people_count as peopleCount, price, total_price as totalPrice, member_id as memberId
+        SELECT booking_no, board_no, start_date,
+               end_date, people_count, price, total_price, member_id
         FROM booking
         WHERE member_id = #{memberId}
     </select>

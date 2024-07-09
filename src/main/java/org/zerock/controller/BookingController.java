@@ -109,6 +109,7 @@ public class BookingController {
         }
 
         List<BookingVO> bookings = bookService.getListByUser(userId);
+        log.info("==============BookingController getListByUser " + bookings);
         model.addAttribute("bookings", bookings);
         return "booking/list";
     }
