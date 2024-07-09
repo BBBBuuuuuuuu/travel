@@ -10,5 +10,6 @@ public class BookingVO {
 	private String end_date;
 	private Long price;
 	private Long total_price;
+	private String member_id;
 
 }
