@@ -53,6 +53,7 @@
                     <th>출발일</th>
                     <th>도착일</th>
                     <th>가격/박</th>
+                    <th>인원수</th>
                     <th>총합 가격</th>
                     <th>예약취소</th>
                 </tr>
@@ -69,6 +70,7 @@
                         <td>${booking.start_date}</td>
                         <td>${booking.end_date}</td>
                         <td>${booking.price}</td>
+                        <td>${booking.people_count }</td>
                         <td>${booking.total_price}</td>
                         <td>
                             <button class="btn btn-danger" onclick="cancelBooking(${booking.booking_no})">예약 취소</button>
