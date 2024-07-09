@@ -20,9 +20,9 @@ import org.zerock.domain.CardVO;
 import org.zerock.service.BookingService;
 import org.zerock.service.CardRequest;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j;
 
-@Slf4j
+@Log4j
 @Controller
 public class BookingController {
 
@@ -30,45 +30,54 @@ public class BookingController {
 	private BookingService bookService;
 	
 	@GetMapping("/book.do")
-	public String showBooking(HttpServletRequest request, BookingVO booking, Model model) {
+	public String showBooking(HttpServletRequest request, BookingVO booking, String boardName, Model model) {
 		String userId = (String) request.getSession(false).getAttribute("userId"); 
 		if (userId != null); // 로그인 여부 확인 
 		else
 			return "redirect:/login.do"; 
 
-		int daysBetween = checkDaysBetween(booking.getStart_date(), booking.getEnd_date());// 날짜 수 계산
+		log.info("===============book.do " + booking.getStart_date()); 
+		Long daysBetween = checkDaysBetween(booking.getStart_date(), booking.getEnd_date());// 날짜 수 계산
 		if(daysBetween <= 0) {
 			return "redirect:/book.do"; // 날짜 입력 오류
 		}
+		booking.setPrice(10000L);
         booking.setTotal_price(daysBetween * booking.getPrice()); // 총 가격
 
         model.addAttribute("userId", userId);
         model.addAttribute("booking", booking);
-		return "booking";
+        model.addAttribute("boardName", boardName);
+        
+		return "booking/booking";
 	}
 	
 	@PostMapping("/book.do")
-	public String BookStay(HttpServletRequest request, BookingVO booking, CardRequest cardRequest) {
+	public String BookStay(HttpServletRequest request, @RequestParam BookingVO booking, CardRequest cardRequest) {
 		String userId = (String) request.getSession(false).getAttribute("userId");
 		CardVO card = bookService.getUserCard(userId); // 카드정보 불러오기
 		
-		if(!checkCardRequest(cardRequest, card))
+		
+		log.info("=====================" + booking.getTotal_price());
+		if(!checkCardRequest(cardRequest, card)) {
+			log.info("입력 값 오류");
 			return "redirect:/book.do"; // 입력 값 오류
+		}
 		if(card.getBalance() < booking.getTotal_price()) {
+			log.info("잔고 부족");
 			return "redirect:/book.do"; // 잔고 부족
 		}
 		bookService.payTotalPrice(card, booking.getTotal_price()); // 잔고 수정
 		bookService.bookStay(booking); // 숙소 예약
 		bookService.addPayment(card); // 결제 내역 추가
 		
-		return "예약현황";
+		return "redirect:/bookinglist.do";
 	}
 	
-	private Integer checkDaysBetween(String date1, String date2) {
-		int daysBetween = 0;
+	private Long checkDaysBetween(String date1, String date2) {
+		Long daysBetween = 0L;
 		LocalDate localDate1 =  LocalDate.parse(date1);
         LocalDate localDate2 = LocalDate.parse(date2);
-        daysBetween = (int) ChronoUnit.DAYS.between(localDate1, localDate2);
+        daysBetween = ChronoUnit.DAYS.between(localDate1, localDate2);
 		return daysBetween;
 	}
 	

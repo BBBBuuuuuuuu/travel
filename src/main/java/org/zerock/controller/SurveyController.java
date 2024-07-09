@@ -79,11 +79,11 @@ public class SurveyController {
             return "survey/surveysearch";
         }
         
-        @GetMapping
-        public String searchBySurvey(SurveyVO survey) {
-        	  surveyService.getCommonBoard(survey);
-        	return"";
-        }
+//        @GetMapping
+//        public String searchBySurvey(SurveyVO survey) {
+//        	  surveyService.getCommonBoard(survey);
+//        	return"";
+//        }
     }
 
     
