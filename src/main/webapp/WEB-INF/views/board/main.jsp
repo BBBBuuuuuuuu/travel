@@ -253,67 +253,46 @@
 						</div>
 						<div class="lGhNq QA c JpEOb"
 							data-automation="desktop-cart-and-profile">
-							<c:choose>
-								<c:when test="${not empty userId}">
-									<div class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj"
-										id="userContainer">
-										<span class="biGQs _P ttuOS">
-											<div class="eoYut" id="userIdDisplay">${userId}님</div>
-										</span>
-										<div id="userMenu" style="display: none;">
-											<a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj"
-												href="/travel/updateMember.do"> <span class="biGQs _P ttuOS">
-													<div class="eoYut">정보수정</div>
-											</span>
-											</a> <a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj"
-												href="/travel/logout.do"> <span class="biGQs _P ttuOS">
-													<div class="eoYut">로그아웃</div>
-											</span>
-											</a>
-										</div>
-									</div>
-								</c:when>
-								<c:otherwise>
-									<a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj"
-										href="/travel/login.do"> <span class="biGQs _P ttuOS">
-											<div class="eoYut">로그인</div>
-									</span>
-									</a>
-								</c:otherwise>
-							</c:choose>
+							<a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj"
+								href="login.do"><span
+								class="biGQs _P ttuOS">
+									<div class="eoYut">Sign in</div>
+							</span></a>
 						</div>
-						<span>
-							<div class="o">
-								<div class="IDaDx mvTrV cyIij fluiI SMjpI">
-									<div class="uNcsI _T o" data-test-target="global-nav">
-										<div class="fSuCF w q CbORX czCLw">
-											<div class="f M" role="tablist" data-automation="tab-list">
-												<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS BmgDU"
-													role="tab" type="button" aria-selected="true"
-													data-automation="navHeader_Hotels">
-													<span class="biGQs _P fOtGX"><a class="JBbKZ Q1"
-														href="getList.do?category=stay">호텔</a></span>
-												</button>
-												<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS BmgDU"
-													role="tab" type="button" aria-selected="true"
-													data-automation="navHeader_Things to Do">
-													<span class="biGQs _P fOtGX"><a class="JBbKZ Q1"
-														href="getList.do?category=activity">즐길거리</a></span>
-												</button>
-												<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS"
-													role="tab" type="button" aria-selected="false"
-													tabindex="-1" data-automation="navHeader_ThingsToDo">
-													</svg>
-												</button>
-											</div>
-										</div>
+					</nav>
+				</div>
+				<span>
+					<div class="o">
+						<div class="IDaDx mvTrV cyIij fluiI SMjpI">
+							<div class="uNcsI _T o" data-test-target="global-nav">
+								<div class="fSuCF w q CbORX czCLw">
+									<div class="f M" role="tablist" data-automation="tab-list">
+										<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS BmgDU"
+											role="tab" type="button" aria-selected="true"
+											data-automation="navHeader_Hotels">
+											<span class="biGQs _P fOtGX"><a class="JBbKZ Q1"
+												href="getList.do?category=stay">호텔</a></span>
+										</button>
+										<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS BmgDU"
+											role="tab" type="button" aria-selected="true"
+											data-automation="navHeader_Things to Do">
+											<span class="biGQs _P fOtGX"><a class="JBbKZ Q1"
+												href="getList.do?category=activity">즐길거리</a></span>
+										</button>
+										<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS" role="tab"
+											type="button" aria-selected="false" tabindex="-1"
+											data-automation="navHeader_ThingsToDo">
+											</svg>
+										</button>
 									</div>
 								</div>
-								<div class="hNYnL _T NK"></div>
 							</div>
-				</div>
-		</span>
-		</header>
+						</div>
+						<div class="hNYnL _T NK"></div>
+					</div>
+	</div>
+	</span>
+	</header>
 		</span>
 		<main>
 			<!--$-->

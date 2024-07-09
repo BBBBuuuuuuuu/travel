@@ -160,6 +160,10 @@
 <script src="https://static.tacdn.com/assets/p7jq7m.4Ujcuf7.js" async=""
 	crossorigin="" fetchpriority="low"></script>
 <style>
+.Za {
+z-index: 0;
+}
+
 .rmyCe.XDcOZ:not(:disabled) {
 	background-color: var(- -commerceButtonFill);
 	border-color: var(- -commerceButtonFill);
@@ -371,8 +375,15 @@
       width: 80%;
     }
 
-
-
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 1
+}
     .rating-stars {
       margin-bottom: 10px;
     }
@@ -687,12 +698,13 @@
 															</div>
 															<div class="kPQaf q">Guests</div>
 															<div class="icDdG q dibDZ">
-																<span> <span class="adult-info">2</span> adults,
+																<span> <span class="adult-info">0 adults</span>,
 																	<span class="child-info">0 children</span>
 																</span>
 															</div>
 														</button>
 													</div>
+
 
 													<!-- Modal -->
 													<div class="modal fade" id="guestModal" tabindex="-1"
@@ -749,6 +761,7 @@
 								</div>
 							</div>
 						</div>
+
 						<button class="rmyCe _G B- z _S c Wc wSSLS mowmC w jWkoZ XDcOZ"
 							data-testid="show_prices_button" data-removecommercetest="true"
 							type="button" onclick="redirectToController()">

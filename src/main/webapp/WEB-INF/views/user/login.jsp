@@ -159,7 +159,7 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     max-width: 100%;
-    margin-left: 30%;
+    margin-left: 25%;
     width: calc(var(--max-content-width) + var(--page-margin)* 2);
 }
 
@@ -185,7 +185,20 @@ body {
     max-width: 28rem;
 }
 
-.form {
+
+.form.sign-in{
+	padding: 1rem;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(0);
+    transition: .5s ease-in-out;
+    transition-delay: 1s;
+    z-index: 5;
+}
+
+.form.sign-up{
     padding: 1rem;
     background-color: var(--white);
     border-radius: 1.5rem;
@@ -194,6 +207,7 @@ body {
     transform: scale(0);
     transition: .5s ease-in-out;
     transition-delay: 1s;
+    z-index: 0;
 }
 
 .input-group {
@@ -397,28 +411,21 @@ body {
 .container.sign-in::before {
     transform: translate(0, 0);
     right: 0%;
-    z-index: 0;
+    z-index: 4;
+    margin-left: 5%;
 }
 
 .container.sign-up::before {
     transform: translate(100%, 0);
     right: 50%;
+    margin-right: 30%;
+    z-index: 0;
 }
 
 /* RESPONSIVE */
 
 @media only screen and (max-width: 425px) {
 
-    .container::before,
-    .container.sign-in::before,
-    .container.sign-up::before {
-        height: 100vh;
-        border-bottom-right-radius: 0;
-        border-top-left-radius: 0;
-        z-index: 0;
-        transform: none;
-        right: 0;
-    }
 
     /* .container.sign-in .col.sign-up {
         transform: translateY(100%);
@@ -538,20 +545,24 @@ body {
         <div class="form-wrapper align-items-center">
           <div class="form sign-up">
             <div class="input-group">
-              <i class='bx bxs-user'></i>
-              <input type="text" placeholder="Username">
+              <i class='bx bxs-userID'></i>
+              <input type="text" placeholder="아이디">
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-userPW'></i>
+              <input type="password" placeholder="비밀번호">
             </div>
             <div class="input-group">
               <i class='bx bx-mail-send'></i>
-              <input type="email" placeholder="Email">
+              <input type="email" placeholder="이메일">
             </div>
             <div class="input-group">
-              <i class='bx bxs-lock-alt'></i>
-              <input type="password" placeholder="Password">
+              <i class='bx bxs-userName'></i>
+              <input type="text" placeholder="이름">
             </div>
             <div class="input-group">
-              <i class='bx bxs-lock-alt'></i>
-              <input type="password" placeholder="Confirm password">
+              <i class='bx bxs-PhoneNUM'></i>
+              <input type="text" placeholder="번호">
             </div>
             <button type="submit">
               Sign up
@@ -571,11 +582,11 @@ body {
           <form class="form sign-in" action="login.do" method="post">
             <div class="input-group">
               <i class='bx bxs-user'></i>
-              <input type="text" name="id" placeholder="Username">
+              <input type="text" name="id" placeholder="아이디">
             </div>
             <div class="input-group">
               <i class='bx bxs-lock-alt'></i>
-              <input type="password" name="password" placeholder="Password">
+              <input type="password" name="password" placeholder="비밀번호">
             </div>
             <button type="submit">
               확인
@@ -638,7 +649,8 @@ body {
 
   setTimeout(() => {
     container.classList.add('sign-in')
-  }, 200)
+  }, 0)
+  
   </script>
 </body>
 </html>
