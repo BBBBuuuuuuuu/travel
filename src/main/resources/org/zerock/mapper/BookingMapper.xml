@@ -7,8 +7,7 @@
     <!-- Insert Booking with member_id fetched from the card table -->
     <insert id="insertBooking">
         insert into booking (booking_no, board_no, start_date, end_date, people_count, price, total_price, member_id)
-        values (null, #{boardNo}, #{startDate}, #{endDate}, #{peopleCount}, #{price}, #{totalPrice}, 
-                (select member_id from card where card_num = #{cardNum} limit 1))
+        values (null, #{board_no}, #{start_date}, #{end_date}, #{people_count}, #{price}, #{total_price}, #{member_id})
     </insert>
 
     <!-- Select max booking number by member_id -->
@@ -27,7 +26,7 @@
 
     <!-- Select card details by member_id -->
     <select id="selectCard" resultMap="cardResultMap">
-        select card_num as cardNum, member_id as memberId, bank, card_pass as cardPass, balance
+        select card_num, member_id, bank, card_pass, balance
         from card 
         where member_id = #{memberId}
     </select>
@@ -39,7 +38,7 @@
 
     <!-- Insert payment record -->
     <insert id="insertPayment">
-        insert into payment (payment_no, member_id, card_num, bank, booking_no)
+        insert into payment (payment_no, member_id, card_number, bank, booking_no)
         values (null, #{card.memberId}, #{card.cardNum}, #{card.bank}, #{bookingNo})
     </insert>
 

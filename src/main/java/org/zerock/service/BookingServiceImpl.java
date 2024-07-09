@@ -9,7 +9,9 @@ import org.zerock.domain.CardVO;
 import org.zerock.mapper.BookingMapper;
 
 import lombok.Setter;
+import lombok.extern.log4j.Log4j;
 
+@Log4j
 @Service
 public class BookingServiceImpl implements BookingService{
 
@@ -19,6 +21,7 @@ public class BookingServiceImpl implements BookingService{
 	
 	@Override
 	public CardVO getUserCard(String userId) {
+		log.info(mapper.selectCard(userId));
 		return mapper.selectCard(userId);
 	}
 

@@ -37,7 +37,6 @@ public class BookingController {
 		else
 			return "redirect:/login.do"; 
 
-		log.info("===============book.do " + booking.getStart_date()); 
 		Long daysBetween = checkDaysBetween(booking.getStart_date(), booking.getEnd_date());// 날짜 수 계산
 		if(daysBetween <= 0) {
 			return "redirect:/book.do"; // 날짜 입력 오류
@@ -45,7 +44,6 @@ public class BookingController {
 		booking.setPrice(10000L);
         booking.setTotal_price(daysBetween * booking.getPrice()); // 총 가격
         
-        log.info("======================이이이이잉~~~~~~~~~book Get" + booking.getTotal_price());
         model.addAttribute("userId", userId);
         model.addAttribute("booking", booking);
         model.addAttribute("boardName", boardName);
@@ -58,8 +56,8 @@ public class BookingController {
 		String userId = (String) request.getSession(false).getAttribute("userId");
 		CardVO card = bookService.getUserCard(userId); // 카드정보 불러오기
 		
-		log.info("=====================토탈 프라이스" + booking.getTotal_price());
-		log.info(booking); 
+		log.info(userId);
+		log.info("++=============postMapping book.do " + card);
 		if(!checkCardRequest(cardRequest, card)) {
 			log.info("입력 값 오류");
 			return "redirect:/book.do"; // 입력 값 오류
@@ -86,13 +84,18 @@ public class BookingController {
 	
 	private Boolean checkCardRequest(CardRequest cardRequest, CardVO card) {
 		if(cardRequest.getConfirmPass() == null || !cardRequest.getConfirmPass().equals(card.getCardPass())) {
+			log.info(cardRequest);
+			log.info(card);
+			log.info("비밀번호 오류");
 			return false; // 비밀번호가 올바르지 않음
 		}
 		if(cardRequest.getBank() == null || !cardRequest.getBank().equals(card.getBank())) {
+			log.info("은행사 오류");
 			return false; // 은행사가 일치하지 않음
 		}
 		if(cardRequest.getCardNum() == 0 || !(cardRequest.getCardNum() == (card.getCardNum()))) {
-			return false;
+			log.info("카드 번호 오류");
+			return false; // 카드번호 일치하지 않음
 		}
 		
 		return true;
