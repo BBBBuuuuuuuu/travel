@@ -90,7 +90,7 @@ public class SurveyServiceImpl implements SurveyService {
                 survey.setActivity_type3(activities.get(2).getActivity_type());
             }
         }
-
+        System.out.println(survey.getStart_date().substring(5, 7));
         return survey;
     }
 
@@ -125,4 +125,16 @@ public class SurveyServiceImpl implements SurveyService {
 
         return surveys;
     }
+
+	@Override
+	public void getCommonBoard(SurveyVO survey) {
+		String monthForClimate = toMonthClimate(survey.getStart_date());
+		surveyMapper.selectCommonBoardNo(monthForClimate, survey);
+		
+	}
+	
+	private String toMonthClimate(String startDate) {
+		String month = startDate.substring(5, 7);
+		return "";
+	}
 }

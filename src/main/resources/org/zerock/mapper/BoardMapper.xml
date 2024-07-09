@@ -12,6 +12,7 @@
 		<result property="area" column="area"/>
 		<result property="address" column="address"/>
 		<result property="category" column="category"/>
+		<result property="climate" column="climate"/>
 	</resultMap>
 	<select id="selectBoardList" resultMap="boardResultMap">
 		select * from board where category = #{category} order by board_no desc

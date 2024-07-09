@@ -8,6 +8,10 @@
 <link rel="mask-icon" sizes="any"
 	href="https://static.tacdn.com/img2/brand_refresh/application_icons/mask-icon.svg"
 	color="#000000" />
+	<script src="/travel/resources/js/booking.js"></script>
+	<script>
+	var boardNo = "${board.boardNo}";
+	</script>
 <script type="application/ld+json">[{"@context":"http:\u002F\u002Fschema.org","@type":"Organization","name":"Tripadvisor","url":"https:\u002F\u002Fwww.tripadvisor.com\u002F","logo":"https:\u002F\u002Fstatic.tacdn.com\u002Fimg2\u002Fbrand_refresh\u002FTripadvisor_logoset_solid_green.svg","sameAs":["https:\u002F\u002Fwww.facebook.com\u002FTripadvisor","https:\u002F\u002Ftwitter.com\u002FTripadvisor","https:\u002F\u002Finstagram.com\u002Ftripadvisor\u002F","https:\u002F\u002Fwww.linkedin.com\u002Fcompany\u002Ftripadvisor"]},{"@context":"http:\u002F\u002Fschema.org","@type":"WebSite","name":"Tripadvisor","url":"https:\u002F\u002Fwww.tripadvisor.com\u002F","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\u002F\u002Fwww.tripadvisor.com\u002FSearch?q={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
 <meta property="fb:pages" content="5863091683" />
 <meta property="fb:pages" content="329182043776593" />
@@ -683,7 +687,7 @@
 															</div>
 															<div class="kPQaf q">Guests</div>
 															<div class="icDdG q dibDZ">
-																<span> <span class="adult-info">2 adults</span>,
+																<span> <span class="adult-info">2</span> adults,
 																	<span class="child-info">0 children</span>
 																</span>
 															</div>
@@ -747,7 +751,7 @@
 						</div>
 						<button class="rmyCe _G B- z _S c Wc wSSLS mowmC w jWkoZ XDcOZ"
 							data-testid="show_prices_button" data-removecommercetest="true"
-							type="button">
+							type="button" onclick="redirectToController()">
 							<span class="biGQs _P ttuOS">예약하기</span>
 						</button>
 

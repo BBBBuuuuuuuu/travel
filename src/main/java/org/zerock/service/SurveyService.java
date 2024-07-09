@@ -20,5 +20,7 @@ public interface SurveyService {
     List<ActivityTypeVO> getAllActivityTypesByUserId(String userId);
 
     List<SurveyVO> getAllSurveysWithActivityTypesByUserId(String userId);
+
+	void getCommonBoard(SurveyVO survey);
 }
 

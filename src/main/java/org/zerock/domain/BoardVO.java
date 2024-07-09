@@ -16,5 +16,6 @@ public class BoardVO {
 	private String address;
 	private String category;
 	private Double like;
+	private String climate;
 	private List<String> imageName; 
 }

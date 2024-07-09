@@ -24,4 +24,6 @@ public interface SurveyMapper {
     List<SurveyVO> getSurveyListByUserId(@Param("userId") String userId);
 
     List<ActivityTypeVO> getAllActivityTypesByUserId(@Param("userId") String userId);
+
+	void selectCommonBoardNo(@Param("month") String monthForClimate,@Param("survey") SurveyVO survey);
 }
