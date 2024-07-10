@@ -14,9 +14,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.zerock.domain.ActivityVO;
+import org.zerock.domain.StayVO;
 import org.zerock.domain.SurveyVO;
 import org.zerock.service.SurveyService;
 
+import lombok.extern.log4j.Log4j;
+
+@Log4j
 @Controller
 public class SurveyController {
 
@@ -24,7 +29,7 @@ public class SurveyController {
 
     @Autowired
     private SurveyService surveyService;
-
+    
     @RequestMapping(value="survey.do", method = RequestMethod.GET)
     public String showInsertSurveyForm(HttpSession session, Model model) {
         String userId = (String) session.getAttribute("userId");
@@ -79,11 +84,21 @@ public class SurveyController {
             return "survey/surveysearch";
         }
         
-//        @GetMapping
-//        public String searchBySurvey(SurveyVO survey) {
-//        	  surveyService.getCommonBoard(survey);
-//        	return"";
-//        }
+        @GetMapping("/listBySurvey.do")
+        public String searchBySurvey(SurveyVO survey, String category, Model model) {
+        	List<Integer> boardNumList = surveyService.getCommonBoard(survey);
+        	log.info("SurveyController Get searchBySurvey " + boardNumList);
+        	
+        	if(category.equals("activity")) {
+        		List<ActivityVO> activityList = surveyService.getActivityBoard(survey, boardNumList);
+        		model.addAttribute("board", activityList);
+        	} else {
+        		List<StayVO> stayList = surveyService.getStayBoardWithCategory(survey, boardNumList);
+        		model.addAttribute("board", stayList);
+        	}
+        	
+        	return "board/list";
+        }
     }
 
     
