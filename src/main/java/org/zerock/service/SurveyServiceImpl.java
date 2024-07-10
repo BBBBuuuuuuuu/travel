@@ -7,15 +7,20 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.zerock.domain.SurveyVO;
 import org.zerock.domain.ActivityTypeVO;
+import org.zerock.domain.ActivityVO;
+import org.zerock.domain.StayVO;
+import org.zerock.domain.SurveyVO;
 import org.zerock.mapper.SurveyMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import lombok.extern.log4j.Log4j;
+
+@Log4j
 @Service
 public class SurveyServiceImpl implements SurveyService {
 
@@ -127,14 +132,58 @@ public class SurveyServiceImpl implements SurveyService {
     }
 
 	@Override
-	public void getCommonBoard(SurveyVO survey) {
-		String monthForClimate = toMonthClimate(survey.getStart_date());
-		surveyMapper.selectCommonBoardNo(monthForClimate, survey);
-		
+	public List<Integer> getCommonBoard(SurveyVO survey) {
+		return surveyMapper.selectCommonBoardNo(toMonthClimate(survey.getStart_date()), survey);
 	}
 	
 	private String toMonthClimate(String startDate) {
 		String month = startDate.substring(5, 7);
-		return "";
+		if(month.equals("01")) 
+			return "jan";
+		else if(month.equals("02")) 
+			return "feb";
+		else if(month.equals("03")) 
+			return "mar";
+		else if(month.equals("04")) 
+			return "apr";
+		else if(month.equals("05")) 
+			return "may";
+		else if(month.equals("06")) 
+			return "jun";
+		else if(month.equals("07")) 
+			return "jul";
+		else if(month.equals("08")) 
+			return "aug";
+		else if(month.equals("09")) 
+			return "sep";
+		else if(month.equals("10")) 
+			return "oct";
+		else if(month.equals("11")) 
+			return "nov";
+		else  
+			return "dec";
 	}
+
+	@Override
+	public List<StayVO> getStayBoardWithCategory(SurveyVO survey, List<Integer> boardNumList) {
+		List<StayVO> stayList = null;
+		for(Integer board : boardNumList) {
+			stayList.add(surveyMapper.selectStayBoardWithCategory(survey, board));
+		}
+		log.info("SurveyServiceImpl StayBoard" + stayList);
+		return stayList;
+	}
+
+	@Override
+	public List<ActivityVO> getActivityBoard(SurveyVO survey, List<Integer> boardNumList) {
+		List<ActivityVO> activityList = null;
+		for(Integer board : boardNumList) {
+			activityList.add(surveyMapper.selectActivityBoardWithCategory(survey, board));
+		}
+		log.info("SurveyServiceImpl ActivityBoard" + activityList);
+		return activityList;
+	}
+
+	
+	
 }

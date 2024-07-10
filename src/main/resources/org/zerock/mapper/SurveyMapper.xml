@@ -88,5 +88,38 @@
     <select id="selectCommonBoardNo" resultType="Integer">
     	select board_no from board where climate = (select climate from month where #{month} = #{survey.climate})
     </select>
+    
+	<resultMap id="boardResultMap" type="org.zerock.domain.BoardVO">
+		<result property="boardNo" column="board_no"/>
+		<result property="monthNo" column="month_no"/>
+		<result property="name" column="name"/>
+		<result property="country" column="country"/>
+		<result property="area" column="area"/>
+		<result property="address" column="address"/>
+		<result property="category" column="category"/>
+		<result property="climate" column="climate"/>
+	</resultMap>
+	
+    <resultMap id="stayResultMap" type="org.zerock.domain.StayVO" extends="boardResultMap">
+		<result property="owner" column= "owner"/>
+		<result property="phone" column= "phone"/>
+		<result property="max" column="max"/>
+		<result property="stayType" column="stay_type"/>
+	</resultMap>
+	
+    <select id="selectStayBoardWithCategory" resultMap="stayResultMap">
+    	select * from board b JOIN stay s ON b.board_no = s.board_no 
+    	where b.board_no = #{boardNum} AND s.stay_type=#{survey.stay_type} AND s.max >= #{survey.peoplecount}
+    </select>
+    
+    <resultMap id="activityResultMap" type="org.zerock.domain.ActivityVO" extends="boardResultMap">
+		<result property="activityType" column="activity_type"/>
+	</resultMap>	
+	
+    <select id="selectActivityBoardWithCategory" resultMap="activityResultMap">
+    	select *from board b JOIN activity a ON b.board_no = a.board_no 
+    	where b.board_no = #{boardNum} AND (
+    	a.activity_type = #{activity_type} OR a.activity_type = #{activity_type1} OR a.activity_type = #{activity_type2})
+    </select>
 </mapper>
 

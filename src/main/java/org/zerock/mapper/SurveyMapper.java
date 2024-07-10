@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.zerock.domain.SurveyVO;
 import org.zerock.domain.ActivityTypeVO;
+import org.zerock.domain.ActivityVO;
+import org.zerock.domain.StayVO;
 
 @Mapper
 public interface SurveyMapper {
@@ -25,5 +27,9 @@ public interface SurveyMapper {
 
     List<ActivityTypeVO> getAllActivityTypesByUserId(@Param("userId") String userId);
 
-	void selectCommonBoardNo(@Param("month") String monthForClimate,@Param("survey") SurveyVO survey);
+	List<Integer> selectCommonBoardNo(@Param("month") String monthForClimate,@Param("survey") SurveyVO survey);
+
+	StayVO selectStayBoardWithCategory(@Param("survey") SurveyVO survey,@Param("boardNum") Integer board);
+
+	ActivityVO selectActivityBoardWithCategory(@Param("survey") SurveyVO survey, @Param("boardNum") Integer board);
 }

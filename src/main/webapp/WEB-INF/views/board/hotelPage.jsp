@@ -698,8 +698,7 @@ z-index: 0;
 															</div>
 															<div class="kPQaf q">Guests</div>
 															<div class="icDdG q dibDZ">
-																<span> <span class="adult-info">0 adults</span>,
-																	<span class="child-info">0 children</span>
+																<span> <span class="adult-info">0</span> adults
 																</span>
 															</div>
 														</button>
@@ -732,17 +731,7 @@ z-index: 0;
 																				<option>5</option>
 																			</select>
 																		</div>
-																		<div class="form-group">
-																			<label for="childCount">Children</label> <select
-																				class="form-control" id="childCount">
-																				<option>0</option>
-																				<option>1</option>
-																				<option>2</option>
-																				<option>3</option>
-																				<option>4</option>
-																				<option>5</option>
-																			</select>
-																		</div>
+																	
 																	</form>
 																</div>
 																<div class="modal-footer">
@@ -776,10 +765,9 @@ z-index: 0;
 						<script>
     document.getElementById('saveSelection').addEventListener('click', function() {
         var adultCount = document.getElementById('adultCount').value;
-        var childCount = document.getElementById('childCount').value;
 
-        document.querySelector('.adult-info').textContent = adultCount + ' adult' + (adultCount > 1 ? 's' : '');
-        document.querySelector('.child-info').textContent = childCount + ' child' + (childCount > 1 ? 'ren' : '');
+        document.querySelector('.adult-info').textContent = adultCount;
+
 
         $('#guestModal').modal('hide');
     });
