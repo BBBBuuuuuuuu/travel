@@ -587,7 +587,6 @@ body {
     </div>
     <!-- END CONTENT SECTION -->
   </div>
-  <%@ include file="/resources/includes/footer.jsp" %>
   <script type="text/javascript">
   let container = document.getElementById('container')
 

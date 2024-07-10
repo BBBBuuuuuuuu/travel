@@ -160,8 +160,9 @@
 <script src="https://static.tacdn.com/assets/p7jq7m.4Ujcuf7.js" async=""
 	crossorigin="" fetchpriority="low"></script>
 <style>
-.Za {
-	z-index: 0;
+.rmyCe.huqcv:not(:disabled) {
+    background-color: #28a745;
+    color: var(--onLightButtonText);
 }
 
 .rmyCe.XDcOZ:not(:disabled) {
@@ -278,7 +279,7 @@
 
 .modal-content {
 	background-color: #fefefe;
-	margin: 10% auto;
+	margin: 20% auto;
 	padding: 20px;
 	border: 1px solid #888;
 	width: 80%;
@@ -625,10 +626,6 @@
 																<div class="modal-header">
 																	<h5 class="modal-title" id="guestModalLabel">Select
 																		Guests</h5>
-																	<button type="button" class="close"
-																		data-dismiss="modal" aria-label="Close">
-																		<span aria-hidden="true">&times;</span>
-																	</button>
 																</div>
 																<div class="modal-body">
 																	<form>
@@ -674,15 +671,30 @@
 						<script
 							src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 						<script>
-    document.getElementById('saveSelection').addEventListener('click', function() {
-        var adultCount = document.getElementById('adultCount').value;
+    let selectedScore = null;
 
-        document.querySelector('.adult-info').textContent = adultCount;
+    document.querySelectorAll('input[name="reviewScore"]').forEach(function(radio) {
+        radio.addEventListener('click', function() {
+            const currentScore = this.value;
 
+            if (selectedScore !== currentScore) {
+                selectedScore = currentScore;
+            } else {
+                this.checked = false;
+                selectedScore = null;
+            }
+        });
+    });
+
+    document.getElementById('saveReview').addEventListener('click', function() {
+        if (selectedScore !== null) {
+            document.querySelector('.review-score-info').textContent = selectedScore;
+        }
 
         $('#guestModal').modal('hide');
     });
 </script>
+
 
 						<div class="wWwSb">
 							<div class="">
@@ -826,178 +838,142 @@
 									<!-- 모달 구현 -->
 									<div id="reviewModal" class="modal">
 										<div class="modal-content">
+											<span class="close">&times;</span>
 											<h2>장소 평가하기</h2>
 											<p>평점을 선택하세요:</p>
 											<div class="rating-box">
-												<!-- 평점 선택 박스 -->
+												<!-- 평점 선택 라디오 버튼 -->
+												<input type="radio" name="rating" value="5" id="rating5">
+												<label for="rating5">5점</label><br> <input type="radio"
+													name="rating" value="4" id="rating4"> <label
+													for="rating4">4점</label><br> <input type="radio"
+													name="rating" value="3" id="rating3"> <label
+													for="rating3">3점</label><br> <input type="radio"
+													name="rating" value="2" id="rating2"> <label
+													for="rating2">2점</label><br> <input type="radio"
+													name="rating" value="1" id="rating1"> <label
+													for="rating1">1점</label><br>
 											</div>
 											<p>리뷰를 작성하세요:</p>
 											<textarea id="reviewText" rows="4" cols="50"></textarea>
 											<br>
-											<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
-												id="submitReview" type="button">
-												<span class="biGQs _P ttuOS"><div class="jktzL">
-														<h1 class="CpzHF q">제출하기</h1></span>
-											</button>
+											<button id="submitReview" class="btn btn-success">제출하기</button>
 										</div>
 									</div>
+								<div class="ppuFV _T Z BB lSnVq amYYZ">
+									<div id="submittedReviews">
+										<h3>제출된 리뷰</h3>
+										<ul id="reviewList"></ul>
+									</div>
+								</div>
+								</div>
 
-									<script>
-document.addEventListener("DOMContentLoaded", function() {
-	  var modal = document.getElementById('reviewModal');
-	  var openModalButton = document.getElementById('openReviewModal');
-	  var closeModalButton = document.querySelector('.close');
-	  var submitButton = document.getElementById('submitReview');
-	  var submittedReviews = document.getElementById('submittedReviews');
-	  var ratingBox = document.querySelector('.rating-box');
-	  var reviewTextArea = document.getElementById('reviewText'); // 리뷰 텍스트 입력란
+								<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById('reviewModal');
+    var openModalButton = document.getElementById('openReviewModal');
+    var closeModalButton = document.querySelector('.close');
+    var submitButton = document.getElementById('submitReview');
+    var submittedReviews = document.getElementById('reviewList');
+    var ratingBox = document.querySelector('.rating-box');
+    var reviewTextArea = document.getElementById('reviewText');
 
-	  // 모달 열기 버튼 클릭 이벤트 핸들러
-	  openModalButton.addEventListener('click', function() {
-	    // 평점 선택 박스 초기화
-	    ratingBox.innerHTML = "";
+    openModalButton.addEventListener('click', function() {
+      modal.style.display = "block";
+    });
 
-	    // 리뷰 텍스트 입력란 초기화
-	    reviewTextArea.value = "";
+    closeModalButton.addEventListener('click', function() {
+      modal.style.display = "none";
+    });
 
-	    // 1점부터 5점까지 평점 선택 박스 추가
-	    for (var i = 1; i <= 5; i++) {
-	      var checkbox = document.createElement('input');
-	      checkbox.type = 'checkbox';
-	      checkbox.value = i;
-	      checkbox.id = 'rating' + i;
-	      var label = document.createElement('label');
-	      label.htmlFor = 'rating' + i;
-	      label.appendChild(document.createTextNode(i + '점'));
-	      
-	      checkbox.addEventListener('click', function() {
-	        var selectedRating = this.value;
-	        addRatingBox(selectedRating);
-	      });
+    window.addEventListener('click', function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
 
-	      ratingBox.appendChild(checkbox);
-	      ratingBox.appendChild(label);
-	    }
+    submitButton.addEventListener('click', function() {
+      var selectedRating = document.querySelector('input[name="rating"]:checked');
+      var reviewText = reviewTextArea.value.trim();
 
-	    // 모달 열기
-	    modal.style.display = "block";
-	  });
+      if (selectedRating && reviewText !== '') {
+        var ratingValue = selectedRating.value;
+        var ratingText = selectedRating.nextSibling.textContent.trim();
+        var reviewItem = document.createElement('li');
+        reviewItem.classList.add('review-item');
+        reviewItem.innerHTML = '<p>평점: ' + ratingText + '</p><p>리뷰 내용: ' + reviewText + '</p>';
+        submittedReviews.appendChild(reviewItem);
+        modal.style.display = "none";
 
-	  // 모달 닫기 버튼 클릭 이벤트 핸들러
-	  closeModalButton.addEventListener('click', function() {
-	    modal.style.display = "none";
-	  });
-
-	  // 모달 외부 클릭 시 닫기
-	  window.addEventListener('click', function(event) {
-	    if (event.target == modal) {
-	      modal.style.display = "none";
-	    }
-	  });
-
-	  // 리뷰 제출 버튼 클릭 이벤트 핸들러
-	  submitButton.addEventListener('click', function() {
-	    var selectedRatings = document.querySelectorAll('.selected-rating');
-	    var selectedRatingsValues = Array.from(selectedRatings).map(function(rating) {
-	      return rating.innerText.split('점')[0];
-	    }).join(', ');
-
-	    var reviewText = reviewTextArea.value; // 리뷰 텍스트 내용 가져오기
-
-	    // 새로운 리뷰 아이템 생성
-	    var reviewItem = document.createElement('li'); // 리스트 아이템으로 변경
-	    reviewItem.classList.add('review-item');
-	    var ratingElement = document.createElement('p');
-	    ratingElement.classList.add('rating');
-	    ratingElement.innerText = '평점: ' + selectedRatingsValues;
-	    var reviewTextElement = document.createElement('p');
-	    reviewTextElement.innerText = '리뷰 내용: ' + reviewText;
-	    reviewItem.appendChild(ratingElement);
-	    reviewItem.appendChild(reviewTextElement);
-	    
-	    // 새로운 리뷰 아이템을 리스트에 추가
-	    submittedReviews.appendChild(reviewItem);
-
-	    // 모달 닫기
-	    modal.style.display = "none";
-	  });
-
-	  // 선택한 평점 추가하기
-	  function addRatingBox(rating) {
-	    // 기존의 선택 평점이 있으면 제거
-	    var selectedRating = document.querySelector('.selected-rating');
-	    if (selectedRating) {
-	      selectedRating.remove();
-	    }
-
-	    // 새로운 선택 평점 추가
-	    var newRating = document.createElement('div');
-	    newRating.classList.add('selected-rating');
-	    newRating.innerText = rating + '점';
-	    ratingBox.appendChild(newRating);
-	  }
-	});
+        // 제출 완료 알람 추가
+        alert('제출되었습니다!');
+      } else {
+        alert('평점과 리뷰를 모두 선택해주세요.');
+      }
+    });
+  });
 </script>
 
-
-									<div class="wWwSb">
+								<div class="wWwSb">
+									<div>
 										<div>
-											<div>
-												<div class="AMQRv Gi Z BB YjQAT">
-													<div>
-														<h2 class="biGQs _P fiohW uuBRH">주변 호텔 추천</h2>
+											<div class="AMQRv Gi Z BB YjQAT">
+												<div>
+													<h2 class="biGQs _P fiohW uuBRH">주변 호텔 추천</h2>
+												</div>
+												<div class="iBGtx f J _h _e z NK Ni qQnpg">
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
+															</div>
+														</div>
 													</div>
-													<div class="iBGtx f J _h _e z NK Ni qQnpg">
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
 															</div>
 														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
+													</div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
 															</div>
 														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
-															</div>
-														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
+													</div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
 															</div>
 														</div>
 													</div>
@@ -1005,23 +981,24 @@ document.addEventListener("DOMContentLoaded", function() {
 											</div>
 										</div>
 									</div>
-									<div class="wWwSb">
-										<div class="ruCQl z">
-											<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
+								</div>
+								<div class="wWwSb">
+									<div class="ruCQl z">
+										<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
+											<div>
 												<div>
-													<div>
-														<div class="ppuFV _T Z BB lSnVq amYYZ"
-															data-tab="TABS_LOCATION"
-															data-section-signature="location" id="LOCATION">
+													<div class="ppuFV _T Z BB lSnVq amYYZ"
+														data-tab="TABS_LOCATION" data-section-signature="location"
+														id="LOCATION">
+														<div>
 															<div>
-																<div>
-																	<h2 class="biGQs _P fiohW ncFvv uuBRH">주변 관광명소</h2>
-																	<div class="YPYBR f"></div>
-																</div>
+																<h2 class="biGQs _P fiohW ncFvv uuBRH">주변 관광명소</h2>
+																<div class="YPYBR f"></div>
+															</div>
 
-																<div id="googleMap" style="width: 100%; height: 700px;"></div>
+															<div id="googleMap" style="width: 100%; height: 700px;"></div>
 
-																<script>
+															<script>
         function myMap() {
             var mapOptions = {
                 center: new google.maps.LatLng(48.8566, 2.3522), // 파리 좌표
@@ -1086,9 +1063,8 @@ document.addEventListener("DOMContentLoaded", function() {
             initMap();
         }
     </script>
-																<script
-																	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdE1NKlgUopd8K2NoyWuASU8Y4ufekHY&callback=myMap"></script>
-															</div>
+															<script
+																src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdE1NKlgUopd8K2NoyWuASU8Y4ufekHY&callback=myMap"></script>
 														</div>
 													</div>
 												</div>
@@ -1096,64 +1072,64 @@ document.addEventListener("DOMContentLoaded", function() {
 										</div>
 									</div>
 								</div>
-								<div class="wWwSb">
+							</div>
+							<div class="wWwSb">
+								<div>
 									<div>
-										<div>
-											<div class="AMQRv Gi Z BB YjQAT">
-												<div>
-													<h2 class="biGQs _P fiohW uuBRH">주변 관광명소 추천</h2>
+										<div class="AMQRv Gi Z BB YjQAT">
+											<div>
+												<h2 class="biGQs _P fiohW uuBRH">주변 관광명소 추천</h2>
+											</div>
+											<div class="iBGtx f J _h _e z NK Ni qQnpg">
+												<div class="ZSsAY xjaPD">
+													<div class="TzTCE w">
+														<div class="Gwegd l t w"></div>
+														<div class="ILCbI hdCDN w"></div>
+														<div class="DZdiH">
+															<div class="ILCbI lxwEm w"></div>
+															<div class="ILCbI lnuPx w"></div>
+															<div class="ILCbI YkRgi w"></div>
+															<div class="ILCbI TZksi w"></div>
+															<div class="ILCbI LtmGt"></div>
+														</div>
+													</div>
 												</div>
-												<div class="iBGtx f J _h _e z NK Ni qQnpg">
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
+												<div class="ZSsAY xjaPD">
+													<div class="TzTCE w">
+														<div class="Gwegd l t w"></div>
+														<div class="ILCbI hdCDN w"></div>
+														<div class="DZdiH">
+															<div class="ILCbI lxwEm w"></div>
+															<div class="ILCbI lnuPx w"></div>
+															<div class="ILCbI YkRgi w"></div>
+															<div class="ILCbI TZksi w"></div>
+															<div class="ILCbI LtmGt"></div>
 														</div>
 													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
+												</div>
+												<div class="ZSsAY xjaPD">
+													<div class="TzTCE w">
+														<div class="Gwegd l t w"></div>
+														<div class="ILCbI hdCDN w"></div>
+														<div class="DZdiH">
+															<div class="ILCbI lxwEm w"></div>
+															<div class="ILCbI lnuPx w"></div>
+															<div class="ILCbI YkRgi w"></div>
+															<div class="ILCbI TZksi w"></div>
+															<div class="ILCbI LtmGt"></div>
 														</div>
 													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
-														</div>
-													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
+												</div>
+												<div class="ZSsAY xjaPD">
+													<div class="TzTCE w">
+														<div class="Gwegd l t w"></div>
+														<div class="ILCbI hdCDN w"></div>
+														<div class="DZdiH">
+															<div class="ILCbI lxwEm w"></div>
+															<div class="ILCbI lnuPx w"></div>
+															<div class="ILCbI YkRgi w"></div>
+															<div class="ILCbI TZksi w"></div>
+															<div class="ILCbI LtmGt"></div>
 														</div>
 													</div>
 												</div>
@@ -1161,15 +1137,15 @@ document.addEventListener("DOMContentLoaded", function() {
 										</div>
 									</div>
 								</div>
-								<div class="wWwSb">
-									<div class="ruCQl z">
-										<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
-											<div class="uaOxz">
-												<div>
-													<div class="izHMK amYYZ qTXWP" data-tab="TABS_REVIEWS"
-														data-section-signature="community" id="REVIEWS">
-														</script>
-														<%@ include file="/resources/includes/footer.jsp"%>
+							</div>
+							<div class="wWwSb">
+								<div class="ruCQl z">
+									<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
+										<div class="uaOxz">
+											<div>
+												<div class="izHMK amYYZ qTXWP" data-tab="TABS_REVIEWS"
+													data-section-signature="community" id="REVIEWS">
+													</script>
 </body>
 <script type="text/javascript">
 //입력폼에 캘린더를 클릭하여 날짜값을 입력해주는 jQuery 플러그인
