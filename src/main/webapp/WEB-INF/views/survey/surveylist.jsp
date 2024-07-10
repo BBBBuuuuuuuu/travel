@@ -335,7 +335,10 @@ iframe {
 					<div id="surveyDetailContent"></div>
 				</div>
 			</div>
-		</main> <script>
+		</main>
+		
+<%@ include file="/resources/includes/footer.jsp" %>
+		 <script>
 			$(document)
 					.ready(
 							function() {

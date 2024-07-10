@@ -142,6 +142,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+.Za {
+     z-index:0;
+}
+</style>
 </head>
 <body>
 <header class="aVAoX t z LDrge Za">

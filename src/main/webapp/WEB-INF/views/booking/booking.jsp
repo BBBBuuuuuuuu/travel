@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	
+<%@ include file="/resources/includes/header.jsp" %> 
+
 	<form action="book.do" method="post">
 	<input type="hidden" name="board_no" value="${booking.board_no }" readonly="readonly">
 		숙소 이름 :<input type="text" name="boardName" value="${boardName}" readonly="readonly">
