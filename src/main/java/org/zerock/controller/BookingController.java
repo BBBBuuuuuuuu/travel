@@ -41,7 +41,6 @@ public class BookingController {
 		if(daysBetween <= 0) {
 			return "redirect:/book.do"; // 날짜 입력 오류
 		}
-		booking.setPrice(10000L);
         booking.setTotal_price(daysBetween * booking.getPrice()); // 총 가격
         
         model.addAttribute("userId", userId);

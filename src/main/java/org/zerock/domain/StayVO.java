@@ -9,4 +9,5 @@ public class StayVO extends BoardVO{
 	private String phone;
 	private int max;
 	private String stayType;
+	private Long price;
 }
