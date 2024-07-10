@@ -45,9 +45,14 @@ public class ReviewServiceImpl implements ReviewService {
 	@Override
 	public List<Integer> getCountsOfLikes(BoardVO board) {
 		List<Integer> counts = new ArrayList<Integer>();
+		int sum = 0;
 		for (int i = 1; i <= 5; i++) {
-			counts.add(mapper.selectCountOfLikes(board, i));
+			int count = mapper.selectCountOfLikes(board, i);
+			counts.add(count);
+			sum += count; 
 		}
+		counts.add(sum);
+		
 		return counts;
 	}
 

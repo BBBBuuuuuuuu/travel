@@ -133,11 +133,14 @@ public class SurveyServiceImpl implements SurveyService {
 
 	@Override
 	public List<Integer> getCommonBoard(SurveyVO survey) {
+		log.info(survey);
 		return surveyMapper.selectCommonBoardNo(toMonthClimate(survey.getStart_date()), survey);
 	}
 	
 	private String toMonthClimate(String startDate) {
+		log.info("surveyImpl ================== " + startDate);
 		String month = startDate.substring(5, 7);
+		log.info(month);
 		if(month.equals("01")) 
 			return "jan";
 		else if(month.equals("02")) 

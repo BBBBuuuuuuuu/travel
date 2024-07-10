@@ -393,7 +393,7 @@
 																	<path
 																	d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
 																	transform="translate(104 0)"></path></svg>
-															<span class="biGQs _P pZUbB KxBGd">2,608 reviews</span>
+															<span class="biGQs _P pZUbB KxBGd">${counts[5]} reviews</span>
 														</div></a>
 													<div class="yCSYR f">
 														<a href="#REVIEWS"
@@ -406,18 +406,14 @@
 																		<path fill-rule="evenodd" clip-rule="evenodd"
 																		d="M20.772 8.538a9.64 9.64 0 01-5.703-5.703c-.197-.538-.976-.538-1.174 0a9.588 9.588 0 01-5.697 5.703c-.538.197-.538.976 0 1.173a9.64 9.64 0 015.703 5.704c.197.537.976.537 1.174 0a9.64 9.64 0 015.703-5.704c.537-.197.537-.976 0-1.173h-.006zm-8.683 7.83a6.885 6.885 0 01-4.074-4.073c-.141-.384-.697-.384-.838 0a6.848 6.848 0 01-4.07 4.073c-.384.142-.384.698 0 .839a6.885 6.885 0 014.074 4.073c.14.384.697.384.838 0a6.885 6.885 0 014.074-4.073c.384-.141.384-.698 0-.839h-.004z"></path></svg>
 																<div class="biGQs _P fiohW kSNRl osNWb">
-																	<strong>NEW</strong> AI Reviews Summary
+																	<strong>주변 관광지 보러가기</strong>
 																</div>
 															</div></a>
 													</div>
 												</div>
 												<div class="SbOdb"></div>
 											</div>
-											<a
-												href="/Hotels-g298566-Osaka_Osaka_Prefecture_Kinki-Hotels.html"
-												class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS"><div
-													class="biGQs _P pZUbB KxBGd">#16 of 444 hotels in
-													Osaka</div></a>
+											
 										</div>
 										<div class="FhOgt H3 f u fRLPH">
 											<span class="H3"><svg viewBox="0 0 24 24" width="18px"

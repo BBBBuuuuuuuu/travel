@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <link rel="icon" id="favicon"
@@ -11,7 +12,7 @@
 <meta property="fb:pages" content="5863091683" />
 <meta property="fb:pages" content="329182043776593" />
 <script>window.performance&&performance.mark&&performance.getEntriesByType&&0===performance.getEntriesByType("visibility-state").length&&(performance.mark("visible"===document.visibilityState?"visible":"hidden"),document.addEventListener&&document.addEventListener("visibilitychange",function(){performance.mark("visible"===document.visibilityState?"visible":"hidden")},!1));</script>
-
+<script src="/travel/resources/js/login.js"></script>
 <head>
 <meta charset="EUC-KR">
 <title>로그인 페이지</title>
@@ -484,6 +485,12 @@ body {
 </style>
 </head>
 <body>
+<c:if test="${registSuccess}" >
+	<script>
+	console.log("회원가입 성공");
+		alert("회원가입 되었습니다.");
+	</script>
+</c:if>
 <%@ include file="/resources/includes/header.jsp" %> 
 <div id="container" class="container">
     <!-- FORM SECTION -->
@@ -494,25 +501,25 @@ body {
           <div class="form sign-up">
             <div class="input-group">
               <i class='bx bxs-userID'></i>
-              <input type="text" placeholder="아이디">
+              <input type="text" name="id" placeholder="아이디">
             </div>
             <div class="input-group">
               <i class='bx bxs-userPW'></i>
-              <input type="password" placeholder="비밀번호">
+              <input type="password" name="password" placeholder="비밀번호">
             </div>
             <div class="input-group">
               <i class='bx bx-mail-send'></i>
-              <input type="email" placeholder="이메일">
+              <input type="email" name="email" placeholder="이메일">
             </div>
             <div class="input-group">
               <i class='bx bxs-userName'></i>
-              <input type="text" placeholder="이름">
+              <input type="text" name="name" placeholder="이름">
             </div>
             <div class="input-group">
               <i class='bx bxs-PhoneNUM'></i>
-              <input type="text" placeholder="번호">
+              <input type="text" name="phone" placeholder="번호">
             </div>
-            <button type="submit">
+            <button type="submit" onclick=regist()>
               Sign up
             </button>
             <p>
