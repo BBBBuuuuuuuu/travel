@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <link rel="icon" id="favicon"
@@ -14,7 +14,7 @@
 
 <head>
 <meta charset="EUC-KR">
-<title>�α��� ������</title>
+<title>로그인 페이지</title>
 <link rel="canonical" href="https://www.tripadvisor.com/Hotels" />
 <link rel="alternate" hrefLang="en"
 	href="https://www.tripadvisor.com/Hotels" />
@@ -494,30 +494,30 @@ body {
           <div class="form sign-up">
             <div class="input-group">
               <i class='bx bxs-userID'></i>
-              <input type="text" placeholder="���̵�">
+              <input type="text" placeholder="아이디">
             </div>
             <div class="input-group">
               <i class='bx bxs-userPW'></i>
-              <input type="password" placeholder="��й�ȣ">
+              <input type="password" placeholder="비밀번호">
             </div>
             <div class="input-group">
               <i class='bx bx-mail-send'></i>
-              <input type="email" placeholder="�̸���">
+              <input type="email" placeholder="이메일">
             </div>
             <div class="input-group">
               <i class='bx bxs-userName'></i>
-              <input type="text" placeholder="�̸�">
+              <input type="text" placeholder="이름">
             </div>
             <div class="input-group">
               <i class='bx bxs-PhoneNUM'></i>
-              <input type="text" placeholder="��ȣ">
+              <input type="text" placeholder="번호">
             </div>
             <button type="submit">
               Sign up
             </button>
             <p>
               <b onclick="toggle()" class="pointer">
-                �α��� �Ϸ�����!
+                로그인 하러가기!
               </b>
             </p>
           </div>
@@ -530,23 +530,23 @@ body {
           <form class="form sign-in" action="login.do" method="post">
             <div class="input-group">
               <i class='bx bxs-user'></i>
-              <input type="text" name="id" placeholder="���̵�">
+              <input type="text" name="id" placeholder="아이디">
             </div>
             <div class="input-group">
               <i class='bx bxs-lock-alt'></i>
-              <input type="password" name="password" placeholder="��й�ȣ">
+              <input type="password" name="password" placeholder="비밀번호">
             </div>
             <button type="submit">
-              Ȯ��
+              확인
             </button>
             <p>
               <b>
-                ��й�ȣ ã��
+                비밀번호 찾기
               </b>
             </p>
             <p>
               <b onclick="toggle()" class="pointer">
-                ȸ������ �Ϸ�����!
+                회원가입 하러가기!
               </b>
             </p>
           </form>
