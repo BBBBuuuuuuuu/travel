@@ -8,8 +8,8 @@
 <link rel="mask-icon" sizes="any"
 	href="https://static.tacdn.com/img2/brand_refresh/application_icons/mask-icon.svg"
 	color="#000000" />
-	<script src="/travel/resources/js/booking.js"></script>
-	<script>
+<script src="/travel/resources/js/booking.js"></script>
+<script>
 	var boardNo = "${board.boardNo}";
 	</script>
 <script type="application/ld+json">[{"@context":"http:\u002F\u002Fschema.org","@type":"Organization","name":"Tripadvisor","url":"https:\u002F\u002Fwww.tripadvisor.com\u002F","logo":"https:\u002F\u002Fstatic.tacdn.com\u002Fimg2\u002Fbrand_refresh\u002FTripadvisor_logoset_solid_green.svg","sameAs":["https:\u002F\u002Fwww.facebook.com\u002FTripadvisor","https:\u002F\u002Ftwitter.com\u002FTripadvisor","https:\u002F\u002Finstagram.com\u002Ftripadvisor\u002F","https:\u002F\u002Fwww.linkedin.com\u002Fcompany\u002Ftripadvisor"]},{"@context":"http:\u002F\u002Fschema.org","@type":"WebSite","name":"Tripadvisor","url":"https:\u002F\u002Fwww.tripadvisor.com\u002F","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\u002F\u002Fwww.tripadvisor.com\u002FSearch?q={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
@@ -161,7 +161,7 @@
 	crossorigin="" fetchpriority="low"></script>
 <style>
 .Za {
-z-index: 0;
+	z-index: 0;
 }
 
 .rmyCe.XDcOZ:not(:disabled) {
@@ -190,32 +190,34 @@ z-index: 0;
 .visible {
 	display: block; /* visible 클래스가 있을 때만 보이도록 설정 */
 }
- .modal {
-      display: none; /* 처음에 모달 숨기기 */
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
 
-    .modal-content {
-      background-color: #fefefe;
-      margin: 10% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
-    .rating-stars {
-      margin-bottom: 10px;
-    }
+.modal {
+	display: none; /* 처음에 모달 숨기기 */
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
 
-    .rating-stars input {
-      margin-right: 5px;
-    }
+.modal-content {
+	background-color: #fefefe;
+	margin: 10% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.rating-stars {
+	margin-bottom: 10px;
+}
+
+.rating-stars input {
+	margin-right: 5px;
+}
 </style>
 <!-- Flatpickr CSS -->
 <link rel="stylesheet"
@@ -227,100 +229,6 @@ z-index: 0;
 	rel="stylesheet">
 </head>
 <body>
-	<div id="lithium-root">
-		<!--$-->
-		<!--$-->
-		<!--/$-->
-		<div class="CvDIt _Q f e Gi Ra _s P6">
-			<button class="UikNM _G B- _S _W _T c G_ wSSLS wnNQG" type="button"
-				tabindex="1">
-				<span class="biGQs _P XWJSj Wb">Skip to main content</span>
-			</button>
-		</div>
-		<div class="EZzYw o"></div>
-		<span><div></div> <header class="aVAoX t z LDrge Za">
-				<div class="IDaDx mvTrV cyIij fluiI SMjpI">
-					<nav class="MGToN u">
-						<div class="oqeTs u JpEOb">
-							<a class="pBcSw F0 wSSLS" href="/"> <picture> <img
-									class="XpHHt" src="/travel/resources/images/logo.png" alt="Tripadvisor" /></picture>
-							</a>
-						</div>
-						<div class="OzBsv">
-							<div class="HREWK t l s _U S ijEOu"></div>
-							<div class="gqnca"></div>
-						</div>
-						<div class="inHiW JpEOb">
-							<div class="eByLG QA c">
-								<div class="AuQZR f">
-									<div class="f u" data-automation="topNav_discover">
-										<div class="JLKop w">
-											<button class="rmyCe _G B- z _S c Wc wSSLS jWkoZ InwKl"
-												type="button">
-												<span class="biGQs _P ttuOS">Discover</span>
-											</button>
-										</div>
-									</div>
-									<div class="f u" data-automation="topNav_trips">
-										<div class="JLKop w">
-											<button class="rmyCe _G B- z _S c Wc wSSLS jWkoZ InwKl"
-												type="button">
-												<span class="biGQs _P ttuOS">Trips</span>
-											</button>
-										</div>
-									</div>
-									<div class="f u" data-automation="topNav_review">
-										<div class="JLKop w">
-											<button class="rmyCe _G B- z _S c Wc wSSLS jWkoZ InwKl"
-												type="button">
-												<span class="biGQs _P ttuOS">Review</span>
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="lGhNq QA c JpEOb"
-							data-automation="desktop-cart-and-profile">
-							<a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj"
-								href="/RegistrationController?flow=sign_up_and_save&amp;returnTo=%2FHotels&amp;fullscreen=true&amp;flowOrigin=login&amp;hideNavigation=true&amp;isLithium=true"><span
-								class="biGQs _P ttuOS">
-									<div class="eoYut">Sign in</div>
-							</span></a>
-						</div>
-					</nav>
-				</div>
-				<span>
-					<div class="o">
-						<div class="IDaDx mvTrV cyIij fluiI SMjpI">
-							<div class="uNcsI _T o" data-test-target="global-nav">
-								<div class="fSuCF w q CbORX czCLw">
-									<div class="f M" role="tablist" data-automation="tab-list">
-										<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS BmgDU"
-											role="tab" type="button" aria-selected="true"
-											data-automation="navHeader_Hotels">
-											<span class="biGQs _P fOtGX"><a class="JBbKZ Q1"
-												href="/Hotels">호텔</a></span>
-										</button>
-										<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS BmgDU"
-											role="tab" type="button" aria-selected="true"
-											data-automation="navHeader_Things to Do">
-											<span class="biGQs _P fOtGX"><a class="JBbKZ Q1"
-												href="/Hotels">즐길거리</a></span>
-										</button>
-										<button class="PFswe d Gv B- _S Mi Nj MH NL wSSLS" role="tab"
-											type="button" aria-selected="false" tabindex="-1"
-											data-automation="navHeader_ThingsToDo">
-											</svg>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="hNYnL _T NK"></div>
-					</div>
-	</div>
-	</span>
 	<style>
 .photos-section {
 	max-width: 1000px;
@@ -355,69 +263,72 @@ z-index: 0;
 .visible {
 	display: block;
 }
- .modal {
-      display: none; /* 처음에 모달 숨기기 */
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
 
-    .modal-content {
-      background-color: #fefefe;
-      margin: 10% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
+.modal {
+	display: none; /* 처음에 모달 숨기기 */
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 10% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
 
 .modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
-    z-index: 1
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	z-index: 1
 }
-    .rating-stars {
-      margin-bottom: 10px;
-    }
 
-    .rating-stars input {
-      margin-right: 5px;
-    }
-	 /* 리뷰 목록 스타일 */
-    #submittedReviews {
-      margin-top: 20px;
-    }
+.rating-stars {
+	margin-bottom: 10px;
+}
 
-    .review-item {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
+.rating-stars input {
+	margin-right: 5px;
+}
+/* 리뷰 목록 스타일 */
+#submittedReviews {
+	margin-top: 20px;
+}
 
-    .review-item p {
-      margin: 5px 0;
-    }
+.review-item {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 10px;
+}
 
-    .review-item .rating {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-   .rmyCe.huqcv:not(:disabled) {
-    background-color: var(--searchButtonFill);
-    color: var(--onLightButtonText);
-    width: 100%;
+.review-item p {
+	margin: 5px 0;
+}
+
+.review-item .rating {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.rmyCe.huqcv:not(:disabled) {
+	background-color: var(- -searchButtonFill);
+	color: var(- -onLightButtonText);
+	width: 100%;
 	height: 45px;
+}
 </style>
-	</header>
-	</span>
+	<%@ include file="/resources/includes/header.jsp"%>
 	<main>
 		<!--$-->
 		<span><div class="IDaDx mvTrV cyIij fluiI SMjpI">
@@ -731,7 +642,7 @@ z-index: 0;
 																				<option>5</option>
 																			</select>
 																		</div>
-																	
+
 																	</form>
 																</div>
 																<div class="modal-footer">
@@ -782,142 +693,156 @@ z-index: 0;
 							<div>
 								<div>
 									<!-- 리뷰 탭 내부의 HTML 구조 -->
-<div class="ppuFV _T Z BB lSnVq amYYZ" data-tab="TABS_ABOUT" data-section-signature="about" id="ABOUT_TAB">
-  <div class="GONGi f fhUph Z BB">
-    <h2 class="aFUwN Cj F1 b">
-      <span class="biGQs _P fiohW uuBRH">리뷰</span>
-    </h2>
-  </div>
-  <div class="ruCQl z">
-    <div class="uqMDf z BGJxv YGfmd YQkjl">
-      <div class="dGsKv Xe f P">
-        <span class="kJyXc P">4.5</span>
-        <button class="UikNM _G B- _S _W _T c G_ wSSLS TXrCr raEkE" type="button">
-          <span class="biGQs _P ttuOS">
-            <div class="PtOPK">Excellent</div>
-            <div class="jVDab o W f u w GOdjs">
-              <svg class="UctUV d H0 hzzSG" viewBox="0 0 128 24" width="88" height="16" aria-labelledby=":lithium-R352m8l4lt5vlq:">
+									<div class="ppuFV _T Z BB lSnVq amYYZ" data-tab="TABS_ABOUT"
+										data-section-signature="about" id="ABOUT_TAB">
+										<div class="GONGi f fhUph Z BB">
+											<h2 class="aFUwN Cj F1 b">
+												<span class="biGQs _P fiohW uuBRH">리뷰</span>
+											</h2>
+										</div>
+										<div class="ruCQl z">
+											<div class="uqMDf z BGJxv YGfmd YQkjl">
+												<div class="dGsKv Xe f P">
+													<span class="kJyXc P">4.5</span>
+													<button class="UikNM _G B- _S _W _T c G_ wSSLS TXrCr raEkE"
+														type="button">
+														<span class="biGQs _P ttuOS">
+															<div class="PtOPK">Excellent</div>
+															<div class="jVDab o W f u w GOdjs">
+																<svg class="UctUV d H0 hzzSG" viewBox="0 0 128 24"
+																	width="88" height="16"
+																	aria-labelledby=":lithium-R352m8l4lt5vlq:">
                 <title id=":lithium-R352m8l4lt5vlq:">4.5 of 5 bubbles</title>
-                <path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform=""></path>
-                <path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(26 0)"></path>
-                <path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(52 0)"></path>
-                <path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(78 0)"></path>
-                <path d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z" transform="translate(104 0)"></path>
+                <path
+																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
+																		transform=""></path>
+                <path
+																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
+																		transform="translate(26 0)"></path>
+                <path
+																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
+																		transform="translate(52 0)"></path>
+                <path
+																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
+																		transform="translate(78 0)"></path>
+                <path
+																		d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
+																		transform="translate(104 0)"></path>
               </svg>
-              <span class="biGQs _P pZUbB KxBGd">2,608 reviews</span>
-            </div>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-												<div class="ZPHZV">
-  <div class="tRIJU w u">
-    <div class="RZjkd">
-      <div class="o">
-        <div class="biGQs _P fiohW hmDzD">
-          <div class="yFXuQ o W q">1점</div>
-        </div>
-      </div>
-      <div class="gOGCN">
-        <div class="OYoZn" style="width: 87.21121999999998%"></div>
-      </div>
-      <div class="q">
-        <div class="biGQs _P fiohW biKBZ osNWb">4.4</div>
-      </div>
-    </div>
-    <div class="RZjkd">
-      <div class="o">
-        <div class="biGQs _P fiohW hmDzD">
-          <div class="yFXuQ o W q">2점</div>
-        </div>
-      </div>
-      <div class="gOGCN">
-        <div class="OYoZn" style="width: 95.04132000000001%"></div>
-      </div>
-      <div class="q">
-        <div class="biGQs _P fiohW biKBZ osNWb">4.8</div>
-      </div>
-    </div>
-    <div class="RZjkd">
-      <div class="o">
-        <div class="biGQs _P fiohW hmDzD">
-          <div class="yFXuQ o W q">3점</div>
-        </div>
-      </div>
-      <div class="gOGCN">
-        <div class="OYoZn" style="width: 91.706448%"></div>
-      </div>
-      <div class="q">
-        <div class="biGQs _P fiohW biKBZ osNWb">4.6</div>
-      </div>
-    </div>
-    <div class="RZjkd">
-      <div class="o">
-        <div class="biGQs _P fiohW hmDzD">
-          <div class="yFXuQ o W q">4점</div>
-        </div>
-      </div>
-      <div class="gOGCN">
-        <div class="OYoZn" style="width: 78.822566%"></div>
-      </div>
-      <div class="q">
-        <div class="biGQs _P fiohW biKBZ osNWb">3.9</div>
-      </div>
-    </div>
-    <div class="RZjkd">
-      <div class="o">
-        <div class="biGQs _P fiohW hmDzD">
-          <div class="yFXuQ o W q">5점</div>
-        </div>
-      </div>
-      <div class="gOGCN">
-        <div class="OYoZn" style="width: 87.21121999999998%"></div>
-      </div>
-      <div class="q">
-        <div class="biGQs _P fiohW biKBZ osNWb">4.4</div>
-      </div>
-    </div>
-  </div>
-</div>
+																<span class="biGQs _P pZUbB KxBGd">2,608 reviews</span>
+															</div>
+														</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="ZPHZV">
+											<div class="tRIJU w u">
+												<div class="RZjkd">
+													<div class="o">
+														<div class="biGQs _P fiohW hmDzD">
+															<div class="yFXuQ o W q">1점</div>
+														</div>
+													</div>
+													<div class="gOGCN">
+														<div class="OYoZn" style="width: 87.21121999999998%"></div>
+													</div>
+													<div class="q">
+														<div class="biGQs _P fiohW biKBZ osNWb">4.4</div>
+													</div>
+												</div>
+												<div class="RZjkd">
+													<div class="o">
+														<div class="biGQs _P fiohW hmDzD">
+															<div class="yFXuQ o W q">2점</div>
+														</div>
+													</div>
+													<div class="gOGCN">
+														<div class="OYoZn" style="width: 95.04132000000001%"></div>
+													</div>
+													<div class="q">
+														<div class="biGQs _P fiohW biKBZ osNWb">4.8</div>
+													</div>
+												</div>
+												<div class="RZjkd">
+													<div class="o">
+														<div class="biGQs _P fiohW hmDzD">
+															<div class="yFXuQ o W q">3점</div>
+														</div>
+													</div>
+													<div class="gOGCN">
+														<div class="OYoZn" style="width: 91.706448%"></div>
+													</div>
+													<div class="q">
+														<div class="biGQs _P fiohW biKBZ osNWb">4.6</div>
+													</div>
+												</div>
+												<div class="RZjkd">
+													<div class="o">
+														<div class="biGQs _P fiohW hmDzD">
+															<div class="yFXuQ o W q">4점</div>
+														</div>
+													</div>
+													<div class="gOGCN">
+														<div class="OYoZn" style="width: 78.822566%"></div>
+													</div>
+													<div class="q">
+														<div class="biGQs _P fiohW biKBZ osNWb">3.9</div>
+													</div>
+												</div>
+												<div class="RZjkd">
+													<div class="o">
+														<div class="biGQs _P fiohW hmDzD">
+															<div class="yFXuQ o W q">5점</div>
+														</div>
+													</div>
+													<div class="gOGCN">
+														<div class="OYoZn" style="width: 87.21121999999998%"></div>
+													</div>
+													<div class="q">
+														<div class="biGQs _P fiohW biKBZ osNWb">4.4</div>
+													</div>
+												</div>
+											</div>
+										</div>
 
 
-  <!-- 수정된 버튼 위치 -->
-  <div class="dGsKv Xe f P" style="margin-top: 10px;">
-  <button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv" id="openReviewModal"
-							type="button">
-							<span class="biGQs _P ttuOS"><div class="jktzL">
-								<h1 class="CpzHF q">리뷰 작성하기</h1></span>
-						</button>
-  </div>
+										<!-- 수정된 버튼 위치 -->
+										<div class="dGsKv Xe f P" style="margin-top: 10px;">
+											<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
+												id="openReviewModal" type="button">
+												<span class="biGQs _P ttuOS"><div class="jktzL">
+														<h1 class="CpzHF q">리뷰 작성하기</h1></span>
+											</button>
+										</div>
 
-  <!-- 리뷰 제출 후 표시할 내용 -->
-  <div id="submittedReviews">
-    <!-- 여기에 제출된 리뷰 내용이 동적으로 추가될 예정 -->
-  </div>
+										<!-- 리뷰 제출 후 표시할 내용 -->
+										<div id="submittedReviews">
+											<!-- 여기에 제출된 리뷰 내용이 동적으로 추가될 예정 -->
+										</div>
 
-</div>
+									</div>
 
-<!-- 모달 구현 -->
-<div id="reviewModal" class="modal">
-  <div class="modal-content">
-    <h2>장소 평가하기</h2>
-    <p>평점을 선택하세요:</p>
-    <div class="rating-box">
-      <!-- 평점 선택 박스 -->
-    </div>
-    <p>리뷰를 작성하세요:</p>
-    <textarea id="reviewText" rows="4" cols="50"></textarea>
-    <br>
-    <button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv" id="submitReview"
-							type="button">
-							<span class="biGQs _P ttuOS"><div class="jktzL">
-								<h1 class="CpzHF q">제출하기</h1></span>
-						</button>
-  </div>
-</div>
+									<!-- 모달 구현 -->
+									<div id="reviewModal" class="modal">
+										<div class="modal-content">
+											<h2>장소 평가하기</h2>
+											<p>평점을 선택하세요:</p>
+											<div class="rating-box">
+												<!-- 평점 선택 박스 -->
+											</div>
+											<p>리뷰를 작성하세요:</p>
+											<textarea id="reviewText" rows="4" cols="50"></textarea>
+											<br>
+											<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
+												id="submitReview" type="button">
+												<span class="biGQs _P ttuOS"><div class="jktzL">
+														<h1 class="CpzHF q">제출하기</h1></span>
+											</button>
+										</div>
+									</div>
 
-<script>
+									<script>
 document.addEventListener("DOMContentLoaded", function() {
 	  var modal = document.getElementById('reviewModal');
 	  var openModalButton = document.getElementById('openReviewModal');
@@ -1015,64 +940,63 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
-										<div class="wWwSb">
+									<div class="wWwSb">
+										<div>
 											<div>
-												<div>
-													<div class="AMQRv Gi Z BB YjQAT">
-														<div>
-															<h2 class="biGQs _P fiohW uuBRH">주변 호텔 추천</h2>
+												<div class="AMQRv Gi Z BB YjQAT">
+													<div>
+														<h2 class="biGQs _P fiohW uuBRH">주변 호텔 추천</h2>
+													</div>
+													<div class="iBGtx f J _h _e z NK Ni qQnpg">
+														<div class="ZSsAY xjaPD">
+															<div class="TzTCE w">
+																<div class="Gwegd l t w"></div>
+																<div class="ILCbI hdCDN w"></div>
+																<div class="DZdiH">
+																	<div class="ILCbI lxwEm w"></div>
+																	<div class="ILCbI lnuPx w"></div>
+																	<div class="ILCbI YkRgi w"></div>
+																	<div class="ILCbI TZksi w"></div>
+																	<div class="ILCbI LtmGt"></div>
+																</div>
+															</div>
 														</div>
-														<div class="iBGtx f J _h _e z NK Ni qQnpg">
-															<div class="ZSsAY xjaPD">
-																<div class="TzTCE w">
-																	<div class="Gwegd l t w"></div>
-																	<div class="ILCbI hdCDN w"></div>
-																	<div class="DZdiH">
-																		<div class="ILCbI lxwEm w"></div>
-																		<div class="ILCbI lnuPx w"></div>
-																		<div class="ILCbI YkRgi w"></div>
-																		<div class="ILCbI TZksi w"></div>
-																		<div class="ILCbI LtmGt"></div>
-																	</div>
+														<div class="ZSsAY xjaPD">
+															<div class="TzTCE w">
+																<div class="Gwegd l t w"></div>
+																<div class="ILCbI hdCDN w"></div>
+																<div class="DZdiH">
+																	<div class="ILCbI lxwEm w"></div>
+																	<div class="ILCbI lnuPx w"></div>
+																	<div class="ILCbI YkRgi w"></div>
+																	<div class="ILCbI TZksi w"></div>
+																	<div class="ILCbI LtmGt"></div>
 																</div>
 															</div>
-															<div class="ZSsAY xjaPD">
-																<div class="TzTCE w">
-																	<div class="Gwegd l t w"></div>
-																	<div class="ILCbI hdCDN w"></div>
-																	<div class="DZdiH">
-																		<div class="ILCbI lxwEm w"></div>
-																		<div class="ILCbI lnuPx w"></div>
-																		<div class="ILCbI YkRgi w"></div>
-																		<div class="ILCbI TZksi w"></div>
-																		<div class="ILCbI LtmGt"></div>
-																	</div>
+														</div>
+														<div class="ZSsAY xjaPD">
+															<div class="TzTCE w">
+																<div class="Gwegd l t w"></div>
+																<div class="ILCbI hdCDN w"></div>
+																<div class="DZdiH">
+																	<div class="ILCbI lxwEm w"></div>
+																	<div class="ILCbI lnuPx w"></div>
+																	<div class="ILCbI YkRgi w"></div>
+																	<div class="ILCbI TZksi w"></div>
+																	<div class="ILCbI LtmGt"></div>
 																</div>
 															</div>
-															<div class="ZSsAY xjaPD">
-																<div class="TzTCE w">
-																	<div class="Gwegd l t w"></div>
-																	<div class="ILCbI hdCDN w"></div>
-																	<div class="DZdiH">
-																		<div class="ILCbI lxwEm w"></div>
-																		<div class="ILCbI lnuPx w"></div>
-																		<div class="ILCbI YkRgi w"></div>
-																		<div class="ILCbI TZksi w"></div>
-																		<div class="ILCbI LtmGt"></div>
-																	</div>
-																</div>
-															</div>
-															<div class="ZSsAY xjaPD">
-																<div class="TzTCE w">
-																	<div class="Gwegd l t w"></div>
-																	<div class="ILCbI hdCDN w"></div>
-																	<div class="DZdiH">
-																		<div class="ILCbI lxwEm w"></div>
-																		<div class="ILCbI lnuPx w"></div>
-																		<div class="ILCbI YkRgi w"></div>
-																		<div class="ILCbI TZksi w"></div>
-																		<div class="ILCbI LtmGt"></div>
-																	</div>
+														</div>
+														<div class="ZSsAY xjaPD">
+															<div class="TzTCE w">
+																<div class="Gwegd l t w"></div>
+																<div class="ILCbI hdCDN w"></div>
+																<div class="DZdiH">
+																	<div class="ILCbI lxwEm w"></div>
+																	<div class="ILCbI lnuPx w"></div>
+																	<div class="ILCbI YkRgi w"></div>
+																	<div class="ILCbI TZksi w"></div>
+																	<div class="ILCbI LtmGt"></div>
 																</div>
 															</div>
 														</div>
@@ -1080,23 +1004,24 @@ document.addEventListener("DOMContentLoaded", function() {
 												</div>
 											</div>
 										</div>
-										<div class="wWwSb">
-											<div class="ruCQl z">
-												<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
+									</div>
+									<div class="wWwSb">
+										<div class="ruCQl z">
+											<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
+												<div>
 													<div>
-														<div>
-															<div class="ppuFV _T Z BB lSnVq amYYZ"
-																data-tab="TABS_LOCATION"
-																data-section-signature="location" id="LOCATION">
+														<div class="ppuFV _T Z BB lSnVq amYYZ"
+															data-tab="TABS_LOCATION"
+															data-section-signature="location" id="LOCATION">
+															<div>
 																<div>
-																	<div>
-																		<h2 class="biGQs _P fiohW ncFvv uuBRH">주변 관광명소</h2>
-																		<div class="YPYBR f"></div>
-																	</div>
+																	<h2 class="biGQs _P fiohW ncFvv uuBRH">주변 관광명소</h2>
+																	<div class="YPYBR f"></div>
+																</div>
 
-																	<div id="googleMap" style="width: 100%; height: 700px;"></div>
+																<div id="googleMap" style="width: 100%; height: 700px;"></div>
 
-																	<script>
+																<script>
         function myMap() {
             var mapOptions = {
                 center: new google.maps.LatLng(48.8566, 2.3522), // 파리 좌표
@@ -1161,9 +1086,8 @@ document.addEventListener("DOMContentLoaded", function() {
             initMap();
         }
     </script>
-																	<script
-																		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdE1NKlgUopd8K2NoyWuASU8Y4ufekHY&callback=myMap"></script>
-																</div>
+																<script
+																	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdE1NKlgUopd8K2NoyWuASU8Y4ufekHY&callback=myMap"></script>
 															</div>
 														</div>
 													</div>
@@ -1171,64 +1095,64 @@ document.addEventListener("DOMContentLoaded", function() {
 											</div>
 										</div>
 									</div>
-									<div class="wWwSb">
+								</div>
+								<div class="wWwSb">
+									<div>
 										<div>
-											<div>
-												<div class="AMQRv Gi Z BB YjQAT">
-													<div>
-														<h2 class="biGQs _P fiohW uuBRH">주변 관광명소 추천</h2>
+											<div class="AMQRv Gi Z BB YjQAT">
+												<div>
+													<h2 class="biGQs _P fiohW uuBRH">주변 관광명소 추천</h2>
+												</div>
+												<div class="iBGtx f J _h _e z NK Ni qQnpg">
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
+															</div>
+														</div>
 													</div>
-													<div class="iBGtx f J _h _e z NK Ni qQnpg">
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
 															</div>
 														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
+													</div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
 															</div>
 														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
-															</div>
-														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
+													</div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
 															</div>
 														</div>
 													</div>
@@ -1236,120 +1160,15 @@ document.addEventListener("DOMContentLoaded", function() {
 											</div>
 										</div>
 									</div>
-									<div class="wWwSb">
-										<div class="ruCQl z">
-											<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
-												<div class="uaOxz">
-													<div>
-														<div class="izHMK amYYZ qTXWP" data-tab="TABS_REVIEWS"
-															data-section-signature="community" id="REVIEWS">
-															</script>
-
-
-															<footer class="KoJoc Cj Pl PN Py PA">
-																<div class="IDaDx mvTrV cyIij fluiI SMjpI">
-																	<div class="dLJNv">
-																		<div class="sVVKe Q2">
-																			<div class="JLKop w">
-																				<button type="button"
-																					class="bMrpo _G f k Q2 u _u w Cq Ra _S wSSLS"
-																					aria-haspopup="listbox"
-																					aria-label="Currency: $ USD">
-																					<span class="biGQs _P fOtGX">$ USD</span>
-																					<svg viewBox="0 0 24 24" width="20px" height="20px"
-																						class="d Vb UmNoP">
-																						<path
-																							d="M18.4 7.4L12 13.7 5.6 7.4 4.2 8.8l7.8 7.8 7.8-7.8-1.4-1.4z"></path></svg>
-																				</button>
-																			</div>
-																			<div class="JLKop w">
-																				<button type="button"
-																					class="bMrpo _G f k Q2 u _u w Cq Ra _S wSSLS"
-																					aria-haspopup="menu"
-																					aria-label="Region: United States">
-																					<span class="biGQs _P fOtGX">United States</span>
-																					<svg viewBox="0 0 24 24" width="20px" height="20px"
-																						class="d Vb UmNoP">
-																							<path
-																							d="M18.4 7.4L12 13.7 5.6 7.4 4.2 8.8l7.8 7.8 7.8-7.8-1.4-1.4z"></path></svg>
-																				</button>
-																			</div>
-																		</div>
-																		<div class="MfOiD">
-																			<div class="MQpxt _Y">
-																				<img class="HAOGn F0"
-																					src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_logoset_solid_green.svg"
-																					alt="" loading="lazy" />
-																				<div>
-																					<div class="CDuLn">
-																						<div class="biGQs _P pZUbB osNWb">
-																							Â©
-																							<!-- -->
-																							2024
-																							<!-- -->
-																							Tripadvisor LLC
-																							<!-- -->
-																							<!-- -->
-																							All rights reserved.
-																						</div>
-																					</div>
-																					<div class="VPSQM">
-																						<span class="biGQs _P fiohW fOtGX"><span
-																							class="Qxcli"><a
-																								class="UikNM _G B- _S _W _T c G_ wSSLS wnNQG raEkE"
-																								href="https://tripadvisor.mediaroom.com/us-terms-of-use"
-																								rel="noopener" target="_self"><span
-																									class="biGQs _P XWJSj Wb">Terms of Use</span></a></span><span
-																							class="Qxcli"><a
-																								class="UikNM _G B- _S _W _T c G_ wSSLS wnNQG raEkE"
-																								href="https://tripadvisor.mediaroom.com/us-privacy-policy"
-																								rel="noopener" target="_self"><span
-																									class="biGQs _P XWJSj Wb">Privacy and
-																										Cookies Statement</span></a></span><span class="Qxcli"><button
-																									class="UikNM _G B- _S _W _T c G_ wSSLS wnNQG"
-																									type="button">
-																									<span class="biGQs _P XWJSj Wb">Cookie
-																										consent</span>
-																								</button></span><span class="Qxcli"><a
-																								class="UikNM _G B- _S _W _T c G_ wSSLS wnNQG raEkE"
-																								href="/SiteIndex-g294196-South_Korea.html"
-																								rel="noopener" target="_self"><span
-																									class="biGQs _P XWJSj Wb">Site Map</span></a></span><span
-																							class="Qxcli"><a
-																								class="UikNM _G B- _S _W _T c G_ wSSLS wnNQG raEkE"
-																								href="/pages/service_en.html" rel="noopener"
-																								target="_self"><span
-																									class="biGQs _P XWJSj Wb">How the site
-																										works</span></a></span><span class="Qxcli"><a
-																								class="UikNM _G B- _S _W _T c G_ wSSLS wnNQG raEkE"
-																								href="https://tripadvisor.mediaroom.com/US-contact-us"
-																								rel="noopener" target="_blank"><span
-																									class="biGQs _P XWJSj Wb">Contact us</span></a></span></span>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="biGQs _P pZUbB osNWb">
-																				<p class="VFcwS">
-																					This is the version of our website addressed to
-																					speakers of
-																					<!-- -->
-																					English
-																					<!-- -->
-																					in
-																					<!-- -->
-																					the United States
-																					<!-- -->
-																					. If you are a resident of another country or
-																					region, please select the appropriate version of
-																					Tripadvisor for your country or region in the
-																					drop-down menu.
-																					<!-- -->
-																					<button class="ZGryi Cg b Wc _S y G_ B-">more</button>
-																				</p>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</footer>
+								</div>
+								<div class="wWwSb">
+									<div class="ruCQl z">
+										<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
+											<div class="uaOxz">
+												<div>
+													<div class="izHMK amYYZ qTXWP" data-tab="TABS_REVIEWS"
+														data-section-signature="community" id="REVIEWS">
+														</script>
+														<%@ include file="/resources/includes/footer.jsp"%>
 </body>
 </html>

@@ -484,59 +484,7 @@ body {
 </style>
 </head>
 <body>
-<header class="aVAoX t z LDrge Za">
-  <div class="IDaDx mvTrV cyIij fluiI SMjpI">
-    <nav class="MGToN u">
-      <div class="oqeTs u JpEOb">
-        <a class="pBcSw F0 wSSLS" href="main.do"> 
-          <picture>
-            <img class="XpHHt" src="/travel/resources/images/logo.png" alt="Áü¸¸½Î" />
-          </picture>
-        </a>
-      </div>
-      <div class="OzBsv">
-        <div class="HREWK t l s _U S ijEOu"></div>
-        <div class="gqnca"></div>
-      </div>
-      <div class="inHiW JpEOb">
-        <div class="eByLG QA c">
-          <div class="AuQZR f">
-            <div class="f u" data-automation="topNav_discover">
-              <div class="JLKop w">
-                <button class="rmyCe _G B- z _S c Wc wSSLS jWkoZ InwKl" type="button">
-                  <span class="biGQs _P ttuOS">Discover</span>
-                </button>
-              </div>
-            </div>
-            <div class="f u" data-automation="topNav_trips">
-              <div class="JLKop w">
-                <button class="rmyCe _G B- z _S c Wc wSSLS jWkoZ InwKl" type="button">
-                  <span class="biGQs _P ttuOS">Trips</span>
-                </button>
-              </div>
-            </div>
-            <div class="f u" data-automation="topNav_review">
-              <div class="JLKop w">
-                <button class="rmyCe _G B- z _S c Wc wSSLS jWkoZ InwKl" type="button">
-                  <span class="biGQs _P ttuOS">Review</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="lGhNq QA c JpEOb"
-        data-automation="desktop-cart-and-profile">
-        <a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj"
-          href="/RegistrationController?flow=sign_up_and_save&amp;returnTo=%2FHotels&amp;fullscreen=true&amp;flowOrigin=login&amp;hideNavigation=true&amp;isLithium=true"><span
-          class="biGQs _P ttuOS">
-            <div class="eoYut">Sign in</div>
-        </span></a>
-      </div>
-    </nav>
-  </div>
-</header>
-
+<%@ include file="/resources/includes/header.jsp" %> 
 <div id="container" class="container">
     <!-- FORM SECTION -->
     <div class="row">
@@ -639,6 +587,7 @@ body {
     </div>
     <!-- END CONTENT SECTION -->
   </div>
+  <%@ include file="/resources/includes/footer.jsp" %>
   <script type="text/javascript">
   let container = document.getElementById('container')
 
