@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <link rel="icon" id="favicon"
@@ -143,6 +144,53 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .profile-button, .sign-in-button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 50px; /* 완전히 둥글게 만들기 위해 50px로 설정 */
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        height: 40px; /* 버튼의 높이를 이미지와 비슷하게 설정 */
+    }
+    .profile-button:hover, .sign-in-button:hover {
+        background-color: #333;
+    }
+</style>
 <body>
 <header class="aVAoX t z LDrge Za">
 				<div class="IDaDx mvTrV cyIij fluiI SMjpI">
@@ -186,14 +234,26 @@
 								</div>
 							</div>
 						</div>
-						<div class="lGhNq QA c JpEOb"
-							data-automation="desktop-cart-and-profile">
-							<a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj"
-								href="login.do"><span
-								class="biGQs _P ttuOS">
-									<div class="eoYut">Sign in</div>
-							</span></a>
-						</div>
+				    <div class="lGhNq QA c JpEOb" data-automation="desktop-cart-and-profile">
+                <c:choose>
+                    <c:when test="${not empty sessionScope.userName}">
+                        <div class="dropdown">
+                            <span class="biGQs _P ttuOS dropdown-toggle">${sessionScope.userName}님</span>
+                            <div class="dropdown-content">
+                                <a href="updateMember.do">정보 수정</a>
+                                <a href="logout.do">로그아웃</a>
+                            </div>
+                        </div>
+                    </c:when>
+                    <c:otherwise>
+                        <a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj" href="login.do">
+                            <span class="biGQs _P ttuOS">
+                                <div class="eoYut">Sign in</div>
+                            </span>
+                        </a>
+                    </c:otherwise>
+                </c:choose>
+            </div>
 					</nav>
 				</div>
 				<span>
@@ -229,4 +289,91 @@
 	</span>
 	</header>
 </body>
+<script type="text/javascript">
+//로그인 후 내 아이디를 누를 시에 정보수정,로그아웃 항목들을 띄워주는 스크립트
+    document.addEventListener('DOMContentLoaded', function() {
+        var userIdDisplay = document.getElementById('userIdDisplay');
+        var userMenu = document.getElementById('userMenu');
+        var userContainer = document.getElementById('userContainer');
+
+        userIdDisplay.addEventListener('click', function(event) {
+            event.stopPropagation();
+            userMenu.style.display = (userMenu.style.display === 'none' || userMenu.style.display === '') ? 'block' : 'none';
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!userContainer.contains(event.target)) {
+                userMenu.style.display = 'none';
+            }
+        });
+    });
+ 
+    
+</script>
+ <script>
+ //모달을 눌렀을 때 로그인이 되어있지 않다면 login.do로 이동시킴
+        document.getElementById('modalBtn').addEventListener('click', function() {
+            fetch('survey.do', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'text/html'
+                },
+                credentials: 'include'
+            })
+            .then(response => {
+                if (response.redirected) {
+                    alert('로그인이 필요한 서비스입니다.');
+                    window.location.href = 'login.do';
+                } else {
+                    var surveyIframe = document.getElementById('surveyIframe');
+                    surveyIframe.src = 'survey.do';
+                    document.getElementById('surveyModal').style.display = 'flex';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('로그인이 필요한 서비스입니다.');
+                window.location.href = 'login.do';
+            });
+        });
+//모달창을 닫았을 때 현재까지 입력되어 있던 정보 초기화
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('surveyModal').style.display = 'none';
+            document.getElementById('surveyIframe').src = 'about:blank';
+        });
+//모달 창 밖을 클릭할 시 모달을 닫는 기능
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('surveyModal')) {
+                document.getElementById('surveyModal').style.display = 'none';
+                document.getElementById('surveyIframe').src = 'about:blank'; 
+            }
+        };
+//모달 창 안에 있는 닫기 버튼 동작을 하게 하는 기능
+        document.getElementById('surveyIframe').onload = function() {
+            var iframeDoc = document.getElementById('surveyIframe').contentDocument || document.getElementById('surveyIframe').contentWindow.document;
+            iframeDoc.addEventListener('submit', function() {
+                document.getElementById('surveyModal').style.display = 'none';
+                document.getElementById('surveyIframe').src = 'about:blank'; 
+            });
+        };
+    </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var buttons = document.querySelectorAll('.rmyCe._G.B-.z._S.c.Wc.wSSLS.jWkoZ.InwKl');
+        buttons.forEach(function(button) {
+            var buttonText = button.querySelector('span').innerText.trim();
+            if (buttonText === 'MyTrips') {
+                button.addEventListener('click', function() {
+                    console.log('MyTrips Button clicked'); 
+                    window.location.href = 'bookinglist.do';
+                });
+            } else if (buttonText === 'MySurvey') {
+                button.addEventListener('click', function() {
+                    console.log('Survey Button clicked'); 
+                    window.location.href = 'surveylist.do';
+                });
+            }
+        });
+    });
+</script>
 </html>
