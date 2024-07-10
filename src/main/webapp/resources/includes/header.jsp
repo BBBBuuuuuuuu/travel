@@ -375,5 +375,5 @@
             }
         });
     });
-</script>
+ </script>
 </html>
