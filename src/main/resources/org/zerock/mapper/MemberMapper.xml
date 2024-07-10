@@ -12,7 +12,7 @@
 	</select>
 	
 	
-	<insert id="join" parameterType="org.zerock.domain.MemberVO">
+	<insert id="insertMember" parameterType="org.zerock.domain.MemberVO">
 		INSERT INTO member (id, password, name, email, phone)
 		VALUES (#{id}, #{password}, #{name}, #{email}, #{phone})
 	</insert>

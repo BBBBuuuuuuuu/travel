@@ -266,7 +266,7 @@ body {
 
 			<label for="end_date">종료 날짜</label> <input type="text" id="end_date"
 				name="end_date" required autocomplete="off"> <label
-				for="stay_type">체류 유형</label> <select id="stay_type"
+				for="stay_type">숙소 유형</label> <select id="stay_type"
 				name="stay_type" required>
 				<option value="">선택하세요</option>
 				<option value="호텔">호텔</option>
@@ -274,7 +274,7 @@ body {
 				<option value="펜션">펜션</option>
 			</select> <label for="peoplecount">인원 수</label> <input type="text"
 				id="peoplecount" name="peoplecount" required> <label
-				for="climate">기후</label> <select id="climate" name="climate"
+				for="climate">선호 기후</label> <select id="climate" name="climate"
 				required>
 				<option value="">선택하세요</option>
 				<option value="따뜻함">따뜻함</option>

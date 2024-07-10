@@ -43,6 +43,7 @@ public class BoardController {
 	@GetMapping("/getBoard.do") // 상세 페이지
 	public String getBoard(@RequestParam("no") int no,  Model model) {
 		BoardVO board = boardService.getBoard(no);
+		model.addAttribute("average", reviewService.getReviewAverage(board));
 		
 		List<ReviewVO> reviewList = reviewService.selectReview(board); // 리뷰 불러오기
 		model.addAttribute("reviewList", reviewList); 
