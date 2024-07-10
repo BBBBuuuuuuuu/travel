@@ -1171,4 +1171,42 @@ document.addEventListener("DOMContentLoaded", function() {
 														</script>
 														<%@ include file="/resources/includes/footer.jsp"%>
 </body>
+<script type="text/javascript">
+//입력폼에 캘린더를 클릭하여 날짜값을 입력해주는 jQuery 플러그인
+flatpickr("#checkinInput", {
+    minDate: "today", // 오늘 이후의 날짜만 선택 가능
+    onChange: function(selectedDates, dateStr, instance) {
+        // 선택된 날짜를 표시
+        document.getElementById("checkinDate").innerText = dateStr;
+        // 체크인 날짜 이후의 날짜만 선택할 수 있도록 체크아웃 캘린더 업데이트
+        document.getElementById("checkoutInput")._flatpickr.set("minDate", dateStr);
+    }
+});
+
+//체크아웃
+flatpickr("#checkoutInput", {
+    onChange: function(selectedDates, dateStr, instance) {
+        // 선택된 날짜를 표시.
+        document.getElementById("checkoutDate").innerText = dateStr;
+    }
+});
+
+
+
+//한번 날짜를 선택하면 수정할 수 없던것을  고치기 위해 추가
+//이 부분은 다른곳에서 가져온 부분 
+function toggleDatePicker(calendarId) {
+	//alendarElement.style.display-> display 스타일 확인
+    var calendarElement = document.getElementById(calendarId);
+    if (calendarElement.style.display === "none" || calendarElement.style.display === "") {
+    	//요소가 없거나 숨겨진 경우 표시
+        calendarElement.style.display = "block";
+    } else {
+    //반대로 표시되어 있을 경우 숨김
+        calendarElement.style.display = "none";
+    }
+}
+
+
+</script>
 </html>
