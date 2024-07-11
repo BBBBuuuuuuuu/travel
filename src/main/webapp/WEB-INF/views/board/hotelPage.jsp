@@ -117,7 +117,6 @@
 	href="https://www.tripadvisor.be/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
 <link rel="alternate" hrefLang="zh-hk"
 	href="https://www.tripadvisor.com.hk/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<script type="application/ld+json">{"@context":"https:\u002F\u002Fschema.org","@type":"LodgingBusiness","name":"The Ritz-Carlton, Osaka","url":"\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html","priceRange":"$$$ (Based on Average Nightly Rates for a Standard Room from our Partners)","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":2608},"address":{"@type":"PostalAddress","streetAddress":"2-5-25 Umeda, Kita-ku","addressRegion":"Osaka Prefecture","postalCode":"530-0001","addressCountry":{"@type":"Country","name":"Japan"}},"image":"https:\u002F\u002Fdynamic-media-cdn.tripadvisor.com\u002Fmedia\u002Fphoto-o\u002F1c\u002F86\u002F22\u002F88\u002Fmain-entrance-with-doorman.jpg?w=500&h=-1&s=1"}</script>
 <link rel="stylesheet"
 	href="https://static.tacdn.com/assets/vk2o6l4ceecg-c.css"
 	crossorigin="" />
@@ -437,7 +436,7 @@
 																	<path
 																	d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
 																	transform="translate(104 0)"></path></svg>
-															<span class="biGQs _P pZUbB KxBGd">2,608 reviews</span>
+															<span class="biGQs _P pZUbB KxBGd">${average}</span>
 														</div></a>
 													<div class="yCSYR f">
 														<a href="#REVIEWS"
@@ -450,18 +449,13 @@
 																		<path fill-rule="evenodd" clip-rule="evenodd"
 																		d="M20.772 8.538a9.64 9.64 0 01-5.703-5.703c-.197-.538-.976-.538-1.174 0a9.588 9.588 0 01-5.697 5.703c-.538.197-.538.976 0 1.173a9.64 9.64 0 015.703 5.704c.197.537.976.537 1.174 0a9.64 9.64 0 015.703-5.704c.537-.197.537-.976 0-1.173h-.006zm-8.683 7.83a6.885 6.885 0 01-4.074-4.073c-.141-.384-.697-.384-.838 0a6.848 6.848 0 01-4.07 4.073c-.384.142-.384.698 0 .839a6.885 6.885 0 014.074 4.073c.14.384.697.384.838 0a6.885 6.885 0 014.074-4.073c.384-.141.384-.698 0-.839h-.004z"></path></svg>
 																<div class="biGQs _P fiohW kSNRl osNWb">
-																	<strong>NEW</strong> AI Reviews Summary
+																	<strong>숙소주변 즐길거리 보러가기</strong>
 																</div>
 															</div></a>
 													</div>
 												</div>
 												<div class="SbOdb"></div>
 											</div>
-											<a
-												href="/Hotels-g298566-Osaka_Osaka_Prefecture_Kinki-Hotels.html"
-												class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS"><div
-													class="biGQs _P pZUbB KxBGd">#16 of 444 hotels in
-													Osaka</div></a>
 										</div>
 										<div class="FhOgt H3 f u fRLPH">
 											<span class="H3"><svg viewBox="0 0 24 24" width="18px"
@@ -492,7 +486,7 @@
 						<div class="wWwSb VogJa">
 							<div class="LOtES f e">
 								 <div class="LoFmz w _Z">
-							        <img src="https://via.placeholder.com/400x300" alt="예시 이미지">
+							        <img src="/travel/resources/images/${board.imageName[0] }" alt="예시 이미지">
 							    </div>
 								<div></div>
 								<div class="VRono Gi B1 Z BB Pk PY Px PK">
@@ -530,7 +524,7 @@
 																</div>
 																<div class="kPQaf q">Check In</div>
 																<div class="icDdG q dibDZ">
-																	<span id="checkinDate">Select Date</span>
+																	<span id="checkinDate">날짜 선택</span>
 																</div>
 															</button>
 															<div id="checkinCalendar" class="calendar">
@@ -553,7 +547,7 @@
 															</div>
 															<div class="kPQaf q">Check Out</div>
 															<div class="icDdG q dibDZ">
-																<span id="checkoutDate">Select Date</span>
+																<span id="checkoutDate">날짜 선택</span>
 															</div>
 														</button>
 														<div id="checkoutCalendar" class="calendar">
@@ -730,11 +724,10 @@
 										<div class="ruCQl z">
 											<div class="uqMDf z BGJxv YGfmd YQkjl">
 												<div class="dGsKv Xe f P">
-													<span class="kJyXc P">4.5</span>
+													<span class="kJyXc P">${average }</span>
 													<button class="UikNM _G B- _S _W _T c G_ wSSLS TXrCr raEkE"
 														type="button">
 														<span class="biGQs _P ttuOS">
-															<div class="PtOPK">Excellent</div>
 															<div class="jVDab o W f u w GOdjs">
 																<svg class="UctUV d H0 hzzSG" viewBox="0 0 128 24"
 																	width="88" height="16"
@@ -756,8 +749,8 @@
 																		d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
 																		transform="translate(104 0)"></path>
               </svg>
-																<span class="biGQs _P pZUbB KxBGd">${counts}
-																	reviews</span>
+																<span class="biGQs _P pZUbB KxBGd">${counts[5]} 개
+																	</span>
 															</div>
 														</span>
 													</button>
@@ -776,7 +769,7 @@
 														<div class="OYoZn" style="width: 87.21121999999998%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">4.4</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[0] } 개</div>
 													</div>
 												</div>
 												<div class="RZjkd">
@@ -789,7 +782,7 @@
 														<div class="OYoZn" style="width: 95.04132000000001%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">4.8</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[1] } 개</div>
 													</div>
 												</div>
 												<div class="RZjkd">
@@ -802,7 +795,7 @@
 														<div class="OYoZn" style="width: 91.706448%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">4.6</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[2] } 개</div>
 													</div>
 												</div>
 												<div class="RZjkd">
@@ -815,7 +808,7 @@
 														<div class="OYoZn" style="width: 78.822566%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">3.9</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[3] } 개</div>
 													</div>
 												</div>
 												<div class="RZjkd">
@@ -828,7 +821,7 @@
 														<div class="OYoZn" style="width: 87.21121999999998%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">4.4</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[4] } 개</div>
 													</div>
 												</div>
 											</div>

@@ -416,7 +416,7 @@
 			<a href="getBoard.do?no=${board.boardNo}">
 				<div class="hotel-card">
 					<div class="hotel-image">
-					<img src="/travel/resources/images/logo.png" alt="${board.name}">
+					<img src="/travel/resources/images/${board.imageName[0] }" alt="${board.name}">
 						<div class="hotel-details">
 							<div class="hotel-title">제목 : ${board.name}</div>
 							<div class="hotel-rating">평점 : ${board.like}</div>
