@@ -283,13 +283,13 @@ button {
 
 .modal-content {
 	background-color: #fff;
-	margin: 7% auto;
-	padding: 20px;
-	border: 2px solid #00aa6c;
-	border-radius: 8px;
-	width: 80%;
-	max-width: 600px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 7% auto;
+    padding: 20px;
+    border: 2px solid #6f6f6f;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .close {

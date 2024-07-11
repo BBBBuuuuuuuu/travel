@@ -97,7 +97,6 @@
             </tbody>
         </table>
     </div>
-    <a href="main.do">메인페이지로</a>
 
     <div id="bookingDetailsModal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
