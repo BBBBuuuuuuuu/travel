@@ -10,7 +10,7 @@ public interface BookingMapper {
 
 	CardVO selectCard(String userId);
 
-	void updateBalance(@Param("cardNum")int cardNum, @Param("balance") long balance);
+	void updateBalance(@Param("cardNum") int cardNum, @Param("balance") long balance);
 
 	void insertBooking(BookingVO booking);
 
@@ -20,7 +20,9 @@ public interface BookingMapper {
 
 	List<BookingVO> getListByUser(String userId);
 
-	BookingVO read(Long booking_no);
+	BookingVO read(Long bookingNo);
 
-	int delete(Long booking_no);
+	void deletePayment(Long bookingNo);
+
+	void deleteBooking(Long bookingNo);
 }

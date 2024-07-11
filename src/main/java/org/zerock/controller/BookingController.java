@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.BookingVO;
 import org.zerock.domain.CardVO;
 import org.zerock.service.BookingService;
@@ -121,15 +122,17 @@ public class BookingController {
         return "booking/search :: modalContents";
     }
 
-    @PostMapping("/delete")
-    @ResponseBody
-    public ResponseEntity<String> cancel(@RequestParam("booking_no") Long booking_no) {
-        boolean isDeleted = bookService.cancel(booking_no);
-        if (isDeleted) {
-            return ResponseEntity.ok("{\"message\": \"Booking cancelled successfully\"}");
-        } else {
-            return ResponseEntity.status(500).body("{\"message\": \"Error cancelling booking\"}");
+
+    @PostMapping("/cancel.do")
+    public String cancelBooking(@RequestParam("bookingNo") Long bookingNo, RedirectAttributes rttr) {
+        try {log.info(rttr);
+            bookService.cancelBooking(bookingNo);
+            rttr.addFlashAttribute("result", "success");
+        } catch (Exception e) {
+            rttr.addFlashAttribute("result", "fail");
+            e.printStackTrace();
         }
+        return "redirect:/bookinglist.do";
     }
 
 }

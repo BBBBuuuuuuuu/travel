@@ -19,6 +19,7 @@ public interface BookingService {
 
 	BookingVO get(Long booking_no);
 	
-	boolean cancel(Long booking_no);
+	boolean cancelBooking(Long booking_no);
 
+	
 }
