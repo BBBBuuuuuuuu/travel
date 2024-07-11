@@ -160,8 +160,9 @@
 <script src="https://static.tacdn.com/assets/p7jq7m.4Ujcuf7.js" async=""
 	crossorigin="" fetchpriority="low"></script>
 <style>
-.Za {
-	z-index: 0;
+.rmyCe.huqcv:not(:disabled) {
+    background-color: #28a745;
+    color: var(--onLightButtonText);
 }
 
 .rmyCe.XDcOZ:not(:disabled) {
@@ -278,7 +279,7 @@
 
 .modal-content {
 	background-color: #fefefe;
-	margin: 10% auto;
+	margin: 20% auto;
 	padding: 20px;
 	border: 1px solid #888;
 	width: 80%;
@@ -392,7 +393,7 @@
 																	<path
 																	d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
 																	transform="translate(104 0)"></path></svg>
-															<span class="biGQs _P pZUbB KxBGd">2,608 reviews</span>
+															<span class="biGQs _P pZUbB KxBGd">${counts[5]} reviews</span>
 														</div></a>
 													<div class="yCSYR f">
 														<a href="#REVIEWS"
@@ -405,18 +406,14 @@
 																		<path fill-rule="evenodd" clip-rule="evenodd"
 																		d="M20.772 8.538a9.64 9.64 0 01-5.703-5.703c-.197-.538-.976-.538-1.174 0a9.588 9.588 0 01-5.697 5.703c-.538.197-.538.976 0 1.173a9.64 9.64 0 015.703 5.704c.197.537.976.537 1.174 0a9.64 9.64 0 015.703-5.704c.537-.197.537-.976 0-1.173h-.006zm-8.683 7.83a6.885 6.885 0 01-4.074-4.073c-.141-.384-.697-.384-.838 0a6.848 6.848 0 01-4.07 4.073c-.384.142-.384.698 0 .839a6.885 6.885 0 014.074 4.073c.14.384.697.384.838 0a6.885 6.885 0 014.074-4.073c.384-.141.384-.698 0-.839h-.004z"></path></svg>
 																<div class="biGQs _P fiohW kSNRl osNWb">
-																	<strong>NEW</strong> AI Reviews Summary
+																	<strong>주변 관광지 보러가기</strong>
 																</div>
 															</div></a>
 													</div>
 												</div>
 												<div class="SbOdb"></div>
 											</div>
-											<a
-												href="/Hotels-g298566-Osaka_Osaka_Prefecture_Kinki-Hotels.html"
-												class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS"><div
-													class="biGQs _P pZUbB KxBGd">#16 of 444 hotels in
-													Osaka</div></a>
+											
 										</div>
 										<div class="FhOgt H3 f u fRLPH">
 											<span class="H3"><svg viewBox="0 0 24 24" width="18px"
@@ -424,49 +421,19 @@
 														<path
 														d="M11.277 20.26l.53-.532-.53.532zm.035.035l.537-.524-.008-.008-.53.532zM12 21l-.537.524.529.542.537-.534L12 21zm.688-.684l.529.532.002-.002-.53-.53zm.303-8.458l-.287-.693.287.693zm-1.98-4.783l-.288-.693.287.693zM12 2.25c-4.262 0-7.75 3.46-7.75 7.707h1.5c0-3.41 2.808-6.207 6.25-6.207v-1.5zM4.25 9.957c0 2.269 1.128 4.455 2.452 6.292 1.335 1.85 2.947 3.45 4.047 4.543l1.057-1.064c-1.108-1.1-2.634-2.62-3.887-4.356-1.262-1.75-2.169-3.62-2.169-5.415h-1.5zm6.499 10.835l.034.035 1.058-1.064-.035-.035-1.057 1.064zm.026.026l.688.706 1.074-1.048-.688-.705-1.074 1.047zm1.754.714l.688-.684-1.058-1.064-.688.684 1.058 1.064zm.69-.686c1.096-1.098 2.717-2.706 4.06-4.566 1.333-1.846 2.471-4.043 2.471-6.323h-1.5c0 1.806-.916 3.685-2.187 5.445-1.262 1.747-2.797 3.275-3.905 4.384l1.06 1.06zm6.531-10.89c0-4.246-3.488-7.706-7.75-7.706v1.5c3.442 0 6.25 2.797 6.25 6.207h1.5zm-6.051-1.193a1.838 1.838 0 01-.995 2.402l.574 1.386a3.338 3.338 0 001.807-4.362l-1.386.574zm-.995 2.402a1.838 1.838 0 01-2.402-.995l-1.386.574a3.338 3.338 0 004.362 1.807l-.574-1.386zm-2.402-.995a1.838 1.838 0 01.995-2.402l-.574-1.386a3.338 3.338 0 00-1.807 4.362l1.386-.574zm.995-2.402a1.838 1.838 0 012.402.995l1.386-.574a3.338 3.338 0 00-4.362-1.807l.574 1.386z"></path></svg></span><span
 												class="fRIUK CdhWK _S "><span
-												class="biGQs _P pZUbB KxBGd">2-5-25 Umeda, Kita-ku,
-													Osaka 530-0001 Osaka Prefecture</span></span>
+												class="biGQs _P pZUbB KxBGd">${board.country}, ${board.area}</span></span>
 										</div>
 										<div class="FPanu f K q">
 											<div class="eeVey S4 H3 f u UKvGa"
 												data-blcontact="URL_HOTEL ">
-												<a target="_blank"
-													class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS"><div
+<div
 														class="biGQs _P pZUbB KxBGd">
 														<div class="kpIff f u UXKqB">
-															<svg viewBox="0 0 24 24" width="20px" height="20px"
-																class="d Vb egaXP icjEL">
-																	<path fill-rule="evenodd" clip-rule="evenodd"
-																	d="M9.566 11.25h4.873c-.07-1.831-.397-3.448-.87-4.628-.268-.672-.57-1.165-.865-1.478-.25-.264-.458-.364-.62-.388H11.922c-.161.024-.37.124-.62.388-.296.313-.597.806-.866 1.478-.472 1.18-.798 2.797-.869 4.628zm-.133-6.027a8.259 8.259 0 00-.39.841c-.554 1.385-.907 3.198-.978 5.186H4.788a7.252 7.252 0 014.645-6.027zm2.393-1.965C7.078 3.348 3.25 7.226 3.25 12a8.744 8.744 0 008.747 8.75c4.833 0 8.753-3.918 8.753-8.75a8.741 8.741 0 00-8.57-8.742 2.079 2.079 0 00-.354 0zm2.746 1.965c.142.263.272.545.39.841.554 1.385.907 3.198.978 5.186h3.272a7.248 7.248 0 00-4.64-6.027zm4.64 7.527H15.94c-.071 1.988-.424 3.8-.977 5.185-.12.298-.25.581-.393.845a7.259 7.259 0 004.642-6.03zm-9.774 6.036a8.244 8.244 0 01-.395-.851c-.554-1.384-.907-3.197-.978-5.185H4.788a7.25 7.25 0 004.65 6.036zm5.001-6.036c-.07 1.83-.397 3.448-.87 4.628-.268.671-.57 1.164-.865 1.477-.295.312-.532.395-.701.395-.17 0-.407-.083-.701-.395-.297-.313-.598-.806-.867-1.477-.472-1.18-.798-2.797-.869-4.628h4.873z"></path></svg>
-															Visit hotel website
+															${board.price} 원 / 박
 														</div>
-													</div></a>
-											</div>
-											<div class="eeVey S4 H3 f u LGJIs" data-blcontact="PHONE ">
-												<a dir="ltr" href="tel:+18446310595"
-													class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS"><div
-														class="biGQs _P pZUbB KxBGd">
-														<div class="kpIff f u">
-															<svg viewBox="0 0 24 24" width="20px" height="20px"
-																class="d Vb hzzSG UmNoP">
-																	<path fill-rule="evenodd" clip-rule="evenodd"
-																	d="M6.525 2.011l5.173 5.176-1.826 2.725.096.207c.167.348.427.829.8 1.347.707.986 1.796 2.082 3.383 2.7l3.168-1.354 4.671 4.674-3.152 4.2-.32.038-.087-.745.086.745h-.004l-.006.001-.018.002a5.117 5.117 0 01-.265.017c-.175.007-.424.01-.737-.004a12.514 12.514 0 01-2.557-.399c-2.109-.547-4.89-1.794-7.668-4.574-2.781-2.783-4.037-5.574-4.591-7.69a12.69 12.69 0 01-.409-2.568 8.769 8.769 0 01.003-.946l.005-.06.002-.018V5.48l.001-.002s0-.002.746.08l-.746-.082.036-.325 4.216-3.139zM3.751 5.947c-.002.127 0 .29.01.487.026.538.114 1.318.361 2.262.493 1.884 1.625 4.433 4.2 7.01 2.573 2.575 5.111 3.698 6.984 4.184.94.243 1.716.327 2.25.351.196.01.359.01.485.008l1.969-2.623-3.035-3.036-2.773 1.185-.272-.093c-2.115-.726-3.517-2.137-4.381-3.341a10.51 10.51 0 01-.934-1.574 8.35 8.35 0 01-.29-.682l-.004-.012-.002-.005v-.001s0-.002.71-.242l-.71.24-.12-.35 1.567-2.339L6.38 3.99 3.75 5.947z"></path></svg>
-															<div class="">+1 844-631-0595</div>
-														</div>
-													</div></a>
-											</div>
-											<a target="_blank"
-												href="/UserReview-g298566-d302242-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html"
-												class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS"><div
-													class="biGQs _P pZUbB KxBGd">
-													<div class="f u">
-														<svg viewBox="0 0 24 24" width="20px" height="20px"
-															class="d Vb egaXP UmNoP">
-																<path fill-rule="evenodd" clip-rule="evenodd"
-																d="M14.288 6.793L6.69 14.368l-.816 3.746 3.724-.839 7.588-7.583-2.9-2.9zm3.96 1.84l-2.898-2.9.556-.554A2.318 2.318 0 0117.52 4.5c.378 0 .73.104 1.031.315l.01.007.012.008c1.12.757 1.221 2.26.326 3.151l-.65.651zm-7.896 10.01l-5.99 1.35C4.34 20 4.319 20 4.298 20a.297.297 0 01-.29-.36l1.31-6.023 9.529-9.5A3.818 3.818 0 0117.52 3c.66 0 1.318.184 1.893.587a3.536 3.536 0 01.546 5.457l-9.607 9.599z"></path></svg>
-														Write a review
 													</div>
-												</div></a>
+											</div>
+											
 										</div>
 									</div>
 									<div class="AVTFm"></div>
@@ -625,10 +592,6 @@
 																<div class="modal-header">
 																	<h5 class="modal-title" id="guestModalLabel">Select
 																		Guests</h5>
-																	<button type="button" class="close"
-																		data-dismiss="modal" aria-label="Close">
-																		<span aria-hidden="true">&times;</span>
-																	</button>
 																</div>
 																<div class="modal-body">
 																	<form>
@@ -674,15 +637,30 @@
 						<script
 							src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 						<script>
-    document.getElementById('saveSelection').addEventListener('click', function() {
-        var adultCount = document.getElementById('adultCount').value;
+    let selectedScore = null;
 
-        document.querySelector('.adult-info').textContent = adultCount;
+    document.querySelectorAll('input[name="reviewScore"]').forEach(function(radio) {
+        radio.addEventListener('click', function() {
+            const currentScore = this.value;
 
+            if (selectedScore !== currentScore) {
+                selectedScore = currentScore;
+            } else {
+                this.checked = false;
+                selectedScore = null;
+            }
+        });
+    });
+
+    document.getElementById('saveReview').addEventListener('click', function() {
+        if (selectedScore !== null) {
+            document.querySelector('.review-score-info').textContent = selectedScore;
+        }
 
         $('#guestModal').modal('hide');
     });
 </script>
+
 
 						<div class="wWwSb">
 							<div class="">
@@ -729,7 +707,7 @@
 																		d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
 																		transform="translate(104 0)"></path>
               </svg>
-																<span class="biGQs _P pZUbB KxBGd">2,608 reviews</span>
+																<span class="biGQs _P pZUbB KxBGd">${counts} reviews</span>
 															</div>
 														</span>
 													</button>
@@ -826,178 +804,142 @@
 									<!-- 모달 구현 -->
 									<div id="reviewModal" class="modal">
 										<div class="modal-content">
+											<span class="close">&times;</span>
 											<h2>장소 평가하기</h2>
 											<p>평점을 선택하세요:</p>
 											<div class="rating-box">
-												<!-- 평점 선택 박스 -->
+												<!-- 평점 선택 라디오 버튼 -->
+												<input type="radio" name="rating" value="5" id="rating5">
+												<label for="rating5">5점</label><br> <input type="radio"
+													name="rating" value="4" id="rating4"> <label
+													for="rating4">4점</label><br> <input type="radio"
+													name="rating" value="3" id="rating3"> <label
+													for="rating3">3점</label><br> <input type="radio"
+													name="rating" value="2" id="rating2"> <label
+													for="rating2">2점</label><br> <input type="radio"
+													name="rating" value="1" id="rating1"> <label
+													for="rating1">1점</label><br>
 											</div>
 											<p>리뷰를 작성하세요:</p>
 											<textarea id="reviewText" rows="4" cols="50"></textarea>
 											<br>
-											<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
-												id="submitReview" type="button">
-												<span class="biGQs _P ttuOS"><div class="jktzL">
-														<h1 class="CpzHF q">제출하기</h1></span>
-											</button>
+											<button id="submitReview" class="btn btn-success">제출하기</button>
 										</div>
 									</div>
+								<div class="ppuFV _T Z BB lSnVq amYYZ">
+									<div id="submittedReviews">
+										<h3>제출된 리뷰</h3>
+										<ul id="reviewList"></ul>
+									</div>
+								</div>
+								</div>
 
-									<script>
-document.addEventListener("DOMContentLoaded", function() {
-	  var modal = document.getElementById('reviewModal');
-	  var openModalButton = document.getElementById('openReviewModal');
-	  var closeModalButton = document.querySelector('.close');
-	  var submitButton = document.getElementById('submitReview');
-	  var submittedReviews = document.getElementById('submittedReviews');
-	  var ratingBox = document.querySelector('.rating-box');
-	  var reviewTextArea = document.getElementById('reviewText'); // 리뷰 텍스트 입력란
+								<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById('reviewModal');
+    var openModalButton = document.getElementById('openReviewModal');
+    var closeModalButton = document.querySelector('.close');
+    var submitButton = document.getElementById('submitReview');
+    var submittedReviews = document.getElementById('reviewList');
+    var ratingBox = document.querySelector('.rating-box');
+    var reviewTextArea = document.getElementById('reviewText');
 
-	  // 모달 열기 버튼 클릭 이벤트 핸들러
-	  openModalButton.addEventListener('click', function() {
-	    // 평점 선택 박스 초기화
-	    ratingBox.innerHTML = "";
+    openModalButton.addEventListener('click', function() {
+      modal.style.display = "block";
+    });
 
-	    // 리뷰 텍스트 입력란 초기화
-	    reviewTextArea.value = "";
+    closeModalButton.addEventListener('click', function() {
+      modal.style.display = "none";
+    });
 
-	    // 1점부터 5점까지 평점 선택 박스 추가
-	    for (var i = 1; i <= 5; i++) {
-	      var checkbox = document.createElement('input');
-	      checkbox.type = 'checkbox';
-	      checkbox.value = i;
-	      checkbox.id = 'rating' + i;
-	      var label = document.createElement('label');
-	      label.htmlFor = 'rating' + i;
-	      label.appendChild(document.createTextNode(i + '점'));
-	      
-	      checkbox.addEventListener('click', function() {
-	        var selectedRating = this.value;
-	        addRatingBox(selectedRating);
-	      });
+    window.addEventListener('click', function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
 
-	      ratingBox.appendChild(checkbox);
-	      ratingBox.appendChild(label);
-	    }
+    submitButton.addEventListener('click', function() {
+      var selectedRating = document.querySelector('input[name="rating"]:checked');
+      var reviewText = reviewTextArea.value.trim();
 
-	    // 모달 열기
-	    modal.style.display = "block";
-	  });
+      if (selectedRating && reviewText !== '') {
+        var ratingValue = selectedRating.value;
+        var ratingText = selectedRating.nextSibling.textContent.trim();
+        var reviewItem = document.createElement('li');
+        reviewItem.classList.add('review-item');
+        reviewItem.innerHTML = '<p>평점: ' + ratingText + '</p><p>리뷰 내용: ' + reviewText + '</p>';
+        submittedReviews.appendChild(reviewItem);
+        modal.style.display = "none";
 
-	  // 모달 닫기 버튼 클릭 이벤트 핸들러
-	  closeModalButton.addEventListener('click', function() {
-	    modal.style.display = "none";
-	  });
-
-	  // 모달 외부 클릭 시 닫기
-	  window.addEventListener('click', function(event) {
-	    if (event.target == modal) {
-	      modal.style.display = "none";
-	    }
-	  });
-
-	  // 리뷰 제출 버튼 클릭 이벤트 핸들러
-	  submitButton.addEventListener('click', function() {
-	    var selectedRatings = document.querySelectorAll('.selected-rating');
-	    var selectedRatingsValues = Array.from(selectedRatings).map(function(rating) {
-	      return rating.innerText.split('점')[0];
-	    }).join(', ');
-
-	    var reviewText = reviewTextArea.value; // 리뷰 텍스트 내용 가져오기
-
-	    // 새로운 리뷰 아이템 생성
-	    var reviewItem = document.createElement('li'); // 리스트 아이템으로 변경
-	    reviewItem.classList.add('review-item');
-	    var ratingElement = document.createElement('p');
-	    ratingElement.classList.add('rating');
-	    ratingElement.innerText = '평점: ' + selectedRatingsValues;
-	    var reviewTextElement = document.createElement('p');
-	    reviewTextElement.innerText = '리뷰 내용: ' + reviewText;
-	    reviewItem.appendChild(ratingElement);
-	    reviewItem.appendChild(reviewTextElement);
-	    
-	    // 새로운 리뷰 아이템을 리스트에 추가
-	    submittedReviews.appendChild(reviewItem);
-
-	    // 모달 닫기
-	    modal.style.display = "none";
-	  });
-
-	  // 선택한 평점 추가하기
-	  function addRatingBox(rating) {
-	    // 기존의 선택 평점이 있으면 제거
-	    var selectedRating = document.querySelector('.selected-rating');
-	    if (selectedRating) {
-	      selectedRating.remove();
-	    }
-
-	    // 새로운 선택 평점 추가
-	    var newRating = document.createElement('div');
-	    newRating.classList.add('selected-rating');
-	    newRating.innerText = rating + '점';
-	    ratingBox.appendChild(newRating);
-	  }
-	});
+        // 제출 완료 알람 추가
+        alert('제출되었습니다!');
+      } else {
+        alert('평점과 리뷰를 모두 선택해주세요.');
+      }
+    });
+  });
 </script>
 
-
-									<div class="wWwSb">
+								<div class="wWwSb">
+									<div>
 										<div>
-											<div>
-												<div class="AMQRv Gi Z BB YjQAT">
-													<div>
-														<h2 class="biGQs _P fiohW uuBRH">주변 호텔 추천</h2>
+											<div class="AMQRv Gi Z BB YjQAT">
+												<div>
+													<h2 class="biGQs _P fiohW uuBRH">주변 호텔 추천</h2>
+												</div>
+												<div class="iBGtx f J _h _e z NK Ni qQnpg">
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
+															</div>
+														</div>
 													</div>
-													<div class="iBGtx f J _h _e z NK Ni qQnpg">
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
 															</div>
 														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
+													</div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
 															</div>
 														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
-															</div>
-														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
+													</div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
 															</div>
 														</div>
 													</div>
@@ -1005,23 +947,24 @@ document.addEventListener("DOMContentLoaded", function() {
 											</div>
 										</div>
 									</div>
-									<div class="wWwSb">
-										<div class="ruCQl z">
-											<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
+								</div>
+								<div class="wWwSb">
+									<div class="ruCQl z">
+										<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
+											<div>
 												<div>
-													<div>
-														<div class="ppuFV _T Z BB lSnVq amYYZ"
-															data-tab="TABS_LOCATION"
-															data-section-signature="location" id="LOCATION">
+													<div class="ppuFV _T Z BB lSnVq amYYZ"
+														data-tab="TABS_LOCATION" data-section-signature="location"
+														id="LOCATION">
+														<div>
 															<div>
-																<div>
-																	<h2 class="biGQs _P fiohW ncFvv uuBRH">주변 관광명소</h2>
-																	<div class="YPYBR f"></div>
-																</div>
+																<h2 class="biGQs _P fiohW ncFvv uuBRH">주변 관광명소</h2>
+																<div class="YPYBR f"></div>
+															</div>
 
-																<div id="googleMap" style="width: 100%; height: 700px;"></div>
+															<div id="googleMap" style="width: 100%; height: 700px;"></div>
 
-																<script>
+															<script>
         function myMap() {
             var mapOptions = {
                 center: new google.maps.LatLng(48.8566, 2.3522), // 파리 좌표
@@ -1086,9 +1029,8 @@ document.addEventListener("DOMContentLoaded", function() {
             initMap();
         }
     </script>
-																<script
-																	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdE1NKlgUopd8K2NoyWuASU8Y4ufekHY&callback=myMap"></script>
-															</div>
+															<script
+																src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdE1NKlgUopd8K2NoyWuASU8Y4ufekHY&callback=myMap"></script>
 														</div>
 													</div>
 												</div>
@@ -1096,64 +1038,64 @@ document.addEventListener("DOMContentLoaded", function() {
 										</div>
 									</div>
 								</div>
-								<div class="wWwSb">
+							</div>
+							<div class="wWwSb">
+								<div>
 									<div>
-										<div>
-											<div class="AMQRv Gi Z BB YjQAT">
-												<div>
-													<h2 class="biGQs _P fiohW uuBRH">주변 관광명소 추천</h2>
+										<div class="AMQRv Gi Z BB YjQAT">
+											<div>
+												<h2 class="biGQs _P fiohW uuBRH">주변 관광명소 추천</h2>
+											</div>
+											<div class="iBGtx f J _h _e z NK Ni qQnpg">
+												<div class="ZSsAY xjaPD">
+													<div class="TzTCE w">
+														<div class="Gwegd l t w"></div>
+														<div class="ILCbI hdCDN w"></div>
+														<div class="DZdiH">
+															<div class="ILCbI lxwEm w"></div>
+															<div class="ILCbI lnuPx w"></div>
+															<div class="ILCbI YkRgi w"></div>
+															<div class="ILCbI TZksi w"></div>
+															<div class="ILCbI LtmGt"></div>
+														</div>
+													</div>
 												</div>
-												<div class="iBGtx f J _h _e z NK Ni qQnpg">
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
+												<div class="ZSsAY xjaPD">
+													<div class="TzTCE w">
+														<div class="Gwegd l t w"></div>
+														<div class="ILCbI hdCDN w"></div>
+														<div class="DZdiH">
+															<div class="ILCbI lxwEm w"></div>
+															<div class="ILCbI lnuPx w"></div>
+															<div class="ILCbI YkRgi w"></div>
+															<div class="ILCbI TZksi w"></div>
+															<div class="ILCbI LtmGt"></div>
 														</div>
 													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
+												</div>
+												<div class="ZSsAY xjaPD">
+													<div class="TzTCE w">
+														<div class="Gwegd l t w"></div>
+														<div class="ILCbI hdCDN w"></div>
+														<div class="DZdiH">
+															<div class="ILCbI lxwEm w"></div>
+															<div class="ILCbI lnuPx w"></div>
+															<div class="ILCbI YkRgi w"></div>
+															<div class="ILCbI TZksi w"></div>
+															<div class="ILCbI LtmGt"></div>
 														</div>
 													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
-														</div>
-													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
+												</div>
+												<div class="ZSsAY xjaPD">
+													<div class="TzTCE w">
+														<div class="Gwegd l t w"></div>
+														<div class="ILCbI hdCDN w"></div>
+														<div class="DZdiH">
+															<div class="ILCbI lxwEm w"></div>
+															<div class="ILCbI lnuPx w"></div>
+															<div class="ILCbI YkRgi w"></div>
+															<div class="ILCbI TZksi w"></div>
+															<div class="ILCbI LtmGt"></div>
 														</div>
 													</div>
 												</div>
@@ -1161,15 +1103,15 @@ document.addEventListener("DOMContentLoaded", function() {
 										</div>
 									</div>
 								</div>
-								<div class="wWwSb">
-									<div class="ruCQl z">
-										<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
-											<div class="uaOxz">
-												<div>
-													<div class="izHMK amYYZ qTXWP" data-tab="TABS_REVIEWS"
-														data-section-signature="community" id="REVIEWS">
-														</script>
-														<%@ include file="/resources/includes/footer.jsp"%>
+							</div>
+							<div class="wWwSb">
+								<div class="ruCQl z">
+									<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
+										<div class="uaOxz">
+											<div>
+												<div class="izHMK amYYZ qTXWP" data-tab="TABS_REVIEWS"
+													data-section-signature="community" id="REVIEWS">
+													</script>
 </body>
 <script type="text/javascript">
 //입력폼에 캘린더를 클릭하여 날짜값을 입력해주는 jQuery 플러그인

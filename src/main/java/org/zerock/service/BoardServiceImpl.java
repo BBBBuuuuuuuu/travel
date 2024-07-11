@@ -49,7 +49,6 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public StayVO getStayBoard(int no) {
 		StayVO stayBoard = boardMapper.selectStayBoard(no);
-		log.info("boardImpl===================" + stayBoard);
 		if (stayBoard != null) {
 			stayBoard.setImageName(boardMapper.selectImageList(no));
 			return stayBoard;

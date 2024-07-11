@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.ActivityVO;
 import org.zerock.domain.StayVO;
 import org.zerock.domain.SurveyVO;
@@ -41,15 +42,25 @@ public class SurveyController {
     }
 
     @RequestMapping(value="survey.do", method = RequestMethod.POST)
-    public String insertSurvey(@ModelAttribute SurveyVO survey, HttpSession session) {
+    public String insertSurvey(@ModelAttribute SurveyVO survey, HttpSession session, String category, Model model) {
         String userId = (String) session.getAttribute("userId");
         if (userId == null) {
             return "redirect:/login.do";
         }
         survey.setMember_id(userId);
         surveyService.insertSurvey(survey);
-        logger.info("Survey inserted with ID: " + survey.getSurvey_no());
-        return "redirect:/main.do";
+
+        List<Integer> boardNumList = surveyService.getCommonBoard(survey);
+    	
+    	if(category.equals("activity")) {
+    		List<ActivityVO> activityList = surveyService.getActivityBoard(survey, boardNumList);
+    		model.addAttribute("board", activityList);
+    	} else {
+    		List<StayVO> stayList = surveyService.getStayBoardWithCategory(survey, boardNumList);
+    		model.addAttribute("board", stayList);
+    	}
+    	
+        return "redirect:/listBySurvey.do";
     }
 
     @RequestMapping(value = "deleteSurvey.do", method = RequestMethod.POST)
@@ -86,16 +97,6 @@ public class SurveyController {
         
         @GetMapping("/listBySurvey.do")
         public String searchBySurvey(SurveyVO survey, String category, Model model) {
-        	List<Integer> boardNumList = surveyService.getCommonBoard(survey);
-        	log.info("SurveyController Get searchBySurvey " + boardNumList);
-        	
-        	if(category.equals("activity")) {
-        		List<ActivityVO> activityList = surveyService.getActivityBoard(survey, boardNumList);
-        		model.addAttribute("board", activityList);
-        	} else {
-        		List<StayVO> stayList = surveyService.getStayBoardWithCategory(survey, boardNumList);
-        		model.addAttribute("board", stayList);
-        	}
         	
         	return "board/list";
         }

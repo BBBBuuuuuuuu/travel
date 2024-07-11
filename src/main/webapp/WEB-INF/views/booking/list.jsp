@@ -1,14 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Booking List</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
+<title>Booking List</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
         function cancelBooking(booking_no) {
             if (confirm("정말로 예약을 취소 하시겠습니까?")) {
                 $.ajax({
@@ -41,8 +43,23 @@
             });
         }
     </script>
+<style type="text/css">
+.h1, h1 {
+	font-size: 2.5rem;
+	margin-top: 5%;
+}
+
+.btn-danger {
+	color: #fff;
+	background-color: #00aa6c;
+	border-color: #000000;
+}
+</style>
 </head>
+<%@ include file="/resources/includes/header.jsp"%>
+
 <body>
+
     <div class="container">
         <h1>내가 떠나기로 한 여행</h1>
         <table class="table table-bordered">
@@ -100,5 +117,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>

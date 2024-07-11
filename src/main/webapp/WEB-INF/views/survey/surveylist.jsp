@@ -314,7 +314,6 @@ iframe {
 </head>
 <body>
 <%@ include file="/resources/includes/header.jsp" %> 
-	<span>
 		<main>
 			<h1>Survey List</h1>
 			<div id="surveyList">
@@ -337,7 +336,6 @@ iframe {
 			</div>
 		</main>
 		
-<%@ include file="/resources/includes/footer.jsp" %>
 		 <script>
 			$(document)
 					.ready(

@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.zerock.domain.MemberVO;
 import org.zerock.service.MemberService;
 
+import lombok.extern.log4j.Log4j;
+
+@Log4j
 @Controller
 public class MemberController {
 	@Autowired
@@ -84,9 +87,10 @@ public class MemberController {
 			model.addAttribute("phoneErrorMessage", "전화번호를 입력해주세요.");
 			return "user/join";
 		}
-
 		memberService.insertMember(vo);
-		return "redirect:login.do";
+		
+		model.addAttribute("registSuccess", Boolean.TRUE);
+		return "user/login";
 	}
 
 	 @RequestMapping(value = "updateMember.do", method = RequestMethod.GET)

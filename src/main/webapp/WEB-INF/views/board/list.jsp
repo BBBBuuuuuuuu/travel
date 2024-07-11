@@ -435,6 +435,5 @@
 			<div class="LNjrQ A">
 				<h2 class="biGQs _P fiohW uPlAb uuBRH">
 					</script>
-<%@ include file="/resources/includes/footer.jsp" %>
 </body>
 </html>
