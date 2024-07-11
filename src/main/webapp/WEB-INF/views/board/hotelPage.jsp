@@ -160,9 +160,23 @@
 <script src="https://static.tacdn.com/assets/p7jq7m.4Ujcuf7.js" async=""
 	crossorigin="" fetchpriority="low"></script>
 <style>
+ .LoFmz {
+            width: 111%;
+            display: block;
+            position: relative; /* 필요한 경우 */
+            overflow: hidden;
+        }
+        .LoFmz img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
 .rmyCe.huqcv:not(:disabled) {
-    background-color: #28a745;
-    color: var(--onLightButtonText);
+	background-color: #28a745;
+	color: var(- -onLightButtonText);
 }
 
 .rmyCe.XDcOZ:not(:disabled) {
@@ -265,25 +279,54 @@
 	display: block;
 }
 
-.modal {
-	display: none; /* 처음에 모달 숨기기 */
-	position: fixed;
-	z-index: 1000;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-	background-color: #fefefe;
-	margin: 20% auto;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 80%;
-}
+ .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .preview-img {
+        max-width: 100px;
+        max-height: 100px;
+        display: none;
+    }
+    .review-item img {
+           max-width: 30%;
+	    max-height: 30%;
+	    display: block;
+	    margin-top: 10px;
+    }
+    .review-item {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
 
 .modal-backdrop {
 	position: fixed;
@@ -292,7 +335,7 @@
 	width: 100vw;
 	height: 100vh;
 	background-color: #000;
-	z-index: 1
+	z-index: 0;
 }
 
 .rating-stars {
@@ -328,6 +371,7 @@
 	width: 100%;
 	height: 45px;
 }
+
 </style>
 	<%@ include file="/resources/includes/header.jsp"%>
 	<main>
@@ -393,7 +437,7 @@
 																	<path
 																	d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
 																	transform="translate(104 0)"></path></svg>
-															<span class="biGQs _P pZUbB KxBGd">${counts[5]} reviews</span>
+															<span class="biGQs _P pZUbB KxBGd">2,608 reviews</span>
 														</div></a>
 													<div class="yCSYR f">
 														<a href="#REVIEWS"
@@ -406,14 +450,18 @@
 																		<path fill-rule="evenodd" clip-rule="evenodd"
 																		d="M20.772 8.538a9.64 9.64 0 01-5.703-5.703c-.197-.538-.976-.538-1.174 0a9.588 9.588 0 01-5.697 5.703c-.538.197-.538.976 0 1.173a9.64 9.64 0 015.703 5.704c.197.537.976.537 1.174 0a9.64 9.64 0 015.703-5.704c.537-.197.537-.976 0-1.173h-.006zm-8.683 7.83a6.885 6.885 0 01-4.074-4.073c-.141-.384-.697-.384-.838 0a6.848 6.848 0 01-4.07 4.073c-.384.142-.384.698 0 .839a6.885 6.885 0 014.074 4.073c.14.384.697.384.838 0a6.885 6.885 0 014.074-4.073c.384-.141.384-.698 0-.839h-.004z"></path></svg>
 																<div class="biGQs _P fiohW kSNRl osNWb">
-																	<strong>주변 관광지 보러가기</strong>
+																	<strong>NEW</strong> AI Reviews Summary
 																</div>
 															</div></a>
 													</div>
 												</div>
 												<div class="SbOdb"></div>
 											</div>
-											
+											<a
+												href="/Hotels-g298566-Osaka_Osaka_Prefecture_Kinki-Hotels.html"
+												class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS"><div
+													class="biGQs _P pZUbB KxBGd">#16 of 444 hotels in
+													Osaka</div></a>
 										</div>
 										<div class="FhOgt H3 f u fRLPH">
 											<span class="H3"><svg viewBox="0 0 24 24" width="18px"
@@ -421,19 +469,17 @@
 														<path
 														d="M11.277 20.26l.53-.532-.53.532zm.035.035l.537-.524-.008-.008-.53.532zM12 21l-.537.524.529.542.537-.534L12 21zm.688-.684l.529.532.002-.002-.53-.53zm.303-8.458l-.287-.693.287.693zm-1.98-4.783l-.288-.693.287.693zM12 2.25c-4.262 0-7.75 3.46-7.75 7.707h1.5c0-3.41 2.808-6.207 6.25-6.207v-1.5zM4.25 9.957c0 2.269 1.128 4.455 2.452 6.292 1.335 1.85 2.947 3.45 4.047 4.543l1.057-1.064c-1.108-1.1-2.634-2.62-3.887-4.356-1.262-1.75-2.169-3.62-2.169-5.415h-1.5zm6.499 10.835l.034.035 1.058-1.064-.035-.035-1.057 1.064zm.026.026l.688.706 1.074-1.048-.688-.705-1.074 1.047zm1.754.714l.688-.684-1.058-1.064-.688.684 1.058 1.064zm.69-.686c1.096-1.098 2.717-2.706 4.06-4.566 1.333-1.846 2.471-4.043 2.471-6.323h-1.5c0 1.806-.916 3.685-2.187 5.445-1.262 1.747-2.797 3.275-3.905 4.384l1.06 1.06zm6.531-10.89c0-4.246-3.488-7.706-7.75-7.706v1.5c3.442 0 6.25 2.797 6.25 6.207h1.5zm-6.051-1.193a1.838 1.838 0 01-.995 2.402l.574 1.386a3.338 3.338 0 001.807-4.362l-1.386.574zm-.995 2.402a1.838 1.838 0 01-2.402-.995l-1.386.574a3.338 3.338 0 004.362 1.807l-.574-1.386zm-2.402-.995a1.838 1.838 0 01.995-2.402l-.574-1.386a3.338 3.338 0 00-1.807 4.362l1.386-.574zm.995-2.402a1.838 1.838 0 012.402.995l1.386-.574a3.338 3.338 0 00-4.362-1.807l.574 1.386z"></path></svg></span><span
 												class="fRIUK CdhWK _S "><span
-												class="biGQs _P pZUbB KxBGd">${board.country}, ${board.area}</span></span>
+												class="biGQs _P pZUbB KxBGd">${board.country},
+													${board.area}</span></span>
 										</div>
 										<div class="FPanu f K q">
 											<div class="eeVey S4 H3 f u UKvGa"
 												data-blcontact="URL_HOTEL ">
-<div
-														class="biGQs _P pZUbB KxBGd">
-														<div class="kpIff f u UXKqB">
-															${board.price} 원 / 박
-														</div>
-													</div>
+												<div class="biGQs _P pZUbB KxBGd">
+													<div class="kpIff f u UXKqB">${board.price}원 / 박</div>
+												</div>
 											</div>
-											
+
 										</div>
 									</div>
 									<div class="AVTFm"></div>
@@ -445,9 +491,9 @@
 						<span></span>
 						<div class="wWwSb VogJa">
 							<div class="LOtES f e">
-								<span><div class="cmOfN">
-										<div style="width: 111%; display: block" class="LoFmz w _Z"></div>
-									</div></span>
+								 <div class="LoFmz w _Z">
+							        <img src="https://via.placeholder.com/400x300" alt="예시 이미지">
+							    </div>
 								<div></div>
 								<div class="VRono Gi B1 Z BB Pk PY Px PK">
 									<div>
@@ -563,25 +609,20 @@
     }
 </script>
 
-													<div class="jxmuG WFbDt KDRFa" data-automation="guest">
-														<button class="bqhCp _T u z Gz Wh sglCU wjpdQ"
-															data-automation="roomsandguests" data-toggle="modal"
-															data-target="#guestModal">
-															<div class="OdUPP">
-																<svg viewBox="0 0 24 24" width="24px" height="24px"
-																	class="d Vb icjEL">
-                <path
-																		d="M8 11.5l-.005.75h.01L8 11.5zM3 14l-.603-.446-.147.199V14H3zm0 6h-.75v.75H3V20zm18 0v.75h.75V20H21zm0-4h.75v-.246l-.146-.199L21 16zm-5-2.527v-.75.75zM11 16l-.604-.445-.146.199V16H11zm0 4h-.75v.75H11V20zM9.5 6.25A1.5 1.5 0 018 7.75v1.5a3 3 0 003-3H9.5zM8 7.75a1.5 1.5 0 01-1.5-1.5H5a3 3 0 003 3v-1.5zm-1.5-1.5A1.5 1.5 0 018 4.75v-1.5a3 3 0 00-3 3h1.5zM8 4.75a1.5 1.5 0 011.5 1.5H11a3 3 0 00-3-3v1.5zm9.5 3.5a1.5 1.5 0 01-1.5 1.5v1.5a3 3 0 003-3h-1.5zM16 9.75a1.5 1.5 0 01-1.5-1.5H13a3 3 0 003 3v-1.5zm-1.5-1.5a1.5 1.5 0 011.5-1.5v-1.5a3 3 0 00-3 3h1.5zm1.5-1.5a1.5 1.5 0 011.5 1.5H19a3 3 0 00-3-3v1.5zm-2.397 6.804a6.91 6.91 0 00-2.468-2.075l-.67 1.342a5.41 5.41 0 011.932 1.625l1.206-.892zm-2.468-2.075a6.91 6.91 0 00-3.14-.729l.01 1.5a5.41 5.41 0 012.46.571l.67-1.342zm-3.13-.729a6.91 6.91 0 00-3.14.73l.67 1.341a5.41 5.41 0 012.46-.571l.01-1.5zm-3.14.73a6.91 6.91 0 00-2.468 2.074l1.206.892a5.41 5.41 0 011.932-1.625l-.67-1.342zM2.25 14v6h1.5v-6h-1.5zM3 20.75h10v-1.5H3v1.5zM21.75 20v-4h-1.5v4h1.5zm-.146-4.445a6.96 6.96 0 00-2.464-2.084l-.677 1.339a5.46 5.46 0 011.933 1.635l1.208-.89zm-2.464-2.084a6.96 6.96 0 00-3.14-.748v1.5c.856 0 1.7.201 2.463.587l.677-1.339zM16 12.723a6.96 6.96 0 00-3.14.748l.677 1.339A5.46 5.46 0 0116 14.223v-1.5zm-3.14.748a6.96 6.96 0 00-2.464 2.084l1.208.89a5.46 5.46 0 011.933-1.635l-.677-1.339zM10.25 16v4h1.5v-4h-1.5zm.75 4.75h10v-1.5H11v1.5z"></path>
-            </svg>
-															</div>
-															<div class="kPQaf q">Guests</div>
-															<div class="icDdG q dibDZ">
-																<span> <span class="adult-info">0</span> adults
-																</span>
-															</div>
-														</button>
-													</div>
-
+													<!-- Guests 버튼 -->
+														<div class="jxmuG WFbDt KDRFa" data-automation="guest">
+														    <button class="bqhCp _T u z Gz Wh sglCU wjpdQ" data-automation="roomsandguests" data-toggle="modal" data-target="#guestModal">
+														        <div class="OdUPP">
+														            <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb icjEL">
+														                <path d="M8 11.5l-.005.75h.01L8 11.5zM3 14l-.603-.446-.147.199V14H3zm0 6h-.75v.75H3V20zm18 0v.75h.75V20H21zm0-4h.75v-.246l-.146-.199L21 16zm-5-2.527v-.75.75zM11 16l-.604-.445-.146.199V16H11zm0 4h-.75v.75H11V20zM9.5 6.25A1.5 1.5 0 018 7.75v1.5a3 3 0 003-3H9.5zM8 7.75a1.5 1.5 0 01-1.5-1.5H5a3 3 0 003 3v-1.5zm-1.5-1.5A1.5 1.5 0 018 4.75v-1.5a3 3 0 00-3 3h1.5zM8 4.75a1.5 1.5 0 011.5 1.5H11a3 3 0 00-3-3v1.5zm9.5 3.5a1.5 1.5 0 01-1.5 1.5v1.5a3 3 0 003-3h-1.5zM16 9.75a1.5 1.5 0 01-1.5-1.5H13a3 3 0 003 3v-1.5zm-1.5-1.5a1.5 1.5 0 011.5-1.5v-1.5a3 3 0 00-3 3h1.5zm1.5-1.5a1.5 1.5 0 011.5 1.5H19a3 3 0 00-3-3v1.5zm-2.397 6.804a6.91 6.91 0 00-2.468-2.075l-.67 1.342a5.41 5.41 0 011.932 1.625l1.206-.892zm-2.468-2.075a6.91 6.91 0 00-3.14-.729l.01 1.5a5.41 5.41 0 012.46.571l.67-1.342zm-3.13-.729a6.91 6.91 0 00-3.14.73l.67 1.341a5.41 5.41 0 012.46-.571l.01-1.5zm-3.14.73a6.91 6.91 0 00-2.468 2.074l1.206.892a5.41 5.41 0 011.932-1.625l-.67-1.342zM2.25 14v6h1.5v-6h-1.5zM3 20.75h10v-1.5H3v1.5zM21.75 20v-4h-1.5v4h1.5zm-.146-4.445a6.96 6.96 0 00-2.464-2.084l-.677 1.339a5.46 5.46 0 011.933 1.635l1.208-.89zm-2.464-2.084a6.96 6.96 0 00-3.14-.748v1.5c.856 0 1.7.201 2.463.587l.677-1.339zM16 12.723a6.96 6.96 0 00-3.14.748l.677 1.339A5.46 5.46 0 0116 14.223v-1.5zm-3.14.748a6.96 6.96 0 00-2.464 2.084l1.208.89a5.46 5.46 0 011.933-1.635l-.677-1.339zM10.25 16v4h1.5v-4h-1.5zm.75 4.75h10v-1.5H11v1.5z"></path>
+														            </svg>
+														        </div>
+														        <div class="kPQaf q">Guests</div>
+														        <div class="icDdG q dibDZ">
+														            <span><span class="adult-info">0</span> adults</span>
+														        </div>
+														    </button>
+														</div>
 
 													<!-- Modal -->
 													<div class="modal fade" id="guestModal" tabindex="-1"
@@ -590,13 +631,12 @@
 														<div class="modal-dialog" role="document">
 															<div class="modal-content">
 																<div class="modal-header">
-																	<h5 class="modal-title" id="guestModalLabel">Select
-																		Guests</h5>
+																	<h5 class="modal-title" id="guestModalLabel">손님 선택</h5>
 																</div>
 																<div class="modal-body">
-																	<form>
+																	<form id="guestForm">
 																		<div class="form-group">
-																			<label for="adultCount">Adults</label> <select
+																			<label for="adultCount">성인 수</label> <select
 																				class="form-control" id="adultCount">
 																				<option>1</option>
 																				<option>2</option>
@@ -605,14 +645,13 @@
 																				<option>5</option>
 																			</select>
 																		</div>
-
 																	</form>
 																</div>
 																<div class="modal-footer">
 																	<button type="button" class="btn btn-secondary"
-																		data-dismiss="modal">Close</button>
+																		data-dismiss="modal">닫기</button>
 																	<button type="button" class="btn btn-primary"
-																		id="saveSelection">Save changes</button>
+																		id="saveSelection">저장</button>
 																</div>
 															</div>
 														</div>
@@ -632,34 +671,44 @@
 						</button>
 
 						<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-						<script
-							src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-						<script
-							src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+						<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+						<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 						<script>
-    let selectedScore = null;
-
-    document.querySelectorAll('input[name="reviewScore"]').forEach(function(radio) {
-        radio.addEventListener('click', function() {
-            const currentScore = this.value;
-
-            if (selectedScore !== currentScore) {
-                selectedScore = currentScore;
-            } else {
-                this.checked = false;
-                selectedScore = null;
-            }
-        });
-    });
-
-    document.getElementById('saveReview').addEventListener('click', function() {
-        if (selectedScore !== null) {
-            document.querySelector('.review-score-info').textContent = selectedScore;
-        }
-
-        $('#guestModal').modal('hide');
-    });
-</script>
+							
+						
+						    document.getElementById('saveSelection').addEventListener('click', function() {
+						        var selectedAdults = document.getElementById('adultCount').value;
+						        console.log('선택된 성인 수:', selectedAdults);
+						
+						        // 선택된 값을 버튼 텍스트에 업데이트
+						        document.querySelector('.adult-info').textContent = selectedAdults;
+						
+						        // 로컬 스토리지에 저장 (필요 시)
+						        localStorage.setItem('selectedAdults', selectedAdults);
+						
+						        // 모달 닫기 및 백드롭 제거
+						        $('#guestModal').modal('hide');
+						        $('body').removeClass('modal-open');
+						        $('.modal-backdrop').remove();
+						    });
+						
+						    // 페이지 로드 시 저장된 값을 불러와서 버튼 텍스트에 표시
+						      document.addEventListener("DOMContentLoaded", function() {
+					        // 페이지가 로드될 때 실행할 초기화 함수
+					        initializeGuests();
+					
+					        // 새로고침 버튼 클릭 시 초기화 함수 호출
+					        document.querySelector('.jxmuG').addEventListener('click', function() {
+					            initializeGuests();
+					        });
+					
+					        // 초기화 함수 정의
+					        function initializeGuests() {
+					            // 초기화할 내용 작성
+					            document.querySelector('.adult-info').textContent = '0';
+					        }
+					    });
+						</script>
 
 
 						<div class="wWwSb">
@@ -707,7 +756,8 @@
 																		d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
 																		transform="translate(104 0)"></path>
               </svg>
-																<span class="biGQs _P pZUbB KxBGd">${counts} reviews</span>
+																<span class="biGQs _P pZUbB KxBGd">${counts}
+																	reviews</span>
 															</div>
 														</span>
 													</button>
@@ -787,11 +837,13 @@
 
 										<!-- 수정된 버튼 위치 -->
 										<div class="dGsKv Xe f P" style="margin-top: 10px;">
-											<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
-												id="openReviewModal" type="button">
-												<span class="biGQs _P ttuOS"><div class="jktzL">
-														<h1 class="CpzHF q">리뷰 작성하기</h1></span>
-											</button>
+										    <button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv" id="openReviewModal" type="button">
+										        <span class="biGQs _P ttuOS">
+										            <div class="jktzL">
+										                <h1 class="CpzHF q">리뷰 작성하기</h1>
+										            </div>
+										        </span>
+										    </button>
 										</div>
 
 										<!-- 리뷰 제출 후 표시할 내용 -->
@@ -801,87 +853,125 @@
 
 									</div>
 
-									<!-- 모달 구현 -->
+									<!-- 리뷰모달 구현 -->
 									<div id="reviewModal" class="modal">
-										<div class="modal-content">
-											<span class="close">&times;</span>
-											<h2>장소 평가하기</h2>
-											<p>평점을 선택하세요:</p>
-											<div class="rating-box">
-												<!-- 평점 선택 라디오 버튼 -->
-												<input type="radio" name="rating" value="5" id="rating5">
-												<label for="rating5">5점</label><br> <input type="radio"
-													name="rating" value="4" id="rating4"> <label
-													for="rating4">4점</label><br> <input type="radio"
-													name="rating" value="3" id="rating3"> <label
-													for="rating3">3점</label><br> <input type="radio"
-													name="rating" value="2" id="rating2"> <label
-													for="rating2">2점</label><br> <input type="radio"
-													name="rating" value="1" id="rating1"> <label
-													for="rating1">1점</label><br>
-											</div>
-											<p>리뷰를 작성하세요:</p>
-											<textarea id="reviewText" rows="4" cols="50"></textarea>
-											<br>
-											<button id="submitReview" class="btn btn-success">제출하기</button>
-										</div>
+									    <div class="modal-content">
+									        <span class="close">&times;</span>
+									        <h2>장소 평가하기</h2>
+									        <p>평점을 선택하세요:</p>
+									        <div class="rating-box">
+									            <!-- 평점 선택 라디오 버튼 -->
+									            <input type="radio" name="rating" value="5" id="rating5">
+									            <label for="rating5">5점</label><br>
+									            <input type="radio" name="rating" value="4" id="rating4">
+									            <label for="rating4">4점</label><br>
+									            <input type="radio" name="rating" value="3" id="rating3">
+									            <label for="rating3">3점</label><br>
+									            <input type="radio" name="rating" value="2" id="rating2">
+									            <label for="rating2">2점</label><br>
+									            <input type="radio" name="rating" value="1" id="rating1">
+									            <label for="rating1">1점</label><br>
+									        </div>
+									        <p>리뷰를 작성하세요:</p>
+									        <textarea id="reviewText" rows="4" cols="50"></textarea>
+									        <br>
+									        <p>사진을 첨부하세요:</p>
+									        <input type="file" id="reviewImage" accept="image/*">
+									        <br>
+									        <img id="previewImage" class="preview-img">
+									        <br>
+									        <button id="submitReview" class="btn btn-success">제출하기</button>
+									    </div>
 									</div>
-								<div class="ppuFV _T Z BB lSnVq amYYZ">
-									<div id="submittedReviews">
-										<h3>제출된 리뷰</h3>
-										<ul id="reviewList"></ul>
+									
+									<div class="ppuFV _T Z BB lSnVq amYYZ">
+									    <div id="submittedReviews">
+									        <h3>제출된 리뷰</h3>
+									        <ul id="reviewList"></ul>
+									    </div>
 									</div>
-								</div>
-								</div>
 
 								<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var modal = document.getElementById('reviewModal');
-    var openModalButton = document.getElementById('openReviewModal');
-    var closeModalButton = document.querySelector('.close');
-    var submitButton = document.getElementById('submitReview');
-    var submittedReviews = document.getElementById('reviewList');
-    var ratingBox = document.querySelector('.rating-box');
-    var reviewTextArea = document.getElementById('reviewText');
-
-    openModalButton.addEventListener('click', function() {
-      modal.style.display = "block";
-    });
-
-    closeModalButton.addEventListener('click', function() {
-      modal.style.display = "none";
-    });
-
-    window.addEventListener('click', function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-
-    submitButton.addEventListener('click', function() {
-      var selectedRating = document.querySelector('input[name="rating"]:checked');
-      var reviewText = reviewTextArea.value.trim();
-
-      if (selectedRating && reviewText !== '') {
-        var ratingValue = selectedRating.value;
-        var ratingText = selectedRating.nextSibling.textContent.trim();
-        var reviewItem = document.createElement('li');
-        reviewItem.classList.add('review-item');
-        reviewItem.innerHTML = '<p>평점: ' + ratingText + '</p><p>리뷰 내용: ' + reviewText + '</p>';
-        submittedReviews.appendChild(reviewItem);
-        modal.style.display = "none";
-
-        // 제출 완료 알람 추가
-        alert('제출되었습니다!');
-      } else {
-        alert('평점과 리뷰를 모두 선택해주세요.');
-      }
-    });
-  });
-</script>
+								<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+								<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+								<script>
+								    document.addEventListener("DOMContentLoaded", function() {
+								        var modal = document.getElementById('reviewModal');
+								        var openModalButton = document.getElementById('openReviewModal');
+								        var closeModalButton = document.querySelector('.close');
+								        var submitButton = document.getElementById('submitReview');
+								        var submittedReviews = document.getElementById('reviewList');
+								        var ratingBox = document.querySelector('.rating-box');
+								        var reviewTextArea = document.getElementById('reviewText');
+								        var reviewImage = document.getElementById('reviewImage');
+								        var previewImage = document.getElementById('previewImage');
+								
+								        openModalButton.addEventListener('click', function() {
+								            modal.style.display = "block";
+								        });
+								
+								        closeModalButton.addEventListener('click', function() {
+								            modal.style.display = "none";
+								        });
+								
+								        window.addEventListener('click', function(event) {
+								            if (event.target == modal) {
+								                modal.style.display = "none";
+								            }
+								        });
+								
+								        reviewImage.addEventListener('change', function(event) {
+								            var file = event.target.files[0];
+								            if (file) {
+								                var reader = new FileReader();
+								                reader.onload = function(e) {
+								                    previewImage.src = e.target.result;
+								                    previewImage.style.display = 'block';
+								                }
+								                reader.readAsDataURL(file);
+								            } else {
+								                previewImage.src = '';
+								                previewImage.style.display = 'none';
+								            }
+								        });
+								
+								        submitButton.addEventListener('click', function() {
+								            var selectedRating = document.querySelector('input[name="rating"]:checked');
+								            var reviewText = reviewTextArea.value.trim();
+								            var reviewImgSrc = previewImage.src;
+								
+								            if (selectedRating && reviewText !== '') {
+								                var ratingValue = selectedRating.value;
+								                var ratingText = selectedRating.nextSibling.textContent.trim();
+								                var reviewItem = document.createElement('li');
+								                reviewItem.classList.add('review-item');
+								                reviewItem.innerHTML = '<p>평점: ' + ratingText + '</p><p>리뷰 내용: ' + reviewText + '</p>';
+								                
+								                if (reviewImgSrc) {
+								                    var imgElement = document.createElement('img');
+								                    imgElement.src = reviewImgSrc;
+								                    imgElement.alt = "Review Image";
+								                    reviewItem.appendChild(imgElement);
+								                }
+								
+								                submittedReviews.appendChild(reviewItem);
+								                modal.style.display = "none";
+								
+								                // 제출 완료 알람 추가
+								                alert('제출되었습니다!');
+								
+								                // 폼 초기화
+								                reviewTextArea.value = '';
+								                previewImage.src = '';
+								                previewImage.style.display = 'none';
+								                reviewImage.value = '';
+								                selectedRating.checked = false;
+								            } else {
+								                alert('평점과 리뷰를 모두 선택해주세요.');
+								            }
+								        });
+								    });
+								</script>
 
 								<div class="wWwSb">
 									<div>
