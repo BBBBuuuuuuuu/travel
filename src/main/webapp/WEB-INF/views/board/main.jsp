@@ -170,7 +170,8 @@
             max-width: 600px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             position: relative;
-            height: 80%;'
+            height: 80%;
+            border-radius:30px;
         }
         .close {
             color: #aaa;

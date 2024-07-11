@@ -160,7 +160,7 @@
 	z-index: 1000;
 	display: none;
 	margin-top: -11.4%;
-	margin-left: -25%;
+	margin-left: -49%;
 }
 
 .popup label {
@@ -301,42 +301,28 @@
 									</button>
 								</div>
 								<div class="KFWPn iUCeN">
-
-									<button id="roomGuestButton" aria-disabled="false"
-										type="button" class="WRyMy z Gz _S q o W f u G wSSLS"
-										aria-label="Enter the number of rooms and then enter the number of guests. The selected number of rooms is 1 and the selected number of guests is 2."
-										aria-haspopup="dialog" onclick="openPopup(event)">
-										<span class="biGQs _P fiohW uWleQ">
-											<div class="yzRfM f">
-												<div>
-													<svg viewBox="0 0 24 24" width="18px" height="18px"
-														class="d Vb UmNoP">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-															d="M3.252 5.405c0-.47.38-.85.85-.85h15.624c.47 0 .85.38.85.85v6.649c.68.562 1.22 1.393 1.22 2.544v4.847h-1.5V17.77H3.704v1.674h-1.5V14.57c.025-.654.304-1.588 1.05-2.35V5.404zM5.887 11.992a6.6 6.6 0 01.836-.052h3.896c-.502-.482-1.31-.93-2.433-.93-1.09 0-1.83.466-2.3.982zm7.389-.052h4.468l.036.004a5.2 5.2 0 01.537.082 2.351 2.351 0 00-.222-.233c-.447-.41-1.18-.783-2.254-.783-1.078 0-1.75.273-2.18.584a2.396 2.396 0 00-.385.346zm5.8-1.282c-.726-.652-1.812-1.148-3.235-1.148-1.347 0-2.338.347-3.06.868-.342.247-.61.525-.821.802-.736-.861-2.005-1.67-3.774-1.67-1.629 0-2.733.712-3.434 1.503V6.055h14.324v3.603zM3.703 16.27h16.594v-1.673c0-.703-.355-1.188-.888-1.545-.56-.374-1.263-.561-1.74-.613H6.724c-1.118 0-1.81.317-2.237.678-.57.482-.765 1.123-.783 1.496v1.657z"></path>
-        </svg>
-													<!-- 숫자는 아래에 표시됩니다. -->
-													<span id="roomCount">1</span>
-												</div>
-												<div>
-													<svg viewBox="0 0 24 24" width="18px" height="18px"
-														class="d Vb UmNoP">
-          <path
-															d="M8 11.5l-.005.75h.01L8 11.5zM3 14l-.603-.446-.147.199V14H3zm0 6h-.75v.75H3V20zm18 0v.75h.75V20H21zm0-4h.75v-.246l-.146-.199L21 16zm-5-2.527v-.75.75zM11 16l-.604-.445-.146.199V16H11zm0 4h-.75v.75H11V20zM9.5 6.25A1.5 1.5 0 018 7.75v1.5a3 3 0 003-3H9.5zM8 7.75a1.5 1.5 0 01-1.5-1.5H5a3 3 0 003 3v-1.5zm-1.5-1.5A1.5 1.5 0 018 4.75v-1.5a3 3 0 00-3 3h1.5zM8 4.75a1.5 1.5 0 011.5 1.5H11a3 3 0 00-3-3v1.5zm9.5 3.5a1.5 1.5 0 01-1.5 1.5v1.5a3 3 0 003-3h-1.5zM16 9.75a1.5 1.5 0 01-1.5-1.5H13a3 3 0 003 3v-1.5zm-1.5-1.5a1.5 1.5 0 011.5-1.5v-1.5a3 3 0 00-3 3h1.5zm1.5-1.5a1.5 1.5 0 011.5 1.5H19a3 3 0 00-3-3v1.5zm-2.397 6.804a6.91 6.91 0 00-2.468-2.075l-.67 1.342a5.41 5.41 0 011.932 1.625l1.206-.892zm-2.468-2.075a6.91 6.91 0 00-3.14-.729l.01 1.5a5.41 5.41 0 012.46.571l.67-1.342zm-3.13-.729a6.91 6.91 0 00-3.14.73l.67 1.341a5.41 5.41 0 012.46-.571l.01-1.5zm-3.14.73a6.91 6.91 0 00-2.468 2.074l1.206.892a5.41 5.41 0 011.932-1.625l-.67-1.342zM2.25 14v6h1.5v-6h-1.5zM3 20.75h10v-1.5H3v1.5zM21.75 20v-4h-1.5v4h1.5zm-.146-4.445a6.96 6.96 0 00-2.464-2.084l-.677 1.339a5.46 5.46 0 011.933 1.635l1.208-.89zm-2.464-2.084a6.96 6.96 0 00-3.14-.748v1.5c.856 0 1.7.201 2.463.587l.677-1.339zM16 12.723a6.96 6.96 0 00-3.14.748l.677 1.339A5.46 5.46 0 0116 14.223v-1.5zm-3.14.748a6.96 6.96 0 00-2.464 2.084l1.208.89a5.46 5.46 0 011.933-1.635l-.677-1.339zM12 14.75v6h1.5v-6H12z"></path>
-        </svg>
-													<!-- 숫자는 아래에 표시됩니다. -->
-													<span id="guestCount">2</span>
-												</div>
-											</div>
-										</span>
-									</button>
-
-									<div id="popup" class="popup">
-										<label for="rooms">Rooms:</label> <input type="number"
-											id="rooms" name="rooms" min="1" max="10" value="1"> <label
-											for="guests">Guests:</label> <input type="number" id="guests"
-											name="guests" min="1" max="20" value="2">
-										<button onclick="applySelection()">Apply</button>
-									</div>
+								    <button id="guestButton" aria-disabled="false"
+								            type="button" class="WRyMy z Gz _S q o W f u G wSSLS"
+								            aria-label="Enter the number of guests. The selected number of guests is 2."
+								            aria-haspopup="dialog" onclick="openPopup(event)">
+								        <span class="biGQs _P fiohW uWleQ">
+								            <div class="yzRfM f">
+								                <div>
+								                    <svg viewBox="0 0 24 24" width="18px" height="18px" class="d Vb UmNoP">
+								                        <path d="M8 11.5l-.005.75h.01L8 11.5zM3 14l-.603-.446-.147.199V14H3zm0 6h-.75v.75H3V20zm18 0v.75h.75V20H21zm0-4h.75v-.246l-.146-.199L21 16zm-5-2.527v-.75.75zM11 16l-.604-.445-.146.199V16H11zm0 4h-.75v.75H11V20zM9.5 6.25A1.5 1.5 0 018 7.75v1.5a3 3 0 003-3H9.5zM8 7.75a1.5 1.5 0 01-1.5-1.5H5a3 3 0 003 3v-1.5zm-1.5-1.5A1.5 1.5 0 018 4.75v-1.5a3 3 0 00-3 3h1.5zM8 4.75a1.5 1.5 0 011.5 1.5H11a3 3 0 00-3-3v1.5zm9.5 3.5a1.5 1.5 0 01-1.5 1.5v1.5a3 3 0 003-3h-1.5zM16 9.75a1.5 1.5 0 01-1.5-1.5H13a3 3 0 003 3v-1.5zm-1.5-1.5a1.5 1.5 0 011.5-1.5v-1.5a3 3 0 00-3 3h1.5zm1.5-1.5a1.5 1.5 0 011.5 1.5H19a3 3 0 00-3-3v1.5zm-2.397 6.804a6.91 6.91 0 00-2.468-2.075l-.67 1.342a5.41 5.41 0 011.932 1.625l1.206-.892zm-2.468-2.075a6.91 6.91 0 00-3.14-.729l.01 1.5a5.41 5.41 0 012.46.571l.67-1.342zm-3.13-.729a6.91 6.91 0 00-3.14.73l.67 1.341a5.41 5.41 0 012.46-.571l.01-1.5zm-3.14.73a6.91 6.91 0 00-2.468 2.074l1.206.892a5.41 5.41 0 011.932-1.625l-.67-1.342zM2.25 14v6h1.5v-6h-1.5zM3 20.75h10v-1.5H3v1.5zM21.75 20v-4h-1.5v4h1.5zm-.146-4.445a6.96 6.96 0 00-2.464-2.084l-.677 1.339a5.46 5.46 0 011.933 1.635l1.208-.89zm-2.464-2.084a6.96 6.96 0 00-3.14-.748v1.5c.856 0 1.7.201 2.463.587l.677-1.339zM16 12.723a6.96 6.96 0 00-3.14.748l.677 1.339A5.46 5.46 0 0116 14.223v-1.5zm-3.14.748a6.96 6.96 0 00-3.14-.748l.677 1.339a5.46 5.46 0 011.933-1.635l-.677-1.339zM12 14.75v6h1.5v-6H12z"></path>
+								                    </svg>
+								                    <!-- 숫자는 아래에 표시됩니다. -->
+								                    <span id="guestCount">2</span>
+								                </div>
+								            </div>
+								        </span>
+								    </button>
+								
+								    <div id="popup" class="popup">
+								        <label for="guests">Guests:</label>
+								        <input type="number" id="guests" name="guests" min="1" max="20" value="2">
+								        <button onclick="applySelection()">Apply</button>
+								    </div>
 								</div>
 								<!-- JavaScript -->
 								<script>
@@ -361,41 +347,30 @@
 							    </script>
 
 								<script>
-									function openPopup(event) {
-									  var popup = document.getElementById('popup');
-									  var button = document.getElementById('roomGuestButton');
-									  var buttonRect = button.getBoundingClientRect(); // 버튼의 위치와 크기 가져오기
-									  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-									
-									  popup.style.top = (buttonRect.bottom + scrollTop) + 'px'; // 버튼의 아래쪽으로 위치 설정
-									  popup.style.left = buttonRect.left + 'px';  // 버튼의 왼쪽으로 위치 설정
-									  popup.style.display = 'block'; // 팝업 보이기
-									}
-									
-									function applySelection() {
-										  var selectedRooms = document.getElementById('rooms').value;
-										  var selectedGuests = document.getElementById('guests').value;
+								    function openPopup(event) {
+								        var popup = document.getElementById('popup');
+								        var button = document.getElementById('guestButton');
+								        var buttonRect = button.getBoundingClientRect(); // 버튼의 위치와 크기 가져오기
+								        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+								
+								        popup.style.top = (buttonRect.bottom + scrollTop) + 'px'; // 버튼의 아래쪽으로 위치 설정
+								        popup.style.left = buttonRect.left + 'px';  // 버튼의 왼쪽으로 위치 설정
+								        popup.style.display = 'block'; // 팝업 보이기
+								    }
+								
+								    function applySelection() {
+								        var selectedGuests = document.getElementById('guests').value;
 
-										  // 버튼 내부의 숫자와 아이콘 모두 업데이트
-										  var buttonRooms = document.querySelector('#roomGuestButton .f div:nth-child(1)');
-										  var buttonGuests = document.querySelector('#roomGuestButton .f div:nth-child(2)');
-										  buttonRooms.innerHTML = `
-										    <svg viewBox="0 0 24 24" width="18px" height="18px" class="d Vb UmNoP">
-										      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.252 5.405c0-.47.38-.85.85-.85h15.624c.47 0 .85.38.85.85v6.649c.68.562 1.22 1.393 1.22 2.544v4.847h-1.5V17.77H3.704v1.674h-1.5V14.57c.025-.654.304-1.588 1.05-2.35V5.404zM5.887 11.992a6.6 6.6 0 01.836-.052h3.896c-.502-.482-1.31-.93-2.433-.93-1.09 0-1.83.466-2.3.982zm7.389-.052h4.468l.036.004a5.2 5.2 0 01.537.082 2.351 2.351 0 00-.222-.233c-.447-.41-1.18-.783-2.254-.783-1.078 0-1.75.273-2.18.584a2.396 2.396 0 00-.385.346zm5.8-1.282c-.726-.652-1.812-1.148-3.235-1.148-1.347 0-2.338.347-3.06.868-.342.247-.61.525-.821.802-.736-.861-2.005-1.67-3.774-1.67-1.629 0-2.733.712-3.434 1.503V6.055h14.324v3.603zM3.703 16.27h16.594v-1.673c0-.703-.355-1.188-.888-1.545-.56-.374-1.263-.561-1.74-.613H6.724c-1.118 0-1.81.317-2.237.678-.57.482-.765 1.123-.783 1.496v1.657z"></path>
-										    </svg>
-										    ${selectedRooms}`;
-										  
-										  buttonGuests.innerHTML = `
-										    <svg viewBox="0 0 24 24" width="18px" height="18px" class="d Vb UmNoP">
-										      <path d="M8 11.5l-.005.75h.01L8 11.5zM3 14l-.603-.446-.147.199V14H3zm0 6h-.75v.75H3V20zm18 0v.75h.75V20H21zm0-4h.75v-.246l-.146-.199L21 16zm-5-2.527v-.75.75zM11 16l-.604-.445-.146.199V16H11zm0 4h-.75v.75H11V20zM9.5 6.25A1.5 1.5 0 018 7.75v1.5a3 3 0 003-3H9.5zM8 7.75a1.5 1.5 0 01-1.5-1.5H5a3 3 0 003 3v-1.5zm-1.5-1.5A1.5 1.5 0 018 4.75v-1.5a3 3 0 00-3 3h1.5zM8 4.75a1.5 1.5 0 011.5 1.5H11a3 3 0 00-3-3v1.5zm9.5 3.5a1.5 1.5 0 01-1.5 1.5v1.5a3 3 0 003-3h-1.5zM16 9.75a1.5 1.5 0 01-1.5-1.5H13a3 3 0 003 3v-1.5zm-1.5-1.5a1.5 1.5 0 011.5-1.5v-1.5a3 3 0 00-3 3h1.5zm1.5-1.5a1.5 1.5 0 011.5 1.5H19a3 3 0 00-3-3v1.5zm-2.397 6.804a6.91 6.91 0 00-2.468-2.075l-.67 1.342a5.41 5.41 0 011.932 1.625l1.206-.892zm-2.468-2.075a6.91 6.91 0 00-3.14-.729l.01 1.5a5.41 5.41 0 012.46.571l.67-1.342zm-3.13-.729a6.91 6.91 0 00-3.14.73l.67 1.341a5.41 5.41 0 012.46-.571l.01-1.5zm-3.14.73a6.91 6.91 0 00-2.468 2.074l1.206.892a5.41 5.41 0 011.932-1.625l-.67-1.342zM2.25 14v6h1.5v-6h-1.5zM3 20.75h10v-1.5H3v1.5zM21.75 20v-4h-1.5v4h1.5zm-.146-4.445a6.96 6.96 0 00-2.464-2.084l-.677 1.339a5.46 5.46 0 011.933 1.635l1.208-.89zm-2.464-2.084a6.96 6.96 0 00-3.14-.748v1.5c.856 0 1.7.201 2.463.587l.677-1.339zM16 12.723a6.96 6.96 0 00-3.14.748l.677 1.339A5.46 5.46 0 0116 14.223v-1.5zm-3.14.748a6.96 6.96 0 00-3.14-.748l.677 1.339a5.46 5.46 0 011.933-1.635l-.677-1.339zM12 14.75v6h1.5v-6H12z"></path>
-										    </svg>
-										    ${selectedGuests}`;
+								        // 버튼 내부의 숫자 업데이트
+								        var buttonGuests = document.querySelector('#guestButton .f div #guestCount');
+								        buttonGuests.innerText = selectedGuests;
 
-										  // 팝업 숨기기
-										  var popup = document.getElementById('popup');
-										  popup.style.display = 'none';
-										}
-									</script>
+								        // 팝업 숨기기
+								        var popup = document.getElementById('popup');
+								        popup.style.display = 'none';
+								    }
+								</script>
+
 							</div>
 						</div>
 						<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
