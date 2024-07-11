@@ -470,7 +470,7 @@
 											<div class="eeVey S4 H3 f u UKvGa"
 												data-blcontact="URL_HOTEL ">
 												<div class="biGQs _P pZUbB KxBGd">
-													<div class="kpIff f u UXKqB">${board.price}원 / 박</div>
+													<div class="kpIff f u UXKqB" id="price">${board.price}원 / 박</div>
 												</div>
 											</div>
 
