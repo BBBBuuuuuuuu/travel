@@ -52,15 +52,15 @@ public class SurveyController {
 
         List<Integer> boardNumList = surveyService.getCommonBoard(survey);
     	
-    	if(category.equals("activity")) {
-    		List<ActivityVO> activityList = surveyService.getActivityBoard(survey, boardNumList);
-    		model.addAttribute("board", activityList);
-    	} else {
+    	if(category == null || category.equals("stay")) {
     		List<StayVO> stayList = surveyService.getStayBoardWithCategory(survey, boardNumList);
     		model.addAttribute("board", stayList);
+    	} else {
+    		List<ActivityVO> activityList = surveyService.getActivityBoard(survey, boardNumList);
+    		model.addAttribute("board", activityList);
     	}
     	
-        return "redirect:/listBySurvey.do";
+        return "board/list";
     }
 
     @RequestMapping(value = "deleteSurvey.do", method = RequestMethod.POST)
