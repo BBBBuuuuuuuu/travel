@@ -14,7 +14,7 @@ public interface ReviewService {
 
 	public List<Integer> getCountsOfLikes(BoardVO board);
 
-	public void writeReview(ReviewVO vo);
+	void writeReview(ReviewVO vo, MultipartFile[] files);
 
 	public void uploadImages(MultipartFile[] files);
 }

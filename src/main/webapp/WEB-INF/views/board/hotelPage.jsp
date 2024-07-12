@@ -8,8 +8,12 @@
 <link rel="mask-icon" sizes="any"
 	href="https://static.tacdn.com/img2/brand_refresh/application_icons/mask-icon.svg"
 	color="#000000" />
+
+<script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var $j = jQuery.noConflict();
+    </script>
 <script src="/travel/resources/js/hotelPage.js"></script>
-<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 <script>
 	var boardNo = "${board.boardNo}";
 	</script>
@@ -160,22 +164,22 @@
 <script src="https://static.tacdn.com/assets/p7jq7m.4Ujcuf7.js" async=""
 	crossorigin="" fetchpriority="low"></script>
 <style>
- .LoFmz {
- 			border:3px solid black;
-	 		border-radius: 40px;
-            width: 111%;
-            display: block;
-            position: relative; /* 필요한 경우 */
-            overflow: hidden;
-        }
-        .LoFmz img {
-        	
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            display: block;
-            object-fit: cover;
-        }
+.LoFmz {
+	border: 3px solid black;
+	border-radius: 40px;
+	width: 111%;
+	display: block;
+	position: relative; /* 필요한 경우 */
+	overflow: hidden;
+}
+
+.LoFmz img {
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	display: block;
+	object-fit: cover;
+}
 
 .rmyCe.huqcv:not(:disabled) {
 	background-color: #28a745;
@@ -282,54 +286,59 @@
 	display: block;
 }
 
- .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.4);
-    }
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
-    }
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    .preview-img {
-        max-width: 100px;
-        max-height: 100px;
-        display: none;
-    }
-    .review-item img {
-           max-width: 30%;
-	    max-height: 30%;
-	    display: block;
-	    margin-top: 10px;
-    }
-    .review-item {
-        border: 1px solid #ddd;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-    }
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.preview-img {
+	max-width: 100px;
+	max-height: 100px;
+	display: none;
+}
+
+.review-item img {
+	max-width: 30%;
+	max-height: 30%;
+	display: block;
+	margin-top: 10px;
+}
+
+.review-item {
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
 
 .modal-backdrop {
 	position: fixed;
@@ -374,7 +383,6 @@
 	width: 100%;
 	height: 45px;
 }
-
 </style>
 	<%@ include file="/resources/includes/header.jsp"%>
 	<main>
@@ -474,7 +482,8 @@
 											<div class="eeVey S4 H3 f u UKvGa"
 												data-blcontact="URL_HOTEL ">
 												<div class="biGQs _P pZUbB KxBGd">
-													<div class="kpIff f u UXKqB" id="price">${board.price}원 / 박</div>
+													<div class="kpIff f u UXKqB" id="price">${board.price}원
+														/ 박</div>
 												</div>
 											</div>
 
@@ -489,10 +498,11 @@
 						<span></span>
 						<div class="wWwSb VogJa">
 							<div class="LOtES f e">
-								 <div class="LoFmz w _Z">
-							        <img src="/travel/resources/images/${board.imageName[0] }" alt="예시 이미지">
-							        
-							    </div>
+								<div class="LoFmz w _Z">
+									<img src="/travel/resources/images/${board.imageName[0] }"
+										alt="예시 이미지">
+
+								</div>
 								<div></div>
 								<div class="VRono Gi B1 Z BB Pk PY Px PK">
 									<div>
@@ -529,7 +539,6 @@
 																</div>
 																<div class="kPQaf q">Check In</div>
 																<div class="icDdG q dibDZ">
-																	<span id="checkinDate">날짜 선택</span>
 																</div>
 															</button>
 															<div id="checkinCalendar" class="calendar">
@@ -552,7 +561,7 @@
 															</div>
 															<div class="kPQaf q">Check Out</div>
 															<div class="icDdG q dibDZ">
-																<span id="checkoutDate">날짜 선택</span>
+																<span id="checkoutDate"></span>
 															</div>
 														</button>
 														<div id="checkoutCalendar" class="calendar">
@@ -609,19 +618,23 @@
 </script>
 
 													<!-- Guests 버튼 -->
-														<div class="jxmuG WFbDt KDRFa" data-automation="guest">
-														    <button class="bqhCp _T u z Gz Wh sglCU wjpdQ" data-automation="roomsandguests" data-toggle="modal" data-target="#guestModal">
-														        <div class="OdUPP">
-														            <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb icjEL">
-														                <path d="M8 11.5l-.005.75h.01L8 11.5zM3 14l-.603-.446-.147.199V14H3zm0 6h-.75v.75H3V20zm18 0v.75h.75V20H21zm0-4h.75v-.246l-.146-.199L21 16zm-5-2.527v-.75.75zM11 16l-.604-.445-.146.199V16H11zm0 4h-.75v.75H11V20zM9.5 6.25A1.5 1.5 0 018 7.75v1.5a3 3 0 003-3H9.5zM8 7.75a1.5 1.5 0 01-1.5-1.5H5a3 3 0 003 3v-1.5zm-1.5-1.5A1.5 1.5 0 018 4.75v-1.5a3 3 0 00-3 3h1.5zM8 4.75a1.5 1.5 0 011.5 1.5H11a3 3 0 00-3-3v1.5zm9.5 3.5a1.5 1.5 0 01-1.5 1.5v1.5a3 3 0 003-3h-1.5zM16 9.75a1.5 1.5 0 01-1.5-1.5H13a3 3 0 003 3v-1.5zm-1.5-1.5a1.5 1.5 0 011.5-1.5v-1.5a3 3 0 00-3 3h1.5zm1.5-1.5a1.5 1.5 0 011.5 1.5H19a3 3 0 00-3-3v1.5zm-2.397 6.804a6.91 6.91 0 00-2.468-2.075l-.67 1.342a5.41 5.41 0 011.932 1.625l1.206-.892zm-2.468-2.075a6.91 6.91 0 00-3.14-.729l.01 1.5a5.41 5.41 0 012.46.571l.67-1.342zm-3.13-.729a6.91 6.91 0 00-3.14.73l.67 1.341a5.41 5.41 0 012.46-.571l.01-1.5zm-3.14.73a6.91 6.91 0 00-2.468 2.074l1.206.892a5.41 5.41 0 011.932-1.625l-.67-1.342zM2.25 14v6h1.5v-6h-1.5zM3 20.75h10v-1.5H3v1.5zM21.75 20v-4h-1.5v4h1.5zm-.146-4.445a6.96 6.96 0 00-2.464-2.084l-.677 1.339a5.46 5.46 0 011.933 1.635l1.208-.89zm-2.464-2.084a6.96 6.96 0 00-3.14-.748v1.5c.856 0 1.7.201 2.463.587l.677-1.339zM16 12.723a6.96 6.96 0 00-3.14.748l.677 1.339A5.46 5.46 0 0116 14.223v-1.5zm-3.14.748a6.96 6.96 0 00-2.464 2.084l1.208.89a5.46 5.46 0 011.933-1.635l-.677-1.339zM10.25 16v4h1.5v-4h-1.5zm.75 4.75h10v-1.5H11v1.5z"></path>
+													<div class="jxmuG WFbDt KDRFa" data-automation="guest">
+														<button class="bqhCp _T u z Gz Wh sglCU wjpdQ"
+															data-automation="roomsandguests" data-toggle="modal"
+															data-target="#guestModal">
+															<div class="OdUPP">
+																<svg viewBox="0 0 24 24" width="24px" height="24px"
+																	class="d Vb icjEL">
+														                <path
+																		d="M8 11.5l-.005.75h.01L8 11.5zM3 14l-.603-.446-.147.199V14H3zm0 6h-.75v.75H3V20zm18 0v.75h.75V20H21zm0-4h.75v-.246l-.146-.199L21 16zm-5-2.527v-.75.75zM11 16l-.604-.445-.146.199V16H11zm0 4h-.75v.75H11V20zM9.5 6.25A1.5 1.5 0 018 7.75v1.5a3 3 0 003-3H9.5zM8 7.75a1.5 1.5 0 01-1.5-1.5H5a3 3 0 003 3v-1.5zm-1.5-1.5A1.5 1.5 0 018 4.75v-1.5a3 3 0 00-3 3h1.5zM8 4.75a1.5 1.5 0 011.5 1.5H11a3 3 0 00-3-3v1.5zm9.5 3.5a1.5 1.5 0 01-1.5 1.5v1.5a3 3 0 003-3h-1.5zM16 9.75a1.5 1.5 0 01-1.5-1.5H13a3 3 0 003 3v-1.5zm-1.5-1.5a1.5 1.5 0 011.5-1.5v-1.5a3 3 0 00-3 3h1.5zm1.5-1.5a1.5 1.5 0 011.5 1.5H19a3 3 0 00-3-3v1.5zm-2.397 6.804a6.91 6.91 0 00-2.468-2.075l-.67 1.342a5.41 5.41 0 011.932 1.625l1.206-.892zm-2.468-2.075a6.91 6.91 0 00-3.14-.729l.01 1.5a5.41 5.41 0 012.46.571l.67-1.342zm-3.13-.729a6.91 6.91 0 00-3.14.73l.67 1.341a5.41 5.41 0 012.46-.571l.01-1.5zm-3.14.73a6.91 6.91 0 00-2.468 2.074l1.206.892a5.41 5.41 0 011.932-1.625l-.67-1.342zM2.25 14v6h1.5v-6h-1.5zM3 20.75h10v-1.5H3v1.5zM21.75 20v-4h-1.5v4h1.5zm-.146-4.445a6.96 6.96 0 00-2.464-2.084l-.677 1.339a5.46 5.46 0 011.933 1.635l1.208-.89zm-2.464-2.084a6.96 6.96 0 00-3.14-.748v1.5c.856 0 1.7.201 2.463.587l.677-1.339zM16 12.723a6.96 6.96 0 00-3.14.748l.677 1.339A5.46 5.46 0 0116 14.223v-1.5zm-3.14.748a6.96 6.96 0 00-2.464 2.084l1.208.89a5.46 5.46 0 011.933-1.635l-.677-1.339zM10.25 16v4h1.5v-4h-1.5zm.75 4.75h10v-1.5H11v1.5z"></path>
 														            </svg>
-														        </div>
-														        <div class="kPQaf q">Guests</div>
-														        <div class="icDdG q dibDZ">
-														            <span><span class="adult-info">0</span> adults</span>
-														        </div>
-														    </button>
-														</div>
+															</div>
+															<div class="kPQaf q">Guests</div>
+															<div class="icDdG q dibDZ">
+																<span><span class="adult-info">0</span> adults</span>
+															</div>
+														</button>
+													</div>
 
 													<!-- Modal -->
 													<div class="modal fade" id="guestModal" tabindex="-1"
@@ -670,8 +683,10 @@
 						</button>
 
 						<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-						<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-						<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+						<script
+							src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+						<script
+							src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 						<script>
 							
 						
@@ -755,7 +770,7 @@
 																		transform="translate(104 0)"></path>
               </svg>
 																<span class="biGQs _P pZUbB KxBGd">${counts[5]} 개
-																	</span>
+																</span>
 															</div>
 														</span>
 													</button>
@@ -774,7 +789,8 @@
 														<div class="OYoZn" style="width: 87.21121999999998%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">${counts[0] } 개</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[0] }
+															개</div>
 													</div>
 												</div>
 												<div class="RZjkd">
@@ -787,7 +803,8 @@
 														<div class="OYoZn" style="width: 95.04132000000001%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">${counts[1] } 개</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[1] }
+															개</div>
 													</div>
 												</div>
 												<div class="RZjkd">
@@ -800,7 +817,8 @@
 														<div class="OYoZn" style="width: 91.706448%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">${counts[2] } 개</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[2] }
+															개</div>
 													</div>
 												</div>
 												<div class="RZjkd">
@@ -813,7 +831,8 @@
 														<div class="OYoZn" style="width: 78.822566%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">${counts[3] } 개</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[3] }
+															개</div>
 													</div>
 												</div>
 												<div class="RZjkd">
@@ -826,7 +845,8 @@
 														<div class="OYoZn" style="width: 87.21121999999998%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">${counts[4] } 개</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[4] }
+															개</div>
 													</div>
 												</div>
 											</div>
@@ -835,13 +855,14 @@
 
 										<!-- 수정된 버튼 위치 -->
 										<div class="dGsKv Xe f P" style="margin-top: 10px;">
-										    <button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv" id="openReviewModal" type="button">
-										        <span class="biGQs _P ttuOS">
-										            <div class="jktzL">
-										                <h1 class="CpzHF q">리뷰 작성하기</h1>
-										            </div>
-										        </span>
-										    </button>
+											<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
+												id="openReviewModal" type="button">
+												<span class="biGQs _P ttuOS">
+													<div class="jktzL">
+														<h1 class="CpzHF q">리뷰 작성하기</h1>
+													</div>
+												</span>
+											</button>
 										</div>
 
 										<!-- 리뷰 제출 후 표시할 내용 -->
@@ -850,184 +871,212 @@
 										</div>
 
 									</div>
-
-									<!-- 리뷰모달 구현 -->
-									<div id="reviewModal" class="modal">
-									    <div class="modal-content">
-									        <span class="close">&times;</span>
-									        <h2>장소 평가하기</h2>
-									        <p>평점을 선택하세요:</p>
-									        <div class="rating-box">
-									            <!-- 평점 선택 라디오 버튼 -->
-									            <input type="radio" name="rating" value="5" id="rating5">
-									            <label for="rating5">5점</label><br>
-									            <input type="radio" name="rating" value="4" id="rating4">
-									            <label for="rating4">4점</label><br>
-									            <input type="radio" name="rating" value="3" id="rating3">
-									            <label for="rating3">3점</label><br>
-									            <input type="radio" name="rating" value="2" id="rating2">
-									            <label for="rating2">2점</label><br>
-									            <input type="radio" name="rating" value="1" id="rating1">
-									            <label for="rating1">1점</label><br>
-									        </div>
-									        <p>리뷰를 작성하세요:</p>
-									        <textarea id="reviewText" rows="4" cols="50"></textarea>
-									        <br>
-									        <p>사진을 첨부하세요:</p>
-									        <input type="file" id="reviewImage" accept="image/*">
-									        <br>
-									        <img id="previewImage" class="preview-img">
-									        <br>
-									        <button id="submitReview" class="btn btn-success">제출하기</button>
-									    </div>
-									</div>
-									
-									<div class="ppuFV _T Z BB lSnVq amYYZ">
-									    <div id="submittedReviews">
-									        <h3>제출된 리뷰</h3>
-									        <ul id="reviewList"></ul>
-									    </div>
-									</div>
-
-								<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-								<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-								<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-								<script>
-								    document.addEventListener("DOMContentLoaded", function() {
-								        var modal = document.getElementById('reviewModal');
-								        var openModalButton = document.getElementById('openReviewModal');
-								        var closeModalButton = document.querySelector('.close');
-								        var submitButton = document.getElementById('submitReview');
-								        var submittedReviews = document.getElementById('reviewList');
-								        var ratingBox = document.querySelector('.rating-box');
-								        var reviewTextArea = document.getElementById('reviewText');
-								        var reviewImage = document.getElementById('reviewImage');
-								        var previewImage = document.getElementById('previewImage');
 								
-								        openModalButton.addEventListener('click', function() {
-								            modal.style.display = "block";
-								        });
-								
-								        closeModalButton.addEventListener('click', function() {
-								            modal.style.display = "none";
-								        });
-								
-								        window.addEventListener('click', function(event) {
-								            if (event.target == modal) {
-								                modal.style.display = "none";
-								            }
-								        });
-								
-								        reviewImage.addEventListener('change', function(event) {
-								            var file = event.target.files[0];
-								            if (file) {
-								                var reader = new FileReader();
-								                reader.onload = function(e) {
-								                    previewImage.src = e.target.result;
-								                    previewImage.style.display = 'block';
-								                }
-								                reader.readAsDataURL(file);
-								            } else {
-								                previewImage.src = '';
-								                previewImage.style.display = 'none';
-								            }
-								        });
-								
-								        submitButton.addEventListener('click', function() {
-								            var selectedRating = document.querySelector('input[name="rating"]:checked');
-								            var reviewText = reviewTextArea.value.trim();
-								            var reviewImgSrc = previewImage.src;
-								
-								            if (selectedRating && reviewText !== '') {
-								                var ratingValue = selectedRating.value;
-								                var ratingText = selectedRating.nextSibling.textContent.trim();
-								                var reviewItem = document.createElement('li');
-								                reviewItem.classList.add('review-item');
-								                reviewItem.innerHTML = '<p>평점: ' + ratingText + '</p><p>리뷰 내용: ' + reviewText + '</p>';
-								                
-								                if (reviewImgSrc) {
-								                    var imgElement = document.createElement('img');
-								                    imgElement.src = reviewImgSrc;
-								                    imgElement.alt = "Review Image";
-								                    reviewItem.appendChild(imgElement);
-								                }
-								
-								                submittedReviews.appendChild(reviewItem);
-								                modal.style.display = "none";
-								
-								                // 제출 완료 알람 추가
-								                alert('제출되었습니다!');
-								
-								                // 폼 초기화
-								                reviewTextArea.value = '';
-								                previewImage.src = '';
-								                previewImage.style.display = 'none';
-								                reviewImage.value = '';
-								                selectedRating.checked = false;
-								            } else {
-								                alert('평점과 리뷰를 모두 선택해주세요.');
-								            }
-								        });
-								    });
-								</script>
-
-								<div class="wWwSb">
-									<div>
-										<div>
-											<div class="AMQRv Gi Z BB YjQAT">
-												<div>
-													<h2 class="biGQs _P fiohW uuBRH">주변 호텔 추천</h2>
+										<!-- 리뷰모달 구현 -->
+										<div id="reviewModal" class="modal">
+											<div class="modal-content">
+												<span class="close">&times;</span>
+												<h2>장소 평가하기</h2>
+												<p>평점을 선택하세요:</p>
+												<div class="rating-box">
+													<!-- 평점 선택 라디오 버튼 -->
+													<input type="radio" name="rating" value="5" id="rating5">
+													<label for="rating5">5점</label><br> <input
+														type="radio" name="rating" value="4" id="rating4">
+													<label for="rating4">4점</label><br> <input
+														type="radio" name="rating" value="3" id="rating3">
+													<label for="rating3">3점</label><br> <input
+														type="radio" name="rating" value="2" id="rating2">
+													<label for="rating2">2점</label><br> <input
+														type="radio" name="rating" value="1" id="rating1">
+													<label for="rating1">1점</label><br>
 												</div>
-												<div class="iBGtx f J _h _e z NK Ni qQnpg">
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
+												<p>리뷰를 작성하세요:</p>
+												<textarea id="reviewText" rows="4" cols="50"></textarea>
+												<br>
+												<p>사진을 첨부하세요:</p>
+												<input type="file" id="reviewImage" accept="image/*">
+												<br> <img id="previewImage" class="preview-img">
+												<br>
+												<button id="submitReview" class="btn btn-success">제출하기</button>
+											</div>
+										</div>
+
+										<div class="ppuFV _T Z BB lSnVq amYYZ">
+											<div id="submittedReviews">
+												<h3>제출된 리뷰</h3>
+												<ul id="reviewList"></ul>
+											</div>
+										</div>
+								
+									<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+									<script
+										src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+									<script
+										src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script>
+    $j(document).ready(function() { 
+        var modal = $j('#reviewModal'); 
+        var openModalButton = $j('#openReviewModal'); 
+        var closeModalButton = $j('.close'); 
+        var submitButton = $j('#submitReview'); 
+        var submittedReviews = $j('#reviewList');
+        var ratingBox = $j('.rating-box'); 
+        var reviewTextArea = $j('#reviewText'); 
+        var reviewImage = $j('#reviewImage'); 
+        var previewImage = $j('#previewImage'); 
+        
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        var boardNo = getParameterByName('no');
+        console.log('Board No: ', boardNo);
+
+        openModalButton.on('click', function() { 
+            modal.show(); 
+        });
+
+        closeModalButton.on('click', function() { 
+            modal.hide(); 
+        });
+
+        $j(window).on('click', function(event) { 
+            if ($j(event.target).is(modal)) {
+                modal.hide(); 
+            }
+        });
+
+        reviewImage.on('change', function(event) { 
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImage.attr('src', e.target.result); 
+                    previewImage.show(); 
+                }
+                reader.readAsDataURL(file);
+            } else {
+                previewImage.attr('src', ''); 
+                previewImage.hide(); 
+            }
+        });
+
+        submitButton.on('click', function() { 
+            var selectedRating = $j('input[name="rating"]:checked'); 
+            var reviewText = reviewTextArea.val().trim(); 
+            var reviewImgSrc = previewImage.attr('src'); 
+
+            if (selectedRating.length && reviewText !== '') {
+                var ratingValue = selectedRating.val(); 
+
+                // Ajax 요청으로 데이터 전송
+                var formData = new FormData();
+                formData.append('rating', ratingValue);
+                formData.append('reviewText', reviewText);
+                formData.append('boardNo', boardNo); 
+                if (reviewImage[0].files[0]) { 
+                    formData.append('files', reviewImage[0].files[0]); 
+                }
+
+                $j.ajax({ 
+                    type: 'POST',
+                    url: 'writeReview.do',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    dataType: 'json',
+                    success: function(response) {
+                        alert("리뷰가 제출되었습니다.");
+
+                        // 새로운 리뷰 항목 추가
+                        var reviewItem = $j('<li>').addClass('review-item').html('<p>평점: ' + ratingValue + '</p><p>리뷰 내용: ' + reviewText + '</p>'); 
+                        if (reviewImgSrc) {
+                            var imgElement = $j('<img>').attr('src', reviewImgSrc).attr('alt', 'Review Image'); 
+                            reviewItem.append(imgElement);
+                        }
+                        submittedReviews.append(reviewItem); 
+                        modal.hide(); 
+
+                        // 폼 초기화
+                        reviewTextArea.val(''); 
+                        previewImage.attr('src', '').hide(); 
+                        reviewImage.val(''); 
+                        selectedRating.prop('checked', false); 
+                    },
+                    error: function(error) {
+                        alert("리뷰 제출에 실패했습니다.");
+                        console.log(error);
+                    }
+                });
+            } else {
+                alert('평점과 리뷰를 모두 선택해주세요.');
+            }
+        });
+    });
+    </script>
+
+									<div class="wWwSb">
+										<div>
+											<div>
+												<div class="AMQRv Gi Z BB YjQAT">
+													<div>
+														<h2 class="biGQs _P fiohW uuBRH">주변 호텔 추천</h2>
+													</div>
+													<div class="iBGtx f J _h _e z NK Ni qQnpg">
+														<div class="ZSsAY xjaPD">
+															<div class="TzTCE w">
+																<div class="Gwegd l t w"></div>
+																<div class="ILCbI hdCDN w"></div>
+																<div class="DZdiH">
+																	<div class="ILCbI lxwEm w"></div>
+																	<div class="ILCbI lnuPx w"></div>
+																	<div class="ILCbI YkRgi w"></div>
+																	<div class="ILCbI TZksi w"></div>
+																	<div class="ILCbI LtmGt"></div>
+																</div>
 															</div>
 														</div>
-													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
+														<div class="ZSsAY xjaPD">
+															<div class="TzTCE w">
+																<div class="Gwegd l t w"></div>
+																<div class="ILCbI hdCDN w"></div>
+																<div class="DZdiH">
+																	<div class="ILCbI lxwEm w"></div>
+																	<div class="ILCbI lnuPx w"></div>
+																	<div class="ILCbI YkRgi w"></div>
+																	<div class="ILCbI TZksi w"></div>
+																	<div class="ILCbI LtmGt"></div>
+																</div>
 															</div>
 														</div>
-													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
+														<div class="ZSsAY xjaPD">
+															<div class="TzTCE w">
+																<div class="Gwegd l t w"></div>
+																<div class="ILCbI hdCDN w"></div>
+																<div class="DZdiH">
+																	<div class="ILCbI lxwEm w"></div>
+																	<div class="ILCbI lnuPx w"></div>
+																	<div class="ILCbI YkRgi w"></div>
+																	<div class="ILCbI TZksi w"></div>
+																	<div class="ILCbI LtmGt"></div>
+																</div>
 															</div>
 														</div>
-													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
+														<div class="ZSsAY xjaPD">
+															<div class="TzTCE w">
+																<div class="Gwegd l t w"></div>
+																<div class="ILCbI hdCDN w"></div>
+																<div class="DZdiH">
+																	<div class="ILCbI lxwEm w"></div>
+																	<div class="ILCbI lnuPx w"></div>
+																	<div class="ILCbI YkRgi w"></div>
+																	<div class="ILCbI TZksi w"></div>
+																	<div class="ILCbI LtmGt"></div>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -1035,24 +1084,23 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="wWwSb">
-									<div class="ruCQl z">
-										<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
-											<div>
+									<div class="wWwSb">
+										<div class="ruCQl z">
+											<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
 												<div>
-													<div class="ppuFV _T Z BB lSnVq amYYZ"
-														data-tab="TABS_LOCATION" data-section-signature="location"
-														id="LOCATION">
-														<div>
+													<div>
+														<div class="ppuFV _T Z BB lSnVq amYYZ"
+															data-tab="TABS_LOCATION"
+															data-section-signature="location" id="LOCATION">
 															<div>
-																<h2 class="biGQs _P fiohW ncFvv uuBRH">주변 관광명소</h2>
-																<div class="YPYBR f"></div>
-															</div>
+																<div>
+																	<h2 class="biGQs _P fiohW ncFvv uuBRH">주변 관광명소</h2>
+																	<div class="YPYBR f"></div>
+																</div>
 
-															<div id="googleMap" style="width: 100%; height: 700px;"></div>
+																<div id="googleMap" style="width: 100%; height: 700px;"></div>
 
-															<script>
+																<script>
         function myMap() {
             var mapOptions = {
                 center: new google.maps.LatLng(48.8566, 2.3522), // 파리 좌표
@@ -1117,8 +1165,9 @@
             initMap();
         }
     </script>
-															<script
-																src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdE1NKlgUopd8K2NoyWuASU8Y4ufekHY&callback=myMap"></script>
+																<script
+																	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdE1NKlgUopd8K2NoyWuASU8Y4ufekHY&callback=myMap"></script>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -1126,64 +1175,64 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="wWwSb">
-								<div>
+								<div class="wWwSb">
 									<div>
-										<div class="AMQRv Gi Z BB YjQAT">
-											<div>
-												<h2 class="biGQs _P fiohW uuBRH">주변 관광명소 추천</h2>
-											</div>
-											<div class="iBGtx f J _h _e z NK Ni qQnpg">
-												<div class="ZSsAY xjaPD">
-													<div class="TzTCE w">
-														<div class="Gwegd l t w"></div>
-														<div class="ILCbI hdCDN w"></div>
-														<div class="DZdiH">
-															<div class="ILCbI lxwEm w"></div>
-															<div class="ILCbI lnuPx w"></div>
-															<div class="ILCbI YkRgi w"></div>
-															<div class="ILCbI TZksi w"></div>
-															<div class="ILCbI LtmGt"></div>
+										<div>
+											<div class="AMQRv Gi Z BB YjQAT">
+												<div>
+													<h2 class="biGQs _P fiohW uuBRH">주변 관광명소 추천</h2>
+												</div>
+												<div class="iBGtx f J _h _e z NK Ni qQnpg">
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
+															</div>
 														</div>
 													</div>
-												</div>
-												<div class="ZSsAY xjaPD">
-													<div class="TzTCE w">
-														<div class="Gwegd l t w"></div>
-														<div class="ILCbI hdCDN w"></div>
-														<div class="DZdiH">
-															<div class="ILCbI lxwEm w"></div>
-															<div class="ILCbI lnuPx w"></div>
-															<div class="ILCbI YkRgi w"></div>
-															<div class="ILCbI TZksi w"></div>
-															<div class="ILCbI LtmGt"></div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
+															</div>
 														</div>
 													</div>
-												</div>
-												<div class="ZSsAY xjaPD">
-													<div class="TzTCE w">
-														<div class="Gwegd l t w"></div>
-														<div class="ILCbI hdCDN w"></div>
-														<div class="DZdiH">
-															<div class="ILCbI lxwEm w"></div>
-															<div class="ILCbI lnuPx w"></div>
-															<div class="ILCbI YkRgi w"></div>
-															<div class="ILCbI TZksi w"></div>
-															<div class="ILCbI LtmGt"></div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
+															</div>
 														</div>
 													</div>
-												</div>
-												<div class="ZSsAY xjaPD">
-													<div class="TzTCE w">
-														<div class="Gwegd l t w"></div>
-														<div class="ILCbI hdCDN w"></div>
-														<div class="DZdiH">
-															<div class="ILCbI lxwEm w"></div>
-															<div class="ILCbI lnuPx w"></div>
-															<div class="ILCbI YkRgi w"></div>
-															<div class="ILCbI TZksi w"></div>
-															<div class="ILCbI LtmGt"></div>
+													<div class="ZSsAY xjaPD">
+														<div class="TzTCE w">
+															<div class="Gwegd l t w"></div>
+															<div class="ILCbI hdCDN w"></div>
+															<div class="DZdiH">
+																<div class="ILCbI lxwEm w"></div>
+																<div class="ILCbI lnuPx w"></div>
+																<div class="ILCbI YkRgi w"></div>
+																<div class="ILCbI TZksi w"></div>
+																<div class="ILCbI LtmGt"></div>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -1191,15 +1240,14 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="wWwSb">
-								<div class="ruCQl z">
-									<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
-										<div class="uaOxz">
-											<div>
-												<div class="izHMK amYYZ qTXWP" data-tab="TABS_REVIEWS"
-													data-section-signature="community" id="REVIEWS">
-													</script>
+								<div class="wWwSb">
+									<div class="ruCQl z">
+										<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
+											<div class="uaOxz">
+												<div>
+													<div class="izHMK amYYZ qTXWP" data-tab="TABS_REVIEWS"
+														data-section-signature="community" id="REVIEWS">
+														</script>
 </body>
 <script type="text/javascript">
 //입력폼에 캘린더를 클릭하여 날짜값을 입력해주는 jQuery 플러그인
