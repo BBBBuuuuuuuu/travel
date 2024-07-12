@@ -36,6 +36,10 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public BoardVO getBoard(int no) {
 		BoardVO board = boardMapper.selectBoard(no);
+		 if (board == null) {
+		        log.warn("Board not found for boardNo: " + no);
+		        return null;
+		    }
 		board.setContent(boardMapper.selectContent(no));
 		return board;
 	}
@@ -74,7 +78,8 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public Boolean checkPaymentById(String id) {
 		List<Integer> paymentNo = boardMapper.selectPaymentById(id);
-		return paymentNo.isEmpty() ? true : false;
+		log.info("boardImple + " + paymentNo);
+		return !paymentNo.isEmpty() ? true : false;
 	}
 
 	
