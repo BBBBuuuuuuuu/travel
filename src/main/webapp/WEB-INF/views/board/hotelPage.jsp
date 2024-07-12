@@ -161,12 +161,15 @@
 	crossorigin="" fetchpriority="low"></script>
 <style>
  .LoFmz {
+ 			border:3px solid black;
+	 		border-radius: 40px;
             width: 111%;
             display: block;
             position: relative; /* 필요한 경우 */
             overflow: hidden;
         }
         .LoFmz img {
+        	
             width: 100%;
             height: auto;
             max-width: 100%;
@@ -488,6 +491,7 @@
 							<div class="LOtES f e">
 								 <div class="LoFmz w _Z">
 							        <img src="/travel/resources/images/${board.imageName[0] }" alt="예시 이미지">
+							        
 							    </div>
 								<div></div>
 								<div class="VRono Gi B1 Z BB Pk PY Px PK">

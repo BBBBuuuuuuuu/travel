@@ -4,10 +4,11 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.zerock.domain.SurveyVO;
 import org.zerock.domain.ActivityTypeVO;
 import org.zerock.domain.ActivityVO;
+import org.zerock.domain.BoardVO;
 import org.zerock.domain.StayVO;
+import org.zerock.domain.SurveyVO;
 
 @Mapper
 public interface SurveyMapper {
@@ -27,9 +28,9 @@ public interface SurveyMapper {
 
     List<ActivityTypeVO> getAllActivityTypesByUserId(@Param("userId") String userId);
 
-	List<Integer> selectCommonBoardNo(@Param("month") String monthForClimate,@Param("survey") SurveyVO survey);
+	List<BoardVO> selectCommonBoardNo(@Param("month") String monthForClimate,@Param("survey") SurveyVO survey, @Param("category") String category);
 
-	StayVO selectStayBoardWithCategory(@Param("survey") SurveyVO survey,@Param("boardNum") Integer board);
+	StayVO selectStayBoardWithCategory(@Param("survey") SurveyVO survey,@Param("board") BoardVO board);
 
-	ActivityVO selectActivityBoardWithCategory(@Param("survey") SurveyVO survey, @Param("boardNum") Integer board);
+	ActivityVO selectActivityBoardWithCategory(@Param("survey") SurveyVO survey, @Param("board") BoardVO board);
 }

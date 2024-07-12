@@ -23,12 +23,16 @@ public class BoardServiceImpl implements BoardService {
 	public List<BoardVO> getBoardList(String category) {
 		List<BoardVO> boardList = boardMapper.selectBoardList(category);
 		for (BoardVO board : boardList) {
-			board.setImageName(boardMapper.selectImageList(board.getBoardNo()));
+			setImage(board);
 		}
-
 		return boardList;
 	}
 
+	@Override
+	public void setImage(BoardVO board){
+			board.setImageName(boardMapper.selectImageList(board.getBoardNo()));
+	}
+	
 	@Override
 	public BoardVO getBoard(int no) {
 		BoardVO board = boardMapper.selectBoard(no);

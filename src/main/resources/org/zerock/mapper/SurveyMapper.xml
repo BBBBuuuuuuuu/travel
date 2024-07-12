@@ -85,8 +85,8 @@
             survey_no IN (SELECT survey_no FROM survey WHERE member_id = #{userId})
     </select>
     
-    <select id="selectCommonBoardNo" resultType="Integer">
-    	select board_no from board where climate = (select climate from month where #{month} = #{survey.climate})
+    <select id="selectCommonBoardNo" resultMap="boardResultMap">
+    	select * from board 	where category = #{category} AND month_no = (select month_no from month where ${month} = #{survey.climate}) order by board_no desc
     </select>
     
 	<resultMap id="boardResultMap" type="org.zerock.domain.BoardVO">
@@ -108,8 +108,11 @@
 	</resultMap>
 	
     <select id="selectStayBoardWithCategory" resultMap="stayResultMap">
+    <![CDATA[
     	select * from board b JOIN stay s ON b.board_no = s.board_no 
-    	where b.board_no = #{boardNum} AND s.stay_type=#{survey.stay_type} AND s.max >= #{survey.peoplecount}
+    	where b.board_no = #{board.boardNo} AND s.stay_type=#{survey.stay_type} AND s.max >= #{survey.peoplecount}
+		]]>
+
     </select>
     
     <resultMap id="activityResultMap" type="org.zerock.domain.ActivityVO" extends="boardResultMap">
@@ -118,7 +121,7 @@
 	
     <select id="selectActivityBoardWithCategory" resultMap="activityResultMap">
     	select *from board b JOIN activity a ON b.board_no = a.board_no 
-    	where b.board_no = #{boardNum} AND (
+    	where b.board_no = #{board.boardNo} AND (
     	a.activity_type = #{activity_type} OR a.activity_type = #{activity_type1} OR a.activity_type = #{activity_type2})
     </select>
 </mapper>

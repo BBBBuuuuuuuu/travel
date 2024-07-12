@@ -19,4 +19,6 @@ public interface BoardService {
 	public List<BoardVO> searchBoard(String category, String word);
 
 	public Boolean checkPaymentById(String id);
+
+	void setImage(BoardVO board);
 }

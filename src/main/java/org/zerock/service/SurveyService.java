@@ -1,10 +1,12 @@
 package org.zerock.service;
 
 import java.util.List;
-import org.zerock.domain.SurveyVO;
+
 import org.zerock.domain.ActivityTypeVO;
 import org.zerock.domain.ActivityVO;
+import org.zerock.domain.BoardVO;
 import org.zerock.domain.StayVO;
+import org.zerock.domain.SurveyVO;
 
 public interface SurveyService {
     void insertSurvey(SurveyVO vo);
@@ -23,11 +25,11 @@ public interface SurveyService {
 
     List<SurveyVO> getAllSurveysWithActivityTypesByUserId(String userId);
 
-	List<Integer> getCommonBoard(SurveyVO survey);
+	List<BoardVO> getCommonBoard(SurveyVO survey, String category);
 
-	List<StayVO> getStayBoardWithCategory(SurveyVO survey, List<Integer> boardNumList);
+	List<StayVO> getStayBoardWithCategory(SurveyVO survey, List<BoardVO> boardNumList);
 
-	List<ActivityVO> getActivityBoard(SurveyVO survey, List<Integer> boardNumList);
+	List<ActivityVO> getActivityBoard(SurveyVO survey, List<BoardVO> boardNumList);
 
 }
 

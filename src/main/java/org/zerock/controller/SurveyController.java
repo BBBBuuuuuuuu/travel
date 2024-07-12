@@ -14,10 +14,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.domain.ActivityVO;
+import org.zerock.domain.BoardVO;
 import org.zerock.domain.StayVO;
 import org.zerock.domain.SurveyVO;
+import org.zerock.service.BoardService;
+import org.zerock.service.ReviewService;
 import org.zerock.service.SurveyService;
 
 import lombok.extern.log4j.Log4j;
@@ -30,6 +32,10 @@ public class SurveyController {
 
     @Autowired
     private SurveyService surveyService;
+    @Autowired
+    private ReviewService reviewService;
+    @Autowired
+    private BoardService boardService;
     
     @RequestMapping(value="survey.do", method = RequestMethod.GET)
     public String showInsertSurveyForm(HttpSession session, Model model) {
@@ -50,7 +56,7 @@ public class SurveyController {
         survey.setMember_id(userId);
         surveyService.insertSurvey(survey);
 
-        List<Integer> boardNumList = surveyService.getCommonBoard(survey);
+        List<BoardVO> boardNumList = surveyService.getCommonBoard(survey, category);
     	
     	if(category == null || category.equals("stay")) {
     		List<StayVO> stayList = surveyService.getStayBoardWithCategory(survey, boardNumList);
@@ -96,7 +102,30 @@ public class SurveyController {
         }
         
         @GetMapping("/listBySurvey.do")
-        public String searchBySurvey(SurveyVO survey, String category, Model model) {
+        public String searchBySurvey(String surveyNum, String category, Model model) {
+        	SurveyVO survey = surveyService.getSurvey(Long.parseLong(surveyNum));
+        	if(category == null) 
+        		category = "stay";
+        	
+        	List<BoardVO> boardNumList = surveyService.getCommonBoard(survey, category);
+        	
+        	if(category == null || category.equals("stay")) {
+        		List<StayVO> stayList = surveyService.getStayBoardWithCategory(survey, boardNumList);
+        		for(StayVO board : stayList) {
+        			board.setLike(reviewService.getReviewAverage(board));
+        			boardService.setImage(board);
+        		}
+        		
+        		model.addAttribute("boardList", stayList);
+        	} else {
+        		List<ActivityVO> activityList = surveyService.getActivityBoard(survey, boardNumList);
+        		log.info("surveyControdeflaskdf " + activityList);
+        		for(ActivityVO board : activityList) {
+        			board.setLike(reviewService.getReviewAverage(board));
+        			boardService.setImage(board);
+        		}
+        		model.addAttribute("boardList", activityList);
+        	}
         	
         	return "board/list";
         }
