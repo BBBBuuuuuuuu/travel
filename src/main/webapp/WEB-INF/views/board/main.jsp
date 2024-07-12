@@ -123,6 +123,7 @@
 <link rel="stylesheet"
 	href="https://static.tacdn.com/assets/p7jq7m.4Ujcuf7.css"
 	crossorigin="" />
+	<script src="/travel/resources/js/search.js"></script>
 <script src="https://static.tacdn.com/assets/uiysebtawutl-c.js" async=""
 	crossorigin="" fetchpriority="low"></script>
 <script src="https://static.tacdn.com/assets/544p0pr403vd-c.en-US.js"
@@ -225,7 +226,7 @@
 													name="ssrc" value="h" />
 												<div class="oKjvH f u Ma Nk MA NM DERJF">
 													<div class="F1 f u Q2">
-														<button type="submit" formaction="/list.jsp"
+														<button type="submit" onclick="search()" 
 															class="LhcRH _G _H B- G_ _S t u j H0" title="Search"
 															aria-label="Search" tabindex="-1">
 															<svg viewBox="0 0 24 24" width="24px" height="24px"
@@ -235,8 +236,7 @@
 																	d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
                											 </svg>
 														</button>
-														<input type="search" autoComplete="off" autoCorrect="off"
-															autoCapitalize="none" spellcheck="false" required
+														<input type="text" id="searchedWord" autoComplete="off"  required
 															name="q" class="hUpcN _G G_ B- z F1 _J w Cj R0 NBfGt H3"
 															placeholder="검색" title="Search" role="searchbox"
 															aria-label="Search" aria-controls="typeahead_results"
@@ -269,9 +269,8 @@
 
 
 
-							<a href="list.jsp">
 								<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
-									type="button">
+									type="button" onclick="search()">
 									<span class="biGQs _P ttuOS">
 										<div class="jktzL">
 											<svg viewBox="0 0 24 24" width="20px" height="20px"
@@ -283,7 +282,6 @@
 										<h1 class="CpzHF q">검색</h1>
 									</span>
 								</button>
-							</a>
 						</div>
 					</div>
 				</div>

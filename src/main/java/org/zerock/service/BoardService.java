@@ -17,4 +17,6 @@ public interface BoardService {
 	public StayVO getStayBoard(int no);
 
 	public List<BoardVO> searchBoard(String category, String word);
+
+	public Boolean checkPaymentById(String id);
 }

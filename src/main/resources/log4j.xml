@@ -11,6 +11,10 @@
 	</appender>
 	
 	<!-- Application Loggers -->
+	
+	<logger name="org.zerock">
+		<level value="debug"></level>
+	</logger>
 	<logger name="org.zerock.controller">
 		<level value="info" />
 	</logger>
@@ -18,6 +22,10 @@
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
 		<level value="info" />
+	</logger>
+	
+	<logger name="org.springframework">
+		<level value="debug"/>
 	</logger>
 	
 	<logger name="org.springframework.beans">
@@ -29,7 +37,7 @@
 	</logger>
 
 	<logger name="org.springframework.web">
-		<level value="info" />
+		<level value="debug" />
 	</logger>
 	
 	<logger name="jdbc.audit">
@@ -46,7 +54,7 @@
 
 	<!-- Root Logger -->
 	<root>
-		<priority value="info" />
+		<priority value="debug" />
 		<appender-ref ref="console" />
 	</root>
 	

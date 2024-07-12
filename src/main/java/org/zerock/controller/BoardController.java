@@ -67,14 +67,17 @@ public class BoardController {
 	}
 	
 	@PostMapping("/writeReview.do")
-	public String writeReview(HttpServletRequest request, @RequestParam("files") MultipartFile[] files, ReviewVO vo) { // 주소값의 BoardNo을 매개변수로 
-		if(request.getSession(false).getAttribute("login") == null) { // 로그인 여부 확인
+	public String writeReview(HttpServletRequest request, @RequestParam("files") MultipartFile[] files, ReviewVO vo) { // 주소값의 BoardNo을 매개변수로
+		log.info("과연 들어올까요??");
+		String id = (String) request.getSession(false).getAttribute("userId");
+		if(id == null) { // 로그인 여부 확인
 			return "redirect:/getBoard.do?no="+vo.getBoardNo();
 		}
 		
 		if(boardService.getBoard(vo.getBoardNo()).getCategory().equals("stay")) { // 숙소 구매 내역 확인
-			// 구매 내역 확인
-			// 구매 내역이 없을 경우 페이지로 바로 리턴
+			Boolean checking = boardService.checkPaymentById(id);
+			if(checking)
+				return "redirect:/getBoard.do?no="+vo.getBoardNo();
 		}
 		reviewService.writeReview(vo); // 
 		reviewService.uploadImages(files); // 
@@ -83,14 +86,14 @@ public class BoardController {
 	}
 	
 	@GetMapping("/search.do")
-	public String search(@RequestParam(value="word", required = false) String word, @RequestParam("category") String category, Model model) {
+	public String search(@RequestParam(value="word", required = false) String word, @RequestParam(value="category", defaultValue="stay" ) String category, Model model) {
 		List<BoardVO> boardList = boardService.searchBoard(category, word);
 		for(BoardVO board : boardList) {
 			board.setLike(reviewService.getReviewAverage(board));
 		}	
 		
 		model.addAttribute("boardList", boardList);
-		return "getBoardList";
+		return "board/list";
 	}
 	
 }

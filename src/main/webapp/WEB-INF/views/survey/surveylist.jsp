@@ -283,13 +283,13 @@ button {
 
 .modal-content {
 	background-color: #fff;
-    margin: 7% auto;
-    padding: 20px;
-    border: 2px solid #6f6f6f;
-    border-radius: 8px;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	margin: 7% auto;
+	padding: 20px;
+	border: 2px solid #00aa6c;
+	border-radius: 8px;
+	width: 80%;
+	max-width: 600px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .close {
@@ -323,7 +323,9 @@ iframe {
 						<p>시작 날짜: ${survey.start_date}, 종료 날짜: ${survey.end_date}</p>
 						<button class="viewSurvey">보기</button>
 						<button class="deleteSurvey">삭제</button>
-						<button class="suggestSurvey">여행지추천</button>
+						<form action="listBySurvey.do" method="get">
+						<button type="submit" class="suggestSurvey">여행지추천</button>
+						</form>
 					</div>
 				</c:forEach>
 			</div>
@@ -385,6 +387,7 @@ iframe {
 									}
 								});
 
+				
 								$('.deleteSurvey')
 										.click(
 												function() {
@@ -415,6 +418,22 @@ iframe {
 																});
 													}
 												});
+								$('.suggestSurvey').click(function() {
+					                var surveyId = $(this).closest('.surveyItem').data('survey-id');
+					                $.ajax({
+					                    url: 'listBySurvey.do',
+					                    type: 'GET',
+					                    data: {
+					                        survey_no: surveyId
+					                    },
+					                    success: function(response) {
+					                        alert('여행지 추천이 완료되었습니다.');
+					                    },
+					                    error: function(xhr, status, error) {
+					                        alert('여행지 추천에 실패했습니다.');
+					                    }
+					                });
+					            }); 
 							});
 		</script>
 </body>

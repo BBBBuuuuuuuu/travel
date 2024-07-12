@@ -67,5 +67,12 @@ public class BoardServiceImpl implements BoardService {
 		return boardList;
 	}
 
+	@Override
+	public Boolean checkPaymentById(String id) {
+		List<Integer> paymentNo = boardMapper.selectPaymentById(id);
+		return paymentNo.isEmpty() ? true : false;
+	}
+
+	
 
 }

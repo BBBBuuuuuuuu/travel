@@ -22,4 +22,6 @@ public interface BoardMapper {
 	public String selectContent(int no);
 
 	public List<BoardVO> selectWord(@Param("category") String category, @Param("word") String word);
+
+	public List<Integer> selectPaymentById(String id);
 }
