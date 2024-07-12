@@ -54,6 +54,6 @@
 	</select>
 	
 	<select id="selectPaymentById" resultType="Integer">
-		select payment_no from payment where member_id = #{id}
+		select payment_no from payment where member_id = #{id} AND booking_no = (select max(booking_no) from booking where member_id = #{id});
 	</select>
 </mapper>

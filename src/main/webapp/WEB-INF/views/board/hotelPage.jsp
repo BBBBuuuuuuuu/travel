@@ -3,11 +3,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<link rel="icon" id="favicon"
-	href="https://static.tacdn.com/favicon.ico?v2" type="image/x-icon" />
-<link rel="mask-icon" sizes="any"
-	href="https://static.tacdn.com/img2/brand_refresh/application_icons/mask-icon.svg"
-	color="#000000" />
 
 <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -17,111 +12,10 @@ var $j = jQuery.noConflict();
 <script>
 	var boardNo = "${board.boardNo}";
 	</script>
-<script type="application/ld+json">[{"@context":"http:\u002F\u002Fschema.org","@type":"Organization","name":"Tripadvisor","url":"https:\u002F\u002Fwww.tripadvisor.com\u002F","logo":"https:\u002F\u002Fstatic.tacdn.com\u002Fimg2\u002Fbrand_refresh\u002FTripadvisor_logoset_solid_green.svg","sameAs":["https:\u002F\u002Fwww.facebook.com\u002FTripadvisor","https:\u002F\u002Ftwitter.com\u002FTripadvisor","https:\u002F\u002Finstagram.com\u002Ftripadvisor\u002F","https:\u002F\u002Fwww.linkedin.com\u002Fcompany\u002Ftripadvisor"]},{"@context":"http:\u002F\u002Fschema.org","@type":"WebSite","name":"Tripadvisor","url":"https:\u002F\u002Fwww.tripadvisor.com\u002F","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\u002F\u002Fwww.tripadvisor.com\u002FSearch?q={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
 <meta property="fb:pages" content="5863091683" />
 <meta property="fb:pages" content="329182043776593" />
 <script>window.performance&&performance.mark&&performance.getEntriesByType&&0===performance.getEntriesByType("visibility-state").length&&(performance.mark("visible"===document.visibilityState?"visible":"hidden"),document.addEventListener&&document.addEventListener("visibilitychange",function(){performance.mark("visible"===document.visibilityState?"visible":"hidden")},!1));</script>
 <title>호텔 상세페이지</title>
-<link rel="canonical"
-	href="https://www.tripadvisor.com/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en"
-	href="https://www.tripadvisor.com/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-GB"
-	href="https://www.tripadvisor.co.uk/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-CA"
-	href="https://www.tripadvisor.ca/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="fr-CA"
-	href="https://fr.tripadvisor.ca/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="it"
-	href="https://www.tripadvisor.it/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="es"
-	href="https://www.tripadvisor.es/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="de"
-	href="https://www.tripadvisor.de/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="fr"
-	href="https://www.tripadvisor.fr/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="ja"
-	href="https://www.tripadvisor.jp/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="zh-Hans"
-	href="https://cn.tripadvisor.com/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-IN"
-	href="https://www.tripadvisor.in/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="sv"
-	href="https://www.tripadvisor.se/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="nl"
-	href="https://www.tripadvisor.nl/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="pt"
-	href="https://www.tripadvisor.com.br/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="tr"
-	href="https://www.tripadvisor.com.tr/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="da"
-	href="https://www.tripadvisor.dk/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="es-MX"
-	href="https://www.tripadvisor.com.mx/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-IE"
-	href="https://www.tripadvisor.ie/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="ar"
-	href="https://ar.tripadvisor.com/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="ar-EG"
-	href="https://www.tripadvisor.com.eg/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="de-AT"
-	href="https://www.tripadvisor.at/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="el"
-	href="https://www.tripadvisor.com.gr/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-AU"
-	href="https://www.tripadvisor.com.au/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-MY"
-	href="https://www.tripadvisor.com.my/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-NZ"
-	href="https://www.tripadvisor.co.nz/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-PH"
-	href="https://www.tripadvisor.com.ph/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-SG"
-	href="https://www.tripadvisor.com.sg/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-ZA"
-	href="https://www.tripadvisor.co.za/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="es-AR"
-	href="https://www.tripadvisor.com.ar/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="es-CL"
-	href="https://www.tripadvisor.cl/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="es-CO"
-	href="https://www.tripadvisor.co/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="es-PE"
-	href="https://www.tripadvisor.com.pe/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="es-VE"
-	href="https://www.tripadvisor.com.ve/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="id"
-	href="https://www.tripadvisor.co.id/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="he"
-	href="https://www.tripadvisor.co.il/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="ko"
-	href="https://www.tripadvisor.co.kr/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="nb"
-	href="https://no.tripadvisor.com/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="pt-PT"
-	href="https://www.tripadvisor.pt/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="ru"
-	href="https://www.tripadvisor.ru/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="th"
-	href="https://th.tripadvisor.com/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="vi"
-	href="https://www.tripadvisor.com.vn/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="zh-Hant"
-	href="https://www.tripadvisor.com.tw/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="de-CH"
-	href="https://www.tripadvisor.ch/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="fr-CH"
-	href="https://fr.tripadvisor.ch/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="it-CH"
-	href="https://it.tripadvisor.ch/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="en-HK"
-	href="https://en.tripadvisor.com.hk/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="fr-BE"
-	href="https://fr.tripadvisor.be/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="nl-BE"
-	href="https://www.tripadvisor.be/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
-<link rel="alternate" hrefLang="zh-hk"
-	href="https://www.tripadvisor.com.hk/Hotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html" />
 <link rel="stylesheet"
 	href="https://static.tacdn.com/assets/vk2o6l4ceecg-c.css"
 	crossorigin="" />
@@ -174,16 +68,17 @@ var $j = jQuery.noConflict();
     margin-bottom: -15px;
 }
 
+.smallImage{
+	width:100%;
+}
  .LoFmz {
- 			border:3px solid black;
-	 		border-radius: 40px;
-            width: 111%;
-            display: block;
-            position: relative; /* 필요한 경우 */
-            overflow: hidden;
+    width: 100%;
+    border-radius: 40px;
+    display: flex;  /* Flexbox를 사용하여 내용을 수평으로 배열 */
+    align-items: start;  /* 아이템들을 상단 정렬 */
+    overflow: hidden;
         }
       .LoFmz img {
-    width: 100%;
     height: auto;
     max-width: 100%;
     display: block;
@@ -394,21 +289,23 @@ var $j = jQuery.noConflict();
 	height: 45px;
 }
    .main-image {
-            width: 100%;
+            width: 80%;
             height: auto;
             margin-bottom: 20px;
         }
 
         .thumbnail {
-            width: 20%;
+            width: 100%;
             height: auto;
             margin: 5px;
             cursor: pointer;
         }
 
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
+            width: 18%; 
+    display: flex;
+    flex-direction: column;  /* 세로 방향 배열 */
+    gap: 2px;  /* 이미지 사이의 간격 */
         }
 
 </style>
@@ -526,21 +423,14 @@ var $j = jQuery.noConflict();
 						<span></span>
 						<div class="wWwSb VogJa">
 							<div class="LOtES f e">
-								  <div class="LoFmz w _Z">
+								  <div class="LoFmz ">
 								        <img id="mainImage" class="main-image" src="/travel/resources/images/${board.imageName[0]}" alt="메인 이미지">
-								        <div class="gallery iBGtx f J _h _e z NK Ni qQnpg">
-								            <div class="ZSsAY xjaPD">
-								                <img class="thumbnail" src="/travel/resources/images/${board.imageName[0]}" alt="썸네일 1">
+								        <div class="gallery">
+								        <c:forEach var="image" items="${board.imageName }">
+								            <div class="smallImage">
+								                <img class="thumbnail" src="/travel/resources/images/${image}" alt="썸네일">
 								            </div>
-								            <div class="ZSsAY xjaPD">
-								                <img class="thumbnail" src="/travel/resources/images/${board.imageName[1]}" alt="썸네일 2">
-								            </div>
-								            <div class="ZSsAY xjaPD">
-								                <img class="thumbnail" src="/travel/resources/images/${board.imageName[2]}" alt="썸네일 3">
-								            </div>
-								            <div class="ZSsAY xjaPD">
-								                <img class="thumbnail" src="/travel/resources/images/${board.imageName[3]}" alt="썸네일 4">
-								            </div>
+								            </c:forEach>
 								        </div>
 								    </div>
 								  <script>
@@ -953,8 +843,14 @@ var $j = jQuery.noConflict();
 
 										<div class="ppuFV _T Z BB lSnVq amYYZ">
 											<div id="submittedReviews">
-												<h3>제출된 리뷰</h3>
+													<c:forEach var="review" items="${reviewList }">
 												<ul id="reviewList"></ul>
+														작성자 : ${review.memberId}
+														평점 : ${review.like}
+														내용 : ${review.content}
+														이미지 : <img src="/travel/resources/images/${review.imageName[0]}">
+													</c:forEach>
+												<!-- 리뷰를 넣을 위치  -->
 											</div>
 										</div>
 								
