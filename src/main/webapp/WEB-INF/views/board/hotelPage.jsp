@@ -175,6 +175,7 @@
             max-width: 100%;
             display: block;
             object-fit: cover;
+            border-radius: 8px;
         }
 
 .rmyCe.huqcv:not(:disabled) {
@@ -374,6 +375,23 @@
 	width: 100%;
 	height: 45px;
 }
+   .main-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .thumbnail {
+            width: 20%;
+            height: auto;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
 </style>
 	<%@ include file="/resources/includes/header.jsp"%>
@@ -489,11 +507,33 @@
 						<span></span>
 						<div class="wWwSb VogJa">
 							<div class="LOtES f e">
-								 <div class="LoFmz w _Z">
-							        <img src="/travel/resources/images/${board.imageName[0] }" alt="예시 이미지">
-							        
-							    </div>
-								<div></div>
+								  <div class="LoFmz w _Z">
+								        <img id="mainImage" class="main-image" src="/travel/resources/images/${board.imageName[0]}" alt="메인 이미지">
+								        <div class="gallery iBGtx f J _h _e z NK Ni qQnpg">
+								            <div class="ZSsAY xjaPD">
+								                <img class="thumbnail" src="/travel/resources/images/${board.imageName[0]}" alt="썸네일 1">
+								            </div>
+								            <div class="ZSsAY xjaPD">
+								                <img class="thumbnail" src="/travel/resources/images/${board.imageName[1]}" alt="썸네일 2">
+								            </div>
+								            <div class="ZSsAY xjaPD">
+								                <img class="thumbnail" src="/travel/resources/images/${board.imageName[2]}" alt="썸네일 3">
+								            </div>
+								            <div class="ZSsAY xjaPD">
+								                <img class="thumbnail" src="/travel/resources/images/${board.imageName[3]}" alt="썸네일 4">
+								            </div>
+								        </div>
+								    </div>
+								  <script>
+								        // 모든 썸네일 이미지에 클릭 이벤트를 추가
+								        document.querySelectorAll('.thumbnail').forEach(function(thumbnail) {
+								            thumbnail.addEventListener('click', function() {
+								                // 클릭된 썸네일 이미지의 src 값을 가져와서 메인 이미지의 src 값으로 설정
+								                document.getElementById('mainImage').src = this.src;
+								            });
+								        });
+								    </script>   
+								    
 								<div class="VRono Gi B1 Z BB Pk PY Px PK">
 									<div>
 										<h2 class="biGQs _P fiohW uuBRH">여행날짜 및 인원 선택하기</h2>
