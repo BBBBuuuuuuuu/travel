@@ -189,6 +189,7 @@
 /* 여기에 CSS 스타일링을 추가하세요 */
 #hotelList {
     display: flex;
+
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
@@ -210,6 +211,31 @@
     box-sizing: border-box;
     transition: all 0.3s ease;
     overflow: hidden;
+    align-items: center; /* 이미지와 텍스트를 수직으로 중앙 정렬 */
+}
+
+.hotel-image {
+    margin-right: 20px;
+    max-width: 20%; /* 이미지 최대 너비 */
+}
+
+.hotel-image img {
+    width: 100%; /* 이미지 너비를 부모 요소에 맞춤 */
+    height: auto; /* 이미지 비율 유지 */
+    border-radius: 8px; /* 이미지 둥근 테두리 */
+}
+
+.hotel-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* 자식 요소를 세로 방향으로 정렬 */
+}
+
+.hotel-title {
+font-size: 23px;
+
+    position: relative; /* 부모 요소로부터 상대적 위치 설정 /
+
 }
 
 .hotel-image {
@@ -233,6 +259,7 @@
 
 .hotel-title {
     font-size: 18px;
+>>>>>>> master
     font-weight: bold;
     margin-bottom: 10px;
     white-space: nowrap;
@@ -244,6 +271,7 @@
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
+
 }
 
 .book-button {
@@ -280,6 +308,25 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: none; /* 기본적으로 숨김 처리 */
+}
+
+.book-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.book-button:hover {
+    background-color: #45a049;
 }
 
 
@@ -453,6 +500,7 @@
 			            </div>
 			        </a>
 			    </c:forEach>
+
 			</div>
 			
 	</main>
