@@ -189,12 +189,30 @@
 /* 여기에 CSS 스타일링을 추가하세요 */
 .hotel-card {
     display: flex;
-    margin-bottom: 20px;
-    margin-top: 26px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-right: 18.5%;
-    margin-left: 21%;
+
+    align-items: center; /* 이미지와 텍스트를 수직으로 중앙 정렬 */
+}
+
+.hotel-image {
+    margin-right: 20px;
+    max-width: 20%; /* 이미지 최대 너비 */
+}
+
+.hotel-image img {
+    width: 100%; /* 이미지 너비를 부모 요소에 맞춤 */
+    height: auto; /* 이미지 비율 유지 */
+    border-radius: 8px; /* 이미지 둥근 테두리 */
+}
+
+.hotel-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* 자식 요소를 세로 방향으로 정렬 */
+}
+
+.hotel-title {
+font-size: 23px;
+=======
     position: relative; /* 부모 요소로부터 상대적 위치 설정 /
 }
 
@@ -216,12 +234,14 @@
 
 .hotel-title {
     font-size: 18px;
+>>>>>>> master
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .hotel-rating {
     margin-bottom: 5px;
+    font-size: 20px
 }
 
 .hotel-review {
@@ -235,8 +255,28 @@
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    display: none; / 기본적으로 숨김 처리 */
+    display: none; /* 기본적으로 숨김 처리 */
 }
+
+.book-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.book-button:hover {
+    background-color: #45a049;
+}
+
 </style>
 </head>
 
@@ -388,7 +428,7 @@
 											<path fill-rule="evenodd" clip-rule="evenodd"
 											d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path></svg>
 								</div>
-								<h1 class="CpzHF q">Find hotels</h1></span>
+								<h1 class="CpzHF q">검색</h1></span>
 						</button>
 					</div>
 				</div>
@@ -397,13 +437,13 @@
 			<c:forEach var="board" items="${boardList}">
 			<a href="getBoard.do?no=${board.boardNo}">
 				<div class="hotel-card">
-					<div class="hotel-image">
-					<img src="/travel/resources/images/${board.imageName[0] }" alt="${board.name}">
-						<div class="hotel-details">
-							<div class="hotel-title">제목 : ${board.name}</div>
-							<div class="hotel-rating">평점 : ${board.like}</div>
-						</div>
-					</div>
+				    <div class="hotel-image">
+				        <img src="/travel/resources/images/${board.imageName[0] }" alt="${board.name}">
+				    </div>
+				    <div class="hotel-details">
+				        <div class="hotel-title">제목 : ${board.name}</div>
+				        <div class="hotel-rating">평점 : ${board.like}</div>
+				    </div>
 				</div>
 				</a>
 				</c:forEach>
