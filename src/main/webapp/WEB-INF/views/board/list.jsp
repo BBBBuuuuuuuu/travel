@@ -210,35 +210,6 @@
     box-sizing: border-box;
     transition: all 0.3s ease;
     overflow: hidden;
-    align-items: center; /* 이미지와 텍스트를 수직으로 중앙 정렬 */
-}
-
-.hotel-image {
-    margin-right: 20px;
-    max-width: 20%; /* 이미지 최대 너비 */
-}
-
-.hotel-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    width: calc(45% - 20px); /* 간격을 맞추기 위해 20px 차감 */
-    min-width: 555px; /* 최소 너비 설정 */
-    height: 400px;
-    box-sizing: border-box;
-    transition: all 0.3s ease; /* 부드러운 hover 효과를 위한 transition */
-    overflow: hidden;
-    flex-direction: column; /* 자식 요소를 세로 방향으로 정렬 */
-}
-
-.hotel-title {
-font-size: 23px;
-
-    position: relative; /* 부모 요소로부터 상대적 위치 설정 /
-
 }
 
 .hotel-image {
@@ -311,30 +282,6 @@ font-size: 23px;
     display: none; /* 기본적으로 숨김 처리 */
 }
 
-.book-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    align-self: flex-start;
-}
-
-.book-button:hover {
-    background-color: #45a049;
-}
-
-@media screen and (max-width: 768px) {
-    .hotel-card {
-        width: 100%; /* 모바일 화면에서 카드를 한 줄에 하나씩 표시 */
-        margin-bottom: 20px;
-    }
-}
 
 </style>
 </head>
@@ -506,7 +453,6 @@ font-size: 23px;
 			            </div>
 			        </a>
 			    </c:forEach>
-
 			</div>
 			
 	</main>
