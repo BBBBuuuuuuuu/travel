@@ -53,4 +53,7 @@
 		select * from board b JOIN stay s ON b.board_no = s.board_no where b.board_no = #{no}
 	</select>
 	
+	<select id="selectPaymentById" resultType="Integer">
+		select payment_no from payment where member_id = #{id}
+	</select>
 </mapper>

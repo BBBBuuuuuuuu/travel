@@ -8,7 +8,8 @@
 <link rel="mask-icon" sizes="any"
 	href="https://static.tacdn.com/img2/brand_refresh/application_icons/mask-icon.svg"
 	color="#000000" />
-<script src="/travel/resources/js/booking.js"></script>
+<script src="/travel/resources/js/hotelPage.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 <script>
 	var boardNo = "${board.boardNo}";
 	</script>

@@ -11,7 +11,7 @@
 <link rel="mask-icon" sizes="any"
 	href="https://static.tacdn.com/img2/brand_refresh/application_icons/mask-icon.svg"
 	color="#000000" />
-<script type="application/ld+json">[{"@context":"http:\u002F\u002Fschema.org","@type":"Organization","name":"Tripadvisor","url":"https:\u002F\u002Fwww.tripadvisor.com\u002F","logo":"https:\u002F\u002Fstatic.tacdn.com\u002Fimg2\u002Fbrand_refresh\u002FTripadvisor_logoset_solid_green.svg","sameAs":["https:\u002F\u002Fwww.facebook.com\u002FTripadvisor","https:\u002F\u002Ftwitter.com\u002FTripadvisor","https:\u002F\u002Finstagram.com\u002Ftripadvisor\u002F","https:\u002F\u002Fwww.linkedin.com\u002Fcompany\u002Ftripadvisor"]},{"@context":"http:\u002F\u002Fschema.org","@type":"WebSite","name":"Tripadvisor","url":"https:\u002F\u002Fwww.tripadvisor.com\u002F","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\u002F\u002Fwww.tripadvisor.com\u002FSearch?q={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
+	<script src="/travel/resources/js/search.js"></script>
 <meta property="fb:pages" content="5863091683" />
 <meta property="fb:pages" content="329182043776593" />
 <script>window.performance && performance.mark && performance.getEntriesByType && 0 === performance.getEntriesByType("visibility-state").length && (performance.mark("visible" === document.visibilityState ? "visible" : "hidden"), document.addEventListener && document.addEventListener("visibilitychange", function () { performance.mark("visible" === document.visibilityState ? "visible" : "hidden") }, !1));</script>
@@ -188,47 +188,54 @@
 }
 /* 여기에 CSS 스타일링을 추가하세요 */
 .hotel-card {
-	display: flex;
-	margin-bottom: 20px;
-	margin-top: 26px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	margin-right: 18.5%;
-	margin-left: 21%;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 26px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-right: 18.5%;
+    margin-left: 21%;
+    position: relative; /* 부모 요소로부터 상대적 위치 설정 /
 }
 
 .hotel-image {
-	width: 20%;
-	height: 20%;
-	margin-right: 20px;
+    flex: 0 0 auto; / 이미지 너비 자동 설정 /
+    margin-right: 20px;
+    max-width: 20%; / 이미지 최대 너비 설정 /
+}
+
+.hotel-image img {
+    width: 100%; / 이미지 너비 100%로 설정 /
+    height: auto; / 이미지 비율 유지 /
+    border-radius: 8px; / 이미지에 둥근 테두리 설정 /
 }
 
 .hotel-details {
-	flex: 1;
+    flex: 1; / 나머지 공간을 차지하도록 설정 /
 }
 
 .hotel-title {
-	font-size: 18px;
-	font-weight: bold;
-	margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .hotel-rating {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .hotel-review {
-	color: #666;
+    color: #666;
 }
 
 .datepicker-container {
-	position: absolute;
-	background-color: white;
-	border: 1px solid #ccc;
-	padding: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	z-index: 1000;
-	display: none; /* 기본적으로 숨김 처리 */
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; / 기본적으로 숨김 처리 */
 }
 </style>
 </head>
@@ -270,7 +277,7 @@
 																d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
                											 </svg>
 													</button>
-													<input type="search" autoComplete="off" autoCorrect="off"
+													<input type="search" id="searchedWord" autoComplete="off" autoCorrect="off"
 														autoCapitalize="none" spellcheck="false" required name="q"
 														class="hUpcN _G G_ B- z F1 _J w Cj R0 NBfGt H3"
 														placeholder="검색" title="Search" role="searchbox"
@@ -374,7 +381,7 @@
 							</div>
 						</div>
 						<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
-							type="button">
+							type="button" onclick='search()'>
 							<span class="biGQs _P ttuOS"><div class="jktzL">
 									<svg viewBox="0 0 24 24" width="20px" height="20px"
 										class="d Vb UmNoP">
