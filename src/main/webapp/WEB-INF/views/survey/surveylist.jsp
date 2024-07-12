@@ -310,6 +310,11 @@ iframe {
 	height: 100%;
 	border: none;
 }
+
+#submitForm {
+	width: 15%;
+    float: left;
+}
 </style>
 </head>
 <body>
@@ -323,8 +328,9 @@ iframe {
 						<p>시작 날짜: ${survey.start_date}, 종료 날짜: ${survey.end_date}</p>
 						<button class="viewSurvey">보기</button>
 						<button class="deleteSurvey">삭제</button>
-						<form action="listBySurvey.do" method="get">
+						<form id="submitForm" action="listBySurvey.do" method="get">
 						<button type="submit" class="suggestSurvey">여행지추천</button>
+						<input type="hidden" name="surveyNum" value="${survey.survey_no}">
 						</form>
 					</div>
 				</c:forEach>
@@ -418,7 +424,7 @@ iframe {
 																});
 													}
 												});
-								$('.suggestSurvey').click(function() {
+							/* 	$('.suggestSurvey').click(function() {
 					                var surveyId = $(this).closest('.surveyItem').data('survey-id');
 					                $.ajax({
 					                    url: 'listBySurvey.do',
@@ -433,7 +439,7 @@ iframe {
 					                        alert('여행지 추천에 실패했습니다.');
 					                    }
 					                });
-					            }); 
+					            });  */
 							});
 		</script>
 </body>
