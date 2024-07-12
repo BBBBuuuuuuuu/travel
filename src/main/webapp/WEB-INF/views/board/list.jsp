@@ -189,7 +189,6 @@
 /* 여기에 CSS 스타일링을 추가하세요 */
 #hotelList {
     display: flex;
-
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
@@ -219,15 +218,19 @@
     max-width: 20%; /* 이미지 최대 너비 */
 }
 
-.hotel-image img {
-    width: 100%; /* 이미지 너비를 부모 요소에 맞춤 */
-    height: auto; /* 이미지 비율 유지 */
-    border-radius: 8px; /* 이미지 둥근 테두리 */
-}
-
-.hotel-details {
-    flex: 1;
+.hotel-card {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: calc(45% - 20px); /* 간격을 맞추기 위해 20px 차감 */
+    min-width: 555px; /* 최소 너비 설정 */
+    height: 400px;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* 부드러운 hover 효과를 위한 transition */
+    overflow: hidden;
     flex-direction: column; /* 자식 요소를 세로 방향으로 정렬 */
 }
 
@@ -259,7 +262,6 @@ font-size: 23px;
 
 .hotel-title {
     font-size: 18px;
->>>>>>> master
     font-weight: bold;
     margin-bottom: 10px;
     white-space: nowrap;
@@ -271,7 +273,6 @@ font-size: 23px;
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
-
 }
 
 .book-button {
@@ -321,14 +322,19 @@ font-size: 23px;
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
-    width: 50%;
+    align-self: flex-start;
 }
 
 .book-button:hover {
     background-color: #45a049;
 }
 
+@media screen and (max-width: 768px) {
+    .hotel-card {
+        width: 100%; /* 모바일 화면에서 카드를 한 줄에 하나씩 표시 */
+        margin-bottom: 20px;
+    }
+}
 
 </style>
 </head>
