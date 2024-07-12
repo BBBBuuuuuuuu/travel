@@ -11,7 +11,7 @@
 <link rel="mask-icon" sizes="any"
 	href="https://static.tacdn.com/img2/brand_refresh/application_icons/mask-icon.svg"
 	color="#000000" />
-	<script src="/travel/resources/js/search.js"></script>
+<script type="application/ld+json">[{"@context":"http:\u002F\u002Fschema.org","@type":"Organization","name":"Tripadvisor","url":"https:\u002F\u002Fwww.tripadvisor.com\u002F","logo":"https:\u002F\u002Fstatic.tacdn.com\u002Fimg2\u002Fbrand_refresh\u002FTripadvisor_logoset_solid_green.svg","sameAs":["https:\u002F\u002Fwww.facebook.com\u002FTripadvisor","https:\u002F\u002Ftwitter.com\u002FTripadvisor","https:\u002F\u002Finstagram.com\u002Ftripadvisor\u002F","https:\u002F\u002Fwww.linkedin.com\u002Fcompany\u002Ftripadvisor"]},{"@context":"http:\u002F\u002Fschema.org","@type":"WebSite","name":"Tripadvisor","url":"https:\u002F\u002Fwww.tripadvisor.com\u002F","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\u002F\u002Fwww.tripadvisor.com\u002FSearch?q={search_term_string}"},"query-input":"required name=search_term_string"}}]</script>
 <meta property="fb:pages" content="5863091683" />
 <meta property="fb:pages" content="329182043776593" />
 <script>window.performance && performance.mark && performance.getEntriesByType && 0 === performance.getEntriesByType("visibility-state").length && (performance.mark("visible" === document.visibilityState ? "visible" : "hidden"), document.addEventListener && document.addEventListener("visibilitychange", function () { performance.mark("visible" === document.visibilityState ? "visible" : "hidden") }, !1));</script>
@@ -198,6 +198,27 @@
 }
 
 .hotel-card {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: calc(56% - 20px);
+    min-width: 560px;
+    height: 400px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    align-items: center; /* 이미지와 텍스트를 수직으로 중앙 정렬 */
+}
+
+.hotel-image {
+    margin-right: 20px;
+    max-width: 20%; /* 이미지 최대 너비 */
+}
+
+.hotel-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,6 +231,14 @@
     box-sizing: border-box;
     transition: all 0.3s ease; /* 부드러운 hover 효과를 위한 transition */
     overflow: hidden;
+    flex-direction: column; /* 자식 요소를 세로 방향으로 정렬 */
+}
+
+.hotel-title {
+font-size: 23px;
+
+    position: relative; /* 부모 요소로부터 상대적 위치 설정 /
+
 }
 
 .hotel-image {
@@ -244,6 +273,42 @@
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
+}
+
+.book-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.book-button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+    .hotel-card {
+        width: 100%; /* 모바일 화면에서 카드를 한 줄에 하나씩 표시 */
+        margin-bottom: 20px;
+    }
+}
+
+
+.datepicker-container {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none; /* 기본적으로 숨김 처리 */
 }
 
 .book-button {
@@ -311,7 +376,7 @@
 																d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
                											 </svg>
 													</button>
-													<input type="search" id="searchedWord" autoComplete="off" autoCorrect="off"
+													<input type="search" autoComplete="off" autoCorrect="off"
 														autoCapitalize="none" spellcheck="false" required name="q"
 														class="hUpcN _G G_ B- z F1 _J w Cj R0 NBfGt H3"
 														placeholder="검색" title="Search" role="searchbox"
@@ -415,7 +480,7 @@
 							</div>
 						</div>
 						<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
-							type="button" onclick='search()'>
+							type="button">
 							<span class="biGQs _P ttuOS"><div class="jktzL">
 									<svg viewBox="0 0 24 24" width="20px" height="20px"
 										class="d Vb UmNoP">
@@ -428,20 +493,22 @@
 				</div>
 			</div> <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 			<div id="hotelList">
-			<c:forEach var="board" items="${boardList}">
-			<a href="getBoard.do?no=${board.boardNo}">
-				<div class="hotel-card">
-				    <div class="hotel-image">
-				        <img src="/travel/resources/images/${board.imageName[0] }" alt="${board.name}">
-				    </div>
-				    <div class="hotel-details">
-				        <div class="hotel-title">제목 : ${board.name}</div>
-				        <div class="hotel-rating">평점 : ${board.like}</div>
-				    </div>
-				</div>
-				</a>
-				</c:forEach>
+			    <c:forEach var="board" items="${boardList}">
+			        <a href="getBoard.do?no=${board.boardNo}" style="text-decoration: none; color: inherit;">
+			            <div class="hotel-card">
+			                <div class="hotel-image">
+			                    <img src="/travel/resources/images/${board.imageName[0] }" alt="${board.name}">
+			                </div>
+			                <div class="hotel-details">
+			                    <div class="hotel-title">제목 : ${board.name}</div>
+			                    <div class="hotel-rating">평점 : ${board.like}</div>
+			                </div>
+			            </div>
+			        </a>
+			    </c:forEach>
+
 			</div>
+			
 	</main>
 	<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<script type="application/ld+json">[{"@context":"http:\u002F\u002Fschema.org","@type":"Hotel","name":"Ikos Dassia","description":"","url":"\u002FHotel_Review-g939713-d12279503-Reviews-Ikos_Dassia-Dassia_Corfu_Ionian_Islands.html","image":"https:\u002F\u002Fdynamic-media-cdn.tripadvisor.com\u002Fmedia\u002Fphoto-o\u002F2a\u002Fab\u002F0d\u002F17\u002Fikos-dassia.jpg?w=600&h=400&s=1","address":{"address":{"@type":"PostalAddress","addressCountry":"Greece","addressLocality":"","addressRegion":"","postalCode":"49100","streetAddress":"Dassia 49100 Greece"}}},{"@context":"http:\u002F\u002Fschema.org","@type":"Hotel","name":"Rixos  Premium Belek - The Land Of Legends Access","description":"","url":"\u002FHotel_Review-g312725-d507974-Reviews-Rixos_Premium_Belek_The_Land_Of_Legends_Access-Belek_Serik_District_Turkish_Mediterrane.html","image":"https:\u002F\u002Fdynamic-media-cdn.tripadvisor.com\u002Fmedia\u002Fphoto-o\u002F26\u002Fa4\u002F56\u002F3d\u002Frixos-premium-belek.jpg?w=600&h=400&s=1","address":{"address":{"@type":"PostalAddress","addressCountry":"T\u00FCrkiye","addressLocality":"","addressRegion":"","postalCode":"07500","streetAddress":"Mahallesi Kongre Caddesi, Belek 07500 T\u00FCrkiye"}}},{"@context":"http:\u002F\u002Fschema.org","@type":"Hotel","name":"Voyage Sorgun","description":"","url":"\u002FHotel_Review-g297968-d581323-Reviews-Voyage_Sorgun-Side_Manavgat_Turkish_Mediterranean_Coast.html","image":"https:\u002F\u002Fdynamic-media-cdn.tripadvisor.com\u002Fmedia\u002Fphoto-o\u002F2a\u002F03\u002F6f\u002F33\u002Fdiscover-pure-paradise.jpg?w=600&h=400&s=1","address":{"address":{"@type":"PostalAddress","addressCountry":"T\u00FCrkiye","addressLocality":"","addressRegion":"","postalCode":"07600","streetAddress":"Titreyeng\u00F6l Mevkii Manavgat Sorgun Y\u00F6resi, Side, Manavgat 07600 T\u00FCrkiye"}}},{"@context":"http:\u002F\u002Fschema.org","@type":"Hotel","name":"Voyage Belek Golf And Spa","description":"","url":"\u002FHotel_Review-g312725-d647824-Reviews-Voyage_Belek_Golf_And_Spa-Belek_Serik_District_Turkish_Mediterranean_Coast.html","image":"https:\u002F\u002Fdynamic-media-cdn.tripadvisor.com\u002Fmedia\u002Fphoto-o\u002F29\u002Fca\u002Fed\u002F6b\u002Fvoyage-belek-golf-spa.jpg?w=600&h=400&s=1","address":{"address":{"@type":"PostalAddress","addressCountry":"T\u00FCrkiye","addressLocality":"","addressRegion":"","postalCode":"07506","streetAddress":"Belek Mahallesi G\u00FCn\u00FCbirlik Caddesi No: 2, Belek 07506 T\u00FCrkiye"}}}]</script>
