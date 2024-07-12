@@ -160,6 +160,16 @@
 <script src="https://static.tacdn.com/assets/p7jq7m.4Ujcuf7.js" async=""
 	crossorigin="" fetchpriority="low"></script>
 <style>
+.uuBRH {
+    font: var(--_EcuCfCh7);
+    margin-bottom: 20px;
+}
+.Ni {
+    margin-right: var(--spacing-01);
+    margin-top: -2%;
+    margin-bottom: -15px;
+}
+
  .LoFmz {
  			border:3px solid black;
 	 		border-radius: 40px;
@@ -168,15 +178,14 @@
             position: relative; /* 필요한 경우 */
             overflow: hidden;
         }
-        .LoFmz img {
-        	
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            display: block;
-            object-fit: cover;
-            border-radius: 8px;
-        }
+      .LoFmz img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+}
 
 .rmyCe.huqcv:not(:disabled) {
 	background-color: #28a745;
