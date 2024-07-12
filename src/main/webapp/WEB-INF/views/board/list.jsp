@@ -187,75 +187,63 @@
 	background-color: #0056b3;
 }
 /* 여기에 CSS 스타일링을 추가하세요 */
+#hotelList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* 여백 추가 */
+    box-sizing: border-box;
+}
+
 .hotel-card {
     display: flex;
-
-    align-items: center; /* 이미지와 텍스트를 수직으로 중앙 정렬 */
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: calc(45% - 20px); /* 간격을 맞추기 위해 20px 차감 */
+    min-width: 555px; /* 최소 너비 설정 */
+    height: 400px;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* 부드러운 hover 효과를 위한 transition */
+    overflow: hidden;
 }
 
 .hotel-image {
-    margin-right: 20px;
-    max-width: 20%; /* 이미지 최대 너비 */
+    width: 100%;
+    height: 250px; /* 이미지 높이 조정 */
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .hotel-image img {
-    width: 100%; /* 이미지 너비를 부모 요소에 맞춤 */
-    height: auto; /* 이미지 비율 유지 */
-    border-radius: 8px; /* 이미지 둥근 테두리 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* 이미지 hover 시 효과를 위한 transition */
 }
 
 .hotel-details {
-    flex: 1;
-    display: flex;
-    flex-direction: column; /* 자식 요소를 세로 방향으로 정렬 */
-}
-
-.hotel-title {
-font-size: 23px;
-=======
-    position: relative; /* 부모 요소로부터 상대적 위치 설정 /
-}
-
-.hotel-image {
-    flex: 0 0 auto; / 이미지 너비 자동 설정 /
-    margin-right: 20px;
-    max-width: 20%; / 이미지 최대 너비 설정 /
-}
-
-.hotel-image img {
-    width: 100%; / 이미지 너비 100%로 설정 /
-    height: auto; / 이미지 비율 유지 /
-    border-radius: 8px; / 이미지에 둥근 테두리 설정 /
-}
-
-.hotel-details {
-    flex: 1; / 나머지 공간을 차지하도록 설정 /
+    width: 100%;
 }
 
 .hotel-title {
     font-size: 18px;
->>>>>>> master
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .hotel-rating {
-    margin-bottom: 5px;
-    font-size: 20px
-}
-
-.hotel-review {
+    font-size: 16px;
     color: #666;
-}
-
-.datepicker-container {
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: none; /* 기본적으로 숨김 처리 */
+    margin-bottom: 10px;
 }
 
 .book-button {
@@ -269,12 +257,18 @@ font-size: 23px;
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
-    width: 50%;
+    align-self: flex-start;
 }
 
 .book-button:hover {
     background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+    .hotel-card {
+        width: 100%; /* 모바일 화면에서 카드를 한 줄에 하나씩 표시 */
+        margin-bottom: 20px;
+    }
 }
 
 </style>
