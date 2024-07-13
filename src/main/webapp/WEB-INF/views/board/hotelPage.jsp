@@ -262,7 +262,7 @@ var $j = jQuery.noConflict();
 .rating-stars input {
 	margin-right: 5px;
 }
-/* 리뷰 목록 스타일 */
+/*  목록 스타일 */
 #submittedReviews {
 	margin-top: 20px;
 }
@@ -672,12 +672,12 @@ var $j = jQuery.noConflict();
 						<div class="wWwSb">
 							<div>
 								<div>
-									<!-- 리뷰 탭 내부의 HTML 구조 -->
+									<!--  탭 내부의 HTML 구조 -->
 									<div class="ppuFV _T Z BB lSnVq amYYZ" data-tab="TABS_ABOUT"
 										data-section-signature="about" id="ABOUT_TAB">
 										<div class="GONGi f fhUph Z BB">
 											<h2 class="aFUwN Cj F1 b">
-												<span class="biGQs _P fiohW uuBRH">리뷰</span>
+												<span class="biGQs _P fiohW uuBRH"></span>
 											</h2>
 										</div>
 										<div class="ruCQl z">
@@ -804,11 +804,7 @@ var $j = jQuery.noConflict();
 											</button>
 										</div>
 
-										<!-- 리뷰 제출 후 표시할 내용 -->
-										<div id="submittedReviews">
-											<!-- 여기에 제출된 리뷰 내용이 동적으로 추가될 예정 -->
-										</div>
-
+							
 									</div>
 								
 										<!-- 리뷰모달 구현 -->
