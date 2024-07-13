@@ -21,4 +21,6 @@ public interface BoardService {
 	public Boolean checkPaymentById(String id);
 
 	void setImage(BoardVO board);
+
+	public List<ActivityVO> recommendActivity(BoardVO board);
 }

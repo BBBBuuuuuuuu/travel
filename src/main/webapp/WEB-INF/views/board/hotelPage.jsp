@@ -319,16 +319,15 @@ var $j = jQuery.noConflict();
     gap: 2px;  /* 이미지 사이의 간격 */
         }
 
+#ILCbI img{
+	width:400px;
+	heigh:300px;
+}
 </style>
 	<%@ include file="/resources/includes/header.jsp"%>
 	<main>
 		<!--$-->
-		<span><div class="IDaDx mvTrV cyIij fluiI SMjpI">
-				<script type="application/ld+json">{"@context":"http:\u002F\u002Fschema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":"1","item":"https:\u002F\u002Fwww.tripadvisor.com\u002FTourism-g2-Asia-Vacations.html","name":"Asia"},{"@type":"ListItem","position":"2","item":"https:\u002F\u002Fwww.tripadvisor.com\u002FTourism-g294232-Japan-Vacations.html","name":"Japan"},{"@type":"ListItem","position":"3","item":"https:\u002F\u002Fwww.tripadvisor.com\u002FTourism-g298189-Kinki-Vacations.html","name":"Kinki"},{"@type":"ListItem","position":"4","item":"https:\u002F\u002Fwww.tripadvisor.com\u002FTourism-g298199-Osaka_Prefecture_Kinki-Vacations.html","name":"Osaka Prefecture"},{"@type":"ListItem","position":"5","item":"https:\u002F\u002Fwww.tripadvisor.com\u002FTourism-g298566-Osaka_Osaka_Prefecture_Kinki-Vacations.html","name":"Osaka"},{"@type":"ListItem","position":"6","item":"https:\u002F\u002Fwww.tripadvisor.com\u002FHotels-g298566-Osaka_Osaka_Prefecture_Kinki-Hotels.html","name":"Osaka Hotels"},{"@type":"ListItem","position":"7","name":"이름"}]}</script>
-			</div>
-			</div>
-			</div>
-			<div></div>
+		<span>
 			<div data-test-target="faq-json-ld">
 				<script type="application/ld+json">{"@context":"http:\u002F\u002Fschema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which popular attractions are close to The Ritz-Carlton, Osaka?","acceptedAnswer":{"@type":"Answer","text":"Nearby attractions include Osaka Shiki Theater (0.2 miles), Hilton Plaza Osaka East\u002FWest (0.2 miles), and Herbis Plaza \u002F Herbis Plaza Ent (0.2 miles). \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=118&faqtqr=1\" \u003ESee all nearby attractions.\u003C\u002Fa\u003E"}},{"@type":"Question","name":"What are some of the property amenities at The Ritz-Carlton, Osaka?","acceptedAnswer":{"@type":"Answer","text":"Some of the more popular amenities offered include an indoor pool, free wifi, and an on-site restaurant. \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=121&faqtqr=2\" \u003ESee all property amenities.\u003C\u002Fa\u003E"}},{"@type":"Question","name":"Which room amenities are available at The Ritz-Carlton, Osaka?","acceptedAnswer":{"@type":"Answer","text":"Top room amenities include a minibar, air conditioning, and a flat screen TV. \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=122&faqtqr=3\" \u003ESee all room amenities.\u003C\u002Fa\u003E"}},{"@type":"Question","name":"What food & drink options are available at The Ritz-Carlton, Osaka?","acceptedAnswer":{"@type":"Answer","text":"Guests can enjoy an on-site restaurant, a lounge, and breakfast during their stay.  \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=123&faqtqr=4\" \u003ELearn more.\u003C\u002Fa\u003E"}},{"@type":"Question","name":"Is parking available at The Ritz-Carlton, Osaka?","acceptedAnswer":{"@type":"Answer","text":"Yes, paid private parking on-site and valet parking are available to guests. \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=127&faqtqr=5\" \u003ELearn more.\u003C\u002Fa\u003E"}},{"@type":"Question","name":"What are some restaurants close to The Ritz-Carlton, Osaka?","acceptedAnswer":{"@type":"Answer","text":"Conveniently located restaurants include Kobe Beef Ishida Herbis Plaza, La Baie, and Umeda Mix Juice. \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=129&faqtqr=6\" \u003ESee all nearby restaurants.\u003C\u002Fa\u003E"}},{"@type":"Question","name":"Are there opportunities to exercise at The Ritz-Carlton, Osaka?","acceptedAnswer":{"@type":"Answer","text":"Yes, guests have access to an indoor pool, a fitness center, and a sauna during their stay. \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=130&faqtqr=7\" \u003ELearn more.\u003C\u002Fa\u003E"}},{"@type":"Question","name":"Are any cleaning services offered at The Ritz-Carlton, Osaka?","acceptedAnswer":{"@type":"Answer","text":"Yes, dry cleaning and laundry service are offered to guests.  \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=135&faqtqr=8\" \u003ESee all property amenities.\u003C\u002Fa\u003E"}},{"@type":"Question","name":"Does The Ritz-Carlton, Osaka offer any business services?","acceptedAnswer":{"@type":"Answer","text":"Yes, it conveniently offers a business center, meeting rooms, and a banquet room.  \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=137&faqtqr=9\" \u003ESee all property amenities.\u003C\u002Fa\u003E"}},{"@type":"Question","name":"Which languages are spoken by the staff at The Ritz-Carlton, Osaka?","acceptedAnswer":{"@type":"Answer","text":"The staff speaks multiple languages, including English, French, German, Italian, Chinese, Japanese, and Vietnamese.  \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=139&faqtqr=10\" \u003ESee all property amenities.\u003C\u002Fa\u003E"}},{"@type":"Question","name":"Are there any historical sites close to The Ritz-Carlton, Osaka?","acceptedAnswer":{"@type":"Answer","text":"Many travelers enjoy visiting Osaka Castle (2.1 miles), Osaka City Central Hall (0.8 miles), and Osaka Prefectural Nakanoshima Library (0.7 miles).  \u003Ca href=\"https:\u002F\u002Fwww.tripadvisor.com\u002FHotel_Review-g298566-d302242-Reviews-The_Ritz_Carlton_Osaka-Osaka_Osaka_Prefecture_Kinki.html?m=63287&faqts=Hotel_Review&faqtup=geo%3A298566%3Bdetail%3A302242&faqtt=145&faqtqr=11\" \u003ESee all nearby attractions.\u003C\u002Fa\u003E"}}]}</script>
 			</div>
@@ -363,24 +362,26 @@ var $j = jQuery.noConflict();
 										<div class="MNXrs f K">
 											<div class="JRWqg f H">
 												<div class="hvAtG">
-													<a href="#REVIEWS"
-														class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS"><div
+													<div
 															class="jVDab o W f u w GOdjs">
 																	<c:forEach begin="1" end="5" var="i">
 			                    											<div class="circle ${i <= average ? 'active' : ''}"></div>
 			                    									</c:forEach>
-														</div></a>
+														</div>
 													<div class="yCSYR f">
 														<div
 																class="tUwDs f Q1 u F_ Ph PW Pu PI z q"
 																style="min-width: 145px">
 																<div class="haHoo Xd Z" style="left: 130px"></div>
+																
 																<svg viewBox="0 0 24 24" width="16px" height="16px"
 																	class="d Vb icjEL">
 																		<path fill-rule="evenodd" clip-rule="evenodd"
 																		d="M20.772 8.538a9.64 9.64 0 01-5.703-5.703c-.197-.538-.976-.538-1.174 0a9.588 9.588 0 01-5.697 5.703c-.538.197-.538.976 0 1.173a9.64 9.64 0 015.703 5.704c.197.537.976.537 1.174 0a9.64 9.64 0 015.703-5.704c.537-.197.537-.976 0-1.173h-.006zm-8.683 7.83a6.885 6.885 0 01-4.074-4.073c-.141-.384-.697-.384-.838 0a6.848 6.848 0 01-4.07 4.073c-.384.142-.384.698 0 .839a6.885 6.885 0 014.074 4.073c.14.384.697.384.838 0a6.885 6.885 0 014.074-4.073c.384-.141.384-.698 0-.839h-.004z"></path></svg>
 																<div class="biGQs _P fiohW kSNRl osNWb">
-																	<strong>숙소주변 즐길거리 보러가기</strong>
+																<a href="#REVIEWS"
+														class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS">
+																	<strong>숙소주변 즐길거리 보러가기</strong></a>
 																</div>
 															</div>
 													</div>
@@ -939,71 +940,6 @@ var $j = jQuery.noConflict();
     </script>
 
 									<div class="wWwSb">
-										<div>
-											<div>
-												<div class="AMQRv Gi Z BB YjQAT">
-													<div>
-														<h2 class="biGQs _P fiohW uuBRH">주변 호텔 추천</h2>
-													</div>
-													<div class="iBGtx f J _h _e z NK Ni qQnpg">
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
-															</div>
-														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
-															</div>
-														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
-															</div>
-														</div>
-														<div class="ZSsAY xjaPD">
-															<div class="TzTCE w">
-																<div class="Gwegd l t w"></div>
-																<div class="ILCbI hdCDN w"></div>
-																<div class="DZdiH">
-																	<div class="ILCbI lxwEm w"></div>
-																	<div class="ILCbI lnuPx w"></div>
-																	<div class="ILCbI YkRgi w"></div>
-																	<div class="ILCbI TZksi w"></div>
-																	<div class="ILCbI LtmGt"></div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="wWwSb">
 										<div class="ruCQl z">
 											<div class="uqMDf z BGJxv xOykd dAJIw yikFK">
 												<div>
@@ -1102,58 +1038,22 @@ var $j = jQuery.noConflict();
 													<h2 class="biGQs _P fiohW uuBRH">주변 관광명소 추천</h2>
 												</div>
 												<div class="iBGtx f J _h _e z NK Ni qQnpg">
+												<c:forEach var="recommend" items="${recommend}">
 													<div class="ZSsAY xjaPD">
 														<div class="TzTCE w">
 															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
+															<div class="ILCbI hdCDN w"><img src="/travel/resources/images/${recommend.imageName[0]}"></div>
 															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
+																<div class="ILCbI lxwEm w">${recommend.name }</div>
+																<div class="ILCbI lnuPx w">
+																	<c:forEach begin="1" end="5" var="i">
+			                    											<div class="circle ${i <= average ? 'active' : ''}"></div>
+			                    									</c:forEach>
+																</div>
 															</div>
 														</div>
 													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
-														</div>
-													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
-														</div>
-													</div>
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w"></div>
-																<div class="ILCbI lnuPx w"></div>
-																<div class="ILCbI YkRgi w"></div>
-																<div class="ILCbI TZksi w"></div>
-																<div class="ILCbI LtmGt"></div>
-															</div>
-														</div>
-													</div>
+													</c:forEach>
 												</div>
 											</div>
 										</div>
