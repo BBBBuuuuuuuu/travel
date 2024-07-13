@@ -211,7 +211,7 @@
 										<div class="JLKop w">
 											<button class="rmyCe _G B- z _S c Wc wSSLS jWkoZ InwKl"
 												type="button">
-												<span class="biGQs _P ttuOS">MySurvey</span>
+												<span class="biGQs _P ttuOS">설문내역</span>
 											</button>
 										</div>
 									</div>
@@ -219,15 +219,7 @@
 										<div class="JLKop w">
 											<button class="rmyCe _G B- z _S c Wc wSSLS jWkoZ InwKl"
 												type="button" value="bookinglist.do">
-												<span class="biGQs _P ttuOS">MyTrips</span>
-											</button>
-										</div>
-									</div>
-									<div class="f u" data-automation="topNav_review">
-										<div class="JLKop w">
-											<button class="rmyCe _G B- z _S c Wc wSSLS jWkoZ InwKl"
-												type="button" >
-												<span class="biGQs _P ttuOS">MyReview</span>
+												<span class="biGQs _P ttuOS">예약현황</span>
 											</button>
 										</div>
 									</div>
@@ -248,7 +240,7 @@
                     <c:otherwise>
                         <a class="rmyCe _G B- z _S c Wc wSSLS w jWkoZ sOtnj" href="login.do">
                             <span class="biGQs _P ttuOS">
-                                <div class="eoYut">Sign in</div>
+                                <div class="eoYut">로그인</div>
                             </span>
                         </a>
                     </c:otherwise>
@@ -362,12 +354,12 @@
         var buttons = document.querySelectorAll('.rmyCe._G.B-.z._S.c.Wc.wSSLS.jWkoZ.InwKl');
         buttons.forEach(function(button) {
             var buttonText = button.querySelector('span').innerText.trim();
-            if (buttonText === 'MyTrips') {
+            if (buttonText === '예약현황') {
                 button.addEventListener('click', function() {
                     console.log('MyTrips Button clicked'); 
                     window.location.href = 'bookinglist.do';
                 });
-            } else if (buttonText === 'MySurvey') {
+            } else if (buttonText === '설문내역') {
                 button.addEventListener('click', function() {
                     console.log('Survey Button clicked'); 
                     window.location.href = 'surveylist.do';

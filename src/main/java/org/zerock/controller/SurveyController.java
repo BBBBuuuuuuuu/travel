@@ -58,14 +58,27 @@ public class SurveyController {
 
         List<BoardVO> boardNumList = surveyService.getCommonBoard(survey, category);
     	
+    	
     	if(category == null || category.equals("stay")) {
     		List<StayVO> stayList = surveyService.getStayBoardWithCategory(survey, boardNumList);
+    		for(StayVO board : stayList) {
+    			Double average = reviewService.getReviewAverage(board);
+    			if(average != 0.0) {
+    				board.setLike(average);
+    			}
+    			boardService.setImage(board);
+    		}
     		model.addAttribute("board", stayList);
     	} else {
     		List<ActivityVO> activityList = surveyService.getActivityBoard(survey, boardNumList);
+    		for(ActivityVO board : activityList) {
+    			board.setLike(reviewService.getReviewAverage(board));
+    			boardService.setImage(board);
+    		}
     		model.addAttribute("board", activityList);
     	}
     	
+    	log.info("출발~~~~~~~");
         return "board/list";
     }
 
@@ -104,15 +117,16 @@ public class SurveyController {
         @GetMapping("/listBySurvey.do")
         public String searchBySurvey(String surveyNum, String category, Model model) {
         	SurveyVO survey = surveyService.getSurvey(Long.parseLong(surveyNum));
-        	if(category == null) 
-        		category = "stay";
         	
         	List<BoardVO> boardNumList = surveyService.getCommonBoard(survey, category);
         	
         	if(category == null || category.equals("stay")) {
         		List<StayVO> stayList = surveyService.getStayBoardWithCategory(survey, boardNumList);
         		for(StayVO board : stayList) {
-        			board.setLike(reviewService.getReviewAverage(board));
+        			Double average = reviewService.getReviewAverage(board);
+        			if(average != 0.0) {
+        				board.setLike(average);
+        			}
         			boardService.setImage(board);
         		}
         		

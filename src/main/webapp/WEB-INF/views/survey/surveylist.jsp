@@ -320,7 +320,7 @@ iframe {
 <body>
 <%@ include file="/resources/includes/header.jsp" %> 
 		<main>
-			<h1>Survey List</h1>
+			<h1>설문 내역</h1>
 			<div id="surveyList">
 				<c:forEach var="survey" items="${surveys}">
 					<div class="surveyItem" data-survey-id="${survey.survey_no}">

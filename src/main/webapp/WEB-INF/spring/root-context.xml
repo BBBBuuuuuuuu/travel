@@ -21,7 +21,7 @@
 		<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe"></property> -->
  		
 		<property name="username" value="root"></property>
-		<property name="password" value="8967"></property>
+		<property name="password" value="mysql"></property>
 
 	</bean>
 	<!-- HikariCP configuration -->

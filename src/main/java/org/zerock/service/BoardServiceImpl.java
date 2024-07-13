@@ -30,7 +30,10 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public void setImage(BoardVO board){
-			board.setImageName(boardMapper.selectImageList(board.getBoardNo()));
+		List<String> imageList = boardMapper.selectImageList(board.getBoardNo());
+		if(!imageList.isEmpty()) {
+			board.setImageName(imageList);
+		}
 	}
 	
 	@Override

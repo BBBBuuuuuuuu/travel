@@ -137,8 +137,9 @@ public class SurveyServiceImpl implements SurveyService {
 
 	@Override
 	public List<BoardVO> getCommonBoard(SurveyVO survey, String category) {
+    	if(category == null) 
+    		category = "stay";
 		List<BoardVO> boardList =surveyMapper.selectCommonBoardNo(toMonthClimate(survey.getStart_date()), survey, category);
-		
 		return boardList;
 	}
 	
@@ -174,10 +175,12 @@ public class SurveyServiceImpl implements SurveyService {
 	public List<StayVO> getStayBoardWithCategory(SurveyVO survey, List<BoardVO> boardNumList) {
 		List<StayVO> stayList = new ArrayList<StayVO>();
 		for(BoardVO board : boardNumList) {
-			StayVO stay = surveyMapper.selectStayBoardWithCategory(survey, board);
-			stayList.add(stay);
+				StayVO stay = surveyMapper.selectStayBoardWithCategory(survey, board);
+				if(stay != null) {
+					stayList.add(stay);
+					log.info("surveyImpl " + stay);
+				}
 		}
-		log.info("SurveyImpl +++ " + stayList);
 		return stayList;
 	}
 
@@ -187,7 +190,6 @@ public class SurveyServiceImpl implements SurveyService {
 		for(BoardVO board : boardNumList) {
 			activityList.add(surveyMapper.selectActivityBoardWithCategory(survey, board));
 		}
-		log.info("SurveyServiceImpl ActivityBoard" + activityList);
 		return activityList;
 	}
 
