@@ -49,7 +49,8 @@ public class BoardController {
 	@GetMapping("/getBoard.do") // 상세 페이지
 	public String getBoard(@RequestParam("no") int no,  Model model) {
 		BoardVO board = boardService.getBoard(no);
-		model.addAttribute("average", reviewService.getReviewAverage(board));
+		board.setLike(reviewService.getReviewAverage(board));
+		model.addAttribute("average", board.getLike());
 		
 		List<ReviewVO> reviewList = reviewService.selectReview(board); // 리뷰 불러오기
 		model.addAttribute("reviewList", reviewList); 
@@ -67,6 +68,7 @@ public class BoardController {
 		} else {
 			StayVO stayBoard = boardService.getStayBoard(no); // 숙소 게시판에 대한 정보 불러오기
 			model.addAttribute("board", stayBoard);
+			log.info(board);
 			return "board/hotelPage";
 		}
 		

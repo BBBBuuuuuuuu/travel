@@ -282,7 +282,17 @@
     display: none; /* 기본적으로 숨김 처리 */
 }
 
-
+.circle{
+	width:10px;
+	height: 10px;
+	background-color: white;
+	border: 0.1px solid gray;
+	border-radius:50%;
+	display: inline-block;
+}
+.active{
+	background-color: #00AA6C;
+}
 </style>
 </head>
 
@@ -297,7 +307,6 @@
 					src="https://static.tacdn.com/img2/branding/homepage/hotel-hero-default-4.jpg" />
 				<div class="WhAxR f e u j c z M-">
 					<div class="biGQs _P socJU mowmC eIegw">
-						<span>Latest&nbsp;reviews. Lowest&nbsp;prices.</span>
 					</div>
 					<div class="tXYlE u Gi">
 						<div class="gZifJ">
@@ -448,7 +457,13 @@
 			                </div>
 			                <div class="hotel-details">
 			                    <div class="hotel-title">제목 : ${board.name}</div>
-			                    <div class="hotel-rating">평점 : ${board.like}</div>
+			                    <div class="hotel-rating">평점 : 
+			                    <%-- <c:if test="${board.like!=0.0} "> --%>
+			                    <c:forEach begin="1" end="5" var="i">
+			                    	<div class="circle ${i <= board.like ? 'active' : ''}"></div>
+			                    </c:forEach>
+			                    <%-- </c:if> --%>
+								</div>
 			                </div>
 			            </div>
 			        </a>

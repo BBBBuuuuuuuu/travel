@@ -145,6 +145,18 @@ var $j = jQuery.noConflict();
 .rating-stars input {
 	margin-right: 5px;
 }
+
+.circle{
+	width:15px;
+	height: 15px;
+	background-color: white;
+	border: 0.1px solid gray;
+	border-radius:50%;
+	display: inline-block;
+}
+.active{
+	background-color: #00AA6C;
+}
 </style>
 <!-- Flatpickr CSS -->
 <link rel="stylesheet"
@@ -291,7 +303,6 @@ var $j = jQuery.noConflict();
    .main-image {
             width: 80%;
             height: auto;
-            margin-bottom: 20px;
         }
 
         .thumbnail {
@@ -355,29 +366,12 @@ var $j = jQuery.noConflict();
 													<a href="#REVIEWS"
 														class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS"><div
 															class="jVDab o W f u w GOdjs">
-															<svg class="UctUV d H0 hzzSG" viewBox="0 0 128 24"
-																width="88" height="16"
-																aria-labelledby=":lithium-R2latd4lt5vlq:">
-																	<title id=":lithium-R2latd4lt5vlq:">4.5 of 5 bubbles</title><path
-																	d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
-																	transform=""></path>
-																	<path
-																	d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
-																	transform="translate(26 0)"></path>
-																	<path
-																	d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
-																	transform="translate(52 0)"></path>
-																	<path
-																	d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
-																	transform="translate(78 0)"></path>
-																	<path
-																	d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
-																	transform="translate(104 0)"></path></svg>
-															<span class="biGQs _P pZUbB KxBGd">${average}</span>
+																	<c:forEach begin="1" end="5" var="i">
+			                    											<div class="circle ${i <= average ? 'active' : ''}"></div>
+			                    									</c:forEach>
 														</div></a>
 													<div class="yCSYR f">
-														<a href="#REVIEWS"
-															class="BMQDV _F Gv wSSLS SwZTJ FGwzt ukgoS"><div
+														<div
 																class="tUwDs f Q1 u F_ Ph PW Pu PI z q"
 																style="min-width: 145px">
 																<div class="haHoo Xd Z" style="left: 130px"></div>
@@ -388,7 +382,7 @@ var $j = jQuery.noConflict();
 																<div class="biGQs _P fiohW kSNRl osNWb">
 																	<strong>숙소주변 즐길거리 보러가기</strong>
 																</div>
-															</div></a>
+															</div>
 													</div>
 												</div>
 												<div class="SbOdb"></div>
@@ -688,27 +682,10 @@ var $j = jQuery.noConflict();
 														type="button">
 														<span class="biGQs _P ttuOS">
 															<div class="jVDab o W f u w GOdjs">
-																<svg class="UctUV d H0 hzzSG" viewBox="0 0 128 24"
-																	width="88" height="16"
-																	aria-labelledby=":lithium-R352m8l4lt5vlq:">
-                <title id=":lithium-R352m8l4lt5vlq:">4.5 of 5 bubbles</title>
-                <path
-																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
-																		transform=""></path>
-                <path
-																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
-																		transform="translate(26 0)"></path>
-                <path
-																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
-																		transform="translate(52 0)"></path>
-                <path
-																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
-																		transform="translate(78 0)"></path>
-                <path
-																		d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
-																		transform="translate(104 0)"></path>
-              </svg>
-																<span class="biGQs _P pZUbB KxBGd">${counts[5]} 개
+                																	<c:forEach begin="1" end="5" var="i">
+			                    											<div class="circle ${i <= average ? 'active' : ''}"></div>
+			                    									</c:forEach>
+																<span class="biGQs _P pZUbB KxBGd" style="margin-left:5px">${counts[5]} 개
 																</span>
 															</div>
 														</span>
@@ -728,8 +705,7 @@ var $j = jQuery.noConflict();
 														<div class="OYoZn" style="width: 87.21121999999998%"></div>
 													</div>
 													<div class="q">
-														<div class="biGQs _P fiohW biKBZ osNWb">${counts[0] }
-															개</div>
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[0]}개</div>
 													</div>
 												</div>
 												<div class="RZjkd">
@@ -848,7 +824,9 @@ var $j = jQuery.noConflict();
 														작성자 : ${review.memberId}
 														평점 : ${review.like}
 														내용 : ${review.content}
-														이미지 : <img src="/travel/resources/images/${review.imageName[0]}">
+														<c:if test="${not empty review.imageName}">
+														<img src="/travel/resources/images/${review.imageName[0]}">
+														</c:if>
 													</c:forEach>
 												<!-- 리뷰를 넣을 위치  -->
 											</div>

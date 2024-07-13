@@ -86,7 +86,8 @@
     </select>
     
     <select id="selectCommonBoardNo" resultMap="boardResultMap">
-    	select * from board 	where category = #{category} AND month_no = (select month_no from month where ${month} = #{survey.climate}) order by board_no desc
+    	select * from board 	where category = #{category} AND country = #{survey.country} AND area = #{survey.area} AND 
+    	month_no = (select month_no from month where ${month} = #{survey.climate}) order by board_no desc
     </select>
     
 	<resultMap id="boardResultMap" type="org.zerock.domain.BoardVO">

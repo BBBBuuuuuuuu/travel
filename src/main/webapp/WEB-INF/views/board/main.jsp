@@ -290,12 +290,12 @@
 						class="IDaDx mvTrV cyIij fluiI SMjpI">
 						<div class="VzUjD A Fi mowmC">
 							<div class="LNjrQ A">
-								<h2 class="biGQs _P fiohW uPlAb uuBRH">Travelersa Choice:
-									인기호텔</h2>
+								<h2 class="biGQs _P fiohW uPlAb uuBRH">
+									인기 호텔</h2>
 							</div>
 							<div class="gzyoO">
 								<a class="UikNM _G B- _S _W _T c G_ wSSLS wnNQG"
-									href="/TravelersChoice-Hotels-cTop-g1"><span
+									href="/travel/getList.do?category=stay"><span
 									class="biGQs _P XWJSj Wb">모두보기</span></a>
 							</div>
 						</div>
@@ -306,7 +306,7 @@
 										<li class="Mkrpq Fg I _u">
 											<div class="_T Cj">
 												<a
-													href="/Hotel_Review-g304555-d302157-Reviews-Rambagh_Palace-Jaipur_Jaipur_District_Rajasthan.html"
+													href="/travel/getBoard.do?no=13"
 													class="BMQDV _F Gv wSSLS SwZTJ hNpWR">
 													<div class="MbtNv _T Pv _Z w">
 														<div class="FGwzt PaRlG">
@@ -360,8 +360,6 @@
 																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
 																		transform="translate(104 0)"></path>
                                                                 </svg>
-																<span class="biGQs _P pZUbB osNWb"><span
-																	class="yyzcQ">7,222</span></span>
 															</div>
 														</div>
 													</div>
@@ -385,7 +383,7 @@
 										<li class="Mkrpq Fg I _u">
 											<div class="_T Cj">
 												<a
-													href="/Hotel_Review-g6580337-d21512218-Reviews-Ozen_Reserve_Bolifushi_Luxury_All_Inclusive-Bolifushi_Island.html"
+													href="/travel/getBoard.do?no=14"
 													class="BMQDV _F Gv wSSLS SwZTJ hNpWR">
 													<div class="MbtNv _T Pv _Z w">
 														<div class="FGwzt PaRlG">
@@ -465,8 +463,6 @@
 																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
 																		transform="translate(104 0)"></path>
                                                                 </svg>
-																<span class="biGQs _P pZUbB osNWb"><span
-																	class="yyzcQ">2,782</span></span>
 															</div>
 														</div>
 													</div>
@@ -490,7 +486,7 @@
 										<li class="Mkrpq Fg I _u">
 											<div class="_T Cj">
 												<a
-													href="/Hotel_Review-g303536-d13871137-Reviews-Hotel_Colline_de_France-Gramado_State_of_Rio_Grande_do_Sul.html"
+													href="/travel/getBoard.do?no=12"
 													class="BMQDV _F Gv wSSLS SwZTJ hNpWR">
 													<div class="MbtNv _T Pv _Z w">
 														<div class="FGwzt PaRlG">
@@ -570,8 +566,6 @@
 																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
 																		transform="translate(104 0)"></path>
                                                                 </svg>
-																<span class="biGQs _P pZUbB osNWb"><span
-																	class="yyzcQ">4,418</span></span>
 															</div>
 														</div>
 													</div>
@@ -595,7 +589,7 @@
 										<li class="Mkrpq Fg I _u">
 											<div class="_T Cj">
 												<a
-													href="/Hotel_Review-g186338-d6484754-Reviews-Shangri_La_The_Shard_London-London_England.html"
+													href="/travel/getBoard.do?no=15"
 													class="BMQDV _F Gv wSSLS SwZTJ hNpWR">
 													<div class="MbtNv _T Pv _Z w">
 														<div class="FGwzt PaRlG">
@@ -649,8 +643,6 @@
 																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
 																		transform="translate(104 0)"></path>
                                                                 </svg>
-																<span class="biGQs _P pZUbB osNWb"><span
-																	class="yyzcQ">7,377</span></span>
 															</div>
 														</div>
 													</div>
@@ -675,18 +667,17 @@
 								</div>
 							</div>
 						</div>
-						<script type="application/ld+json">[{"@context":"http:\u002F\u002Fschema.org","@type":"Hotel","name":"Rambagh Palace","description":"","url":"\u002FHotel_Review-g304555-d302157-Reviews-Rambagh_Palace-Jaipur_Jaipur_District_Rajasthan.html","image":"https:\u002F\u002Fdynamic-media-cdn.tripadvisor.com\u002Fmedia\u002Fphoto-o\u002F2c\u002F20\u002F5a\u002F17\u002Frambagh-palace-exterior.jpg?w=600&h=400&s=1","address":{"address":{"@type":"PostalAddress","addressCountry":"India","addressLocality":"","addressRegion":"","postalCode":"302005","streetAddress":"Bhawani Singh Road, Jaipur 302005 India"}}},{"@context":"http:\u002F\u002Fschema.org","@type":"Hotel","name":"Ozen Reserve Bolifushi - Luxury All Inclusive","description":"","url":"\u002FHotel_Review-g6580337-d21512218-Reviews-Ozen_Reserve_Bolifushi_Luxury_All_Inclusive-Bolifushi_Island.html","image":"https:\u002F\u002Fdynamic-media-cdn.tripadvisor.com\u002Fmedia\u002Fphoto-o\u002F1c\u002Fb9\u002F35\u002Fdc\u002Fozen-reserve-bolifushi.jpg?w=600&h=400&s=1","address":{"address":{"@type":"PostalAddress","addressCountry":"","addressLocality":"","addressRegion":"","postalCode":"20222","streetAddress":"20222"}}},{"@context":"http:\u002F\u002Fschema.org","@type":"Hotel","name":"Hotel Colline de France","description":"","url":"\u002FHotel_Review-g303536-d13871137-Reviews-Hotel_Colline_de_France-Gramado_State_of_Rio_Grande_do_Sul.html","image":"https:\u002F\u002Fdynamic-media-cdn.tripadvisor.com\u002Fmedia\u002Fphoto-o\u002F22\u002F00\u002F50\u002Ffd\u002Fhotel-colline-de-france.jpg?w=600&h=400&s=1","address":{"address":{"@type":"PostalAddress","addressCountry":"Brazil","addressLocality":"","addressRegion":"","postalCode":"95670-000","streetAddress":"Rua Vigilante - Av.Central 400, Gramado, State of Rio Grande do Sul 95670-000 Brazil"}}},{"@context":"http:\u002F\u002Fschema.org","@type":"Hotel","name":"Shangri-La The Shard, London","description":"","url":"\u002FHotel_Review-g186338-d6484754-Reviews-Shangri_La_The_Shard_London-London_England.html","image":"https:\u002F\u002Fdynamic-media-cdn.tripadvisor.com\u002Fmedia\u002Fphoto-o\u002F10\u002Fb6\u002F3a\u002F3b\u002Fsky-pool.jpg?w=600&h=400&s=1","address":{"address":{"@type":"PostalAddress","addressCountry":"United Kingdom","addressLocality":"","addressRegion":"","postalCode":"SE1 9QU","streetAddress":"31 St Thomas Street, London SE1 9QU England"}}}]</script>
 					</div>
 					<div data-curated-shelf-id="6616"
 						class="IDaDx mvTrV cyIij fluiI SMjpI">
 						<div class="VzUjD A Fi mowmC">
 							<div class="LNjrQ A">
-								<h2 class="biGQs _P fiohW uPlAb uuBRH">Travelersa Choice:
-									인기여행지 호텔</h2>
+								<h2 class="biGQs _P fiohW uPlAb uuBRH">
+									인기 여행지</h2>
 							</div>
 							<div class="gzyoO">
 								<a class="UikNM _G B- _S _W _T c G_ wSSLS wnNQG"
-									href="/TravelersChoice-Hotels-cAllInclusive-g1"><span
+									href="/travel/getList.do?category=activity"><span
 									class="biGQs _P XWJSj Wb">모두보기</span></a>
 							</div>
 						</div>
@@ -777,8 +768,6 @@
 																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
 																		transform="translate(104 0)"></path>
                                                                 </svg>
-																<span class="biGQs _P pZUbB osNWb"><span
-																	class="yyzcQ">3,826</span></span>
 															</div>
 														</div>
 													</div>
@@ -882,8 +871,6 @@
 																		d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z"
 																		transform="translate(104 0)"></path>
                                                                 </svg>
-																<span class="biGQs _P pZUbB osNWb"><span
-																	class="yyzcQ">11,051</span></span>
 															</div>
 														</div>
 													</div>
@@ -961,8 +948,6 @@
 																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
 																		transform="translate(104 0)"></path>
                                                                 </svg>
-																<span class="biGQs _P pZUbB osNWb"><span
-																	class="yyzcQ">9,071</span></span>
 															</div>
 														</div>
 													</div>
@@ -1066,8 +1051,6 @@
 																		d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z"
 																		transform="translate(104 0)"></path>
                                                                 </svg>
-																<span class="biGQs _P pZUbB osNWb"><span
-																	class="yyzcQ">13,978</span></span>
 															</div>
 														</div>
 													</div>
@@ -1169,12 +1152,12 @@
         var buttons = document.querySelectorAll('.rmyCe._G.B-.z._S.c.Wc.wSSLS.jWkoZ.InwKl');
         buttons.forEach(function(button) {
             var buttonText = button.querySelector('span').innerText.trim();
-            if (buttonText === 'MyTrips') {
+            if (buttonText === '예약현황') {
                 button.addEventListener('click', function() {
                     console.log('MyTrips Button clicked'); 
                     window.location.href = 'bookinglist.do';
                 });
-            } else if (buttonText === 'MySurvey') {
+            } else if (buttonText === '설문내역') {
                 button.addEventListener('click', function() {
                     console.log('Survey Button clicked'); 
                     window.location.href = 'surveylist.do';
