@@ -85,6 +85,16 @@ public class BoardServiceImpl implements BoardService {
 		return !paymentNo.isEmpty() ? true : false;
 	}
 
-	
+	@Override
+	public List<ActivityVO> recommendActivity(BoardVO board) {
+		List<ActivityVO> activityList = boardMapper.selectActivityRecommend(board);
+		for(BoardVO activity : activityList) {
+			setImage(activity);
+			log.info(activity.getImageName().get(0));
+		}
+		return activityList;
+	}
 
+	
+	
 }

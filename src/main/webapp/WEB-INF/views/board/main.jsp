@@ -1114,7 +1114,9 @@
                 if (response.redirected) {
                     alert('로그인이 필요한 서비스입니다.');
                     window.location.href = 'login.do';
-                } else {
+                } else if(response == "board/list"){
+                	alert('이거 되냐?');
+                }else {
                     var surveyIframe = document.getElementById('surveyIframe');
                     surveyIframe.src = 'survey.do';
                     document.getElementById('surveyModal').style.display = 'flex';
