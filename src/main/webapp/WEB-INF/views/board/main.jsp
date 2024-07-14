@@ -688,8 +688,7 @@
 										<li class="Mkrpq Fg I _u">
 											<div class="_T Cj">
 												<a
-													href="/Hotel_Review-g939713-d12279503-Reviews-Ikos_Dassia-Dassia_Corfu_Ionian_Islands.html"
-													class="BMQDV _F Gv wSSLS SwZTJ hNpWR">
+													href="/travel/getBoard.do?no=17">
 													<div class="MbtNv _T Pv _Z w">
 														<div class="FGwzt PaRlG">
 															<div class="hOjcA _T w" style="padding-top: 100%">
@@ -743,7 +742,7 @@
 													<div class="NcGPW Q1">
 														<div
 															class="biGQs _P fiohW alXOW NwcxK GzNcM ytVPx UTQMg RnEEZ ngXxk">
-															Ikos Dassia</div>
+															이코스 다시아</div>
 														<div class="bzahk u">
 															<div class="jVDab o W f u w JqMhy"
 																aria-label="5.0 of 5 bubbles. 3,826 reviews">
@@ -791,7 +790,7 @@
 										<li class="Mkrpq Fg I _u">
 											<div class="_T Cj">
 												<a
-													href="/Hotel_Review-g312725-d507974-Reviews-Rixos_Premium_Belek_The_Land_Of_Legends_Access-Belek_Serik_District_Turkish_Mediterrane.html"
+													href="/travel/getBoard.do?no=8"
 													class="BMQDV _F Gv wSSLS SwZTJ hNpWR">
 													<div class="MbtNv _T Pv _Z w">
 														<div class="FGwzt PaRlG">
@@ -810,8 +809,7 @@
 																<source media="(max-width: 1023px)"
 																	srcSet="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/a4/56/3d/rixos-premium-belek.jpg?w=400&amp;h=400&amp;s=1 1x,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/a4/56/3d/rixos-premium-belek.jpg?w=800&amp;h=800&amp;s=1 2x" />
 																<img
-																	srcSet="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/a4/56/3d/rixos-premium-belek.jpg?w=300&amp;h=300&amp;s=1 1x,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/a4/56/3d/rixos-premium-belek.jpg?w=600&amp;h=600&amp;s=1 2x"
-																	src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/a4/56/3d/rixos-premium-belek.jpg?w=300&amp;h=300&amp;s=1"
+																	src="/travel/resources/images/에펠탑.jpg"
 																	width="300" height="300" role="none" alt=""
 																	loading="lazy" /> </picture>
 															</div>
@@ -846,7 +844,7 @@
 													<div class="NcGPW Q1">
 														<div
 															class="biGQs _P fiohW alXOW NwcxK GzNcM ytVPx UTQMg RnEEZ ngXxk">
-															Rixos Premium Belek - The Land Of Legends Access</div>
+															에펠탑</div>
 														<div class="bzahk u">
 															<div class="jVDab o W f u w JqMhy"
 																aria-label="4.5 of 5 bubbles. 11,051 reviews">
@@ -894,7 +892,7 @@
 										<li class="Mkrpq Fg I _u">
 											<div class="_T Cj">
 												<a
-													href="/Hotel_Review-g297968-d581323-Reviews-Voyage_Sorgun-Side_Manavgat_Turkish_Mediterranean_Coast.html"
+													href="/travel/getBoard.do?no=19"
 													class="BMQDV _F Gv wSSLS SwZTJ hNpWR">
 													<div class="MbtNv _T Pv _Z w">
 														<div class="FGwzt PaRlG">
@@ -913,8 +911,7 @@
 																<source media="(max-width: 1023px)"
 																	srcSet="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/03/6f/33/discover-pure-paradise.jpg?w=400&amp;h=400&amp;s=1 1x,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/03/6f/33/discover-pure-paradise.jpg?w=800&amp;h=800&amp;s=1 2x" />
 																<img
-																	srcSet="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/03/6f/33/discover-pure-paradise.jpg?w=300&amp;h=300&amp;s=1 1x,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/03/6f/33/discover-pure-paradise.jpg?w=600&amp;h=600&amp;s=1 2x"
-																	src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/03/6f/33/discover-pure-paradise.jpg?w=300&amp;h=300&amp;s=1"
+																	src="/travel/resources/images/망원시장.jpg"
 																	width="300" height="300" role="none" alt=""
 																	loading="lazy" /> </picture>
 															</div>
@@ -923,7 +920,7 @@
 													<div class="NcGPW Q1">
 														<div
 															class="biGQs _P fiohW alXOW NwcxK GzNcM ytVPx UTQMg RnEEZ ngXxk">
-															Voyage Sorgun</div>
+															망원시장</div>
 														<div class="bzahk u">
 															<div class="jVDab o W f u w JqMhy"
 																aria-label="5.0 of 5 bubbles. 9,071 reviews">
@@ -971,7 +968,7 @@
 										<li class="Mkrpq Fg I _u">
 											<div class="_T Cj">
 												<a
-													href="/Hotel_Review-g312725-d647824-Reviews-Voyage_Belek_Golf_And_Spa-Belek_Serik_District_Turkish_Mediterranean_Coast.html"
+													href="/travel/getBoard.do?no=20"
 													class="BMQDV _F Gv wSSLS SwZTJ hNpWR">
 													<div class="MbtNv _T Pv _Z w">
 														<div class="FGwzt PaRlG">
@@ -990,8 +987,7 @@
 																<source media="(max-width: 1023px)"
 																	srcSet="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/ca/ed/6b/voyage-belek-golf-spa.jpg?w=400&amp;h=400&amp;s=1 1x,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/ca/ed/6b/voyage-belek-golf-spa.jpg?w=800&amp;h=800&amp;s=1 2x" />
 																<img
-																	srcSet="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/ca/ed/6b/voyage-belek-golf-spa.jpg?w=300&amp;h=300&amp;s=1 1x,https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/ca/ed/6b/voyage-belek-golf-spa.jpg?w=600&amp;h=600&amp;s=1 2x"
-																	src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/ca/ed/6b/voyage-belek-golf-spa.jpg?w=300&amp;h=300&amp;s=1"
+																	src="/travel/resources/images/사그라다_파밀리아_대성당.jpg"
 																	width="300" height="300" role="none" alt=""
 																	loading="lazy" /> </picture>
 															</div>
@@ -1026,7 +1022,7 @@
 													<div class="NcGPW Q1">
 														<div
 															class="biGQs _P fiohW alXOW NwcxK GzNcM ytVPx UTQMg RnEEZ ngXxk">
-															Voyage Belek Golf And Spa</div>
+															사그라다 파밀리아 대성당</div>
 														<div class="bzahk u">
 															<div class="jVDab o W f u w JqMhy"
 																aria-label="5.0 of 5 bubbles. 13,978 reviews">
