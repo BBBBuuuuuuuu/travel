@@ -478,7 +478,6 @@ var $j = jQuery.noConflict();
         <input type="text" id="checkinInput">
     </div>
 </div>
-											
 													<!-- Check Out 버튼 -->
 													<div class="jxmuG ZIYzG KDRFa" data-automation="checkout">
 														<button class="bqhCp _T u z Gz Wh sglCU"
@@ -504,44 +503,36 @@ var $j = jQuery.noConflict();
 
 													<!-- Flatpickr JS -->
 													<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-    // Toggle the visibility of the date picker
-    function toggleDatePicker(calendarId) {
-        var calendarElement = document.getElementById(calendarId);
-        if (calendarElement.style.display === "none" || calendarElement.style.display === "") {
-            calendarElement.style.display = "block";
-        } else {
-            calendarElement.style.display = "none";
-        }
-    }
+													<script>
+													// Toggle the visibility of the date picker
+													function toggleDatePicker(calendarId) {
+													    var calendarElement = document.getElementById(calendarId);
+													    if (calendarElement.style.display === "none" || calendarElement.style.display === "") {
+													        calendarElement.style.display = "block";
+													    } else {
+													        calendarElement.style.display = "none";
+													    }
+													}
 
-    // Check-in Calendar
-    flatpickr("#checkinInput", {
-        minDate: "today", // 오늘 이후의 날짜만 선택 가능
-        onChange: function(selectedDates, dateStr, instance) {
-            // 선택된 날짜를 입력 필드에 설정
-            document.getElementById("checkinInput").value = dateStr;
-            // 체크인 날짜 이후의 날짜만 선택할 수 있도록 체크아웃 캘린더 업데이트
-            document.getElementById("checkoutInput")._flatpickr.set("minDate", dateStr);
-            // 달력 요소를 숨깁니다.
-            document.getElementById("checkinCalendar").style.display = "none";
-            // 선택된 날짜를 표시합니다.
-            document.getElementById("checkinDate").innerText = dateStr;
-        }
-    });
+													// Check-in Calendar
+													flatpickr("#checkinInput", {
+													    onChange: function(selectedDates, dateStr, instance) {
+													        // 날짜가 선택되면 달력 요소를 숨깁니다.
+													        document.getElementById("checkinCalendar").style.display = "none";
+													        // 선택된 날짜를 표시합니다.
+													        document.getElementById("checkinDate").innerText = dateStr;
+													    }
+													});
 
-    // Check-out Calendar
-    flatpickr("#checkoutInput", {
-        onChange: function(selectedDates, dateStr, instance) {
-            // 선택된 날짜를 입력 필드에 설정
-            document.getElementById("checkoutInput").value = dateStr;
-            // 달력 요소를 숨깁니다.
-            document.getElementById("checkoutCalendar").style.display = "none";
-            // 선택된 날짜를 표시합니다.
-            document.getElementById("checkoutDate").innerText = dateStr;
-        }
-    });
+													// Check-out Calendar
+													flatpickr("#checkoutInput", {
+													    onChange: function(selectedDates, dateStr, instance) {
+													        // 날짜가 선택되면 달력 요소를 숨깁니다.
+													        document.getElementById("checkoutCalendar").style.display = "none";
+													        // 선택된 날짜를 표시합니다.
+													        document.getElementById("checkoutDate").innerText = dateStr;
+													    }
+													});
 
     // 페이지가 로드될 때 캘린더 표시
     document.addEventListener("DOMContentLoaded", function() {
@@ -555,8 +546,6 @@ var $j = jQuery.noConflict();
         datePicker.classList.toggle('visible');
     }
 </script>
-
-
 
 													<!-- Guests 버튼 -->
 													<div class="jxmuG WFbDt KDRFa" data-automation="guest">
@@ -777,16 +766,14 @@ var $j = jQuery.noConflict();
 
 
 										<!-- 수정된 버튼 위치 -->
-										<div class="dGsKv Xe f P" style="margin-top: 10px;">
-											<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
-												id="openReviewModal" type="button">
-												<span class="biGQs _P ttuOS">
-													<div class="jktzL">
-														<h1 class="CpzHF q">리뷰 작성하기</h1>
-													</div>
-												</span>
-											</button>
-										</div>
+										<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
+    id="openReviewModal" type="button" data-board-no="${board.boardNo}">
+    <span class="biGQs _P ttuOS">
+        <div class="jktzL">
+            <h1 class="CpzHF q">리뷰 작성하기</h1>
+        </div>
+    </span>
+</button>
 
 							
 									</div>
@@ -841,110 +828,139 @@ var $j = jQuery.noConflict();
 										src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 									<script
 										src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script>
-    $j(document).ready(function() { 
-        var modal = $j('#reviewModal'); 
-        var openModalButton = $j('#openReviewModal'); 
-        var closeModalButton = $j('.close'); 
-        var submitButton = $j('#submitReview'); 
-        var submittedReviews = $j('#reviewList');
-        var ratingBox = $j('.rating-box'); 
-        var reviewTextArea = $j('#reviewText'); 
-        var reviewImage = $j('#reviewImage'); 
-        var previewImage = $j('#previewImage'); 
-        
-        function getParameterByName(name) {
-            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                results = regex.exec(location.search);
-            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-        }
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        var boardNo = getParameterByName('no');
-        console.log('Board No: ', boardNo);
+<script>
+$(document).ready(function() { 
+    var modal = $('#reviewModal'); 
+    var openModalButton = $('#openReviewModal'); 
+    var closeModalButton = $('.close'); 
+    var submitButton = $('#submitReview'); 
+    var reviewTextArea = $('#reviewText'); 
+    var reviewImage = $('#reviewImage'); 
+    var previewImage = $('#previewImage'); 
 
-        openModalButton.on('click', function() { 
-            modal.show(); 
-        });
-
-        closeModalButton.on('click', function() { 
-            modal.hide(); 
-        });
-
-        $j(window).on('click', function(event) { 
-            if ($j(event.target).is(modal)) {
-                modal.hide(); 
-            }
-        });
-
-        reviewImage.on('change', function(event) { 
-            var file = event.target.files[0];
-            if (file) {
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    previewImage.attr('src', e.target.result); 
-                    previewImage.show(); 
-                }
-                reader.readAsDataURL(file);
-            } else {
-                previewImage.attr('src', ''); 
-                previewImage.hide(); 
-            }
-        });
-
-        submitButton.on('click', function() { 
-            var selectedRating = $j('input[name="rating"]:checked'); 
-            var reviewText = reviewTextArea.val().trim(); 
-            var reviewImgSrc = previewImage.attr('src'); 
-
-            if (selectedRating.length && reviewText !== '') {
-                var ratingValue = selectedRating.val(); 
-
-                // Ajax 요청으로 데이터 전송
-                var formData = new FormData();
-                formData.append('rating', ratingValue);
-                formData.append('reviewText', reviewText);
-                formData.append('boardNo', boardNo); 
-                if (reviewImage[0].files[0]) { 
-                    formData.append('files', reviewImage[0].files[0]); 
-                }
-
-                $j.ajax({ 
-                    type: 'POST',
-                    url: 'writeReview.do',
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    dataType: 'json',
-                    success: function(response) {
-                        alert("리뷰가 제출되었습니다.");
-
-                        // 새로운 리뷰 항목 추가
-                        var reviewItem = $j('<li>').addClass('review-item').html('<p>평점: ' + ratingValue + '</p><p>리뷰 내용: ' + reviewText + '</p>'); 
-                        if (reviewImgSrc) {
-                            var imgElement = $j('<img>').attr('src', reviewImgSrc).attr('alt', 'Review Image'); 
-                            reviewItem.append(imgElement);
-                        }
-                        submittedReviews.append(reviewItem); 
-                        modal.hide(); 
-
-                        // 폼 초기화
-                        reviewTextArea.val(''); 
-                        previewImage.attr('src', '').hide(); 
-                        reviewImage.val(''); 
-                        selectedRating.prop('checked', false); 
-                    },
-                    error: function(error) {
-                        alert("리뷰 제출에 실패했습니다.");
-                        console.log(error);
-                    }
-                });
-            } else {
-                alert('평점과 리뷰를 모두 선택해주세요.');
-            }
-        });
+    // 모달 열기
+    openModalButton.on('click', function() {
+        modal.show();
     });
-    </script>
+
+    // 모달 닫기
+    closeModalButton.on('click', function() { 
+        modal.hide(); 
+    });
+
+    $(window).on('click', function(event) {
+        if ($(event.target).is(modal)) {
+            modal.hide();
+        }
+    });
+
+    // 이미지 미리보기
+    reviewImage.on('change', function(event) { 
+        var file = event.target.files[0];
+        if (file) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                previewImage.attr('src', e.target.result); 
+                previewImage.show(); 
+            }
+            reader.readAsDataURL(file);
+        } else {
+            previewImage.attr('src', ''); 
+            previewImage.hide(); 
+        }
+    });
+
+    // 리뷰 제출
+    submitButton.on('click', function() { 
+        var selectedRating = $('input[name="rating"]:checked'); 
+        var reviewText = reviewTextArea.val().trim(); 
+        var reviewImgSrc = previewImage.attr('src'); 
+        var boardNo = $('#openReviewModal').data('board-no'); // boardNo를 가져옴
+
+        if (selectedRating.length && reviewText !== '') {
+            var ratingValue = selectedRating.val(); 
+
+            // 로그인 및 예약 확인
+            $.ajax({
+                type: 'POST',
+                url: 'checkLoginAndPurchase.do', // 로그인 및 예약 확인 URL
+                data: { boardNo: boardNo },
+                dataType: 'json',
+                success: function(response) {
+                    if (response.isLoggedIn && response.hasPurchased) {
+                        // 로그인 및 예약 확인 후 리뷰 제출
+                        var formData = new FormData();
+                        formData.append('rating', ratingValue);
+                        formData.append('reviewText', reviewText);
+                        formData.append('boardNo', boardNo); 
+                        if (reviewImage[0].files[0]) { 
+                            formData.append('files', reviewImage[0].files[0]); 
+                        }
+
+                        $.ajax({ 
+                            type: 'POST',
+                            url: 'writeReview.do',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            dataType: 'json',
+                            success: function(response) {
+                                if (response.status === 'error') {
+                                    alert(response.message);
+                                } else {
+                                    alert("리뷰가 제출되었습니다.");
+
+                                    // 새로운 리뷰 항목 추가
+                                    var reviewItem = $('<li>').addClass('review-item').html('<p>평점: ' + ratingValue + '</p><p>리뷰 내용: ' + reviewText + '</p>'); 
+                                    if (reviewImgSrc) {
+                                        var imgElement = $('<img>').attr('src', reviewImgSrc).attr('alt', 'Review Image'); 
+                                        reviewItem.append(imgElement);
+                                    }
+                                    $('#submittedReviews').append(reviewItem); 
+                                    modal.hide(); 
+
+                                    // 폼 초기화
+                                    reviewTextArea.val(''); 
+                                    previewImage.attr('src', '').hide(); 
+                                    reviewImage.val(''); 
+                                    selectedRating.prop('checked', false); 
+                                }
+                            },
+                            error: function(error) {
+                                alert("리뷰 제출에 실패했습니다.");
+                                console.log(error);
+                            }
+                        });
+                    } else {
+                        if (!response.isLoggedIn) {
+                            alert("로그인이 필요합니다.");
+                        } else if (!response.hasPurchased) {
+                            alert("구매 내역이 없습니다.");
+                        }
+                    }
+                },
+                error: function(error) {
+                    alert('로그인 및 예약 확인에 실패했습니다.');
+                    console.log(error);
+                }
+            });
+        } else {
+            alert('평점과 리뷰를 모두 선택해주세요.');
+        }
+    });
+});
+
+
+
+
+</script>
+
+
+
+
+
 
 									<div class="wWwSb">
 										<div class="ruCQl z">

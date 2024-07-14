@@ -35,4 +35,11 @@
   	<insert id="insertReview" >
   		insert into review values(#{reviewNo}, #{boardNo}, #{memberId}, #{content}, #{like})
   	</insert>
+  	
+ <select id="checkIfUserHasBooking" parameterType="map" resultType="int">
+        SELECT COUNT(*)
+        FROM booking
+        WHERE member_id = #{userId} AND board_no = #{boardNo}
+    </select>
+
   </mapper>
