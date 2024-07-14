@@ -58,6 +58,10 @@ var $j = jQuery.noConflict();
 <script src="https://static.tacdn.com/assets/p7jq7m.4Ujcuf7.js" async=""
 	crossorigin="" fetchpriority="low"></script>
 <style>
+.jktzL {
+    display: block !important;
+}
+
 .uuBRH {
     font: var(--_EcuCfCh7);
     margin-bottom: 20px;
@@ -323,6 +327,190 @@ var $j = jQuery.noConflict();
 	width:400px;
 	heigh:300px;
 }
+
+/* 전체 리뷰 카드 스타일 */
+.review-card {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+/* 이미지 크기 지정 */
+.review-image {
+    width: 30%; /* 원하는 너비 */
+    height: 200px; /* 원하는 높이 */
+    object-fit: cover; /* 이미지 비율 유지하면서 자르기 */
+    border-radius: 8px; /* 이미지 모서리 둥글게 */
+    margin-right: 20px; /* 이미지 오른쪽 마진 */
+}
+
+/* 리뷰 텍스트 컨테이너 */
+.review-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 작성자 텍스트 스타일 */
+.review-author {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 평점 텍스트 스타일 */
+.review-rating {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* 내용 텍스트 스타일 */
+.review-content {
+    font-size: 14px;
+    line-height: 1.5;
+}
+<!--///////////////////////////////////////////////////// -->
+/* 상위 컨테이너 스타일 */
+.AMQRv {
+    overflow-x: auto; /* 가로 스크롤 추가 */
+    white-space: nowrap; /* 자식 요소들이 한 줄로 배치되도록 설정 */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* 추천 카드 스타일 */
+.ZSsAY {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 3%;
+}
+
+/* 이미지 컨테이너 */
+.ILCbI.hdCDN.w {
+    width: 150px; /* 원하는 너비 */
+    height: 150px; /* 원하는 높이 */
+    margin-right: 20px; /* 이미지 오른쪽 마진 */
+}
+
+/* 이미지 스타일 */
+.recommend-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지 비율 유지하면서 자르기 */
+    border-radius: 8px; /* 이미지 모서리 둥글게 */
+}
+
+/* 추천 텍스트와 평점 컨테이너 */
+.DZdiH {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 추천 이름 스타일 */
+.ILCbI.lxwEm.w {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ILCbI {
+    background-color: #ffffff;
+    border-radius: var(--_gPAtcjMD);
+    height: 18px;
+}
+
+.recommend-image {
+    width: 185%;
+    height: 108%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* 평점 컨테이너 */
+.ILCbI.lnuPx.w {
+    display: flex;
+}
+
+/* 평점 표시 스타일 */
+.circle {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: gray; /* 기본 평점 색상 */
+}
+
+.circle.active {
+    background-color: #00aa6c; /* 활성 평점 색상 */
+}
+<!-- //////////////////////////////////////////////////-->
+
+.ObEVv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-02);
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.jxmuG {
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+button svg {
+    fill: #333;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.kPQaf {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.icDdG {
+    font-size: 12px;
+    color: #666;
+}
+
 </style>
 	<%@ include file="/resources/includes/header.jsp"%>
 	<main>
@@ -457,49 +645,48 @@ var $j = jQuery.noConflict();
 									<div class="LvgWR">
 										<div class="f K">
 											<div class="huERZ e">
-												<div class="ObEVv Q2 J G _T F-"
-													data-automation="hotel-picker-new">
-													<div class="llUeM">
-														<!-- Check In 버튼 -->
-											<div class="jxmuG ZIYzG KDRFa" data-automation="checkin">
-    <button class="bqhCp _T u z Gz Wh sglCU" onclick="toggleDatePicker('checkinCalendar')">
-        <div class="OdUPP">
-            <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb UmNoP">
-                <path d="M4 4.5v-.75h-.75v.75H4zm16.01 0h.75v-.75h-.75v.75zm0 15.5v.75h.75V20h-.75zM4 20h-.75v.75H4V20zM8.76 3.002a.75.75 0 10-1.5-.004l1.5.004zM12.77 3a.75.75 0 00-1.5 0h1.5zm3.97-.002a.75.75 0 00-1.5.004l1.5-.004zM12 12h.75v-.75H12V12zm-4 0v-.75h-.75V12H8zm0 4h-.75v.75H8V16zm4 0v.75h.75V16H12zM4 5.25h16.01v-1.5H4v1.5zm15.26-.75V20h1.5V4.5h-1.5zm.75 14.75H4v1.5h16.01v-1.5zM4.75 20V4.5h-1.5V20h1.5zm4-12.998l.01-4-1.5-.004-.01 4 1.5.004zM12.77 7V3h-1.5v4h1.5zm3.983-.003l-.013-4-1.5.006.013 4 1.5-.006zM12 11.25H8v1.5h4v-1.5zM7.25 12v4h1.5v-4h-1.5zM8 16.75h4v-1.5H8v1.5zm4.75-.75v-4h-1.5v4h1.5z"></path>
-            </svg>
-        </div>
-        <div class="kPQaf q">Check In</div>
-        <div class="icDdG q dibDZ">
-            <span id="checkinDate"></span>
-        </div>
-    </button>
-    <div id="checkinCalendar" class="calendar">
-        <!-- Checkin Calendar Content Here -->
-        <input type="text" id="checkinInput">
-    </div>
-</div>
+												<div class="ObEVv">
+												    <div class="box">
+												        <!-- Check In 버튼 -->
+												        <div class="jxmuG ZIYzG KDRFa" data-automation="checkin">
+												            <button class="bqhCp _T u z Gz Wh sglCU" onclick="toggleDatePicker('checkinCalendar')">
+												                <div class="OdUPP">
+												                    <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb UmNoP">
+												                        <path d="M4 4.5v-.75h-.75v.75H4zm16.01 0h.75v-.75h-.75v.75zm0 15.5v.75h.75V20h-.75zM4 20h-.75v.75H4V20zM8.76 3.002a.75.75 0 10-1.5-.004l1.5.004zM12.77 3a.75.75 0 00-1.5 0h1.5zm3.97-.002a.75.75 0 00-1.5.004l1.5-.004zM12 12h.75v-.75H12V12zm-4 0v-.75h-.75V12H8zm0 4h-.75v.75H8V16zm4 0v.75h.75V16H12zM4 5.25h16.01v-1.5H4v1.5zm15.26-.75V20h1.5V4.5h-1.5zm.75 14.75H4v1.5h16.01v-1.5zM4.75 20V4.5h-1.5V20h1.5zm4-12.998l.01-4-1.5-.004-.01 4 1.5.004zM12.77 7V3h-1.5v4h1.5zm3.983-.003l-.013-4-1.5.006.013 4 1.5-.006zM12 11.25H8v1.5h4v-1.5zM7.25 12v4h1.5v-4h-1.5zM8 16.75h4v-1.5H8v1.5zm4.75-.75v-4h-1.5v4h1.5z"></path>
+												                    </svg>
+												                </div>
+												                <div class="kPQaf q">Check In</div>
+												                <div class="icDdG q dibDZ">
+												                    <span id="checkinDate"></span>
+												                </div>
+												            </button>
+												            <div id="checkinCalendar" class="calendar">
+												                <!-- Checkin Calendar Content Here -->
+												                <input type="text" id="checkinInput">
+												            </div>
+												        </div>
+												    </div>
 											
-													<!-- Check Out 버튼 -->
-													<div class="jxmuG ZIYzG KDRFa" data-automation="checkout">
-														<button class="bqhCp _T u z Gz Wh sglCU"
-															onclick="toggleDatePicker('checkoutCalendar')">
-															<div class="OdUPP">
-																<svg viewBox="0 0 24 24" width="24px" height="24px"
-																	class="d Vb UmNoP">
-                <path
-																		d="M4 4.5v-.75h-.75v.75H4zm16.01 0h.75v-.75h-.75v.75zm0 15.5v.75h.75V20h-.75zM4 20h-.75v.75H4V20zM8.76 3.002a.75.75 0 10-1.5-.004l1.5.004zM12.77 3a.75.75 0 00-1.5 0h1.5zm3.97-.002a.75.75 0 00-1.5.004l1.5-.004zM12 12h.75v-.75H12V12zm-4 0v-.75h-.75V12H8zm0 4h-.75v.75H8V16zm4 0v.75h.75V16H12zM4 5.25h16.01v-1.5H4v1.5zm15.26-.75V20h1.5V4.5h-1.5zm.75 14.75H4v1.5h16.01v-1.5zM4.75 20V4.5h-1.5V20h1.5zm4-12.998l.01-4-1.5-.004-.01 4 1.5.004zM12.77 7V3h-1.5v4h1.5zm3.983-.003l-.013-4-1.5.006.013 4 1.5-.006zM12 11.25H8v1.5h4v-1.5zM7.25 12v4h1.5v-4h-1.5zM8 16.75h4v-1.5H8v1.5zm4.75-.75v-4h-1.5v4h1.5z"></path>
-            </svg>
-															</div>
-															<div class="kPQaf q">Check Out</div>
-															<div class="icDdG q dibDZ">
-																<span id="checkoutDate"></span>
-															</div>
-														</button>
-														<div id="checkoutCalendar" class="calendar">
-															<!-- Checkout Calendar Content Here -->
-															<input type="text" id="checkoutInput">
-														</div>
-													</div>
+													  <div class="box">
+												        <!-- Check Out 버튼 -->
+												        <div class="jxmuG ZIYzG KDRFa" data-automation="checkout">
+												            <button class="bqhCp _T u z Gz Wh sglCU" onclick="toggleDatePicker('checkoutCalendar')">
+												                <div class="OdUPP">
+												                    <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb UmNoP">
+												                        <path d="M4 4.5v-.75h-.75v.75H4zm16.01 0h.75v-.75h-.75v.75zm0 15.5v.75h.75V20h-.75zM4 20h-.75v.75H4V20zM8.76 3.002a.75.75 0 10-1.5-.004l1.5.004zM12.77 3a.75.75 0 00-1.5 0h1.5zm3.97-.002a.75.75 0 00-1.5.004l1.5-.004zM12 12h.75v-.75H12V12zm-4 0v-.75h-.75V12H8zm0 4h-.75v.75H8V16zm4 0v.75h.75V16H12zM4 5.25h16.01v-1.5H4v1.5zm15.26-.75V20h1.5V4.5h-1.5zm.75 14.75H4v1.5h16.01v-1.5zM4.75 20V4.5h-1.5V20h1.5zm4-12.998l.01-4-1.5-.004-.01 4 1.5.004zM12.77 7V3h-1.5v4h1.5zm3.983-.003l-.013-4-1.5.006.013 4 1.5-.006zM12 11.25H8v1.5h4v-1.5zM7.25 12v4h1.5v-4h-1.5zM8 16.75h4v-1.5H8v1.5zm4.75-.75v-4h-1.5v4h1.5z"></path>
+												                    </svg>
+												                </div>
+												                <div class="kPQaf q">Check Out</div>
+												                <div class="icDdG q dibDZ">
+												                    <span id="checkoutDate"></span>
+												                </div>
+												            </button>
+												            <div id="checkoutCalendar" class="calendar">
+												                <!-- Checkout Calendar Content Here -->
+												                <input type="text" id="checkoutInput">
+												            </div>
+												        </div>
+												    </div>
 
 
 													<!-- Flatpickr JS -->
@@ -558,24 +745,26 @@ var $j = jQuery.noConflict();
 
 
 
-													<!-- Guests 버튼 -->
-													<div class="jxmuG WFbDt KDRFa" data-automation="guest">
-														<button class="bqhCp _T u z Gz Wh sglCU wjpdQ"
-															data-automation="roomsandguests" data-toggle="modal"
-															data-target="#guestModal">
-															<div class="OdUPP">
-																<svg viewBox="0 0 24 24" width="24px" height="24px"
-																	class="d Vb icjEL">
-														                <path
-																		d="M8 11.5l-.005.75h.01L8 11.5zM3 14l-.603-.446-.147.199V14H3zm0 6h-.75v.75H3V20zm18 0v.75h.75V20H21zm0-4h.75v-.246l-.146-.199L21 16zm-5-2.527v-.75.75zM11 16l-.604-.445-.146.199V16H11zm0 4h-.75v.75H11V20zM9.5 6.25A1.5 1.5 0 018 7.75v1.5a3 3 0 003-3H9.5zM8 7.75a1.5 1.5 0 01-1.5-1.5H5a3 3 0 003 3v-1.5zm-1.5-1.5A1.5 1.5 0 018 4.75v-1.5a3 3 0 00-3 3h1.5zM8 4.75a1.5 1.5 0 011.5 1.5H11a3 3 0 00-3-3v1.5zm9.5 3.5a1.5 1.5 0 01-1.5 1.5v1.5a3 3 0 003-3h-1.5zM16 9.75a1.5 1.5 0 01-1.5-1.5H13a3 3 0 003 3v-1.5zm-1.5-1.5a1.5 1.5 0 011.5-1.5v-1.5a3 3 0 00-3 3h1.5zm1.5-1.5a1.5 1.5 0 011.5 1.5H19a3 3 0 00-3-3v1.5zm-2.397 6.804a6.91 6.91 0 00-2.468-2.075l-.67 1.342a5.41 5.41 0 011.932 1.625l1.206-.892zm-2.468-2.075a6.91 6.91 0 00-3.14-.729l.01 1.5a5.41 5.41 0 012.46.571l.67-1.342zm-3.13-.729a6.91 6.91 0 00-3.14.73l.67 1.341a5.41 5.41 0 012.46-.571l.01-1.5zm-3.14.73a6.91 6.91 0 00-2.468 2.074l1.206.892a5.41 5.41 0 011.932-1.625l-.67-1.342zM2.25 14v6h1.5v-6h-1.5zM3 20.75h10v-1.5H3v1.5zM21.75 20v-4h-1.5v4h1.5zm-.146-4.445a6.96 6.96 0 00-2.464-2.084l-.677 1.339a5.46 5.46 0 011.933 1.635l1.208-.89zm-2.464-2.084a6.96 6.96 0 00-3.14-.748v1.5c.856 0 1.7.201 2.463.587l.677-1.339zM16 12.723a6.96 6.96 0 00-3.14.748l.677 1.339A5.46 5.46 0 0116 14.223v-1.5zm-3.14.748a6.96 6.96 0 00-2.464 2.084l1.208.89a5.46 5.46 0 011.933-1.635l-.677-1.339zM10.25 16v4h1.5v-4h-1.5zm.75 4.75h10v-1.5H11v1.5z"></path>
-														            </svg>
+													 <div class="box">
+												        <!-- Guests 버튼 -->
+															<div class="jxmuG WFbDt KDRFa" data-automation="guest">
+																<button class="bqhCp _T u z Gz Wh sglCU wjpdQ"
+																	data-automation="roomsandguests" data-toggle="modal"
+																	data-target="#guestModal">
+																	<div class="OdUPP">
+																		<svg viewBox="0 0 24 24" width="24px" height="24px"
+																			class="d Vb icjEL">
+																                <path
+																				d="M8 11.5l-.005.75h.01L8 11.5zM3 14l-.603-.446-.147.199V14H3zm0 6h-.75v.75H3V20zm18 0v.75h.75V20H21zm0-4h.75v-.246l-.146-.199L21 16zm-5-2.527v-.75.75zM11 16l-.604-.445-.146.199V16H11zm0 4h-.75v.75H11V20zM9.5 6.25A1.5 1.5 0 018 7.75v1.5a3 3 0 003-3H9.5zM8 7.75a1.5 1.5 0 01-1.5-1.5H5a3 3 0 003 3v-1.5zm-1.5-1.5A1.5 1.5 0 018 4.75v-1.5a3 3 0 00-3 3h1.5zM8 4.75a1.5 1.5 0 011.5 1.5H11a3 3 0 00-3-3v1.5zm9.5 3.5a1.5 1.5 0 01-1.5 1.5v1.5a3 3 0 003-3h-1.5zM16 9.75a1.5 1.5 0 01-1.5-1.5H13a3 3 0 003 3v-1.5zm-1.5-1.5a1.5 1.5 0 011.5-1.5v-1.5a3 3 0 00-3 3h1.5zm1.5-1.5a1.5 1.5 0 011.5 1.5H19a3 3 0 00-3-3v1.5zm-2.397 6.804a6.91 6.91 0 00-2.468-2.075l-.67 1.342a5.41 5.41 0 011.932 1.625l1.206-.892zm-2.468-2.075a6.91 6.91 0 00-3.14-.729l.01 1.5a5.41 5.41 0 012.46.571l.67-1.342zm-3.13-.729a6.91 6.91 0 00-3.14.73l.67 1.341a5.41 5.41 0 012.46-.571l.01-1.5zm-3.14.73a6.91 6.91 0 00-2.468 2.074l1.206.892a5.41 5.41 0 011.932-1.625l-.67-1.342zM2.25 14v6h1.5v-6h-1.5zM3 20.75h10v-1.5H3v1.5zM21.75 20v-4h-1.5v4h1.5zm-.146-4.445a6.96 6.96 0 00-2.464-2.084l-.677 1.339a5.46 5.46 0 011.933 1.635l1.208-.89zm-2.464-2.084a6.96 6.96 0 00-3.14-.748v1.5c.856 0 1.7.201 2.463.587l.677-1.339zM16 12.723a6.96 6.96 0 00-3.14.748l.677 1.339A5.46 5.46 0 0116 14.223v-1.5zm-3.14.748a6.96 6.96 0 00-2.464 2.084l1.208.89a5.46 5.46 0 011.933-1.635l-.677-1.339zM10.25 16v4h1.5v-4h-1.5zm.75 4.75h10v-1.5H11v1.5z"></path>
+																            </svg>
+																	</div>
+																	<div class="kPQaf q">Guests</div>
+																	<div class="icDdG q dibDZ">
+																		<span><span class="adult-info">0</span> adults</span>
+																	</div>
+																</button>
 															</div>
-															<div class="kPQaf q">Guests</div>
-															<div class="icDdG q dibDZ">
-																<span><span class="adult-info">0</span> adults</span>
-															</div>
-														</button>
-													</div>
+														</div>
 
 													<!-- Modal -->
 													<div class="modal fade" id="guestModal" tabindex="-1"
@@ -679,7 +868,7 @@ var $j = jQuery.noConflict();
 										data-section-signature="about" id="ABOUT_TAB">
 										<div class="GONGi f fhUph Z BB">
 											<h2 class="aFUwN Cj F1 b">
-												<span class="biGQs _P fiohW uuBRH"></span>
+												<span class="biGQs _P fiohW uuBRH">리뷰작성</span>
 											</h2>
 										</div>
 										<div class="ruCQl z">
@@ -822,19 +1011,25 @@ var $j = jQuery.noConflict();
 										</div>
 
 										<div class="ppuFV _T Z BB lSnVq amYYZ">
-											<div id="submittedReviews">
-													<c:forEach var="review" items="${reviewList }">
-												<ul id="reviewList"></ul>
-														작성자 : ${review.memberId}
-														평점 : ${review.like}
-														내용 : ${review.content}
-														<c:if test="${not empty review.imageName}">
-														<img src="/travel/resources/images/${review.imageName[0]}">
-														</c:if>
-													</c:forEach>
-												<!-- 리뷰를 넣을 위치  -->
-											</div>
+											<h2 class="aFUwN Cj F1 b">
+												<span class="biGQs _P fiohW uuBRH">리뷰</span>
+											</h2>
+										    <div id="submittedReviews">
+										        <c:forEach var="review" items="${reviewList}">
+										            <div class="review-card">
+										                <c:if test="${not empty review.imageName}">
+										                    <img src="/travel/resources/images/${review.imageName[0]}" class="review-image">
+										                </c:if>
+										                <div class="review-details">
+										                    <div class="review-author">작성자: ${review.memberId}</div>
+										                    <div class="review-rating">평점: ${review.like}</div>
+										                    <div class="review-content">내용: ${review.content}</div>
+										                </div>
+										            </div>
+										        </c:forEach>
+										    </div>
 										</div>
+
 								
 									<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 									<script
@@ -1041,26 +1236,25 @@ var $j = jQuery.noConflict();
 									<div>
 										<div>
 											<div class="AMQRv Gi Z BB YjQAT">
-												<div>
-													<h2 class="biGQs _P fiohW uuBRH">주변 관광명소 추천</h2>
-												</div>
+														<span class="biGQs _P fiohW uuBRH">주변 관광명소 추천</span>
 												<div class="iBGtx f J _h _e z NK Ni qQnpg">
-												<c:forEach var="recommend" items="${recommend}">
-													<div class="ZSsAY xjaPD">
-														<div class="TzTCE w">
-															<div class="Gwegd l t w"></div>
-															<div class="ILCbI hdCDN w"><img src="/travel/resources/images/${recommend.imageName[0]}"></div>
-															<div class="DZdiH">
-																<div class="ILCbI lxwEm w">${recommend.name }</div>
-																<div class="ILCbI lnuPx w">
-																	<c:forEach begin="1" end="5" var="i">
-			                    											<div class="circle ${i <= average ? 'active' : ''}"></div>
-			                    									</c:forEach>
-																</div>
-															</div>
-														</div>
-													</div>
-													</c:forEach>
+												    <c:forEach var="recommend" items="${recommend}">
+												        <div class="ZSsAY xjaPD">
+												            <div class="TzTCE w">
+												                <div class="ILCbI hdCDN w">
+												                    <img src="/travel/resources/images/${recommend.imageName[0]}" class="recommend-image">
+												                </div>
+												                <div class="DZdiH">
+												                    <div class="ILCbI lxwEm w">${recommend.name}</div>
+												                    <div class="ILCbI lnuPx w">
+												                        <c:forEach begin="1" end="5" var="i">
+												                            <div class="circle ${i <= average ? 'active' : ''}"></div>
+												                        </c:forEach>
+												                    </div>
+												                </div>
+												            </div>
+												        </div>
+												    </c:forEach>
 												</div>
 											</div>
 										</div>
