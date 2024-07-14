@@ -461,28 +461,24 @@ var $j = jQuery.noConflict();
 													data-automation="hotel-picker-new">
 													<div class="llUeM">
 														<!-- Check In 버튼 -->
-														<div class="jxmuG ZIYzG KDRFa" data-automation="checkin">
-															<button class="bqhCp _T u z Gz Wh sglCU"
-																onclick="toggleDatePicker('checkinCalendar')">
-																<div class="OdUPP">
-																	<svg viewBox="0 0 24 24" width="24px" height="24px"
-																		class="d Vb UmNoP">
-                <path
-																			d="M4 4.5v-.75h-.75v.75H4zm16.01 0h.75v-.75h-.75v.75zm0 15.5v.75h.75V20h-.75zM4 20h-.75v.75H4V20zM8.76 3.002a.75.75 0 10-1.5-.004l1.5.004zM12.77 3a.75.75 0 00-1.5 0h1.5zm3.97-.002a.75.75 0 00-1.5.004l1.5-.004zM12 12h.75v-.75H12V12zm-4 0v-.75h-.75V12H8zm0 4h-.75v.75H8V16zm4 0v.75h.75V16H12zM4 5.25h16.01v-1.5H4v1.5zm15.26-.75V20h1.5V4.5h-1.5zm.75 14.75H4v1.5h16.01v-1.5zM4.75 20V4.5h-1.5V20h1.5zm4-12.998l.01-4-1.5-.004-.01 4 1.5.004zM12.77 7V3h-1.5v4h1.5zm3.983-.003l-.013-4-1.5.006.013 4 1.5-.006zM12 11.25H8v1.5h4v-1.5zM7.25 12v4h1.5v-4h-1.5zM8 16.75h4v-1.5H8v1.5zm4.75-.75v-4h-1.5v4h1.5z"></path>
+											<div class="jxmuG ZIYzG KDRFa" data-automation="checkin">
+    <button class="bqhCp _T u z Gz Wh sglCU" onclick="toggleDatePicker('checkinCalendar')">
+        <div class="OdUPP">
+            <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb UmNoP">
+                <path d="M4 4.5v-.75h-.75v.75H4zm16.01 0h.75v-.75h-.75v.75zm0 15.5v.75h.75V20h-.75zM4 20h-.75v.75H4V20zM8.76 3.002a.75.75 0 10-1.5-.004l1.5.004zM12.77 3a.75.75 0 00-1.5 0h1.5zm3.97-.002a.75.75 0 00-1.5.004l1.5-.004zM12 12h.75v-.75H12V12zm-4 0v-.75h-.75V12H8zm0 4h-.75v.75H8V16zm4 0v.75h.75V16H12zM4 5.25h16.01v-1.5H4v1.5zm15.26-.75V20h1.5V4.5h-1.5zm.75 14.75H4v1.5h16.01v-1.5zM4.75 20V4.5h-1.5V20h1.5zm4-12.998l.01-4-1.5-.004-.01 4 1.5.004zM12.77 7V3h-1.5v4h1.5zm3.983-.003l-.013-4-1.5.006.013 4 1.5-.006zM12 11.25H8v1.5h4v-1.5zM7.25 12v4h1.5v-4h-1.5zM8 16.75h4v-1.5H8v1.5zm4.75-.75v-4h-1.5v4h1.5z"></path>
             </svg>
-																</div>
-																<div class="kPQaf q">Check In</div>
-																<div class="icDdG q dibDZ">
-																	<span id="checkintDate"></span>
-																</div>
-															</button>
-															<div id="checkinCalendar" class="calendar">
-																<!-- Checkin Calendar Content Here -->
-																<input type="text" id="checkinInput">
-															</div>
-														</div>
-
-													</div>
+        </div>
+        <div class="kPQaf q">Check In</div>
+        <div class="icDdG q dibDZ">
+            <span id="checkinDate"></span>
+        </div>
+    </button>
+    <div id="checkinCalendar" class="calendar">
+        <!-- Checkin Calendar Content Here -->
+        <input type="text" id="checkinInput">
+    </div>
+</div>
+											
 													<!-- Check Out 버튼 -->
 													<div class="jxmuG ZIYzG KDRFa" data-automation="checkout">
 														<button class="bqhCp _T u z Gz Wh sglCU"
@@ -508,36 +504,44 @@ var $j = jQuery.noConflict();
 
 													<!-- Flatpickr JS -->
 													<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-													<script>
-													// Toggle the visibility of the date picker
-													function toggleDatePicker(calendarId) {
-													    var calendarElement = document.getElementById(calendarId);
-													    if (calendarElement.style.display === "none" || calendarElement.style.display === "") {
-													        calendarElement.style.display = "block";
-													    } else {
-													        calendarElement.style.display = "none";
-													    }
-													}
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    // Toggle the visibility of the date picker
+    function toggleDatePicker(calendarId) {
+        var calendarElement = document.getElementById(calendarId);
+        if (calendarElement.style.display === "none" || calendarElement.style.display === "") {
+            calendarElement.style.display = "block";
+        } else {
+            calendarElement.style.display = "none";
+        }
+    }
 
-													// Check-in Calendar
-													flatpickr("#checkinInput", {
-													    onChange: function(selectedDates, dateStr, instance) {
-													        // 날짜가 선택되면 달력 요소를 숨깁니다.
-													        document.getElementById("checkinCalendar").style.display = "none";
-													        // 선택된 날짜를 표시합니다.
-													        document.getElementById("checkinDate").innerText = dateStr;
-													    }
-													});
+    // Check-in Calendar
+    flatpickr("#checkinInput", {
+        minDate: "today", // 오늘 이후의 날짜만 선택 가능
+        onChange: function(selectedDates, dateStr, instance) {
+            // 선택된 날짜를 입력 필드에 설정
+            document.getElementById("checkinInput").value = dateStr;
+            // 체크인 날짜 이후의 날짜만 선택할 수 있도록 체크아웃 캘린더 업데이트
+            document.getElementById("checkoutInput")._flatpickr.set("minDate", dateStr);
+            // 달력 요소를 숨깁니다.
+            document.getElementById("checkinCalendar").style.display = "none";
+            // 선택된 날짜를 표시합니다.
+            document.getElementById("checkinDate").innerText = dateStr;
+        }
+    });
 
-													// Check-out Calendar
-													flatpickr("#checkoutInput", {
-													    onChange: function(selectedDates, dateStr, instance) {
-													        // 날짜가 선택되면 달력 요소를 숨깁니다.
-													        document.getElementById("checkoutCalendar").style.display = "none";
-													        // 선택된 날짜를 표시합니다.
-													        document.getElementById("checkoutDate").innerText = dateStr;
-													    }
-													});
+    // Check-out Calendar
+    flatpickr("#checkoutInput", {
+        onChange: function(selectedDates, dateStr, instance) {
+            // 선택된 날짜를 입력 필드에 설정
+            document.getElementById("checkoutInput").value = dateStr;
+            // 달력 요소를 숨깁니다.
+            document.getElementById("checkoutCalendar").style.display = "none";
+            // 선택된 날짜를 표시합니다.
+            document.getElementById("checkoutDate").innerText = dateStr;
+        }
+    });
 
     // 페이지가 로드될 때 캘린더 표시
     document.addEventListener("DOMContentLoaded", function() {
@@ -551,6 +555,8 @@ var $j = jQuery.noConflict();
         datePicker.classList.toggle('visible');
     }
 </script>
+
+
 
 													<!-- Guests 버튼 -->
 													<div class="jxmuG WFbDt KDRFa" data-automation="guest">
