@@ -302,6 +302,7 @@
 		<!--$-->
 		<span>
 			<div></div>
+			<c:if test="${param.category == 'stay' }">
 			<div class="HyLIU w GA Gm z">
 				<img class="ahLpu _C s w _Z"
 					src="https://static.tacdn.com/img2/branding/homepage/hotel-hero-default-4.jpg" />
@@ -447,7 +448,72 @@
 						</button>
 					</div>
 				</div>
-			</div> <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+			</div>
+			</c:if> <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+			<c:if test="${param.category == 'activity' }">
+			<div class="HyLIU w GA Gm z">
+				<img class="ahLpu _C s w _Z"
+					src="https://static.tacdn.com/img2/tc/hero/redesign/TC2024_BucketList_desktop-c1.jpg" />
+				<div class="WhAxR f e u j c z M-">
+					<div class="biGQs _P socJU mowmC eIegw">
+					</div>
+					<div class="tXYlE u Gi">
+						<div class="gZifJ">
+							<div>
+								<div class="HREWK t l s _U S ijEOu"></div>
+								<div class="ctKgY">
+									<div class="ZjkxF f e Wh z _f"
+										data-test-attribute="typeahead-trip_search_Hotels">
+										<form role="search" action="/list.jsp">
+											<input type="hidden" name="searchSessionId"
+												value="001d380a05179a9c.ssid" /> <input type="hidden"
+												name="searchNearby" value="false" /> <input type="hidden"
+												name="ssrc" value="h" />
+											<div class="oKjvH f u Ma Nk MA NM DERJF">
+												<div class="F1 f u Q2">
+													<button type="submit" formaction="/list.jsp"
+														class="LhcRH _G _H B- G_ _S t u j H0" title="Search"
+														aria-label="Search" tabindex="-1">
+														<svg viewBox="0 0 24 24" width="24px" height="24px"
+															class="d Vb UmNoP">
+                											  <path fill-rule="evenodd"
+																clip-rule="evenodd"
+																d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
+               											 </svg>
+													</button>
+													<input type="search" autoComplete="off" autoCorrect="off"
+														autoCapitalize="none" spellcheck="false" required name="q"
+														class="hUpcN _G G_ B- z F1 _J w Cj R0 NBfGt H3"
+														placeholder="검색" title="Search" role="searchbox"
+														aria-label="Search" aria-controls="typeahead_results"
+														aria-autocomplete="list" value="" />
+												</div>
+											</div>
+										</form>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="QWjIT e">
+							<div class="GRZMb Fh Q2" data-automation="hotel-picker-new">
+
+							</div>
+						</div>
+						<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
+							type="button">
+							<span class="biGQs _P ttuOS"><div class="jktzL">
+									<svg viewBox="0 0 24 24" width="20px" height="20px"
+										class="d Vb UmNoP">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path></svg>
+								</div>
+								<h1 class="CpzHF q">검색</h1></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			</c:if>
 			<div id="hotelList">
 			    <c:forEach var="board" items="${boardList}">
 			        <a href="getBoard.do?no=${board.boardNo}" style="text-decoration: none; color: inherit;">
