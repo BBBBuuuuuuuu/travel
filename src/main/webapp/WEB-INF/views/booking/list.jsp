@@ -61,7 +61,7 @@
 <body>
 
     <div class="container">
-        <h1>내가 떠나기로 한 여행</h1>
+        <h1>예약 현황</h1>
         <table class="table table-bordered">
             <thead>
                 <tr>

@@ -78,7 +78,6 @@ public class SurveyController {
     		model.addAttribute("board", activityList);
     	}
     	
-    	log.info("출발~~~~~~~");
         return "board/list";
     }
 

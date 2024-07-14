@@ -189,7 +189,7 @@ body {
 		<c:if test="${not empty errorMessage}">
 			<div class="error-message">${errorMessage}</div>
 		</c:if>
-		<form action="survey.do" method="post">
+		<form action="survey.do" method="post" target="_top">
 			<label for="member_id">회원 ID</label> <input type="text"
 				id="member_id" name="member_id" value="${userId}" readonly>
 
