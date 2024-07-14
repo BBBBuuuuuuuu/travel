@@ -306,6 +306,7 @@ var $j = jQuery.noConflict();
 }
    .main-image {
             width: 80%;
+            max-height: 600px;
             height: auto;
         }
 
@@ -451,7 +452,8 @@ var $j = jQuery.noConflict();
     height: 10px;
     margin-right: 5px;
     border-radius: 50%;
-    background-color: gray; /* 기본 평점 색상 */
+    background-color: white; /* 기본 평점 색상 */
+    border: 0.1px solid gray;
 }
 
 .circle.active {
