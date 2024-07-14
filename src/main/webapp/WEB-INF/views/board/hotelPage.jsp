@@ -473,6 +473,7 @@ var $j = jQuery.noConflict();
 																</div>
 																<div class="kPQaf q">Check In</div>
 																<div class="icDdG q dibDZ">
+																	<span id="checkintDate"></span>
 																</div>
 															</button>
 															<div id="checkinCalendar" class="calendar">
