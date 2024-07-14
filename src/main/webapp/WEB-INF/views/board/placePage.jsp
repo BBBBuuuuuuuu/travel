@@ -307,6 +307,7 @@ var $j = jQuery.noConflict();
    .main-image {
             width: 80%;
             height: auto;
+            max-height: 600px;
         }
 
         .thumbnail {
@@ -590,8 +591,6 @@ button svg {
 											<div class="eeVey S4 H3 f u UKvGa"
 												data-blcontact="URL_HOTEL ">
 												<div class="biGQs _P pZUbB KxBGd">
-													<div class="kpIff f u UXKqB" id="price">${board.price}원
-														/ 박</div>
 												</div>
 											</div>
 
@@ -628,11 +627,282 @@ button svg {
 							</div>
 						</div>
 
-						<button class="rmyCe _G B- z _S c Wc wSSLS mowmC w jWkoZ XDcOZ"
-							data-testid="show_prices_button" data-removecommercetest="true"
-							type="button" onclick="redirectToController()">
-							<span class="biGQs _P ttuOS">예약하기</span>
-						</button>
+						<div class="ppuFV _T Z BB lSnVq amYYZ" data-tab="TABS_ABOUT"
+										data-section-signature="about" id="ABOUT_TAB">
+										<div class="GONGi f fhUph Z BB">
+											<h2 class="aFUwN Cj F1 b">
+												<span class="biGQs _P fiohW uuBRH">리뷰작성</span>
+											</h2>
+										</div>
+										<div class="ruCQl z">
+											<div class="uqMDf z BGJxv YGfmd YQkjl">
+												<div class="dGsKv Xe f P">
+													<span class="kJyXc P">${average }</span>
+													<button class="UikNM _G B- _S _W _T c G_ wSSLS TXrCr raEkE"
+														type="button">
+														<span class="biGQs _P ttuOS">
+															<div class="jVDab o W f u w GOdjs">
+                																	<c:forEach begin="1" end="5" var="i">
+			                    											<div class="circle ${i <= average ? 'active' : ''}"></div>
+			                    									</c:forEach>
+																<span class="biGQs _P pZUbB KxBGd" style="margin-left:5px">${counts[5]} 개
+																</span>
+															</div>
+														</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="ZPHZV">
+											<div class="tRIJU w u">
+												<div class="RZjkd">
+													<div class="o">
+														<div class="biGQs _P fiohW hmDzD">
+															<div class="yFXuQ o W q">1점</div>
+														</div>
+													</div>
+													<div class="gOGCN">
+														<div class="OYoZn" style="width: 87.21121999999998%"></div>
+													</div>
+													<div class="q">
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[0]}개</div>
+													</div>
+												</div>
+												<div class="RZjkd">
+													<div class="o">
+														<div class="biGQs _P fiohW hmDzD">
+															<div class="yFXuQ o W q">2점</div>
+														</div>
+													</div>
+													<div class="gOGCN">
+														<div class="OYoZn" style="width: 95.04132000000001%"></div>
+													</div>
+													<div class="q">
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[1] }
+															개</div>
+													</div>
+												</div>
+												<div class="RZjkd">
+													<div class="o">
+														<div class="biGQs _P fiohW hmDzD">
+															<div class="yFXuQ o W q">3점</div>
+														</div>
+													</div>
+													<div class="gOGCN">
+														<div class="OYoZn" style="width: 91.706448%"></div>
+													</div>
+													<div class="q">
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[2] }
+															개</div>
+													</div>
+												</div>
+												<div class="RZjkd">
+													<div class="o">
+														<div class="biGQs _P fiohW hmDzD">
+															<div class="yFXuQ o W q">4점</div>
+														</div>
+													</div>
+													<div class="gOGCN">
+														<div class="OYoZn" style="width: 78.822566%"></div>
+													</div>
+													<div class="q">
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[3] }
+															개</div>
+													</div>
+												</div>
+												<div class="RZjkd">
+													<div class="o">
+														<div class="biGQs _P fiohW hmDzD">
+															<div class="yFXuQ o W q">5점</div>
+														</div>
+													</div>
+													<div class="gOGCN">
+														<div class="OYoZn" style="width: 87.21121999999998%"></div>
+													</div>
+													<div class="q">
+														<div class="biGQs _P fiohW biKBZ osNWb">${counts[4] }
+															개</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<!-- 수정된 버튼 위치 -->
+										<div class="dGsKv Xe f P" style="margin-top: 10px;">
+											<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
+												id="openReviewModal" type="button">
+												<span class="biGQs _P ttuOS">
+													<div class="jktzL">
+														<h1 class="CpzHF q">리뷰 작성하기</h1>
+													</div>
+												</span>
+											</button>
+										</div>
+
+							
+									</div>
+								
+										<!-- 리뷰모달 구현 -->
+										<div id="reviewModal" class="modal">
+											<div class="modal-content">
+												<span class="close">&times;</span>
+												<h2>장소 평가하기</h2>
+												<p>평점을 선택하세요:</p>
+												<div class="rating-box">
+													<!-- 평점 선택 라디오 버튼 -->
+													<input type="radio" name="rating" value="5" id="rating5">
+													<label for="rating5">5점</label><br> <input
+														type="radio" name="rating" value="4" id="rating4">
+													<label for="rating4">4점</label><br> <input
+														type="radio" name="rating" value="3" id="rating3">
+													<label for="rating3">3점</label><br> <input
+														type="radio" name="rating" value="2" id="rating2">
+													<label for="rating2">2점</label><br> <input
+														type="radio" name="rating" value="1" id="rating1">
+													<label for="rating1">1점</label><br>
+												</div>
+												<p>리뷰를 작성하세요:</p>
+												<textarea id="reviewText" rows="4" cols="50"></textarea>
+												<br>
+												<p>사진을 첨부하세요:</p>
+												<input type="file" id="reviewImage" accept="image/*">
+												<br> <img id="previewImage" class="preview-img">
+												<br>
+												<button id="submitReview" class="btn btn-success">제출하기</button>
+											</div>
+										</div>
+
+										<div class="ppuFV _T Z BB lSnVq amYYZ">
+											<h2 class="aFUwN Cj F1 b">
+												<span class="biGQs _P fiohW uuBRH">리뷰</span>
+											</h2>
+										    <div id="submittedReviews">
+										        <c:forEach var="review" items="${reviewList}">
+										            <div class="review-card">
+										                <c:if test="${not empty review.imageName}">
+										                    <img src="/travel/resources/images/${review.imageName[0]}" class="review-image">
+										                </c:if>
+										                <div class="review-details">
+										                    <div class="review-author">작성자: ${review.memberId}</div>
+										                    <div class="review-rating">평점: ${review.like}</div>
+										                    <div class="review-content">내용: ${review.content}</div>
+										                </div>
+										            </div>
+										        </c:forEach>
+										    </div>
+										</div>
+
+								
+									<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+									<script
+										src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+									<script
+										src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script>
+    $j(document).ready(function() { 
+        var modal = $j('#reviewModal'); 
+        var openModalButton = $j('#openReviewModal'); 
+        var closeModalButton = $j('.close'); 
+        var submitButton = $j('#submitReview'); 
+        var submittedReviews = $j('#reviewList');
+        var ratingBox = $j('.rating-box'); 
+        var reviewTextArea = $j('#reviewText'); 
+        var reviewImage = $j('#reviewImage'); 
+        var previewImage = $j('#previewImage'); 
+        
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        var boardNo = getParameterByName('no');
+        console.log('Board No: ', boardNo);
+
+        openModalButton.on('click', function() { 
+            modal.show(); 
+        });
+
+        closeModalButton.on('click', function() { 
+            modal.hide(); 
+        });
+
+        $j(window).on('click', function(event) { 
+            if ($j(event.target).is(modal)) {
+                modal.hide(); 
+            }
+        });
+
+        reviewImage.on('change', function(event) { 
+            var file = event.target.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImage.attr('src', e.target.result); 
+                    previewImage.show(); 
+                }
+                reader.readAsDataURL(file);
+            } else {
+                previewImage.attr('src', ''); 
+                previewImage.hide(); 
+            }
+        });
+
+        submitButton.on('click', function() { 
+            var selectedRating = $j('input[name="rating"]:checked'); 
+            var reviewText = reviewTextArea.val().trim(); 
+            var reviewImgSrc = previewImage.attr('src'); 
+
+            if (selectedRating.length && reviewText !== '') {
+                var ratingValue = selectedRating.val(); 
+
+                // Ajax 요청으로 데이터 전송
+                var formData = new FormData();
+                formData.append('rating', ratingValue);
+                formData.append('reviewText', reviewText);
+                formData.append('boardNo', boardNo); 
+                if (reviewImage[0].files[0]) { 
+                    formData.append('files', reviewImage[0].files[0]); 
+                }
+
+                $j.ajax({ 
+                    type: 'POST',
+                    url: 'writeReview.do',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    dataType: 'json',
+                    success: function(response) {
+                        alert("리뷰가 제출되었습니다.");
+
+                        // 새로운 리뷰 항목 추가
+                        var reviewItem = $j('<li>').addClass('review-item').html('<p>평점: ' + ratingValue + '</p><p>리뷰 내용: ' + reviewText + '</p>'); 
+                        if (reviewImgSrc) {
+                            var imgElement = $j('<img>').attr('src', reviewImgSrc).attr('alt', 'Review Image'); 
+                            reviewItem.append(imgElement);
+                        }
+                        submittedReviews.append(reviewItem); 
+                        modal.hide(); 
+
+                        // 폼 초기화
+                        reviewTextArea.val(''); 
+                        previewImage.attr('src', '').hide(); 
+                        reviewImage.val(''); 
+                        selectedRating.prop('checked', false); 
+                    },
+                    error: function(error) {
+                        alert("리뷰 제출에 실패했습니다.");
+                        console.log(error);
+                    }
+                });
+            } else {
+                alert('평점과 리뷰를 모두 선택해주세요.');
+            }
+        });
+    });
+    </script>
 
 						<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 						<script
