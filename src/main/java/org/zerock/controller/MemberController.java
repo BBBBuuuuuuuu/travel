@@ -38,6 +38,7 @@ public class MemberController {
 		if (user != null) {
 			session.setAttribute("userName", user.getName());
 			session.setAttribute("userId", user.getId());
+			 System.out.println("로그인 성공: " + user.getId()); // 로그인 성공 로그
 			return "redirect:main.do";
 		} else {
 			model.addAttribute("errorMessage", "아이디 또는 비밀번호가 올바르지 않습니다.");

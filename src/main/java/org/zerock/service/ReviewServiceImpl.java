@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,6 +61,7 @@ public class ReviewServiceImpl implements ReviewService {
         return counts;
     }
 
+    @Override
     @Transactional
     public void writeReview(ReviewVO vo, MultipartFile[] files) {
         log.info("리뷰 저장 시작");
@@ -72,11 +75,13 @@ public class ReviewServiceImpl implements ReviewService {
                     String fileExtension = originalFilename.substring(originalFilename.lastIndexOf("."));
                     String fileName = new SimpleDateFormat("yy-MM-dd-HH-mm-ss").format(new Date()) + fileExtension;
                     log.info("Inserting image: " + fileName);
-                   
+                    File dest = new File("C:\\Users\\USER\\git\\travel\\src\\main\\webapp\\resources\\images", fileName);
+                    file.transferTo(dest);
+                    mapper.insertImage(fileName);
                 }
             }
         } catch (Exception e) {
-            log.error("리뷰 안올라간다고!");
+            log.error("리뷰 저장 중 오류 발생", e);
         }
     }
 
@@ -84,32 +89,38 @@ public class ReviewServiceImpl implements ReviewService {
     public void uploadImages(MultipartFile[] files) {
         for (MultipartFile file : files) {
             if (!file.isEmpty()) {
-                String originalFilename = "";
                 try {
-                    originalFilename = file.getOriginalFilename();
+                    String originalFilename = file.getOriginalFilename();
                     String fileExtension = originalFilename.substring(originalFilename.lastIndexOf("."));
                     String fileName = new SimpleDateFormat("yy-MM-dd-HH-mm-ss").format(new Date()) + fileExtension;
                     // 절대 경로 설정
                     String uploadPath = "C:\\Users\\SJ02\\git\\travel\\src\\main\\webapp\\resources\\images";
+
                     File uploadDir = new File(uploadPath);
 
                     if (!uploadDir.exists()) {
-                        uploadDir.mkdirs(); // 디렉토리가 존재하지 않으면 생성
+                        uploadDir.mkdirs();
                     }
 
                     File dest = new File(uploadPath, fileName);
                     file.transferTo(dest);
-                    log.info("Image uploaded: " + fileName);
                     mapper.insertImage(fileName);
                 } catch (IOException e) {
-                    log.error("갸악 이미지 안올라간다");
+                    log.error("이미지 업로드 중 오류 발생", e);
                     throw new RuntimeException("Image upload failed", e);
                 }
             }
         }
     }
 
+    @Override
+    public boolean checkIfUserHasBooking(String userId, Long boardNo) {
+        return mapper.checkIfUserHasBooking(userId, boardNo) > 0;
+    }
+
     private Double changePoint(Double dNum) {
         return Math.round(dNum * 10) / 10.0;
     }
 }
+
+

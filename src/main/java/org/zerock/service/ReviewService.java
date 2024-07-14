@@ -9,7 +9,7 @@ import org.zerock.domain.ReviewVO;
 public interface ReviewService {
 
 	public List<ReviewVO> selectReview(BoardVO vo);
-	
+
 	public Double getReviewAverage(BoardVO vo);
 
 	public List<Integer> getCountsOfLikes(BoardVO board);
@@ -17,4 +17,9 @@ public interface ReviewService {
 	void writeReview(ReviewVO vo, MultipartFile[] files);
 
 	public void uploadImages(MultipartFile[] files);
+
+	boolean checkIfUserHasBooking(String userId, Long boardNo);
+	
+
+
 }
