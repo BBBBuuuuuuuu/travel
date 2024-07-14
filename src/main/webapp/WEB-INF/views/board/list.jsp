@@ -302,7 +302,218 @@
 		<!--$-->
 		<span>
 			<div></div>
-			
+			<c:if test="${param.category == 'stay' }">
+			<div class="HyLIU w GA Gm z">
+				<img class="ahLpu _C s w _Z"
+					src="https://static.tacdn.com/img2/branding/homepage/hotel-hero-default-4.jpg" />
+				<div class="WhAxR f e u j c z M-">
+					<div class="biGQs _P socJU mowmC eIegw">
+					</div>
+					<div class="tXYlE u Gi">
+						<div class="gZifJ">
+							<div>
+								<div class="HREWK t l s _U S ijEOu"></div>
+								<div class="ctKgY">
+									<div class="ZjkxF f e Wh z _f"
+										data-test-attribute="typeahead-trip_search_Hotels">
+										<form role="search" action="/list.jsp">
+											<input type="hidden" name="searchSessionId"
+												value="001d380a05179a9c.ssid" /> <input type="hidden"
+												name="searchNearby" value="false" /> <input type="hidden"
+												name="ssrc" value="h" />
+											<div class="oKjvH f u Ma Nk MA NM DERJF">
+												<div class="F1 f u Q2">
+													<button type="submit" formaction="/list.jsp"
+														class="LhcRH _G _H B- G_ _S t u j H0" title="Search"
+														aria-label="Search" tabindex="-1">
+														<svg viewBox="0 0 24 24" width="24px" height="24px"
+															class="d Vb UmNoP">
+                											  <path fill-rule="evenodd"
+																clip-rule="evenodd"
+																d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
+               											 </svg>
+													</button>
+													<input type="search" autoComplete="off" autoCorrect="off"
+														autoCapitalize="none" spellcheck="false" required name="q"
+														class="hUpcN _G G_ B- z F1 _J w Cj R0 NBfGt H3"
+														placeholder="검색" title="Search" role="searchbox"
+														aria-label="Search" aria-controls="typeahead_results"
+														aria-autocomplete="list" value="" />
+												</div>
+											</div>
+										</form>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="QWjIT e">
+							<div class="GRZMb Fh Q2" data-automation="hotel-picker-new">
+								<div class="KFWPn">
+									<button aria-disabled="false" type="button"
+										class="WRyMy z Gz _S q o W f u G mnpxG F1 wSSLS"
+										aria-label="Enter the dates." aria-haspopup="dialog"
+										id="openDateRangeCalendarBtn">
+										<span class="biGQs _P fiohW uWleQ"> <svg
+												viewBox="0 0 24 24" width="18px" height="18px"
+												class="d Vb icjEL">
+									                <path
+													d="M4 4.5v-.75h-.75v.75H4zm16.01 0h.75v-.75h-.75v.75zm0 15.5v.75h.75V20h-.75zM4 20h-.75v.75H4V20zM8.76 3.002a.75.75 0 10-1.5-.004l1.5.004zM12.77 3a.75.75 0 00-1.5 0h1.5zm3.97-.002a.75.75 0 00-1.5.004l1.5-.004zM12 12h.75v-.75H12V12zm-4 0v-.75h-.75V12H8zm0 4h-.75v.75H8V16zm4 0v.75h.75V16H12zM4 5.25h16.01v-1.5H4v1.5zm15.26-.75V20h1.5V4.5h-1.5zm.75 14.75H4v1.5h16.01v-1.5zM4.75 20V4.5h-1.5V20h1.5zm4-12.998l.01-4-1.5-.004-.01 4 1.5.004zM12.77 7V3h-1.5v4h1.5zm3.983-.003l-.013-4-1.5.006.013 4 1.5-.006zM12 11.25H8v1.5h4v-1.5zM7.25 12v4h1.5v-4h-1.5zM8 16.75h4v-1.5H8v1.5zm4.75-.75v-4h-1.5v4h1.5z"></path>
+									              </svg> <!-- -->날짜 선택
+										</span>
+									</button>
+								</div>
+								<div class="KFWPn iUCeN">
+								    <button id="guestButton" aria-disabled="false"
+								            type="button" class="WRyMy z Gz _S q o W f u G wSSLS"
+								            aria-label="Enter the number of guests. The selected number of guests is 2."
+								            aria-haspopup="dialog" onclick="openPopup(event)">
+								        <span class="biGQs _P fiohW uWleQ">
+								            <div class="yzRfM f">
+								                <div>
+								                    <svg viewBox="0 0 24 24" width="18px" height="18px" class="d Vb UmNoP">
+								                        <path d="M8 11.5l-.005.75h.01L8 11.5zM3 14l-.603-.446-.147.199V14H3zm0 6h-.75v.75H3V20zm18 0v.75h.75V20H21zm0-4h.75v-.246l-.146-.199L21 16zm-5-2.527v-.75.75zM11 16l-.604-.445-.146.199V16H11zm0 4h-.75v.75H11V20zM9.5 6.25A1.5 1.5 0 018 7.75v1.5a3 3 0 003-3H9.5zM8 7.75a1.5 1.5 0 01-1.5-1.5H5a3 3 0 003 3v-1.5zm-1.5-1.5A1.5 1.5 0 018 4.75v-1.5a3 3 0 00-3 3h1.5zM8 4.75a1.5 1.5 0 011.5 1.5H11a3 3 0 00-3-3v1.5zm9.5 3.5a1.5 1.5 0 01-1.5 1.5v1.5a3 3 0 003-3h-1.5zM16 9.75a1.5 1.5 0 01-1.5-1.5H13a3 3 0 003 3v-1.5zm-1.5-1.5a1.5 1.5 0 011.5-1.5v-1.5a3 3 0 00-3 3h1.5zm1.5-1.5a1.5 1.5 0 011.5 1.5H19a3 3 0 00-3-3v1.5zm-2.397 6.804a6.91 6.91 0 00-2.468-2.075l-.67 1.342a5.41 5.41 0 011.932 1.625l1.206-.892zm-2.468-2.075a6.91 6.91 0 00-3.14-.729l.01 1.5a5.41 5.41 0 012.46.571l.67-1.342zm-3.13-.729a6.91 6.91 0 00-3.14.73l.67 1.341a5.41 5.41 0 012.46-.571l.01-1.5zm-3.14.73a6.91 6.91 0 00-2.468 2.074l1.206.892a5.41 5.41 0 011.932-1.625l-.67-1.342zM2.25 14v6h1.5v-6h-1.5zM3 20.75h10v-1.5H3v1.5zM21.75 20v-4h-1.5v4h1.5zm-.146-4.445a6.96 6.96 0 00-2.464-2.084l-.677 1.339a5.46 5.46 0 011.933 1.635l1.208-.89zm-2.464-2.084a6.96 6.96 0 00-3.14-.748v1.5c.856 0 1.7.201 2.463.587l.677-1.339zM16 12.723a6.96 6.96 0 00-3.14.748l.677 1.339A5.46 5.46 0 0116 14.223v-1.5zm-3.14.748a6.96 6.96 0 00-3.14-.748l.677 1.339a5.46 5.46 0 011.933-1.635l-.677-1.339zM12 14.75v6h1.5v-6H12z"></path>
+								                    </svg>
+								                    <!-- 숫자는 아래에 표시됩니다. -->
+								                    <span id="guestCount">2</span>
+								                </div>
+								            </div>
+								        </span>
+								    </button>
+								
+								    <div id="popup" class="popup">
+								        <label for="guests">Guests:</label>
+								        <input type="number" id="guests" name="guests" min="1" max="20" value="2">
+								        <button onclick="applySelection()">Apply</button>
+								    </div>
+								</div>
+								<!-- JavaScript -->
+								<script>
+							        let selectedStartDate = null;
+							        let selectedEndDate = null;
+							
+							        const dateRangePicker = flatpickr("#openDateRangeCalendarBtn", {
+							            mode: "range", // 범위 선택 모드
+							            dateFormat: "Y-m-d", // 선택된 날짜 형식
+							            onClose: function(selectedDates, dateStr, instance) {
+							                // 선택한 날짜를 데이터로 저장
+							                if (selectedDates.length > 0) {
+							                    selectedStartDate = selectedDates[0];
+							                    selectedEndDate = selectedDates[selectedDates.length - 1];
+							                    console.log("시작 날짜:", selectedStartDate);
+							                    console.log("끝 날짜:", selectedEndDate);
+							                    // 여기에 데이터를 저장하는 코드를 추가할 수 있습니다.
+							                    // 예를 들어, Ajax 요청을 보내거나 다른 처리를 할 수 있습니다.
+							                }
+							            }
+							        });
+							    </script>
+
+								<script>
+								    function openPopup(event) {
+								        var popup = document.getElementById('popup');
+								        var button = document.getElementById('guestButton');
+								        var buttonRect = button.getBoundingClientRect(); // 버튼의 위치와 크기 가져오기
+								        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+								
+								        popup.style.top = (buttonRect.bottom + scrollTop) + 'px'; // 버튼의 아래쪽으로 위치 설정
+								        popup.style.left = buttonRect.left + 'px';  // 버튼의 왼쪽으로 위치 설정
+								        popup.style.display = 'block'; // 팝업 보이기
+								    }
+								
+								    function applySelection() {
+								        var selectedGuests = document.getElementById('guests').value;
+
+								        // 버튼 내부의 숫자 업데이트
+								        var buttonGuests = document.querySelector('#guestButton .f div #guestCount');
+								        buttonGuests.innerText = selectedGuests;
+
+								        // 팝업 숨기기
+								        var popup = document.getElementById('popup');
+								        popup.style.display = 'none';
+								    }
+								</script>
+
+							</div>
+						</div>
+						<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
+							type="button">
+							<span class="biGQs _P ttuOS"><div class="jktzL">
+									<svg viewBox="0 0 24 24" width="20px" height="20px"
+										class="d Vb UmNoP">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path></svg>
+								</div>
+								<h1 class="CpzHF q">검색</h1></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			</c:if> <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+			<c:if test="${param.category == 'activity' }">
+			<div class="HyLIU w GA Gm z">
+				<img class="ahLpu _C s w _Z"
+					src="https://static.tacdn.com/img2/tc/hero/redesign/TC2024_BucketList_desktop-c1.jpg" />
+				<div class="WhAxR f e u j c z M-">
+					<div class="biGQs _P socJU mowmC eIegw">
+					</div>
+					<div class="tXYlE u Gi">
+						<div class="gZifJ">
+							<div>
+								<div class="HREWK t l s _U S ijEOu"></div>
+								<div class="ctKgY">
+									<div class="ZjkxF f e Wh z _f"
+										data-test-attribute="typeahead-trip_search_Hotels">
+										<form role="search" action="/list.jsp">
+											<input type="hidden" name="searchSessionId"
+												value="001d380a05179a9c.ssid" /> <input type="hidden"
+												name="searchNearby" value="false" /> <input type="hidden"
+												name="ssrc" value="h" />
+											<div class="oKjvH f u Ma Nk MA NM DERJF">
+												<div class="F1 f u Q2">
+													<button type="submit" formaction="/list.jsp"
+														class="LhcRH _G _H B- G_ _S t u j H0" title="Search"
+														aria-label="Search" tabindex="-1">
+														<svg viewBox="0 0 24 24" width="24px" height="24px"
+															class="d Vb UmNoP">
+                											  <path fill-rule="evenodd"
+																clip-rule="evenodd"
+																d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
+               											 </svg>
+													</button>
+													<input type="search" autoComplete="off" autoCorrect="off"
+														autoCapitalize="none" spellcheck="false" required name="q"
+														class="hUpcN _G G_ B- z F1 _J w Cj R0 NBfGt H3"
+														placeholder="검색" title="Search" role="searchbox"
+														aria-label="Search" aria-controls="typeahead_results"
+														aria-autocomplete="list" value="" />
+												</div>
+											</div>
+										</form>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="QWjIT e">
+							<div class="GRZMb Fh Q2" data-automation="hotel-picker-new">
+
+							</div>
+						</div>
+						<button class="rmyCe _G B- z _S c Wc wSSLS AeLHi huqcv"
+							type="button">
+							<span class="biGQs _P ttuOS"><div class="jktzL">
+									<svg viewBox="0 0 24 24" width="20px" height="20px"
+										class="d Vb UmNoP">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path></svg>
+								</div>
+								<h1 class="CpzHF q">검색</h1></span>
+						</button>
+					</div>
+				</div>
+			</div>
+			</c:if>
 			<div id="hotelList">
 			    <c:forEach var="board" items="${boardList}">
 			        <a href="getBoard.do?no=${board.boardNo}" style="text-decoration: none; color: inherit;">
