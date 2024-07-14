@@ -90,7 +90,7 @@ public class ReviewServiceImpl implements ReviewService {
                     String fileExtension = originalFilename.substring(originalFilename.lastIndexOf("."));
                     String fileName = new SimpleDateFormat("yy-MM-dd-HH-mm-ss").format(new Date()) + fileExtension;
                     // 절대 경로 설정
-                    String uploadPath = "C:\\Users\\USER\\git\\travel\\src\\main\\webapp\\resources\\images";
+                    String uploadPath = "C:\\Users\\SJ02\\git\\travel\\src\\main\\webapp\\resources\\images";
                     File uploadDir = new File(uploadPath);
 
                     if (!uploadDir.exists()) {
