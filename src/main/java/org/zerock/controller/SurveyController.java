@@ -68,14 +68,14 @@ public class SurveyController {
     			}
     			boardService.setImage(board);
     		}
-    		model.addAttribute("board", stayList);
+    		model.addAttribute("boardList", stayList);
     	} else {
     		List<ActivityVO> activityList = surveyService.getActivityBoard(survey, boardNumList);
     		for(ActivityVO board : activityList) {
     			board.setLike(reviewService.getReviewAverage(board));
     			boardService.setImage(board);
     		}
-    		model.addAttribute("board", activityList);
+    		model.addAttribute("boardList", activityList);
     	}
     	
         return "board/list";
