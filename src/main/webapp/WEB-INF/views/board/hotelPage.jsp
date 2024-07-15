@@ -170,6 +170,7 @@ var $j = jQuery.noConflict();
 <link
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 	rel="stylesheet">
+	
 </head>
 <body>
 	<style>
@@ -807,48 +808,42 @@ button svg {
 							<span class="biGQs _P ttuOS">예약하기</span>
 						</button>
 
-						<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+						<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+						<script>
+var $j = jQuery.noConflict(); // $j 사용으로 jQuery 충돌 방지
+</script>
 						<script
 							src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 						<script
 							src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-						<script>
-							
-						
-						    document.getElementById('saveSelection').addEventListener('click', function() {
-						        var selectedAdults = document.getElementById('adultCount').value;
-						        console.log('선택된 성인 수:', selectedAdults);
-						
-						        // 선택된 값을 버튼 텍스트에 업데이트
-						        document.querySelector('.adult-info').textContent = selectedAdults;
-						
-						        // 로컬 스토리지에 저장 (필요 시)
-						        localStorage.setItem('selectedAdults', selectedAdults);
-						
-						        // 모달 닫기 및 백드롭 제거
-						        $('#guestModal').modal('hide');
-						        $('body').removeClass('modal-open');
-						        $('.modal-backdrop').remove();
-						    });
-						
-						    // 페이지 로드 시 저장된 값을 불러와서 버튼 텍스트에 표시
-						      document.addEventListener("DOMContentLoaded", function() {
-					        // 페이지가 로드될 때 실행할 초기화 함수
-					        initializeGuests();
-					
-					        // 새로고침 버튼 클릭 시 초기화 함수 호출
-					        document.querySelector('.jxmuG').addEventListener('click', function() {
-					            initializeGuests();
-					        });
-					
-					        // 초기화 함수 정의
-					        function initializeGuests() {
-					            // 초기화할 내용 작성
-					            document.querySelector('.adult-info').textContent = '0';
-					        }
-					    });
-						</script>
+<script>
+$j(document).ready(function() {
+    $j('#saveSelection').click(function() {
+        var selectedAdults = $j('#adultCount').val();
+        console.log('선택된 성인 수:', selectedAdults);
 
+        // 선택된 값을 버튼 텍스트에 업데이트
+        $j('.adult-info').text(selectedAdults);
+
+        // 로컬 스토리지에 저장
+        localStorage.setItem('selectedAdults', selectedAdults);
+
+        // 모달 닫기
+        $j('#guestModal').modal('hide'); // 모달 닫기 코드 추가됨
+    });
+
+    // 페이지 로드 시 저장된 값을 불러와서 버튼 텍스트에 표시
+    var storedAdults = localStorage.getItem('selectedAdults');
+    if (storedAdults) {
+        $j('.adult-info').text(storedAdults);
+    }
+
+    // 모달이 닫힐 때 어두운 배경 제거
+    $j('#guestModal').on('hidden.bs.modal', function () {
+        $j('.modal-backdrop').remove();
+    });
+});
+</script>
 
 						<div class="wWwSb">
 							<div class="">
