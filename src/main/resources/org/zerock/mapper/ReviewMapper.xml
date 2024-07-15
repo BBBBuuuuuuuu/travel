@@ -13,7 +13,7 @@
   	</resultMap>
   	
   	<select id="selectReview"  resultMap="reviewResultMap">
-  		select * from review where board_no = #{boardNo}
+  		select * from review where board_no = #{boardNo} order by review_no desc
   	</select>
   	
   	<select id="selectCountOfReview" resultType="Integer">
